@@ -1,0 +1,46 @@
+
+<header class="header">
+  <section class="section orange iso center">
+	<div class="section-content section-content-small">
+      <h1 class="h0">Jumpstart your warehouse</h1>
+	  <p class="text-large">
+        Use one of our community packages to refine the raw data in your
+        warehouse.
+	</div>
+  </section>
+</header>
+
+<main class="main">
+
+  <section class="section offset white">
+	<div class="section-content">
+	  <div class="row">
+          <div class="col-md-12 center">
+              <h4 class="h4">Featured Packages</h4>
+          </div>
+      </div>
+      <div class="tiles">
+        <% data.featured.each do |name| %>
+        <% package = data.packages[name] %>
+        <%= partial "package_card", :locals => { :package => package } %>
+        <% end %>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-md-12 center">
+          <h4 class="h4">Package Index</h4>
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-md-12">
+          <ul style="list-style-type: disc; columns: 3; list-style-position: inside;">
+            <% data.packages.each do |name, package| %>
+            <li><%= link_to(name, "/#{package.namespace}/#{package.name}") %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

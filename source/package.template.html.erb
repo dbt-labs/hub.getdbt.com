@@ -1,0 +1,36 @@
+<header class="header">
+  <section class="section orange iso section-slim">
+    <div class="section-content navigation">
+      dbt
+    </div>
+  </section>
+</header>
+
+<main class="main">
+  <section class="section white section-slim">
+    <div class="section-content">
+
+      <div class="tile-body"
+           style="box-shadow: none; overflow: visible">
+        <div class="tile-graphic">
+          <img src="<%= package.assets.logo %>"
+               alt="<%= package.name %>"/>
+        </div>
+        <div class="tile-text">
+          <h1><%= package.name %></h1>
+          <em>Created by <%= link_to(package.namespace, "#{site_url}/#{package.namespace}") %></em><br/>
+          <em><%= package.versions[package.latest].description %></em>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-slim silver offset">
+    <div class="section-content">
+      <base href="<%= package.versions[package.latest]._source.url %>"
+            target="_blank">
+      <%= markdown(readme) %>
+      </base>
+
+    </div>
+  </section>
+</main>

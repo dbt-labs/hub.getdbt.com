@@ -1,0 +1,75 @@
+{
+    "fishtown-analytics/dbt-utils": {
+        "name": "dbt-utils",
+        "namespace": "fishtown-analytics",
+        "latest": "1.0.0",
+        "assets": {
+            "logo": "https://www.getdbt.com/ui/img/brand/logos/mark-only-color-md.png"
+        },
+        "versions": {
+            "1.0.0": {
+                "id": "fishtown-analytics/dbt-utils/1.0.0",
+                "name": "dbt-utils",
+                "version": "1.0.0",
+                "description": "Utility functions for managing dbt projects.",
+                "published_at": "2017-09-21T00:57:53-0400",
+
+                "dependencies": {},
+
+                "works_with": [
+                    "postgres",
+                    "redshift",
+                    "bigquery",
+                    "snowflake"
+                ],
+
+                "_source": {
+                    "type": "github",
+                    "url": "https://github.com/fishtown-analytics/dbt-utils/tree/master/",
+                    "readme": "https://raw.githubusercontent.com/fishtown-analytics/dbt-utils/master/README.md"
+                },
+
+                "downloads": {
+                    "tarball": "https://github.com/fishtown-analytics/dbt-utils/tarball/master",
+                    "format": "tgz",
+                    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+                }
+            }
+        }
+    },
+    "fishtown-analytics/redshift": {
+        "name": "redshift",
+        "namespace": "fishtown-analytics",
+        "latest": "0.0.1",
+        "assets": {
+            "logo": "https://www.getdbt.com/assets/img/packages/redshift.jpg"
+        },
+        "versions": {
+            "0.0.1": {
+                "id": "fishtown-analytics/redshift/0.0.1",
+                "name": "redshift",
+                "version": "0.0.1",
+                "description": "A collection of Redshift optimization tools that you can drop into your existing cluster.",
+                "published_at": "2017-09-21T00:57:53-0400",
+
+                "dependencies": {},
+
+                "works_with": [
+                    "redshift"
+                ],
+
+                "_source": {
+                    "type": "github",
+                    "url": "https://github.com/fishtown-analytics/redshift/tree/master/",
+                    "readme": "https://raw.githubusercontent.com/fishtown-analytics/redshift/master/README.md"
+                },
+
+                "downloads": {
+                    "tarball": "https://github.com/fishtown-analytics/redshift/tarball/master",
+                    "format": "tgz",
+                    "sha1": ""
+                }
+            }
+        }
+    }
+}
