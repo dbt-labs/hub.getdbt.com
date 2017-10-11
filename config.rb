@@ -1,5 +1,7 @@
 require 'open-uri'
 
+ignore 'www.getdbt.com/'
+
 set :js_dir, 'dbt-site/ui/'
 
 activate :autoprefixer do |prefix|
