@@ -1,5 +1,7 @@
 require 'open-uri'
 
+set :js_dir, 'dbt-site/ui/'
+
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
@@ -9,13 +11,12 @@ data.packages.each do |name, package|
         '/api/v1/package.template.json',
         :locals => { :package => package }
 
-  logger.info(package.versions[package.latest]._source.readme)
-  proxy "/#{name}",
+  proxy "/#{name}/latest",
         '/package.template.html',
         :layout => 'layout',
         :locals => {
           :package => package,
-          :readme => open(package.versions[package.latest]._source.readme).read
+          :version => package.versions[package.latest]
         }
 
   proxy "/#{package.namespace}",
@@ -24,19 +25,19 @@ data.packages.each do |name, package|
         :locals => { :author => package.namespace }
 
   package.versions.each do |version, package_version|
+    proxy "#{name}/#{version}",
+          "/package.template.html",
+          :layout => "layout",
+          :locals => {
+            :package => package,
+            :version => package_version
+          }
+
     proxy "/api/v1/#{name}/#{version}.json",
           '/api/v1/raw.json',
           :locals => { :json_data => package_version }
   end
 end
-
-set :markdown_engine, :redcarpet
-
-set :markdown,
-    :tables => true,
-    :no_intra_emphasis => true,
-    :autolink => true,
-    :fenced_code_blocks => true
 
 set :protocol, 'https://'
 set :host, 'hub.getdbt.com'
@@ -53,11 +54,6 @@ helpers do
 
   def site_url
     config[:protocol] + host_with_port
-  end
-
-  def markdown(text)
-    logger.info(Tilt['markdown'])
-    Tilt['markdown'].new(context: @app) { text }.render
   end
 end
 

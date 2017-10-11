@@ -1,36 +1,95 @@
 <header class="header">
-  <section class="section orange iso section-slim">
-    <div class="section-content navigation">
-      dbt
-    </div>
+  <%= partial "nav" %>
+
+  <section class="section orange iso section-slim" style="padding-bottom:66px;">
+    <div class="section-content navigation" style="z-index: -1000"></div>
   </section>
 </header>
 
 <main class="main">
   <section class="section white section-slim">
     <div class="section-content">
+      <div class="row">
 
-      <div class="tile-body"
-           style="box-shadow: none; overflow: visible">
-        <div class="tile-graphic">
-          <img src="<%= package.assets.logo %>"
-               alt="<%= package.name %>"/>
+        <div class="col-md-8">
+          <div class="tile-body"
+               style="box-shadow: none; overflow: visible">
+            <div class="tile-graphic">
+              <img src="<%= package.assets.logo %>"
+                   alt="<%= package.name %>"/>
+            </div>
+            <div class="tile-text">
+              <h1><%= package.name %></h1>
+              <em>
+                Created by
+                <a href="<%= site_url %>/<%= package.namespace %>"
+                   target="_self">
+                  <%= package.namespace %>
+                </a>
+              </em><br/>
+              <em><%= package.versions[package.latest].description %></em>
+            </div>
+          </div>
         </div>
-        <div class="tile-text">
-          <h1><%= package.name %></h1>
-          <em>Created by <%= link_to(package.namespace, "#{site_url}/#{package.namespace}") %></em><br/>
-          <em><%= package.versions[package.latest].description %></em>
+
+        <div class="col-md-4">
+          <form class="form-inline margin" style="margin-top: 32px">
+            <div class="form-group select">
+              <label for="version">Version</label>
+              <select class="form-control"
+                      style="min-width: 225px"
+                      id="version"
+                      onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                <% for local_version, package_version in package.versions %>
+                <option value="<%= site_url %>/<%= package.namespace %>/<%= package.name %>/<%= local_version %>"
+                        <% if local_version == version.version %>selected="selected"<% end %>>
+                  <%= local_version %><% if local_version == package.latest %> (latest)<% end %>
+                </option>
+                <% end %>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Installation</h3>
+          <p>Include the following in your <code>dbt_project.yml</code> file:
+          <pre>
+packages:
+  '<%= package.name %>': '=<%= version.version %>'</pre>
         </div>
       </div>
     </div>
   </section>
   <section class="section section-slim silver offset">
     <div class="section-content">
-      <base href="<%= package.versions[package.latest]._source.url %>"
-            target="_blank">
-      <%= markdown(readme) %>
-      </base>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>README</h3>
+          (<a href="<%= version._source.url %>">View on Github</a>)
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <base href="<%= package.versions[package.latest]._source.url %>"
+                target="_blank">
+          <div id="readme">
+            <div class="loading">
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
 </main>
+
+<script>
+  $.get('<%= version._source.readme %>').done(function(data) {
+  document.getElementById('readme').innerHTML = marked(data)
+  });
+</script>

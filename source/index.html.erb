@@ -1,5 +1,6 @@
 
 <header class="header">
+  <%= partial "nav" %>
   <section class="section orange iso center">
 	<div class="section-content section-content-small">
       <h1 class="h0">Jumpstart your warehouse</h1>
@@ -36,7 +37,7 @@
         <div class="col-md-12">
           <ul style="list-style-type: disc; columns: 3; list-style-position: inside;">
             <% data.packages.each do |name, package| %>
-            <li><%= link_to(name, "/#{package.namespace}/#{package.name}") %></li>
+            <li><%= link_to(name, "/#{package.namespace}/#{package.name}/latest") %></li>
             <% end %>
           </ul>
         </div>
