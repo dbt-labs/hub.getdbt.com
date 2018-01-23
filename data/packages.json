@@ -1,6 +1,6 @@
 {
-    "fishtown-analytics/dbt-utils": {
-        "name": "dbt-utils",
+    "fishtown-analytics/dbt_utils": {
+        "name": "dbt_utils",
         "namespace": "fishtown-analytics",
         "latest": "1.0.0",
         "assets": {
@@ -8,13 +8,15 @@
         },
         "versions": {
             "1.0.0": {
-                "id": "fishtown-analytics/dbt-utils/1.0.0",
-                "name": "dbt-utils",
+                "id": "fishtown-analytics/dbt_utils/1.0.0",
+                "name": "dbt_utils",
                 "version": "1.0.0",
                 "description": "Utility functions for managing dbt projects.",
                 "published_at": "2017-09-21T00:57:53-0400",
 
-                "dependencies": {},
+                "dependencies": {
+                    "fishtown-analytics/redshift": "0.0.1"
+                },
 
                 "works_with": [
                     "postgres",
@@ -25,19 +27,19 @@
 
                 "_source": {
                     "type": "github",
-                    "url": "https://github.com/fishtown-analytics/dbt-utils/tree/master/",
-                    "readme": "https://raw.githubusercontent.com/fishtown-analytics/dbt-utils/master/README.md"
+                    "url": "https://github.com/fishtown-analytics/dbt-utils/tree/1.0.0/",
+                    "readme": "https://raw.githubusercontent.com/fishtown-analytics/dbt-utils/1.0.0/README.md"
                 },
 
                 "downloads": {
-                    "tarball": "https://github.com/fishtown-analytics/dbt-utils/tarball/master",
+                    "tarball": "https://github.com/fishtown-analytics/dbt-utils/tarball/1.0.0",
                     "format": "tgz",
                     "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
                 }
             },
             "0.9.0": {
-                "id": "fishtown-analytics/dbt-utils/0.9.0",
-                "name": "dbt-utils",
+                "id": "fishtown-analytics/dbt_utils/0.9.0",
+                "name": "dbt_utils",
                 "version": "0.9.0",
                 "description": "Utility functions for managing dbt projects.",
                 "published_at": "2017-09-21T00:57:53-0400",
@@ -53,12 +55,12 @@
 
                 "_source": {
                     "type": "github",
-                    "url": "https://github.com/fishtown-analytics/dbt-utils/tree/master/",
-                    "readme": "https://raw.githubusercontent.com/fishtown-analytics/dbt-utils/master/README.md"
+                    "url": "https://github.com/fishtown-analytics/dbt-utils/tree/0.9.0/",
+                    "readme": "https://raw.githubusercontent.com/fishtown-analytics/dbt-utils/0.9.0/README.md"
                 },
 
                 "downloads": {
-                    "tarball": "https://github.com/fishtown-analytics/dbt-utils/tarball/master",
+                    "tarball": "https://github.com/fishtown-analytics/dbt-utils/tarball/0.9.0",
                     "format": "tgz",
                     "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
                 }
@@ -89,14 +91,14 @@
 
                 "_source": {
                     "type": "github",
-                    "url": "https://github.com/fishtown-analytics/redshift/tree/master/",
-                    "readme": "https://raw.githubusercontent.com/fishtown-analytics/redshift/master/README.md"
+                    "url": "https://github.com/fishtown-analytics/redshift/tree/0.0.1/",
+                    "readme": "https://raw.githubusercontent.com/fishtown-analytics/redshift/0.0.1/README.md"
                 },
 
                 "downloads": {
-                    "tarball": "https://github.com/fishtown-analytics/redshift/tarball/master",
+                    "tarball": "https://github.com/fishtown-analytics/redshift/tarball/0.0.1",
                     "format": "tgz",
-                    "sha1": ""
+                    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
                 }
             }
         }
