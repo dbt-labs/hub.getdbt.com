@@ -14,9 +14,16 @@
                 "description": "Utility functions for managing dbt projects.",
                 "published_at": "2017-09-21T00:57:53-0400",
 
-                "dependencies": {
-                    "fishtown-analytics/redshift": "0.0.1"
-                },
+                "dependencies": [
+                    {
+                        "package": "fishtown-analytics/redshift",
+                        "version": [">0.0.1", "<=0.0.3"]
+                    },
+                    {
+                        "git": "https://github.com/fishtown-analytics/dbt-utils.git".
+                        "version": "1.0.0"
+                    }
+                ],
 
                 "works_with": [
                     "postgres",
