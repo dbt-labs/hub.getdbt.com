@@ -9,7 +9,7 @@ activate :autoprefixer do |prefix|
 end
 
 data.packages.each do |name, package|
-  proxy "/#{name}/latest",
+  proxy "/#{name}/latest/index.html",
         '/package.template.html',
         :content_type => 'text/html',
         :layout => 'layout',
@@ -18,7 +18,7 @@ data.packages.each do |name, package|
           :version => package.versions[package.latest]
         }
 
-  proxy "/#{package.namespace}",
+  proxy "/#{package.namespace}/index.html",
         '/author.template.html',
         :content_type => 'text/html',
         :layout => 'layout',
@@ -34,7 +34,7 @@ data.packages.each do |name, package|
         }
 
   package.versions.each do |version, package_version|
-    proxy "#{name}/#{version}",
+    proxy "#{name}/#{version}/index.html",
           "/package.template.html",
           :layout => "layout",
           :content_type => 'text/html',
