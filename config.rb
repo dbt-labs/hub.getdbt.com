@@ -11,11 +11,13 @@ end
 data.packages.each do |name, package|
   proxy "/api/v1/#{name}.json",
         '/api/v1/package.template.json',
+        :content_type => 'application/json',
         :locals => { :package => package }
 
   proxy "/#{name}/latest",
         '/package.template.html',
         :layout => 'layout',
+        :content_type => 'text/html',
         :locals => {
           :package => package,
           :version => package.versions[package.latest]
@@ -23,6 +25,7 @@ data.packages.each do |name, package|
 
   proxy "/#{package.namespace}",
         '/author.template.html',
+        :content_type => 'text/html',
         :layout => 'layout',
         :locals => { :author => package.namespace }
 
@@ -30,6 +33,7 @@ data.packages.each do |name, package|
     proxy "#{name}/#{version}",
           "/package.template.html",
           :layout => "layout",
+          :content_type => 'text/html',
           :locals => {
             :package => package,
             :version => package_version
@@ -37,6 +41,7 @@ data.packages.each do |name, package|
 
     proxy "/api/v1/#{name}/#{version}.json",
           '/api/v1/raw.json',
+          :content_type => 'application/json',
           :locals => { :json_data => package_version }
   end
 end
