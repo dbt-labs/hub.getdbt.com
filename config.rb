@@ -9,15 +9,10 @@ activate :autoprefixer do |prefix|
 end
 
 data.packages.each do |name, package|
-  proxy "/api/v1/#{name}.json",
-        '/api/v1/package.template.json',
-        :content_type => 'application/json',
-        :locals => { :package => package }
-
   proxy "/#{name}/latest",
         '/package.template.html',
-        :layout => 'layout',
         :content_type => 'text/html',
+        :layout => 'layout',
         :locals => {
           :package => package,
           :version => package.versions[package.latest]
@@ -27,7 +22,16 @@ data.packages.each do |name, package|
         '/author.template.html',
         :content_type => 'text/html',
         :layout => 'layout',
-        :locals => { :author => package.namespace }
+        :locals => {
+          :author => package.namespace
+        }
+
+  proxy "/api/v1/#{name}.json",
+        '/api/v1/package.template.json',
+        :content_type => 'application/json',
+        :locals => {
+          :package => package
+        }
 
   package.versions.each do |version, package_version|
     proxy "#{name}/#{version}",
@@ -42,7 +46,9 @@ data.packages.each do |name, package|
     proxy "/api/v1/#{name}/#{version}.json",
           '/api/v1/raw.json',
           :content_type => 'application/json',
-          :locals => { :json_data => package_version }
+          :locals => {
+            :json_data => package_version
+          }
   end
 end
 
