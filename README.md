@@ -19,5 +19,5 @@ bundle install
 ...and run with middleman:
 
 ```bash
-bundle exec middleman serve
+bundle exec middleman serve --port 4567
 ```
