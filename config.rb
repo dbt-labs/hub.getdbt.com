@@ -8,6 +8,13 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+proxy "/api/v1/packages.json",
+      '/api/v1/raw.json',
+      :content_type => 'application/json',
+      :locals => {
+        :json_data => data.packages
+      }
+
 data.packages.each do |name, package|
   proxy "/#{name}/latest/index.html",
         '/package.template.html',
