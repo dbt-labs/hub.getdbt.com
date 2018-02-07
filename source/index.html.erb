@@ -35,7 +35,7 @@
       <br/>
       <div class="row">
         <div class="col-md-12">
-          <ul style="list-style-type: disc; columns: 3; list-style-position: inside;">
+          <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
             <% data.packages.each do |name, package| %>
             <li><%= link_to(name, "/#{package.namespace}/#{package.name}/latest") %></li>
             <% end %>
