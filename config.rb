@@ -8,54 +8,56 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-proxy "/api/v1/packages.json",
-      '/api/v1/raw.json',
-      :content_type => 'application/json',
-      :locals => {
-        :json_data => data.packages
-      }
-
-data.packages.each do |name, package|
-  proxy "/#{name}/latest/index.html",
-        '/package.template.html',
-        :content_type => 'text/html',
-        :layout => 'layout',
-        :locals => {
-          :package => package,
-          :version => package.versions[package.latest]
-        }
-
-  proxy "/#{package.namespace}/index.html",
-        '/author.template.html',
-        :content_type => 'text/html',
-        :layout => 'layout',
-        :locals => {
-          :author => package.namespace
-        }
-
-  proxy "/api/v1/#{name}.json",
-        '/api/v1/package.template.json',
+after_configuration do
+  proxy "/api/v1/packages.json",
+        '/api/v1/raw.json',
         :content_type => 'application/json',
         :locals => {
-          :package => package
+          :json_data => @app.data.packages
         }
 
-  package.versions.each do |version, package_version|
-    proxy "#{name}/#{version}/index.html",
-          "/package.template.html",
-          :layout => "layout",
+  data.packages.each do |name, package|
+    proxy "/#{name}/latest/index.html",
+          '/package.template.html',
           :content_type => 'text/html',
+          :layout => 'layout',
           :locals => {
             :package => package,
-            :version => package_version
+            :version => package.versions[package.latest]
           }
 
-    proxy "/api/v1/#{name}/#{version}.json",
-          '/api/v1/raw.json',
+    proxy "/#{package.namespace}/index.html",
+          '/author.template.html',
+          :content_type => 'text/html',
+          :layout => 'layout',
+          :locals => {
+            :author => package.namespace
+          }
+
+    proxy "/api/v1/#{name}.json",
+          '/api/v1/package.template.json',
           :content_type => 'application/json',
           :locals => {
-            :json_data => package_version
+            :package => package
           }
+
+    package.versions.each do |version, package_version|
+      proxy "#{name}/#{version}/index.html",
+            "/package.template.html",
+            :layout => "layout",
+            :content_type => 'text/html',
+            :locals => {
+              :package => package,
+              :version => package_version
+            }
+
+      proxy "/api/v1/#{name}/#{version}.json",
+            '/api/v1/raw.json',
+            :content_type => 'application/json',
+            :locals => {
+              :json_data => package_version
+            }
+    end
   end
 end
 
