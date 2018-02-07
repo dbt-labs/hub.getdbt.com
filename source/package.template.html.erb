@@ -60,7 +60,9 @@
           <p>Include the following in your <code>dbt_project.yml</code> file:
           <pre>
 packages:
-  '<%= package.name %>': '=<%= version.version %>'</pre>
+ - package: <%= package.namespace %>/<%= package.name %>
+   version: <%= version.version %>
+          </pre>
         </div>
       </div>
     </div>
