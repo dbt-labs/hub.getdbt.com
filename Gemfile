@@ -8,3 +8,4 @@ gem 'therubyracer'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 gem 'redcarpet', '3.4.0'
+gem 'pry'

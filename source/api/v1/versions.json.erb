@@ -1,1 +1,1 @@
-<%= data.packages.map{ |name,package| [name,package.versions.keys] }.to_h.to_json %>
+<%= get_packages().map{ |name,package| [name,package.versions.keys] }.to_h.to_json %>

@@ -21,8 +21,8 @@
           </div>
       </div>
       <div class="tiles">
-        <% data.featured.each do |name| %>
-        <% package = data.packages[name] %>
+        <% data.featured.each do |pkg| %>
+        <% package = get_package(pkg['org'], pkg['package']) %>
         <%= partial "package_card", :locals => { :package => package } %>
         <% end %>
       </div>
@@ -36,8 +36,10 @@
       <div class="row">
         <div class="col-md-12">
           <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
-            <% data.packages.each do |name, package| %>
-            <li><%= link_to(name, "/#{package.namespace}/#{package.name}/latest") %></li>
+            <% data.packages.each do |org, packages| %>
+               <% packages.each do |name, package| %>
+                <li><%= link_to(name, "/#{package.namespace}/#{package.name}/latest") %></li>
+              <% end %>
             <% end %>
           </ul>
         </div>
