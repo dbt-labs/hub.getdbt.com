@@ -1,9 +1,9 @@
 require 'open-uri'
 
 ignore 'www.getdbt.com/'
-ignore 'source/img/'
+ignore 'source/img'
 
-set :js_dir, 'dbt-site/ui/'
+set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 activate :autoprefixer do |prefix|
@@ -100,7 +100,15 @@ helpers do
   end
 
   def get_packages()
-      combine_packages @app.data.packages
+      package_map = {}
+
+      @app.data.packages.each do |org, org_packages|
+          org_packages.each do |name, package|
+              package_map[name] = package
+          end
+      end
+
+      package_map
   end
 end
 

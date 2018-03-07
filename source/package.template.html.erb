@@ -56,8 +56,8 @@
       <div class="row">
         <div class="col-md-12">
           <h3>Installation</h3>
-          <p>Include the following in your <code>dbt_project.yml</code> file:
-          <pre>
+          <p>Include the following in your <code>packages.yml</code> file:
+          <pre id='install'>
 packages:
  - package: <%= package.namespace %>/<%= package.name %>
    version: <%= version.version %></pre>
@@ -65,7 +65,7 @@ packages:
       </div>
     </div>
   </section>
-  <section class="section section-slim silver offset">
+  <section class="section section-slim white offset" style="padding-top: 0">
     <div class="section-content">
       <div class="row">
         <div class="col-md-12">
@@ -78,7 +78,7 @@ packages:
         <div class="col-md-12">
           <base href="<%= package.versions[package.latest]._source.url %>"
                 target="_blank">
-          <div id="readme">
+          <article id="readme" class='markdown-body'>
             <div class="loading">
           </div>
         </div>
@@ -90,6 +90,10 @@ packages:
 
 <script>
   $.get('<%= version._source.readme %>').done(function(data) {
-  document.getElementById('readme').innerHTML = marked(data)
+      document.getElementById('readme').innerHTML = marked(data)
+
+  });
+  $('#install').each(function(i, block) {
+    hljs.highlightBlock(block);
   });
 </script>

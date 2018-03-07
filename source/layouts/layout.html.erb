@@ -6,13 +6,45 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.css'></link>
+
+    <%= stylesheet_link_tag "main" %>
+    <%= stylesheet_link_tag 'hljs/styles/github' %>
+    <%= javascript_include_tag 'hljs/highlight.pack' %>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-    <%= stylesheet_link_tag "main" %>
+    <script>
+      marked.setOptions({
+        gfm: true, //github-flavored markdown
+        tables: true,
+
+        highlight: function (code) {
+          return hljs.highlightAuto(code).value;
+        }
+      });
+   </script>
+
+
     <%= favicon_tag "#{site_url}/dbt-site/favicon.ico" %>
+
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0;
+        }
+
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+
 
     <title>dbt (data build tool) - Explore Packages</title>
   </head>
