@@ -1,8 +1,10 @@
 require 'open-uri'
 
 ignore 'www.getdbt.com/'
+ignore 'source/img/'
 
 set :js_dir, 'dbt-site/ui/'
+set :images_dir, 'images'
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"

@@ -15,8 +15,7 @@
           <div class="tile-body"
                style="box-shadow: none; overflow: visible">
             <div class="tile-graphic">
-              <img src="<%= package.assets.logo %>"
-                   alt="<%= package.name %>"/>
+              <%= image_tag(package.assets.logo, {alt: package.name}) %>
             </div>
             <div class="tile-text">
               <h1><%= package.name %></h1>

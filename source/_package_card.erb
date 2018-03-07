@@ -1,14 +1,12 @@
-<% latest = package.versions[package.latest] %>
-
 <a href="/<%= package.namespace %>/<%= package.name %>/latest/" class="tile">
   <div class="tile-content">
     <div class="tile-body">
       <div class="tile-graphic">
-         <img src="<%= package.assets.logo %>" alt="<%= package.name %>"/>
+         <%= image_tag(package.assets.logo, {alt: package.name}) %>
       </div>
       <div class="tile-text">
-        <h4 style="color: #3b3f43"><%= package.name %></h4>
-        <p style="color: #767d85"><%= latest.description %></p>
+         <h4 style="color: #3b3f43"><%= package.name %></h4>
+         <p style="color: #767d85"><%= package.description %></p>
       </div>
     </div>
   </div>

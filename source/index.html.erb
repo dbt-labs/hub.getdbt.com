@@ -38,7 +38,9 @@
           <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
             <% data.packages.each do |org, packages| %>
                <% packages.each do |name, package| %>
-                <li><%= link_to(name, "/#{package.namespace}/#{package.name}/latest") %></li>
+                  <li>
+                      <%= link_to(name, "/#{package.namespace}/#{package.name}/latest") %>
+                  </li>
               <% end %>
             <% end %>
           </ul>
