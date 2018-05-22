@@ -104,7 +104,7 @@ helpers do
 
       @app.data.packages.each do |org, org_packages|
           org_packages.each do |name, package|
-              package_map[name] = package
+              package_map["#{package.namespace}/#{name}"] = package
           end
       end
 
