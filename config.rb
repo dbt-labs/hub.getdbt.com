@@ -125,11 +125,14 @@ helpers do
 
 
   def get_packages()
-      packages = build_package(@app.data.packages)
       package_map = {}
 
-      packages.each do |name, package|
-          package_map["#{package.namespace}/#{name}"] = package
+      @app.data.packages.each do |org, packages|
+          packages.each do |package_name, package|
+              entry = package['index'].clone
+              entry['versions'] = package['versions']
+              package_map["#{org}/#{package_name}"] = entry
+          end
       end
 
       package_map

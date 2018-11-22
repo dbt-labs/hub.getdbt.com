@@ -38,7 +38,7 @@
             <% data.packages.each do |org, packages| %>
                <% packages.each do |name, package| %>
                   <li>
-                      <%= link_to(name, "/#{package.namespace}/#{package.name}/latest") %>
+                      <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
                   </li>
               <% end %>
             <% end %>

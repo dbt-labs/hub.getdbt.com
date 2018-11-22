@@ -17,18 +17,9 @@ import requests
 
 """
     TODO:
-        - [?] handle repos with dashes [Don't think i need to?]
-        - [x] can we always use the repo name? Do we need to grab "name" from the dbt_project? [No]
-        - [x] fix sha1
-        - [x] fix published_at
-        - [x] fix packages list
-        - [ ] push changes to github
         - [ ] make a PR if everything checks out
-        - [ ] accept configuration from a file
-        - [ ] moar functions
+        - [ ] clean up the code
 """
-
-ONE_BRANCH_PER_REPO = False
 
 NOW = int(time.time())
 NOW_ISO = datetime.datetime.now(datetime.timezone.utc).astimezone().isoformat()
@@ -41,6 +32,15 @@ dbt.clients.system.make_directory(TMP_DIR)
 
 INDEX_DIR = os.path.join(ROOT_DIR, "data")
 indexed_files = dbt.clients.system.find_matching(INDEX_DIR, ['packages'], '*.json')
+
+config = {}
+with open("config.json", "r") as fh:
+    config = json.loads(fh.read())
+
+TRACKED_REPOS = config['tracked_repos']
+ONE_BRANCH_PER_REPO = config['one_branch_per_repo']
+PUSH_BRANCHES = config['push_branches']
+REMOTE = config['remote']
 
 index = collections.defaultdict(lambda : collections.defaultdict(list))
 for path in indexed_files:
@@ -60,29 +60,8 @@ for path in indexed_files:
         info = {"path": abs_path, "version": version}
         index[org_name][repo_name].append(info)
 
-known_repos = {
-    'fishtown-analytics': [
-        #'adwords',
-        'dbt-utils',
-        'dbt-event-logging',
-        #'bing-ads',
-        #'facebook-ads',
-        #'heap',
-        #'mailchimp',
-        #'outbrain',
-        #'purecloud',
-        #'quickbooks',
-        #'recurly',
-        #'redshift',
-        #'shopify',
-        #'snowplow',
-        #'stripe',
-        #'taboola',
-        #'zendesk',
-    ]
-}
 
-dbt.clients.git.clone_and_checkout(ROOT_DIR, cwd=TMP_DIR, dirname="ROOT")
+dbt.clients.git.clone_and_checkout(REMOTE, cwd=TMP_DIR, dirname="ROOT")
 dbt.clients.system.run_cmd(ROOT_DIR, ['git', 'submodule', 'init'])
 dbt.clients.system.run_cmd(ROOT_DIR, ['git', 'submodule', 'update'])
 
@@ -130,10 +109,11 @@ def make_spec(org, repo, version, git_path):
         }
     }
 
+
 def make_index(org_name, repo, existing, tags):
     description = "dbt models for {}".format(repo)
     assets = {
-        "logo": "logos/placeholder.png".format(repo)
+        "logo": "logos/placeholder.svg".format(repo)
     }
 
     if isinstance(existing, dict):
@@ -163,8 +143,8 @@ def make_index(org_name, repo, existing, tags):
         "assets": assets,
     }
 
-new_branches = []
-for org_name, repos in known_repos.items():
+new_branches = set()
+for org_name, repos in TRACKED_REPOS.items():
     for repo in repos:
         clone_url = 'https://github.com/{}/{}.git'.format(org_name, repo)
         git_path = os.path.join(TMP_DIR, repo)
@@ -197,7 +177,7 @@ for org_name, repos in known_repos.items():
         if 'did not match any file' in err.decode():
             dbt.clients.system.run_cmd(index_path, ['git', 'checkout', '-b', branch_name])
 
-        new_branches.append(branch_name)
+        new_branches.add(branch_name)
         index_file_path = os.path.join(index_path, 'data', 'packages', org_name, repo, 'index.json')
 
         if os.path.exists(index_file_path):
@@ -222,9 +202,6 @@ for org_name, repos in known_repos.items():
             package_spec = make_spec(org_name, repo, tag, git_path)
             dbt.clients.system.write_file(version_path, json.dumps(package_spec, indent=4))
 
-            # - push the changes
-            # - make a PR
-
             msg = "hubcap: Adding tag {} for {}/{}".format(tag, org_name, repo)
             print("      running `git add`")
             res = dbt.clients.system.run_cmd(repo_dir, ['git', 'add', '-A'])
@@ -238,3 +215,16 @@ for org_name, repos in known_repos.items():
         # good house keeping
         dbt.clients.system.run_cmd(index_path, ['git', 'checkout', 'master'])
         print()
+
+# push new branches, if there are any
+print("Push branches? {} - {}".format(PUSH_BRANCHES, new_branches))
+if PUSH_BRANCHES and len(new_branches) > 0:
+    hub_dir = os.path.join(TMP_DIR, "ROOT")
+    dbt.clients.system.run_cmd(hub_dir, ['git', 'remote', 'add', 'hub', REMOTE])
+
+    for branch in new_branches:
+        dbt.clients.system.run_cmd(index_path, ['git', 'checkout', branch])
+        dbt.clients.system.run_cmd(hub_dir, ['git', 'fetch', '--unshallow', 'hub'])
+        res = dbt.clients.system.run_cmd(hub_dir, ['git', 'push', 'hub', branch])
+        print(res[1].decode())
+        # TODO make a PR
