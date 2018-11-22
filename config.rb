@@ -6,8 +6,19 @@ ignore 'source/img'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
+
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
+end
+
+def build_package(org, name)
+    package = @app.data.packages[org][name]
+
+    entry = package['index'].clone
+    versions = package['versions']
+    entry['versions'] = versions
+
+    entry
 end
 
 def combine_packages(packages)
@@ -15,12 +26,16 @@ def combine_packages(packages)
 
   packages.each do |org, org_packages|
       org_packages.each do |name, package|
-          package_map[name] = package
+          entry = build_package(org, name)
+
+          package_map[name] = entry
       end
   end
 
   package_map
 end
+
+package_index = combine_packages(@app.data.packages)
 
 after_configuration do
 
@@ -28,7 +43,7 @@ after_configuration do
         '/api/v1/raw.json',
         :content_type => 'application/json',
         :locals => {
-          :json_data => combine_packages(@app.data.packages)
+          :json_data => package_index
         }
 
   packages = combine_packages(@app.data.packages)
@@ -95,17 +110,26 @@ helpers do
     config[:protocol] + host_with_port
   end
 
-  def get_package(org, package)
-      @app.data.packages[org][package]
+  def build_package(packages, org, name)
+      package = packages[org][name]
+      entry = package['index'].clone
+      versions = package['versions']
+      entry['versions'] = versions
+
+      entry
   end
 
+  def get_package(packages, org, package)
+      build_package(packages, org, package)
+  end
+
+
   def get_packages()
+      packages = build_package(@app.data.packages)
       package_map = {}
 
-      @app.data.packages.each do |org, org_packages|
-          org_packages.each do |name, package|
-              package_map["#{package.namespace}/#{name}"] = package
-          end
+      packages.each do |name, package|
+          package_map["#{package.namespace}/#{name}"] = package
       end
 
       package_map
