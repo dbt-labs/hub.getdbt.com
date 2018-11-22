@@ -2,6 +2,7 @@
 import dbt.clients.git
 import dbt.clients.system
 import dbt.config
+import dbt.exceptions
 
 import collections
 import os
@@ -189,9 +190,12 @@ for org_name, repos in known_repos.items():
         else:
             branch_name = 'bump-{}'.format(NOW)
 
-        print("    Checking out branch {} in meta-index".format(branch_name))
         index_path = os.path.join(TMP_DIR, "ROOT")
-        dbt.clients.system.run_cmd(index_path, ['git', 'checkout', '-b', branch_name])
+        print("    Checking out branch {} in meta-index".format(branch_name))
+
+        out, err = dbt.clients.system.run_cmd(index_path, ['git', 'checkout', branch_name])
+        if 'did not match any file' in err.decode():
+            dbt.clients.system.run_cmd(index_path, ['git', 'checkout', '-b', branch_name])
 
         new_branches.append(branch_name)
         index_file_path = os.path.join(index_path, 'data', 'packages', org_name, repo, 'index.json')
@@ -232,5 +236,5 @@ for org_name, repos in known_repos.items():
                 print("ERROR" + res[1].decode())
 
         # good house keeping
-        dbt.clients.system.run_cmd(index_path, ['git', 'checkout', '-'])
+        dbt.clients.system.run_cmd(index_path, ['git', 'checkout', 'master'])
         print()
