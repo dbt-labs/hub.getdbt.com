@@ -82,6 +82,8 @@ known_repos = {
 }
 
 dbt.clients.git.clone_and_checkout(ROOT_DIR, cwd=TMP_DIR, dirname="ROOT")
+dbt.clients.system.run_cmd(ROOT_DIR, ['git', 'submodule', 'init'])
+dbt.clients.system.run_cmd(ROOT_DIR, ['git', 'submodule', 'update'])
 
 def download(url):
     response = requests.get(url)
