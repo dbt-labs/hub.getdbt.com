@@ -47,18 +47,19 @@ for path in indexed_files:
     abs_path = path['absolute_path']
     filename = os.path.basename(abs_path)
 
+    if filename == 'index.json':
+        continue
+
     pop_1 = os.path.dirname(abs_path)
     pop_2 = os.path.dirname(pop_1)
+    pop_3 = os.path.dirname(pop_2)
 
-    repo_name = os.path.basename(pop_1)
-    org_name = os.path.basename(pop_2)
+    repo_name = os.path.basename(pop_2)
+    org_name = os.path.basename(pop_3)
 
-    if filename == 'index.json':
-        pass
-    else:
-        version = filename[:-5]
-        info = {"path": abs_path, "version": version}
-        index[org_name][repo_name].append(info)
+    version = filename[:-5]
+    info = {"path": abs_path, "version": version}
+    index[org_name][repo_name].append(info)
 
 
 dbt.clients.git.clone_and_checkout(REMOTE, cwd=TMP_DIR, dirname="ROOT")
