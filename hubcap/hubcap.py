@@ -143,7 +143,7 @@ def make_index(org_name, repo, existing, tags):
         "assets": assets,
     }
 
-new_branches = set()
+new_branches = {}
 for org_name, repos in TRACKED_REPOS.items():
     for repo in repos:
         clone_url = 'https://github.com/{}/{}.git'.format(org_name, repo)
@@ -173,11 +173,12 @@ for org_name, repos in TRACKED_REPOS.items():
         index_path = os.path.join(TMP_DIR, "ROOT")
         print("    Checking out branch {} in meta-index".format(branch_name))
 
-        out, err = dbt.clients.system.run_cmd(index_path, ['git', 'checkout', branch_name])
-        if 'did not match any file' in err.decode():
+        try:
+            out, err = dbt.clients.system.run_cmd(index_path, ['git', 'checkout', branch_name])
+        except dbt.exceptions.CommandResultError as e:
             dbt.clients.system.run_cmd(index_path, ['git', 'checkout', '-b', branch_name])
 
-        new_branches.add(branch_name)
+        new_branches[branch_name] = {"org": org_name, "repo": repo}
         index_file_path = os.path.join(index_path, 'data', 'packages', org_name, repo, 'index.json')
 
         if os.path.exists(index_file_path):
@@ -216,15 +217,33 @@ for org_name, repos in TRACKED_REPOS.items():
         dbt.clients.system.run_cmd(index_path, ['git', 'checkout', 'master'])
         print()
 
+def make_pr(ORG, REPO, head):
+    url = 'https://api.github.com/repos/fishtown-analytics/hub.getdbt.com/pulls'
+    body = {
+        "title": "HubCap: Bump {}/{}".format(ORG, REPO),
+        "head": head,
+        "base": "master",
+        "body": "Auto-bumping from new release at https://github.com/{}/{}/releases".format(ORG, REPO),
+        "maintainer_can_modify": True
+    }
+    body = json.dumps(body)
+
+    user = config['user']['name']
+    token = config['user']['token']
+    req = requests.post(url, data=body, headers={'Content-Type': 'application/json'}, auth=(user, token))
+
 # push new branches, if there are any
-print("Push branches? {} - {}".format(PUSH_BRANCHES, new_branches))
+print("Push branches? {} - {}".format(PUSH_BRANCHES, list(new_branches.keys())))
 if PUSH_BRANCHES and len(new_branches) > 0:
     hub_dir = os.path.join(TMP_DIR, "ROOT")
     dbt.clients.system.run_cmd(hub_dir, ['git', 'remote', 'add', 'hub', REMOTE])
 
-    for branch in new_branches:
+    for branch, info in new_branches.items():
         dbt.clients.system.run_cmd(index_path, ['git', 'checkout', branch])
-        dbt.clients.system.run_cmd(hub_dir, ['git', 'fetch', '--unshallow', 'hub'])
+        try:
+            dbt.clients.system.run_cmd(hub_dir, ['git', 'fetch', '--unshallow', 'hub'])
+        except dbt.exceptions.CommandResultError as e:
+            print(e.stderr.decode())
         res = dbt.clients.system.run_cmd(hub_dir, ['git', 'push', 'hub', branch])
         print(res[1].decode())
-        # TODO make a PR
+        make_pr(info['org'], info['repo'], branch)
