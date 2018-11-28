@@ -146,76 +146,86 @@ def make_index(org_name, repo, existing, tags):
 new_branches = {}
 for org_name, repos in TRACKED_REPOS.items():
     for repo in repos:
-        clone_url = 'https://github.com/{}/{}.git'.format(org_name, repo)
-        git_path = os.path.join(TMP_DIR, repo)
-
-        print("Cloning repo {}".format(clone_url))
-        dbt.clients.git.clone_and_checkout(clone_url, cwd=TMP_DIR, dirname=repo)
-
-        tags = dbt.clients.git.list_tags(git_path)
-
-        existing_tags = [i['version'] for i in index[org_name][repo]]
-        print("  Found Tags: {}".format(sorted(tags)))
-        print("  Existing Tags: {}".format(sorted(existing_tags)))
-
-        new_tags = set(tags) - set(existing_tags)
-
-        if len(new_tags) == 0:
-            print("    No tags to add. Skipping")
-            continue
-
-        # check out a new branch for the changes
-        if ONE_BRANCH_PER_REPO:
-            branch_name = 'bump-{}-{}-{}'.format(org_name, repo, NOW)
-        else:
-            branch_name = 'bump-{}'.format(NOW)
-
-        index_path = os.path.join(TMP_DIR, "ROOT")
-        print("    Checking out branch {} in meta-index".format(branch_name))
-
         try:
-            out, err = dbt.clients.system.run_cmd(index_path, ['git', 'checkout', branch_name])
-        except dbt.exceptions.CommandResultError as e:
-            dbt.clients.system.run_cmd(index_path, ['git', 'checkout', '-b', branch_name])
+            clone_url = 'https://github.com/{}/{}.git'.format(org_name, repo)
+            git_path = os.path.join(TMP_DIR, repo)
 
-        new_branches[branch_name] = {"org": org_name, "repo": repo}
-        index_file_path = os.path.join(index_path, 'data', 'packages', org_name, repo, 'index.json')
+            print("Cloning repo {}".format(clone_url))
+            dbt.clients.git.clone_and_checkout(clone_url, cwd=TMP_DIR, dirname=repo)
 
-        if os.path.exists(index_file_path):
-            existing_index_file_contents = dbt.clients.system.load_file_contents(index_file_path)
+            tags = dbt.clients.git.list_tags(git_path)
+
+            existing_tags = [i['version'] for i in index[org_name][repo]]
+            print("  Found Tags: {}".format(sorted(tags)))
+            print("  Existing Tags: {}".format(sorted(existing_tags)))
+
+            new_tags = set(tags) - set(existing_tags)
+
+            if len(new_tags) == 0:
+                print("    No tags to add. Skipping")
+                continue
+
+            # check out a new branch for the changes
+            if ONE_BRANCH_PER_REPO:
+                branch_name = 'bump-{}-{}-{}'.format(org_name, repo, NOW)
+            else:
+                branch_name = 'bump-{}'.format(NOW)
+
+            index_path = os.path.join(TMP_DIR, "ROOT")
+            print("    Checking out branch {} in meta-index".format(branch_name))
+
             try:
-                existing_index_file = json.loads(existing_index_file_contents)
-            except:
-                existing_index_file = []
-        else:
-            existing_index_file = {}
+                out, err = dbt.clients.system.run_cmd(index_path, ['git', 'checkout', branch_name])
+            except dbt.exceptions.CommandResultError as e:
+                dbt.clients.system.run_cmd(index_path, ['git', 'checkout', '-b', branch_name])
 
-        new_index_entry = make_index(org_name, repo, existing_index_file, set(tags) | set(existing_tags))
-        repo_dir = os.path.join(index_path, 'data', 'packages', org_name, repo, 'versions')
-        dbt.clients.system.make_directory(repo_dir)
-        dbt.clients.system.write_file(index_file_path, json.dumps(new_index_entry, indent=4))
+            new_branches[branch_name] = {"org": org_name, "repo": repo}
+            index_file_path = os.path.join(index_path, 'data', 'packages', org_name, repo, 'index.json')
 
-        for i, tag in enumerate(sorted(new_tags)):
-            print("    Adding tag: {}".format(tag))
+            if os.path.exists(index_file_path):
+                existing_index_file_contents = dbt.clients.system.load_file_contents(index_file_path)
+                try:
+                    existing_index_file = json.loads(existing_index_file_contents)
+                except:
+                    existing_index_file = []
+            else:
+                existing_index_file = {}
 
-            version_path = os.path.join(repo_dir, "{}.json".format(tag))
+            new_index_entry = make_index(org_name, repo, existing_index_file, set(tags) | set(existing_tags))
+            repo_dir = os.path.join(index_path, 'data', 'packages', org_name, repo, 'versions')
+            dbt.clients.system.make_directory(repo_dir)
+            dbt.clients.system.write_file(index_file_path, json.dumps(new_index_entry, indent=4))
 
-            package_spec = make_spec(org_name, repo, tag, git_path)
-            dbt.clients.system.write_file(version_path, json.dumps(package_spec, indent=4))
+            for i, tag in enumerate(sorted(new_tags)):
+                print("    Adding tag: {}".format(tag))
 
-            msg = "hubcap: Adding tag {} for {}/{}".format(tag, org_name, repo)
-            print("      running `git add`")
-            res = dbt.clients.system.run_cmd(repo_dir, ['git', 'add', '-A'])
-            if len(res[1]):
-                print("ERROR" + res[1].decode())
-            print("      running `git commit`")
-            res = dbt.clients.system.run_cmd(repo_dir, ['git', 'commit', '-am', '{}'.format(msg)])
-            if len(res[1]):
-                print("ERROR" + res[1].decode())
+                version_path = os.path.join(repo_dir, "{}.json".format(tag))
 
-        # good house keeping
-        dbt.clients.system.run_cmd(index_path, ['git', 'checkout', 'master'])
-        print()
+                package_spec = make_spec(org_name, repo, tag, git_path)
+                dbt.clients.system.write_file(version_path, json.dumps(package_spec, indent=4))
+
+                msg = "hubcap: Adding tag {} for {}/{}".format(tag, org_name, repo)
+                print("      running `git add`")
+                res = dbt.clients.system.run_cmd(repo_dir, ['git', 'add', '-A'])
+                if len(res[1]):
+                    print("ERROR" + res[1].decode())
+                print("      running `git commit`")
+                res = dbt.clients.system.run_cmd(repo_dir, ['git', 'commit', '-am', '{}'.format(msg)])
+                if len(res[1]):
+                    print("ERROR" + res[1].decode())
+
+            # good house keeping
+            dbt.clients.system.run_cmd(index_path, ['git', 'checkout', 'master'])
+            print()
+
+        except dbt.exceptions.SemverException as e:
+            print("Semver exception. Skipping\n  {}".format(e))
+
+        except Exception as e:
+            print("Unhandled exception. Skipping\n  {}".format(e))
+
+        except RuntimeError as e:
+            print("Unhandled exception. Skipping\n  {}".format(e))
 
 def make_pr(ORG, REPO, head):
     url = 'https://api.github.com/repos/fishtown-analytics/hub.getdbt.com/pulls'
