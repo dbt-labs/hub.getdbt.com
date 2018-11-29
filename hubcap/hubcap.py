@@ -247,14 +247,20 @@ def make_pr(ORG, REPO, head):
 print("Push branches? {} - {}".format(PUSH_BRANCHES, list(new_branches.keys())))
 if PUSH_BRANCHES and len(new_branches) > 0:
     hub_dir = os.path.join(TMP_DIR, "ROOT")
-    dbt.clients.system.run_cmd(hub_dir, ['git', 'remote', 'add', 'hub', REMOTE])
+    try:
+        dbt.clients.system.run_cmd(hub_dir, ['git', 'remote', 'add', 'hub', REMOTE])
+    except dbt.exceptions.CommandResultError:
+        print(e.stderr.decode())
 
     for branch, info in new_branches.items():
-        dbt.clients.system.run_cmd(index_path, ['git', 'checkout', branch])
         try:
-            dbt.clients.system.run_cmd(hub_dir, ['git', 'fetch', '--unshallow', 'hub'])
-        except dbt.exceptions.CommandResultError as e:
-            print(e.stderr.decode())
-        res = dbt.clients.system.run_cmd(hub_dir, ['git', 'push', 'hub', branch])
-        print(res[1].decode())
-        make_pr(info['org'], info['repo'], branch)
+            dbt.clients.system.run_cmd(index_path, ['git', 'checkout', branch])
+            try:
+                dbt.clients.system.run_cmd(hub_dir, ['git', 'fetch', '--unshallow', 'hub'])
+            except dbt.exceptions.CommandResultError as e:
+                print(e.stderr.decode())
+            res = dbt.clients.system.run_cmd(hub_dir, ['git', 'push', 'hub', branch])
+            print(res[1].decode())
+            make_pr(info['org'], info['repo'], branch)
+        except Exception as e:
+            print(e)
