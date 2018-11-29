@@ -62,7 +62,12 @@ for path in indexed_files:
     index[org_name][repo_name].append(info)
 
 
-dbt.clients.git.clone_and_checkout(REMOTE, cwd=TMP_DIR, dirname="ROOT")
+try:
+    dbt.clients.git.clone_and_checkout(REMOTE, cwd=TMP_DIR, dirname="ROOT")
+except dbt.exception.CommandResultError as e:
+    print(e.stderr.decode())
+    raise
+
 dbt.clients.system.run_cmd(ROOT_DIR, ['git', 'submodule', 'init'])
 dbt.clients.system.run_cmd(ROOT_DIR, ['git', 'submodule', 'update'])
 
