@@ -254,7 +254,7 @@ if PUSH_BRANCHES and len(new_branches) > 0:
     hub_dir = os.path.join(TMP_DIR, "ROOT")
     try:
         dbt.clients.system.run_cmd(hub_dir, ['git', 'remote', 'add', 'hub', REMOTE])
-    except dbt.exceptions.CommandResultError:
+    except dbt.exceptions.CommandResultError as e:
         print(e.stderr.decode())
 
     for branch, info in new_branches.items():
