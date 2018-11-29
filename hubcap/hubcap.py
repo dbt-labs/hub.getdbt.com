@@ -248,6 +248,22 @@ def make_pr(ORG, REPO, head):
     token = config['user']['token']
     req = requests.post(url, data=body, headers={'Content-Type': 'application/json'}, auth=(user, token))
 
+def get_open_prs():
+    url = 'https://api.github.com/repos/fishtown-analytics/hub.getdbt.com/pulls?state=open'
+
+    user = config['user']['name']
+    token = config['user']['token']
+    req = requests.get(url, auth=(user, token))
+    return req.json()
+
+def is_open_pr(prs, ORG, REPO):
+    for pr in prs:
+        value = '{}/{}'.format(ORG, REPO)
+        if value in pr['title']:
+            return True
+
+    return False
+
 # push new branches, if there are any
 print("Push branches? {} - {}".format(PUSH_BRANCHES, list(new_branches.keys())))
 if PUSH_BRANCHES and len(new_branches) > 0:
@@ -257,7 +273,14 @@ if PUSH_BRANCHES and len(new_branches) > 0:
     except dbt.exceptions.CommandResultError as e:
         print(e.stderr.decode())
 
+    open_prs = get_open_prs()
+
     for branch, info in new_branches.items():
+        # don't open a PR if one is already open
+        if is_open_pr(open_prs, info['org'], info['repo']):
+            print("PR is already open. Skipping.")
+            continue
+
         try:
             dbt.clients.system.run_cmd(index_path, ['git', 'checkout', branch])
             try:
