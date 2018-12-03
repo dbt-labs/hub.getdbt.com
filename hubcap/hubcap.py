@@ -30,9 +30,6 @@ ROOT_DIR = os.path.dirname(CWD)
 TMP_DIR = os.path.join(CWD, "git-tmp")
 dbt.clients.system.make_directory(TMP_DIR)
 
-INDEX_DIR = os.path.join(ROOT_DIR, "data")
-indexed_files = dbt.clients.system.find_matching(INDEX_DIR, ['packages'], '*.json')
-
 config = {}
 with open("config.json", "r") as fh:
     config = json.loads(fh.read())
@@ -41,6 +38,24 @@ TRACKED_REPOS = config['tracked_repos']
 ONE_BRANCH_PER_REPO = config['one_branch_per_repo']
 PUSH_BRANCHES = config['push_branches']
 REMOTE = config['remote']
+
+git_root_dir = os.path.join(TMP_DIR, "ROOT")
+
+try:
+    dbt.clients.git.clone_and_checkout(REMOTE, cwd=TMP_DIR, dirname="ROOT")
+    print("Updating root repo")
+    dbt.clients.system.run_cmd(git_root_dir, ['git', 'checkout', 'master'])
+    dbt.clients.system.run_cmd(git_root_dir, ['git', 'pull', 'origin', 'master'])
+except dbt.exceptions.CommandResultError as e:
+    print(e.stderr.decode())
+    raise
+
+dbt.clients.system.run_cmd(ROOT_DIR, ['git', 'submodule', 'init'])
+dbt.clients.system.run_cmd(ROOT_DIR, ['git', 'submodule', 'update'])
+
+
+INDEX_DIR = os.path.join(git_root_dir, "data")
+indexed_files = dbt.clients.system.find_matching(INDEX_DIR, ['packages'], '*.json')
 
 index = collections.defaultdict(lambda : collections.defaultdict(list))
 for path in indexed_files:
@@ -61,15 +76,6 @@ for path in indexed_files:
     info = {"path": abs_path, "version": version}
     index[org_name][repo_name].append(info)
 
-
-try:
-    dbt.clients.git.clone_and_checkout(REMOTE, cwd=TMP_DIR, dirname="ROOT")
-except dbt.exception.CommandResultError as e:
-    print(e.stderr.decode())
-    raise
-
-dbt.clients.system.run_cmd(ROOT_DIR, ['git', 'submodule', 'init'])
-dbt.clients.system.run_cmd(ROOT_DIR, ['git', 'submodule', 'update'])
 
 def download(url):
     response = requests.get(url)
@@ -159,6 +165,7 @@ for org_name, repos in TRACKED_REPOS.items():
             print("Cloning repo {}".format(clone_url))
             dbt.clients.git.clone_and_checkout(clone_url, cwd=TMP_DIR, dirname=repo)
 
+            dbt.clients.system.run_cmd(git_path, ['git', 'fetch', '-t'])
             tags = dbt.clients.git.list_tags(git_path)
 
             existing_tags = [i['version'] for i in index[org_name][repo]]
@@ -278,7 +285,7 @@ if PUSH_BRANCHES and len(new_branches) > 0:
     for branch, info in new_branches.items():
         # don't open a PR if one is already open
         if is_open_pr(open_prs, info['org'], info['repo']):
-            print("PR is already open. Skipping.")
+            print("PR is already open for {}/{}. Skipping.".format(info['org'], info['repo']))
             continue
 
         try:
@@ -287,6 +294,8 @@ if PUSH_BRANCHES and len(new_branches) > 0:
                 dbt.clients.system.run_cmd(hub_dir, ['git', 'fetch', '--unshallow', 'hub'])
             except dbt.exceptions.CommandResultError as e:
                 print(e.stderr.decode())
+
+            print("Pushing and PRing for {}/{}".format(info['org'], info['repo']))
             res = dbt.clients.system.run_cmd(hub_dir, ['git', 'push', 'hub', branch])
             print(res[1].decode())
             make_pr(info['org'], info['repo'], branch)
