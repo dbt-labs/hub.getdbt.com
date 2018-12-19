@@ -12,8 +12,7 @@
       <div class="row">
         <h2>Packages by <%= author %></h2>
         <div class="tiles">
-          <% packages = get_packages() %>
-          <% packages.each do |name, package| %>
+          <% config[:package_index].each do |name, package| %>
           <% if package.namespace == author %>
           <%= partial "package_card", :locals => { :package => package } %>
           <% end %>

@@ -20,9 +20,11 @@
           </div>
       </div>
       <div class="tiles">
-        <% data.featured.each do |pkg| %>
-        <% package = get_package(data.packages, pkg['org'], pkg['package']) %>
-        <%= partial "package_card", :locals => { :package => package } %>
+        <% data.featured.each do |feat| %>
+            <% org = feat['org'] %>
+            <% pkg = feat['package'] %>
+            <% package = config[:package_index][pkg] %>
+            <%= partial "package_card", :locals => { :package => package } %>
         <% end %>
       </div>
       <hr/>
