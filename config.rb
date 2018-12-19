@@ -11,22 +11,34 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-def build_package(org, name)
-    package = @app.data.packages[org][name]
+def strip_leading_v(version)
+    if version.start_with?("v")
+      version[1..-1]
+    else
+      version
+    end
+end
 
+def _build_package(package, org, name)
     entry = package['index'].clone
     versions = package['versions']
-    entry['versions'] = versions
 
+    new_versions = {}
+    versions.each do |version_num, version_data|
+        version_num = strip_leading_v(version_num)
+        version_data['version'] = strip_leading_v(version_data['version'])
+
+        new_versions[version_num] = version_data
+    end
+    entry['versions'] = new_versions
     entry
 end
 
 def combine_packages(packages)
   package_map = {}
-
   packages.each do |org, org_packages|
       org_packages.each do |name, package|
-          entry = build_package(org, name)
+          entry = _build_package(package, org, name)
 
           package_map[name] = entry
       end
@@ -35,7 +47,7 @@ def combine_packages(packages)
   package_map
 end
 
-package_index = combine_packages(@app.data.packages)
+set :package_index, combine_packages(@app.data.packages)
 
 after_configuration do
 
@@ -43,7 +55,7 @@ after_configuration do
         '/api/v1/raw.json',
         :content_type => 'application/json',
         :locals => {
-          :json_data => package_index
+          :json_data => @package_index
         }
 
   packages = combine_packages(@app.data.packages)
@@ -108,34 +120,6 @@ helpers do
 
   def site_url
     config[:protocol] + host_with_port
-  end
-
-  def build_package(packages, org, name)
-      package = packages[org][name]
-      entry = package['index'].clone
-      versions = package['versions']
-      entry['versions'] = versions
-
-      entry
-  end
-
-  def get_package(packages, org, package)
-      build_package(packages, org, package)
-  end
-
-
-  def get_packages()
-      package_map = {}
-
-      @app.data.packages.each do |org, packages|
-          packages.each do |package_name, package|
-              entry = package['index'].clone
-              entry['versions'] = package['versions']
-              package_map["#{org}/#{package_name}"] = entry
-          end
-      end
-
-      package_map
   end
 end
 
