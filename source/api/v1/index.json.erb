@@ -1,1 +1,1 @@
-<%= get_packages().keys.to_json %>
+<%= config[:package_index].map{ |name,package| package.namespace + "/" + package.name }.to_json %>
