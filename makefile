@@ -4,3 +4,7 @@ serve:
 
 install:
 	bundle install
+
+deploy:
+	bundle install
+	bundle exec middleman build
