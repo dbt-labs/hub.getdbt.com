@@ -170,7 +170,10 @@ for org_name, repos in TRACKED_REPOS.items():
             dbt.clients.system.run_cmd(git_path, ['git', 'fetch', '-t'])
             tags = dbt.clients.git.list_tags(git_path)
 
-            existing_tags = [i['version'] for i in index[org_name][repo]]
+            project = get_project(git_path)
+            package_name = project.project_name
+
+            existing_tags = [i['version'] for i in index[org_name][package_name]]
             print("  Found Tags: {}".format(sorted(tags)))
             print("  Existing Tags: {}".format(sorted(existing_tags)))
 
@@ -194,9 +197,7 @@ for org_name, repos in TRACKED_REPOS.items():
             except dbt.exceptions.CommandResultError as e:
                 dbt.clients.system.run_cmd(index_path, ['git', 'checkout', '-b', branch_name])
 
-            project = get_project(git_path)
-            package_name = project.project_name
-            new_branches[branch_name] = {"org": org_name, "repo": repo}
+            new_branches[branch_name] = {"org": org_name, "repo": package_name}
             index_file_path = os.path.join(index_path, 'data', 'packages', org_name, package_name, 'index.json')
 
             if os.path.exists(index_file_path):
