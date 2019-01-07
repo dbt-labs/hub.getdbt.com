@@ -39,9 +39,11 @@
           <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
             <% data.packages.each do |org, packages| %>
                <% packages.each do |name, package| %>
-                  <li>
-                      <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
-                  </li>
+                  <% if not data.blacklist.include?(name) %>
+                      <li>
+                          <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
+                      </li>
+                  <% end %>
               <% end %>
             <% end %>
           </ul>
