@@ -15,12 +15,6 @@ import hashlib
 import requests
 
 
-"""
-    TODO:
-        - [ ] make a PR if everything checks out
-        - [ ] clean up the code
-"""
-
 NOW = int(time.time())
 NOW_ISO = datetime.datetime.now(datetime.timezone.utc).astimezone().isoformat()
 
@@ -74,7 +68,9 @@ for path in indexed_files:
 
     version = filename[:-5]
     info = {"path": abs_path, "version": version}
-    index[org_name][repo_name].append(info)
+
+    if not config.get('refresh', False):
+        index[org_name][repo_name].append(info)
 
 
 def download(url):
@@ -95,16 +91,20 @@ def get_sha1(url):
     print("      SHA1: {}".format(digest))
     return digest
 
+def get_project(git_path):
+    return dbt.config.Project.from_project_root(git_path, {})
+
 def make_spec(org, repo, version, git_path):
     tarball_url = "https://github.com/{}/{}/archive/{}.tar.gz".format(org, repo, version)
     sha1 = get_sha1(tarball_url)
 
-    project = dbt.config.Project.from_project_root(git_path, {})
+    project = get_project(git_path)
     packages = project.packages.packages
+    package_name = project.project_name
 
     return {
-        "id": "{}/{}/{}".format(org, repo, version),
-        "name": repo,
+        "id": "{}/{}/{}".format(org, package_name, version),
+        "name": package_name,
         "version": version,
         "published_at": NOW_ISO,
         "packages": packages,
@@ -122,7 +122,7 @@ def make_spec(org, repo, version, git_path):
     }
 
 
-def make_index(org_name, repo, existing, tags):
+def make_index(org_name, repo, existing, tags, git_path):
     description = "dbt models for {}".format(repo)
     assets = {
         "logo": "logos/placeholder.svg".format(repo)
@@ -147,8 +147,10 @@ def make_index(org_name, repo, existing, tags):
         if version_tag > latest and not version_tag.prerelease:
             latest = version_tag
 
+    project = get_project(git_path)
+    package_name = project.project_name
     return {
-        "name": repo,
+        "name": package_name,
         "namespace": org_name,
         "description": description,
         "latest": latest.to_version_string().replace("=", ""), # LOL
@@ -192,8 +194,10 @@ for org_name, repos in TRACKED_REPOS.items():
             except dbt.exceptions.CommandResultError as e:
                 dbt.clients.system.run_cmd(index_path, ['git', 'checkout', '-b', branch_name])
 
+            project = get_project(git_path)
+            package_name = project.project_name
             new_branches[branch_name] = {"org": org_name, "repo": repo}
-            index_file_path = os.path.join(index_path, 'data', 'packages', org_name, repo, 'index.json')
+            index_file_path = os.path.join(index_path, 'data', 'packages', org_name, package_name, 'index.json')
 
             if os.path.exists(index_file_path):
                 existing_index_file_contents = dbt.clients.system.load_file_contents(index_file_path)
@@ -204,8 +208,8 @@ for org_name, repos in TRACKED_REPOS.items():
             else:
                 existing_index_file = {}
 
-            new_index_entry = make_index(org_name, repo, existing_index_file, set(tags) | set(existing_tags))
-            repo_dir = os.path.join(index_path, 'data', 'packages', org_name, repo, 'versions')
+            new_index_entry = make_index(org_name, repo, existing_index_file, set(tags) | set(existing_tags), git_path)
+            repo_dir = os.path.join(index_path, 'data', 'packages', org_name, package_name, 'versions')
             dbt.clients.system.make_directory(repo_dir)
             dbt.clients.system.write_file(index_file_path, json.dumps(new_index_entry, indent=4))
 
