@@ -95,7 +95,7 @@ def get_project(git_path):
     return dbt.config.Project.from_project_root(git_path, {})
 
 def make_spec(org, repo, version, git_path):
-    tarball_url = "https://github.com/{}/{}/archive/{}.tar.gz".format(org, repo, version)
+    tarball_url = "https://codeload.github.com/{}/{}/tar.gz/{}".format(org, repo, version)
     sha1 = get_sha1(tarball_url)
 
     project = get_project(git_path)
