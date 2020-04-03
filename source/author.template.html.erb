@@ -1,0 +1,24 @@
+<header class="header">
+  <%= partial "nav" %>
+
+  <section class="section orange iso section-slim" style="padding-bottom:66px;">
+    <div class="section-content navigation"></div>
+  </section>
+</header>
+
+<main class="main">
+  <section class="section silver offset">
+    <div class="section-content">
+      <div class="row">
+        <h2>Packages by <%= author %></h2>
+        <div class="tiles">
+          <% config[:package_index].each do |name, package| %>
+          <% if package.namespace == author %>
+          <%= partial "package_card", :locals => { :package => package } %>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,1 @@
+<%= config[:package_index].map{ |name,package| [name,package.versions.keys] }.to_h.to_json %>

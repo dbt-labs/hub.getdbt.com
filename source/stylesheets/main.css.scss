@@ -1,0 +1,23 @@
+---
+# The main stylesheet
+---
+
+$readme: false;
+
+@charset "utf-8";
+@import "../_sass/effects/effects";
+@import "../_sass/bootstrap/variables";
+@import "../_sass/bootstrap/bootstrap-sass/bootstrap";
+
+@import "../_sass/functions/functions";
+@import "../_sass/fonts/fonts";
+@import "../_sass/base/base";
+@import "../_sass/widgets/widgets";
+@import "../_sass/components/components";
+@import "../_sass/layout/layout";
+@import "../_sass/custom/custom";
+
+pre {
+    background-color: #f6f8fa;
+    color: #24292e;
+}
