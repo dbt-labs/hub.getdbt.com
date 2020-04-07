@@ -28,7 +28,7 @@ config = {}
 with open("config.json", "r") as fh:
     config = json.loads(fh.read())
 
-with open("packages.json", "r") as fh:
+with open("../hub.json", "r") as fh:
     tracked = json.loads(fh.read())
     config['tracked_repos'] = tracked
 
