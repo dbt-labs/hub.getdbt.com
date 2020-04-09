@@ -28,6 +28,10 @@ config = {}
 with open("config.json", "r") as fh:
     config = json.loads(fh.read())
 
+with open("../hub.json", "r") as fh:
+    tracked = json.loads(fh.read())
+    config['tracked_repos'] = tracked
+
 TRACKED_REPOS = config['tracked_repos']
 ONE_BRANCH_PER_REPO = config['one_branch_per_repo']
 PUSH_BRANCHES = config['push_branches']
