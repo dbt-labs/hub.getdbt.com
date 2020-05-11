@@ -142,8 +142,11 @@ def make_index(org_name, repo, existing, tags, git_path):
         if tag.startswith('v'):
             tag = tag[1:]
 
-        version_tag = dbt.semver.VersionSpecifier.from_version_string(tag)
-        version_tags.append(version_tag)
+        try:
+            version_tag = dbt.semver.VersionSpecifier.from_version_string(tag)
+            version_tags.append(version_tag)
+        except dbt.exceptions.SemverException as e:
+            print("Semver exception for {}. Skipping\n  {}".format(repo, e))
 
     # find latest tag which is not a prerelease
     latest = version_tags[0]
@@ -220,6 +223,16 @@ for org_name, repos in TRACKED_REPOS.items():
 
             for i, tag in enumerate(sorted(new_tags)):
                 print("    Adding tag: {}".format(tag))
+
+                import dbt.semver
+                try:
+                    raw_tag = tag
+                    if raw_tag.startswith('v'):
+                        raw_tag = tag[1:]
+                    dbt.semver.VersionSpecifier.from_version_string(raw_tag)
+                except dbt.exceptions.SemverException:
+                    print("Not semver {}. Skipping".format(raw_tag))
+                    continue
 
                 version_path = os.path.join(repo_dir, "{}.json".format(tag))
 
