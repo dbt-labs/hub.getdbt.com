@@ -6,6 +6,16 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+    <% if is_hidden(package, version) %>
+      <!--
+        Version: <%= version['version'] %>
+        Latest: <%= package.latest %>
+        Is blacklisted?: <%= data.blacklist.include?(package.name) %>
+      -->
+      <meta name="robots" content="noindex">
+    <% end %>
+
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.css'></link>
 
     <%= stylesheet_link_tag "main" %>
