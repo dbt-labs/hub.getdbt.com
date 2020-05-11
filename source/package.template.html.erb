@@ -1,6 +1,5 @@
 <header class="header">
   <%= partial "nav" %>
-
   <section class="section orange iso section-slim" style="padding-bottom:66px;">
     <div class="section-content navigation" style="z-index: -1000"></div>
   </section>
@@ -9,6 +8,15 @@
 <main class="main">
   <section class="section white section-slim">
     <div class="section-content">
+
+      <% if is_hidden(package, version) %>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <%= partial "hidden" %>
+        </div>
+      </div>
+      <% end %>
+
       <div class="row">
 
         <div class="col-md-8">

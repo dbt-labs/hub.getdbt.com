@@ -121,6 +121,10 @@ helpers do
   def site_url
     config[:protocol] + host_with_port
   end
+
+  def is_hidden(package, version)
+    version['version'] != package.latest or @app.data.blacklist.include?(package.name)
+  end
 end
 
 ignore '/package.template.html.erb'
