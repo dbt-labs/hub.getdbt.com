@@ -136,6 +136,6 @@ activate :livereload
 
 configure :development do
   set :host, '127.0.0.1'
-  set :port, Middleman::LiveReloadExtension.config.port
+  set :port, 35729
   set :protocol, 'http://'
 end
