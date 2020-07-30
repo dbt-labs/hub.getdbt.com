@@ -34,21 +34,24 @@
         </div>
       </div>
       <br/>
-      <div class="row">
-        <div class="col-md-12">
-          <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
-            <% data.packages.each do |org, packages| %>
-               <% packages.each do |name, package| %>
-                  <% if not data.blocklist.include?(name) %>
-                      <li>
-                          <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
-                      </li>
-                  <% end %>
-              <% end %>
-            <% end %>
-          </ul>
+      <% orgs = data.packages.to_hash.keys.sort_by {|k,v| k.downcase} %>
+      <% orgs.each do |org| %>
+        <div class="row" style="margin-top: 40px">
+          <div class="col-md-12">
+            <h4><%= org %></h4>
+            <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
+                 <% packages = data.packages[org] %>
+                 <% packages.each do |name, package| %>
+                    <% if not data.blocklist.include?(name) %>
+                        <li>
+                            <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
+                        </li>
+                    <% end %>
+                <% end %>
+            </ul>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </section>
 </main>
