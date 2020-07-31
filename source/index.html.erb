@@ -42,7 +42,7 @@
             <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
                  <% packages = data.packages[org] %>
                  <% packages.each do |name, package| %>
-                    <% if not data.blocklist.include?(package) %>
+                    <% if not data.blocklist.include?(org + "/" + name) %>
                         <li>
                             <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
                         </li>
