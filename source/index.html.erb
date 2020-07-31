@@ -40,7 +40,7 @@
           <div class="col-md-12">
             <h4><%= org %></h4>
             <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
-                 <% packages = data.packages[org].sort_by {name.downcase} %>
+                 <% packages = data.packages[org].sort_by {|name, package| name.downcase} %>
                  <% packages.each do |name, package| %>
                     <% if not data.blocklist.include?(name) %>
                         <li>
