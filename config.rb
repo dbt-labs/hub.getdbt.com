@@ -40,7 +40,8 @@ def combine_packages(packages)
       org_packages.each do |name, package|
           entry = _build_package(package, org, name)
 
-          package_map[name] = entry
+          qualified_name = "#{org}/#{name}"
+          package_map[qualified_name] = entry
       end
   end
 
@@ -60,8 +61,7 @@ after_configuration do
 
   packages = combine_packages(@app.data.packages)
   packages.each do |package_name, package|
-      name = "#{package['namespace']}/#{package_name}"
-      proxy "/#{name}/latest/index.html",
+      proxy "/#{package_name}/latest/index.html",
             '/package.template.html',
             :content_type => 'text/html',
             :layout => 'layout',
@@ -78,7 +78,7 @@ after_configuration do
               :author => package.namespace
             }
 
-      proxy "/api/v1/#{name}.json",
+      proxy "/api/v1/#{package_name}.json",
             '/api/v1/package.template.json',
             :content_type => 'application/json',
             :locals => {
@@ -86,7 +86,7 @@ after_configuration do
             }
 
       package.versions.each do |version, package_version|
-        proxy "#{name}/#{version}/index.html",
+        proxy "#{package_name}/#{version}/index.html",
               "/package.template.html",
               :layout => "layout",
               :content_type => 'text/html',
@@ -95,7 +95,7 @@ after_configuration do
                 :version => package_version
               }
 
-        proxy "/api/v1/#{name}/#{version}.json",
+        proxy "/api/v1/#{package_name}/#{version}.json",
               '/api/v1/raw.json',
               :content_type => 'application/json',
               :locals => {

@@ -23,7 +23,8 @@
         <% data.featured.each do |feat| %>
             <% org = feat['org'] %>
             <% pkg = feat['package'] %>
-            <% package = config[:package_index][pkg] %>
+            <% name = "#{org}/#{pkg}" %>
+            <% package = config[:package_index][name] %>
             <%= partial "package_card", :locals => { :package => package } %>
         <% end %>
       </div>
