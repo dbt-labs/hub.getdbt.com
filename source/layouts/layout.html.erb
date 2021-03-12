@@ -6,11 +6,14 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <% if defined?(package) and defined?(version) %>
+    <base href="<%= version._source.readme %>" target="_blank">
+    <% end %>
 
     <% if defined?(package) and defined?(version) and is_hidden(package, version) %>
       <!--
         Version: <%= version['version'] %>
-        Latest: <%= package.latest %>
+        Latest: <%= package.versions[package.latest].description %>
         Is blocklisted?: <%= data.blocklist.include?(package.namespace + "/" + package.name) %>
       -->
       <meta name="robots" content="noindex">
