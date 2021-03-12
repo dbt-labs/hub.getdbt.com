@@ -85,7 +85,7 @@ packages:
       <hr>
       <div class="row">
         <div class="col-md-12">
-          <base href="<%= package.versions[package.latest]._source.url %>"
+          <base href="<%= package.versions[package.latest]._source.readme.delete_suffix('/README.md') %>"
                 target="_blank">
           <article id="readme" class='markdown-body'>
             <div class="loading">
