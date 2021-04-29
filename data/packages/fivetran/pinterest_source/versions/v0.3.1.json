@@ -1,0 +1,38 @@
+{
+    "id": "fivetran/pinterest_source/v0.3.1",
+    "name": "pinterest_source",
+    "version": "v0.3.1",
+    "published_at": "2021-04-29T18:02:32.099030+00:00",
+    "packages": [
+        {
+            "package": "fishtown-analytics/dbt_utils",
+            "version": [
+                ">=0.6.0",
+                "<0.7.0"
+            ]
+        },
+        {
+            "git": "https://github.com/fivetran/dbt_fivetran_utils.git",
+            "revision": null,
+            "warn-unpinned": false
+        },
+        {
+            "package": "fishtown-analytics/spark_utils",
+            "version": [
+                ">=0.2.0",
+                "<0.3.0"
+            ]
+        }
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_pinterest_source/tree/v0.3.1/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_pinterest_source/v0.3.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_pinterest_source/tar.gz/v0.3.1",
+        "format": "tgz",
+        "sha1": "0c45035bfb1d1353edb93f0f5e3f27a607f12b48"
+    }
+}
