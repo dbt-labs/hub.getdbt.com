@@ -1,0 +1,38 @@
+{
+    "id": "fivetran/facebook_ads_source/v0.2.1",
+    "name": "facebook_ads_source",
+    "version": "v0.2.1",
+    "published_at": "2021-05-03T15:02:48.897912+00:00",
+    "packages": [
+        {
+            "package": "fishtown-analytics/dbt_utils",
+            "version": [
+                ">=0.6.0",
+                "<0.7.0"
+            ]
+        },
+        {
+            "git": "https://github.com/fivetran/dbt_fivetran_utils.git",
+            "revision": "master",
+            "warn-unpinned": false
+        },
+        {
+            "package": "fishtown-analytics/spark_utils",
+            "version": [
+                ">=0.2.0",
+                "<0.3.0"
+            ]
+        }
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_facebook_ads_source/tree/v0.2.1/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_facebook_ads_source/v0.2.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_facebook_ads_source/tar.gz/v0.2.1",
+        "format": "tgz",
+        "sha1": "40f2eba155558423d995db8bf8f00cce27741c87"
+    }
+}
