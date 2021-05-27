@@ -1,0 +1,38 @@
+{
+    "id": "fivetran/shopify_source/v0.3.0",
+    "name": "shopify_source",
+    "version": "v0.3.0",
+    "published_at": "2021-05-27T02:02:32.010978+00:00",
+    "packages": [
+        {
+            "package": "fishtown-analytics/dbt_utils",
+            "version": [
+                ">=0.6.0",
+                "<0.7.0"
+            ]
+        },
+        {
+            "package": "fishtown-analytics/spark_utils",
+            "version": [
+                ">=0.2.0",
+                "<0.3.0"
+            ]
+        },
+        {
+            "git": "https://github.com/fivetran/dbt_fivetran_utils.git",
+            "revision": null,
+            "warn-unpinned": false
+        }
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_shopify_source/tree/v0.3.0/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_shopify_source/v0.3.0/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_shopify_source/tar.gz/v0.3.0",
+        "format": "tgz",
+        "sha1": "132d5e4114be88935f23d5ac9d8f742b85d48148"
+    }
+}
