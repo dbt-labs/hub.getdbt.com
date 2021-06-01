@@ -1,0 +1,38 @@
+{
+    "id": "fivetran/klaviyo_source/v0.1.1",
+    "name": "klaviyo_source",
+    "version": "v0.1.1",
+    "published_at": "2021-06-01T19:02:22.859480+00:00",
+    "packages": [
+        {
+            "package": "fishtown-analytics/dbt_utils",
+            "version": [
+                ">=0.6.0",
+                "<0.7.0"
+            ]
+        },
+        {
+            "git": "https://github.com/fivetran/dbt_fivetran_utils.git",
+            "revision": null,
+            "warn-unpinned": false
+        },
+        {
+            "package": "fishtown-analytics/spark_utils",
+            "version": [
+                ">=0.2.0",
+                "<0.3.0"
+            ]
+        }
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_klaviyo_source/tree/v0.1.1/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_klaviyo_source/v0.1.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_klaviyo_source/tar.gz/v0.1.1",
+        "format": "tgz",
+        "sha1": "5cc9ebcd1f8eee67b060d44cc9a8c81cc2efe22e"
+    }
+}
