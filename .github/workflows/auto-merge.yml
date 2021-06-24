@@ -6,6 +6,7 @@ on:
     types: [ opened, synchronize, reopened ]
   check_suite:
     types: [ completed ]
+  workflow_dispatch: #to manually test worlflow
 
 jobs:
   merge:
