@@ -1,25 +1,19 @@
-# Uses 
-# https://github.com/actions/labeler
-# and https://github.com/pascalgn/automerge-action
+# Uses https://github.com/pascalgn/automerge-action
 
 name: Auto-merge
-on: [pull_request]
+on: 
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+  check_suite:
+    types: [ completed ]
 
 jobs:
-  label:
-
+  merge:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-
-    steps:
-    - uses: actions/labeler@v2
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        
-    - uses: pascalgn/automerge-action@v0.14.2
-      env:
+    steps: 
+      - name: Auto-merge
+        uses: pascalgn/automerge-action@v0.14.2
+        env:
           GITHUB_TOKEN: ${{ secrets.AUTO_MERGE_ACTION }}
           MERGE_LABELS: automerge
-          LOG: TRACE  # or "DEBUG"
+          LOG: DEBUG
