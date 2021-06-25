@@ -7,9 +7,8 @@ on:
   check_suite:
     types: [ completed ]
 
-permissions:
-  contents: write
-  pull-requests: write
+permissions: write-all
+  
   
 jobs:
   automerge:
@@ -19,6 +18,8 @@ jobs:
         uses: actions/labeler@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: Auto-merge
         uses: pascalgn/automerge-action@v0.14.2
         env:
