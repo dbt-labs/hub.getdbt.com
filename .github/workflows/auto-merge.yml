@@ -1,4 +1,4 @@
-# Uses https://github.com/pascalgn/automerge-action
+# Uses https://github.com/pascalgn/automerge-action and https://github.com/actions/labeler
 
 name: Auto-merge
 on: 
@@ -12,9 +12,13 @@ permissions:
   pull-requests: write
   
 jobs:
-  merge:
+  automerge:
     runs-on: ubuntu-latest
     steps: 
+      - name: Auto-label
+        uses: actions/labeler@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Auto-merge
         uses: pascalgn/automerge-action@v0.14.2
         env:
