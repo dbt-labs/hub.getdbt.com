@@ -1,11 +1,11 @@
-<nav class="navigation">
+<nav class="navigation" style='background-color: white; box-shadow: 0 1px 16px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 1px 16px rgba(0, 0, 0, 0.3);  -moz-box-shadow: 0 1px 16px rgba(0, 0, 0, 0.3);'>
   <div class="section orange iso center">
 	<div class="section-content">
-	  <div class="navigation-content">
+	  <div class="navigation-content" style="height: 80px">
 		<div class="navigation-brand">
-		  <a class="hub-logo" href="<%= site_url %>/" title="dbt (data build tool) hub" target="_self">
-			<strong class="nav-logo-text">dbt (data build tool) hub</strong>
-            <img src='/images/logos/hub-lockup-white-md.png' />
+		  <a class="hub-logo" href="<%= site_url %>/" title="dbt hub" target="_self">
+			<strong class="nav-logo-text">dbt hub</strong>
+            <img src='/images/logos/dbt-lockup.png' style="height: 48px"/>
 		  </a>
 		</div>
 		<div class="navigation-link">
@@ -14,34 +14,22 @@
              data-icon="octicon-star"
              data-size="large"
              data-show-count="true"
-             aria-label="Star fishtown-analytics/dbt on GitHub">Github</a>
+             aria-label="Star dbt on GitHub">Github</a>
         </div>
-		<div class="navigation-link">
-          <a class="btn btn-outline"
-             href="https://docs.getdbt.com/docs/installation"
-             target="_blank">Install dbt</a>
-        </div>
-
 		<div class="navigation-link">
           <a class="btn btn-blue btn-shadow"
-             href="https://slack.getdbt.com"
+             href="https://docs.getdbt.com/docs/building-a-dbt-project/package-management"
              target="_blank">
-            <i data-icon="slack"></i>Join us on Slack</a>
+             <i data-icon="book"></i>Get started</a>
         </div>
-
 		<div class="navigation-menu">
 		  <div class="dropdown">
-			<a class="btn btn-text btn-skinny" href="#" data-toggle="dropdown"><i data-symbol="menu" class="lg"></i></a>
+			<a class="btn btn-text btn-blue btn-skinny" href="#" data-toggle="dropdown"><i data-symbol="menu" class="lg"></i></a>
 			<ul class="dropdown-menu dropdown-menu-right">
-			  <li><a href="https://docs.getdbt.com/docs/installation"
-                     target="_blank">Install dbt</a></li>
+			  <li><a href="https://docs.getdbt.com/docs/building-a-dbt-project/package-management"
+                     target="_blank">Get started</a></li>
 			  <li><a href="https://github.com/fishtown-analytics/dbt"
                      target="_blank">Github</a></li>
-			  <li class="divider"></li>
-			  <li><a
-                    href="https://slack.getdbt.com"
-                    target="_blank">
-                  Join us on Slack</a></li>
 			</ul>
 		  </div>
 		</div>
