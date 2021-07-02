@@ -35,15 +35,20 @@
         </div>
       </div>
       <br/>
-      <% orgs = data.packages.to_hash.keys.sort_by {|k,v| k.downcase} %>
+      <% all_packages = data.packages.to_hash.keys.sort_by {|k,v| k.downcase} %>
+      <% show_packages = [] %>
+      <% for pkg in all_packages do %>
+        <% show_packages.append(pkg) if not data.blocklist.include?(org + "/" + name) %>
+      <% end %>
+      <% orgs = show_packages.to_hash.keys.sort_by {|k,v| k.downcase} %>
       <% orgs.each do |org| %>
         <div class="row" style="margin-top: 40px">
           <div class="col-md-12">
             <h4><%= org %></h4>
             <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
-                 <% packages = data.packages[org].sort_by {|name, package| name.downcase} %>
+                 <% packages = show_packages[org].sort_by {|name, package| name.downcase} %>
                  <% packages.each do |name, package| %>
-                    <% if not data.blocklist.include?(org + "/" + name) %>
+                    <%  %>
                         <li>
                             <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
                         </li>
