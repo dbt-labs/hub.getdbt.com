@@ -35,30 +35,25 @@
         </div>
       </div>
       <br/>
-      <% all_packages = data.packages.to_hash.keys.sort_by {|k,v| k.downcase} %>
-      <% show_packages = [] %>
-      <% all_packages.each do |pkg| %>
-          <% org = pkg['index'].namespace %>
-          <% name = pkg['index'].name %>
-          <% if not data.blocklist.include?(org + "/" + name) %>
-              <% show_packages = show_packages.push(pkg)  %>
-          <% end %>
-      <% end %>
-      <% orgs = show_packages.to_hash.keys.sort_by {|k,v| k.downcase} %>
+      <% orgs = data.packages.to_hash.keys.sort_by {|k,v| k.downcase} %>
       <% orgs.each do |org| %>
-        <div class="row" style="margin-top: 40px">
-          <div class="col-md-12">
-            <h4><%= org %></h4>
-            <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
-                 <% packages = show_packages[org].sort_by {|name, package| name.downcase} %>
-                 <% packages.each do |name, package| %>
-                    <li>
-                        <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
-                    </li>
-                <% end %>
-            </ul>
+        <% if not data.blocklist['orgs'].include?(org) %>
+          <div class="row" style="margin-top: 40px">
+            <div class="col-md-12">
+              <h4><%= org %></h4>
+              <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
+                   <% packages = data.packages[org].sort_by {|name, package| name.downcase} %>
+                   <% packages.each do |name, package| %>
+                      <% if not data.blocklist['packages'].include?(org + "/" + name) %>
+                          <li>
+                              <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
+                          </li>
+                      <% end %>
+                  <% end %>
+              </ul>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </section>
