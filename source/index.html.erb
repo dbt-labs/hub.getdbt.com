@@ -37,10 +37,12 @@
       <br/>
       <% all_packages = data.packages.to_hash.keys.sort_by {|k,v| k.downcase} %>
       <% show_packages = [] %>
-      <% for pkg in all_packages do %>
+      <% all_packages.each do |pkg| %>
           <% org = pkg['index'].namespace %>
           <% name = pkg['index'].name %>
-        <% show_packages.append(pkg) if not data.blocklist.include?(org + "/" + name) %>
+          <% if not data.blocklist.include?(org + "/" + name) %>
+              <% show_packages = show_packages.push(pkg)  %>
+          <% end %>
       <% end %>
       <% orgs = show_packages.to_hash.keys.sort_by {|k,v| k.downcase} %>
       <% orgs.each do |org| %>
