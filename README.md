@@ -19,6 +19,7 @@ git submodule update --init
 ```bash
 bundle install
 ```
+_If this fails, take a look at [this thread](https://gist.github.com/fernandoaleman/868b64cd60ab2d51ab24e7bf384da1ca#gistcomment-3082045)._
 
 ...and run with middleman:
 
