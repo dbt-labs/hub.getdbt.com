@@ -37,7 +37,7 @@
       <br/>
       <% orgs = data.packages.to_hash.keys.sort_by {|k,v| k.downcase} %>
       <% orgs.each do |org| %>
-        <% if not data.blocklist['orgs'].include?(org) %>
+        <% if not data.blocklist['organizations'].include?(org) %>
           <div class="row" style="margin-top: 40px">
             <div class="col-md-12">
               <h4><%= org %></h4>

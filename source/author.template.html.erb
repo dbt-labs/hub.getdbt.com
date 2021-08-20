@@ -1,20 +1,38 @@
 <header class="header">
+  <% if data.blocklist.organizations.include?(author) %>
+    <div class="row">
+      <div class="col-md-12 ">
+        <div style="background-color:#047377; padding-top:10px; padding-bottom:10px" class="text-center" >
+        <p style="color:#fff; font-size:1em;">
+          🚨 <strong>Warning</strong> 🚨 
+          The <code style="opacity:70%;"><%= author %></code> page has been archived. <br/>
+          Check out individual package pages for their status and/or  redirects to their new locations.  
+        </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
   <%= partial "nav" %>
 
   <section class="section orange iso section-slim" style="padding-bottom:66px;">
     <div class="section-content navigation"></div>
+    <h2 class="text-center" style="padding-top:30px;">Packages by <strong><%= author %></strong></h2>
+
   </section>
+
 </header>
 
 <main class="main">
   <section class="section silver offset">
     <div class="section-content">
       <div class="row">
-        <h2>Packages by <%= author %></h2>
         <div class="tiles">
           <% config[:package_index].each do |name, package| %>
           <% if package.namespace == author %>
-          <%= partial "package_card", :locals => { :package => package } %>
+            <% if not data.blocklist['packages'].include?(package.namespace + "/" + package.name) %>
+              <%= partial "package_card", :locals => { :package => package } %>
+            <% end %>
           <% end %>
           <% end %>
         </div>

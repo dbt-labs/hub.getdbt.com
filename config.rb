@@ -123,7 +123,7 @@ helpers do
   end
 
   def is_hidden(package, version)
-    version['version'] != package.latest or @app.data.blocklist.include?(package.namespace + "/" + package.name)
+    @app.data.blocklist.organizations.include?(package.namespace) or @app.data.blocklist.packages.include?(package.namespace + "/" + package.name) 
   end
 end
 
