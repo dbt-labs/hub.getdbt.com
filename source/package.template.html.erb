@@ -1,4 +1,11 @@
 <header class="header">
+  <% if is_hidden(package, version) or (defined?(package.redirectnamespace) or defined?(package.redirectname)) %>
+    <div class="row">
+      <div class="col-md-12 ">
+        <%= partial "hidden" %>
+      </div>
+    </div>
+  <% end %>
   <%= partial "nav" %>
   <section class="section white section-slim" style="padding-bottom:66px;">
   </section>
@@ -7,14 +14,6 @@
 <main class="main">
   <section class="section white section-slim">
     <div class="section-content">
-
-      <% if is_hidden(package, version) %>
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <%= partial "hidden" %>
-        </div>
-      </div>
-      <% end %>
 
       <div class="row">
 

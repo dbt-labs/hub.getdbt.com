@@ -1,3 +1,18 @@
-<div class="alert alert-warning" role="alert">
-  <h4>Warning! <small>You are viewing an outdated version of the <%= package.name %> package</small></h4>
+<div style="background-color:#047377; padding-top:10px; padding-bottom:10px" class="text-center" >
+  <% if defined?(package.redirectnamespace) or defined?(package.redirectname) %> 
+  <p style="color:#fff; font-size:1em;">
+    🚨 <strong>Warning</strong> 🚨 You are viewing an outdated version of the <code style="opacity:70%;"><%= package.name %></code> package.
+    <br />
+    <a style="font-weight:bold;" href="<%=site_url%>/<% if package.redirectnamespace %><%= package.redirectnamespace %><% else %><%= package.namespace %><% end %>/<% if package.redirectname %><%= package.redirectname %><% else %><%= package.name %><% end %>/latest/"> 
+      Go to the latest version of this package >
+    </a>
+  </p>
+
+  <% else %>
+
+  <p style="color:#fff; font-size:1em;">
+    🚨 <strong>Warning</strong> 🚨 
+    <code style="opacity:70%;"><%= package.name %></code> has been archived. We recommend avoiding using this in new projects.
+  </p>
+  <% end %>
 </div>

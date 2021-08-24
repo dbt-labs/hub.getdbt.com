@@ -11,7 +11,7 @@
       <!--
         Version: <%= version['version'] %>
         Latest: <%= package.latest %>
-        Is blocklisted?: <%= data.blocklist.include?(package.namespace + "/" + package.name) %>
+        Is blocklisted?: <%= is_hidden(package, version) %>
       -->
       <meta name="robots" content="noindex">
     <% end %>
