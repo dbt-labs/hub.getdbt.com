@@ -1,7 +1,7 @@
 <header class="header">
   <% if is_hidden(package, version) or (defined?(package.redirectnamespace) or defined?(package.redirectname)) %>
     <div class="row">
-      <div class="col-md-12 ">
+      <div class="col-md-12" style="padding:0px;">
         <%= partial "hidden" %>
       </div>
     </div>
