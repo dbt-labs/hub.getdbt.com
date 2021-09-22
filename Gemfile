@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '~> 4.2'
-gem 'middleman-autoprefixer', '~> 2.7'
-gem 'middleman-livereload', '3.4.6'
+gem 'middleman-core'
+gem 'middleman', '~> 4.4.0'
+gem 'middleman-autoprefixer'
+gem 'middleman-livereload'
 gem 'less'
 gem 'therubyracer'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
