@@ -41,4 +41,4 @@ bundle exec middleman serve --port 4567
 
 ### In directory bundling
 
-To keep your keeps in a repo vendor folder, use the `--install-dir` flag with the gem install commands above but do so _before_ the `--` (this is critical).
+To install gems to the project repo (as opposed to your system-user-level gem folder), use the `--install-dir` flag with the gem install commands above. However, place this flag and corresponding directory path argument _before_ the `--` (this is critical).
