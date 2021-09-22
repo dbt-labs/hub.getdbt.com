@@ -14,7 +14,7 @@ ignore 'www.getdbt.com/'
 ignore 'source/img'
 
 set :js_dir, 'javascripts'
-set :images_dir, 'images'
+set :images_dir, 'img'
 
 
 activate :autoprefixer do |prefix|
