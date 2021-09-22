@@ -85,6 +85,8 @@ after_configuration do
               :package => package
             }
 
+      redirect "#{package_name}/index.html", to: "/#{package_name}/latest/index.html"
+
       package.versions.each do |version, package_version|
         proxy "#{package_name}/#{version}/index.html",
               "/package.template.html",
