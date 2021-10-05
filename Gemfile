@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '~> 4.2'
-gem 'middleman-autoprefixer', '~> 2.7'
+gem 'middleman', '~> 4.3', '>= 4.3.7'
+gem 'middleman-autoprefixer', '~> 2.8', '>= 2.8.0'
 gem 'middleman-livereload', '3.4.6'
 gem 'less'
 gem 'therubyracer'
