@@ -125,7 +125,7 @@ helpers do
   end
 
   def is_hidden(package, version)
-    @app.data.blocklist.organizations.include?(package.namespace) or @app.data.blocklist.packages.include?(package.namespace + "/" + package.name) 
+    @app.data.blocklist.organizations.include?(package.namespace) or @app.data.blocklist.packages.include?(package.namespace + "/" + package.name)
   end
 end
 
