@@ -1,10 +1,20 @@
 require 'open-uri'
 
+class Middleman::Util::EnhancedHash
+    # Mila: Looked into Hashie::Mash's source code where this class is
+    # defined (Middleman merely mixes it in). disable_warnings is the
+    # advertised way to turn off key conflict warnings which we probably
+    # cannot avoid in this project -- each package we host includes a file
+    # named index.json which is treated as a property. This in turn
+    # conflicts with Ruby's builtin [] (Array#index) method
+    disable_warnings
+end
+
 ignore 'www.getdbt.com/'
 ignore 'source/img'
 
 set :js_dir, 'javascripts'
-set :images_dir, 'images'
+set :images_dir, 'img'
 
 
 activate :autoprefixer do |prefix|
