@@ -1,7 +1,7 @@
 name: Rebase Pull Requests
 on:
   push:
-    branches: [master]
+    branches: '**'
 jobs:
   rebase:
     runs-on: ubuntu-latest
