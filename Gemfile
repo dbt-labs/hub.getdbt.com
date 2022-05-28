@@ -10,3 +10,4 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 gem 'redcarpet', '3.5.1'
 gem 'pry'
+gem 'rack', '~> 2.2.3.1'
