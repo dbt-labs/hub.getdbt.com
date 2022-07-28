@@ -4,6 +4,8 @@
 
 ### Development
 
+See [troubleshooting](#troubleshooting) section below as-needed.
+
 Clone this repository and install submodules:
 
 ```
@@ -21,6 +23,24 @@ bundle install
 ```bash
 bundle exec middleman serve --port 4567
 ```
+
+### Use with `dbt deps` from dbt Core
+
+You can set the `DBT_PACKAGE_HUB_URL` environment variable to specify where `dbt deps` should look to resolve dependencies [listed in `packages.yml`](https://docs.getdbt.com/docs/building-a-dbt-project/package-management#how-do-i-add-a-package-to-my-project):
+```shell
+export DBT_PACKAGE_HUB_URL=http://localhost:4567/
+```
+
+Suppose your `packages.yml` in your dbt project contains the following content:
+```yml
+packages:
+  - package: tnalpgge/cowsay
+    version: 0.3.4
+```
+
+Then `dbt deps` will use the JSON in the following locations:
+- `data/packages/tnalpgge/cowsay/index.json`
+- `data/packages/tnalpgge/cowsay/versions/0.3.4.json`
 
 ### Troubleshooting
 
