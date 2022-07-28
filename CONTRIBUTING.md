@@ -31,6 +31,11 @@ You can set the `DBT_PACKAGE_HUB_URL` environment variable to specify where `dbt
 export DBT_PACKAGE_HUB_URL=http://localhost:4567/
 ```
 
+Or if you have a Netflify preview created by a pull request:
+```
+export DBT_PACKAGE_HUB_URL=https://deploy-preview-1717--flamboyant-mcclintock-92ba2d.netlify.app/
+```
+
 Suppose your `packages.yml` in your dbt project contains the following content:
 ```yml
 packages:
@@ -38,7 +43,7 @@ packages:
     version: 0.3.4
 ```
 
-Then `dbt deps` will use the JSON in the following locations:
+Then `dbt deps` will use the JSON served from the following locations:
 - `data/packages/tnalpgge/cowsay/index.json`
 - `data/packages/tnalpgge/cowsay/versions/0.3.4.json`
 
