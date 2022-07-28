@@ -48,7 +48,7 @@ You can set the `DBT_PACKAGE_HUB_URL` environment variable to specify where `dbt
 export DBT_PACKAGE_HUB_URL=http://localhost:4567/
 ```
 
-Or if you have a Netflify preview created by a pull request:
+Or if you have a Netlify preview created by a pull request:
 ```
 export DBT_PACKAGE_HUB_URL=https://deploy-preview-1717--flamboyant-mcclintock-92ba2d.netlify.app/
 ```
