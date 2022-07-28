@@ -69,19 +69,35 @@ rbenv global 2.7.2
 
 ### Troubleshooting
 
-_For mac users, if this fails for MacOS <0.16, take a look at [this thread](https://gist.github.com/fernandoaleman/868b64cd60ab2d51ab24e7bf384da1ca#gistcomment-3082045). For Big Sur users, try the following adapted from [this thread](https://github.com/shakacode/react-webpack-rails-tutorial/issues/266):_
+Some users may get the following errors during `bundle install`:
 
-```
-env \                                                                                                                                                     master
+> An error occurred while installing libv8 (3.16.14.19), and Bundler cannot continue.
+Make sure that `gem install libv8 -v '3.16.14.19' --source '<https://rubygems.org/'`> succeeds before bundling.
+
+or:
+
+> An error occurred while installing therubyracer (0.12.3), and Bundler cannot continue.
+Make sure that `gem install therubyracer -v '0.12.3' --source '<https://rubygems.org/'`> succeeds before bundling.
+
+```bash
+# Prerequisite
+brew install v8
+
+# Replace `12.1` below with macOS version
+# Replace `3.16.14.19` below with the version number of libv8 in the error message
+# https://gist.github.com/fernandoaleman/868b64cd60ab2d51ab24e7bf384da1ca?permalink_comment_id=3927309#gistcomment-3927309
+env \
   CXX=clang++ \
-  GYPFLAGS=-Dmac_deployment_target=10.16 \  # substitute 10.16 for whatever your Mac OS version is
-gem install libv8 --version 3.16.14.19  # exact version may differ on your system
+  GYPFLAGS=-Dmac_deployment_target=12.1 \
+gem install libv8 --version 3.16.14.19
 
-gem install therubyracer -v ‘<whatever version bundler requests>’ -- --with-v8-dir=/usr/local/opt/v8@3.15
+gem install therubyracer -- --with-v8-dir=/usr/local/opt/v8
 ```
-Note, the precise version of the `with-v8-dir` may differ from what is listed above. Do consult that directory for whatever version your homebrew installed.
 
-Now rerun `bundle install`
+Try re-running:
+```shell
+bundle install
+```
 
 #### In directory bundling
 
