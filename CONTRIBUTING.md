@@ -4,7 +4,7 @@
 
 ### Development
 
-See [troubleshooting](#troubleshooting) section below as-needed.
+See the [installing Ruby for Mac](#installing-ruby-for-mac) and [troubleshooting](#troubleshooting) sections below as-needed.
 
 Clone this repository and install submodules:
 
@@ -41,6 +41,31 @@ packages:
 Then `dbt deps` will use the JSON in the following locations:
 - `data/packages/tnalpgge/cowsay/index.json`
 - `data/packages/tnalpgge/cowsay/versions/0.3.4.json`
+
+
+### Installing Ruby for Mac
+
+[https://antran.app/2021/m1_mac_part2/](https://antran.app/2021/m1_mac_part2/)
+
+```bash
+# Install rbenv
+# Follow the printed instructions to load rbenv automatically for your shell
+brew install rbenv
+
+# Initialise rbenv
+rbenv init
+
+# Verify rbenv
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
+
+# Install Ruby
+rbenv install 2.7.2
+
+# Set global version
+rbenv global 2.7.2
+
+# Restart your shell
+```
 
 ### Troubleshooting
 
