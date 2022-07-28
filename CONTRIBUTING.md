@@ -102,3 +102,17 @@ bundle install
 #### In directory bundling
 
 To install gems to the project repo (as opposed to your system-user-level gem folder), use the `--install-dir` flag with the gem install commands above. However, place this flag and corresponding directory path argument _before_ the `--` (this is critical).
+
+## Managing the `Gemfile` and `Gemfile.lock`
+
+Bundler manages gems used in a Ruby application. A file named `Gemfile` in your project root will contain gem names and optional version ranges.
+
+Modifying the version of a Gem used is a two-step process. Modify the reference to a gem in the `Gemfile` and run a `bundle update`.
+
+### Steps
+
+1. Add or modify a gem entry `gem '<gem name>', '<version range>'` in `Gemfile`
+2. Execute `bundle update <gem name needing update>`
+    - Special formatting in `Gemfile.lock` auto-updates
+    - Try not to run a bare `bundle update` as this will possibly update several gems and break your application
+3. Commit `Gemfile` and `Gemfile.lock` changes in both to the repo
