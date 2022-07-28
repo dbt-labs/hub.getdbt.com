@@ -1,5 +1,22 @@
 # Contributing to this repo
 
+## Overview
+There are two components to the [dbt Hub](https://hub.getdbt.com/):
+
+- **hub.getdbt.com:** Our package registry
+    - https://github.com/dbt-labs/hub.getdbt.com (this repo!)
+    - An indexed collection of JSON files
+    - A static site, served by those same JSON files, where users can discover available packages
+    - Hosted on Netlify
+- **Hubcap:** The way the Hub stays up to date!
+    - https://github.com/dbt-labs/hubcap
+    - A script that:
+        - Catches new package releases when they are available (via GitHub releases)
+        - Parses out metadata—crucially, this package's dependencies on *other* Hub packages
+        - Records each release in a predictable format (JSON file)
+        - Automatically opens a PR against [hub.getdbt.com](http://hub.getdbt.com) to add that JSON file to its indexed collection
+    - Hosted on Heroku
+
 ## Running locally
 
 ### Development
