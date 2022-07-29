@@ -43,6 +43,8 @@ bundle exec middleman serve --port 4567
 
 ### Use with `dbt deps` from dbt Core
 
+**Note:** Make sure to remember to unset any environment variables that you set once you are done! `unset YOUR_VARIABLE_NAME_HERE` should work in bash/zsh. [`direnv`](https://direnv.net/) is one option for loading/unloading environment variables automatically when entering/exiting a directory.
+
 You can set the `DBT_PACKAGE_HUB_URL` environment variable to specify where `dbt deps` should look to resolve dependencies [listed in `packages.yml`](https://docs.getdbt.com/docs/building-a-dbt-project/package-management#how-do-i-add-a-package-to-my-project):
 ```shell
 export DBT_PACKAGE_HUB_URL=http://localhost:4567/
@@ -67,7 +69,7 @@ Then `dbt deps` will use the JSON served from the following locations:
 
 ### Installing Ruby for Mac
 
-[https://antran.app/2021/m1_mac_part2/](https://antran.app/2021/m1_mac_part2/)
+[These](https://antran.app/2021/m1_mac_part2/) instructions are summarized below. They were written with a M1 Mac in mind, but might work for other Macs too. Your mileage may vary.
 
 ```bash
 # Install rbenv
