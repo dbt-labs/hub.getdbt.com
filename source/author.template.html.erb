@@ -28,7 +28,8 @@
     <div class="section-content">
       <div class="row">
         <div class="tiles">
-          <% config[:package_index].each do |name, package| %>
+          <% packages = config[:package_index].sort_by {|name, package| name.downcase} %>
+          <% packages.each do |name, package| %>
           <% if package.namespace == author %>
             <% if not data.blocklist['packages'].include?(package.namespace + "/" + package.name) %>
               <%= partial "package_card", :locals => { :package => package } %>
