@@ -21,3 +21,12 @@ pre {
     background-color: #f6f8fa;
     color: #24292e;
 }
+
+
+// https://css-tricks.com/careful-when-changing-the-display-of-summary/
+summary {
+    // to make summaries show with the triangle
+    display: list-item;
+    // to render the summaries a bit better when they are one after the other
+    margin-top: 16px
+}
