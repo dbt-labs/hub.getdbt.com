@@ -137,6 +137,10 @@ helpers do
   def is_hidden(package, version)
     @app.data.blocklist.organizations.include?(package.namespace) or @app.data.blocklist.packages.include?(package.namespace + "/" + package.name)
   end
+
+  def is_latest(package, version)
+    package.latest == version['version']
+  end  
 end
 
 ignore '/package.template.html.erb'

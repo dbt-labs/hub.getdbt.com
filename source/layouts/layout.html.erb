@@ -7,7 +7,7 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-    <% if defined?(package) and defined?(version) and is_hidden(package, version) %>
+    <% if defined?(package) and defined?(version) and (is_hidden(package, version) or not is_latest(package, version))%>
       <!--
         Version: <%= version['version'] %>
         Latest: <%= package.latest %>
