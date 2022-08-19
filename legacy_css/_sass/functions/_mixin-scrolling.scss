@@ -1,0 +1,28 @@
+@mixin scrollbar($color: #e3e3e3) {
+  &::-webkit-scrollbar              { background: transparent; width: 10px; height: 10px; }
+  &::-webkit-scrollbar-button       { display: none; }
+  &::-webkit-scrollbar-track        { background: transparent; }
+  &::-webkit-scrollbar-track-piece  { background: transparent; }
+  &::-webkit-scrollbar-thumb        { background: $color; @include transitions(); }
+  &::-webkit-scrollbar-corner       { background: transparent; }
+  &::-webkit-resizer                { background: transparent; }
+	&:hover {
+	  &::-webkit-scrollbar-thumb      { background: #ccc; }
+	}
+}
+
+@mixin scroll(){
+  overflow: auto;
+  html.touch & {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@mixin touch-scroll($whitespace: normal){
+  html.touch & {
+    white-space: $whitespace;
+    overflow: scroll !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}

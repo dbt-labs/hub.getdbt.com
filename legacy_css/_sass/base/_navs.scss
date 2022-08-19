@@ -1,0 +1,11 @@
+.nav-stacked {
+	.nav-stacked {
+		@include font-size-small;
+		> li {
+			margin-left: 1em;
+			> a {
+				color: $light;
+			}
+		}
+	}
+}

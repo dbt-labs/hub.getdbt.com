@@ -1,0 +1,44 @@
+
+pre {
+	padding: 0;
+	white-space: pre;
+	font-size: $font-size-code;
+	border-width: 0;
+	padding: $padding-base-vertical $padding-base-horizontal;
+	overflow: auto;
+	//background-color: $silver-light;
+	resize: vertical;
+	border-radius: $border-radius-base;
+	margin: 1em 0;
+}
+
+kbd {
+	box-shadow: none;
+}
+
+kbd, code, pre {
+	@include font-size-code;
+}
+
+figure.highlight {
+	tab-size: 2; 
+}
+
+.code {
+	font-family: $font-family-monospace;
+	font-size: $font-size-code;
+}
+
+pre.code-medium,
+.code-medium pre {
+	padding: $padding-large-vertical $padding-large-horizontal;
+}
+
+pre.code-large,
+.code-large pre {
+	padding: $component-padding-large;
+	@include small {
+		padding-left: $margin-small;
+		padding-right: $margin-small;
+	}
+}

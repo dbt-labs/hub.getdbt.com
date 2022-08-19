@@ -1,0 +1,51 @@
+
+$form-grid-padding: 7px;
+
+.form-grid {
+	display: table;
+	width: 100%;
+	.form-row-group {
+		display: table-row-group;
+	}
+	.form-row {
+		display: table-row;
+		.form-row {
+			display: table;
+			width: 100%;
+		}
+		.form-label, .form-response {
+			display: table-cell;
+			padding: 5px 5px 10px;
+			vertical-align: top;
+			&:first-child { padding-left: 0; }
+			&:last-child { padding-right: 0; }
+			.form-row > * { padding-top: 0; padding-bottom: 0; }
+		}
+		.form-label {
+			white-space: nowrap;
+			width: 1px;
+			label { @extend .form-control-static; }
+		}
+		.form-response {
+			.help-block {
+				margin: 0;
+				top: 3px;
+			}
+			&.form-response-short {
+				width: 1px;
+				white-space: nowrap;
+			}
+			.form-response,
+			.form-label {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
+		> .form-label:first-child {
+			padding-right: 10px;
+		}
+	}
+	&:not(.form-grid-left) {
+		.form-label { text-align: right; }
+	}
+}

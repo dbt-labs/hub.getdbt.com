@@ -1,0 +1,115 @@
+
+.dropdown-menu {
+	@include transform(scale(.75),(0 0));
+	@include transition(all .1875s $bezier-bounce);
+	@include shadow(10px);
+	@include font-size-base;
+	pointer-events: none;
+	margin: 0;
+	border-width: 0;
+	border-radius: $border-radius-base !important;
+	-webkit-transition-property: opacity, -webkit-transform;
+	-moz-transition-property: opacity, -moz-transform;
+	-ms-transition-property: opacity, -ms-transform;
+	-o-transition-property: opacity, -o-transform;
+	transition-property: opacity, transform;
+	opacity: 0;
+	display: block;
+	left: -9999px;
+	max-height: 50vh;
+	min-width: 100%;
+	max-width: 240px;
+	overflow: auto;
+	padding: 5px 0 !important;
+	font-style: normal;
+	//@include font-size-small;
+	&.dropdown-menu-notice-top {
+		padding-top: 0;
+	}
+	&.dropdown-menu-notice-bottom {
+		padding-bottom: 0;
+	}
+	a .help-block {
+		strong {
+			color: $dark;
+			font-style: normal;
+			padding-right: .125em;
+		}
+		white-space: normal;
+		min-width: 240px;
+		font-size: inherit;
+		&.help-block-inline {
+			&:after {
+				content: '';
+				display: block;
+				width: 240px;
+			}
+		}
+	}
+	&.dropdown-menu-right {
+		left: auto;
+		right: 9999px;
+	}
+	
+	> li > a,
+	> li > .dropdown-menu-item {
+		display: block;
+		margin: 0;
+		padding: .25em 15px;
+		> * { margin: 0; }
+		em { font-style: oblique; color: $light; }
+		// &:hover, &.active {
+		// 	background-color: $component-active-bg;
+		// }
+		.icon { margin-right: .25em; }
+	}
+	.divider {
+		margin: 5px 0;
+	}
+	.dropdown-header {
+		@include labels;
+		padding: .5em 15px !important;
+	}
+	&.dropdown-menu-large {
+		> li > a {
+			padding-top: .5em;
+			padding-bottom: .5em;
+		}
+	}
+	> li.dropdown-notice {
+		padding: 1em 1.5em;
+		background: $silver;
+		.notice {
+			padding: 0;
+		}
+	}
+	> li.dropdown-rich {
+		padding: .25em 1.4em;
+	}
+	&.dropdown-menu-notice-top .dropdown-notice { margin-bottom: .5em; }
+	&.dropdown-menu-notice-bottom .dropdown-notice { margin-top: .5em; }
+}
+
+.dropdown.open > .dropdown-menu {
+	pointer-events: auto;
+	@include transform(scale(1),(0 0));
+	opacity: 1;
+	left: 0;
+	&.dropdown-menu-right {
+		right: 0;
+		left: auto;
+	}
+}
+
+.dropdown {
+	cursor: pointer;
+	&.dropdown-inline {
+		display: inline-block;
+	}
+}
+
+.suggest {
+	.dropdown-menu {
+		min-width: auto;
+	}
+}

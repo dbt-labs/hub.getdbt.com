@@ -1,0 +1,31 @@
+.popover {
+	@include shadow;
+	@include round;
+	border-width: 0 !important;
+	padding: 0;
+	@include font-size-base;
+	.arrow { 
+		background: $popover-bg;
+		box-shadow: 0 0 0 1px rgba(0,0,0,.0875);
+		border-radius: 2px;
+		width: 12px;
+		height: 12px;
+		border-width: 0;
+		@include transform(rotate(45deg));
+		&:after {
+			display: none;
+		}
+	}
+	&.top .arrow { margin-bottom: 3px; }
+	&.bottom .arrow { margin-top: 3px; }
+	&.left .arrow { margin-right: 3px; }
+	&.right .arrow { margin-left: 3px; }
+	.popover-content {
+		@include round;
+		margin: 0 !important;
+	}
+	.popover-title, .popover-content {
+		padding: $padding-large-vertical $padding-base-horizontal;
+		background: $popover-bg;
+	}
+}

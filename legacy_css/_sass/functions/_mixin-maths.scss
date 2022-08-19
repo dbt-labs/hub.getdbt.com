@@ -1,0 +1,10 @@
+@function clamp($number, $min, $max) {
+  @return min(max($number, $min), $max);
+}
+
+@function integer($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}

@@ -1,0 +1,69 @@
+@mixin preview-layout($flexible:false){
+	@include flex-row;
+	$shrink: 1;
+	@if $flexible {
+		@include flex-wrap;
+		$shrink: 0;
+	}
+	.preview-header { @include flex(1,$shrink,120px); }
+	.preview-body { @include flex(3,1,$component-break); }
+}
+
+.preview {
+	margin: $component-buffer 0;
+	background: white;
+	border-radius: $component-border-radius;
+	@include flex-column;
+	@include flex(1,0,auto);
+	@include shadow;
+	@include transitions;
+	.preview-header {
+		background-position: 50% 50%;
+		background-size: cover;
+		&:before {
+			content: '';
+			display: block;
+			padding-bottom: 50%;
+		}
+	}
+	.preview-body {
+		@include flex-column;
+		@include flex(1,0,auto);
+		.preview-footer {
+			@include flex(0,0,auto);
+			padding: $component-padding;
+		}
+		.preview-text {
+			@include flex(1,0,auto);
+			padding: $component-padding;
+			@include compact;
+			#{h()} { margin-bottom: $component-padding-vertical; }
+			~ .preview-footer {
+				padding-top: 0;
+			}
+		}
+	}
+	&.preview-link {
+		@include active {
+			@include shadow(15px);
+		}
+	}
+	&.preview-vertical {
+		.preview-header {
+			@include flex(0,0,auto);
+		}
+		.preview-body { @include flex(1,0,auto); }
+		.preview-header-grow {
+			@include flex(1,0,auto);
+			~ .preview-body {
+				@include flex(0,0,auto);
+			}
+		}
+	}
+	&.preview-horizontal {
+		@include preview-layout;
+	}
+	&:not(.preview-vertical):not(.preview-horizontal) {
+		@include preview-layout(true);
+	}
+}

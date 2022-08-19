@@ -1,0 +1,10 @@
+.caret,
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+	@include icon-inline();
+	@include icon-symbol($input-caret);
+	border-width: 0 !important;
+	border-color: transparent !important;
+	margin-left: 0;
+	margin-right: -5px;
+}

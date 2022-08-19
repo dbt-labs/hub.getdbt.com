@@ -1,0 +1,26 @@
+.carousel {
+	.carousel-control {
+		background: transparent;
+		[data-symbol] {
+			@include middle;
+		}
+	}
+	.carousel-indicators {
+		bottom: 10px;
+		li {
+			background: $carousel-indicator-active-bg;
+			opacity: .25;
+			@include transitions;
+			border: 0;
+			width: 8px;
+			height: 8px;
+			margin: 0 2px;
+			&.active {
+				opacity: 1;
+			}
+		}
+	}
+	&.carousel-dark {
+
+	}
+}

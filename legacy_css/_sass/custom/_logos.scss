@@ -1,0 +1,33 @@
+.logos {
+	overflow: hidden;
+	max-width: 960px;
+	margin: 4rem auto;
+	.logos-content {
+		margin: -2px;
+		.logo-row {
+			@include flex-row;
+			@include flex-wrap(wrap);
+			@include flex-align(center);
+            @include flex-align-content(center);
+            @include flex-justify(space-evenly);
+			.logo-image {
+                @include small {
+                    min-width: ($phablet / 4);
+                    max-width: ($phablet / 4);
+                }
+				display: block;
+				@include flex(1,1,auto);
+				overflow: hidden;
+				img {
+					margin: 0;
+					display: block;
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+	@include small {
+        margin: -15px -25px 30px -25px;
+	}
+}

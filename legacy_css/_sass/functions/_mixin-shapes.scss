@@ -1,0 +1,22 @@
+@mixin shadow($height:3px,$border:rgba(0,0,0,.05),$shade:transparent) {
+  $darkness: clamp( integer($height)*.02 , .1 , .5 );
+  box-shadow:
+    0 0 0 1px $border,
+    0 1px 3px $shade,
+    0 $height $height $height*-.5 rgba(0,0,0,$darkness);
+}
+
+@mixin component(){
+  display: block;
+  border-width: 0;
+  @include shadow();
+  border-radius: $component-border-radius;
+  @include transitions(.375s);
+  background: white;
+}
+
+@mixin circle() { border-radius: 50%; }
+
+@mixin round() { border-radius: $border-radius-base; }
+
+@mixin pill($important: null) { border-radius: 200px $important; }

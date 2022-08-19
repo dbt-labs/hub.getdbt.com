@@ -1,0 +1,7 @@
+.thumbnail {
+	@include component;
+	img { width: 100%; }
+	.caption {
+		@include compact;
+	}
+}

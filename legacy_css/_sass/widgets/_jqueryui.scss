@@ -1,0 +1,107 @@
+.ui-widget {
+	@include font-size-base;
+	background: $dropdown-bg;
+	border-width: 0;
+	@include shadow(15px);
+	border-radius: $border-radius-base;
+	z-index: 1050;
+	.ui-state-active,
+	.ui-state-focus {
+		margin: 0;
+		background: $component-active-bg;
+		&, * { color: $component-active-color; }
+	}
+	&.ui-datepicker {
+		padding-left: 10px;
+		padding-right: 10px;
+		th, td a { text-align: center; }
+		td a { padding: .3em; }
+		@include transform(scale(.75),(0 0));
+		@include transition(all .1875s $bezier-bounce);
+		-webkit-transition-property: -webkit-transform;
+		-moz-transition-property: -moz-transform;
+		-ms-transition-property: -ms-transform;
+		-o-transition-property: -o-transform;
+		transition-property: transform;
+		&.ui-widget-active {
+			@include transform(scale(1),(0 0));
+		}
+		.ui-datepicker-prev {
+			top: 2px !important;
+			left: 2px !important;
+		}
+		.ui-datepicker-next {
+			top: 2px !important;
+			right: 2px !important;
+		}
+		.ui-datepicker-month {
+			font-weight: bold;
+		}
+	}
+	&.ui-autocomplete {
+		padding: 5px 0;
+		max-height: 240px;
+		overflow: auto;
+		li {
+			border: 0;
+			padding: 0;
+			.ui-menu-item-wrapper {
+				padding: $padding-small-vertical $padding-base-horizontal;
+			}
+			@include compact;
+			+ li.ui-separator {
+				margin-top: 5px;
+				padding-top: 6px;
+				border-top: 1px solid $line;
+			}
+		}
+	}
+
+	.ui-icon {
+		overflow: visible;
+		&.ui-icon-circle-triangle-w,
+	  &.ui-icon-circle-triangle-e {
+	    &:after {
+	      content: '';
+	      display: block;
+	      border: 5px solid;
+	      width: 0;
+	      height: 0;
+	      border-top-color: transparent;
+	      border-bottom-color: transparent;
+	      position: absolute;
+	      top: 5px;
+	      left: 0;
+	    }
+	  }
+	  &.ui-icon-circle-triangle-w:after {
+	    border-left-color: transparent;
+	  }
+	  &.ui-icon-circle-triangle-e:after {
+	    border-right-color: transparent;
+	    left: 5px;
+	  }
+	}
+}
+
+.ui-sortable-handle, 
+.ui-draggable-handle {
+	cursor: move;
+}
+
+tr.ui-sortable-helper {
+	box-shadow: 0 7px 10px rgba(0,0,0,.2);
+	border-radius: $border-radius-base;
+	display: table;
+	z-index: 2;
+	> td, th {
+		border: 0 !important;
+		&:first-child { border-top-left-radius: $border-radius-base; border-bottom-left-radius: $border-radius-base; }
+		&:last-child { border-top-right-radius: $border-radius-base; border-bottom-right-radius: $border-radius-base; }
+	}
+}
+
+.ui-draggable-dragging,
+.ui-sortable-sorting {
+	z-index: 5001 !important;
+}

@@ -1,0 +1,22 @@
+.input-group-rounded {
+	> * {
+		&:first-child { 
+			&, &.input-group-btn .btn {
+				border-top-left-radius: 100px;
+				border-bottom-left-radius: 100px;
+			}
+		}
+		&:last-child { 
+			&, &.input-group-btn .btn {
+				border-top-right-radius: 100px;
+				border-bottom-right-radius: 100px;
+			}
+		}
+	}	
+}
+
+
+.input-group-addon {
+	color: $light;
+	background: $input-bg-hover;
+}

@@ -1,0 +1,19 @@
+$basis: $component-break + $component-buffer;
+
+
+.flex-row { @include flex-row; @include flex-wrap; }
+.flex-column {
+	@include flex-column;
+	@include flex(1,1,$basis);
+	@for $i from 1 through 12 { &.flex-column-#{$i} { @include flex(1,1,$basis*$i); } }
+}
+
+.flex-buffer {
+	margin: 0 $component-buffer/-2;
+	.flex-item {
+		margin: $component-buffer/2;
+	}
+}
+
+.flex-column > .flex-item { @include flex(1,1,auto); }
+.flex-row > .flex-item { @include flex(1,0,$component-break); }

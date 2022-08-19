@@ -1,0 +1,42 @@
+@include icon-font-face(symbols,"../fonts/velllum-symbols/velllum-symbols.woff");
+
+$symbols: (
+	"top":"8",
+	"down":"2",
+	"left":"4",
+	"right":"6",
+	"menu":"e",
+	//"check":"c",
+	//"minus":"m",
+	//"plus":"p",
+	//"null":"o",
+	//"reload":"r",
+	//"search":"s",
+	"close":"x",
+);
+
+@mixin icon-inline(){
+  vertical-align: middle;
+  display: inline-block;
+  height: 10px;
+  width: 20px;
+  &.md { width: 30px; &:after { font-size: 30px; top: -10px; } }
+  &.lg { width: 40px; &:after { font-size: 40px; top: -15px; } }
+}
+
+[data-symbol] {
+  @include icon-font(symbols);
+  @include icon-inline();
+}
+
+@each $var, $glyph in $symbols {
+  [data-symbol="#{$var}"]:after { content: "#{$glyph}"; }
+}
+
+@mixin icon-symbol($name){
+  @each $var, $glyph in $symbols {
+    @if $var == $name {
+      @include icon-font(symbols,$glyph);
+    }
+  }
+}

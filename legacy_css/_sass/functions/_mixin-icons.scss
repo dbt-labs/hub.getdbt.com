@@ -1,0 +1,28 @@
+@mixin icon-font-face($name,$url){
+  @font-face {
+    font-family: $name;
+    font-weight: normal;
+    font-style: normal;
+    src: url($url) format("woff");
+  }
+}
+
+@mixin icon-font($name,$content:false){
+  &:after {
+    @if $content { content: "#{$content}"; }
+    font-family: $name;
+    text-decoration: inherit;
+    text-transform: none;
+    font-variant: normal;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    line-height: 1;
+    display: block;
+    speak: none;
+    margin-top: -1px;
+    top: -5px;
+  }
+}

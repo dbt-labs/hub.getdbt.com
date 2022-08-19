@@ -1,0 +1,79 @@
+
+.nav-tabs {
+	overflow: visible !important;
+	font-size: 0;
+	margin: $component-buffer/2 0;
+	@include print(){ display: none; }
+	@include screen(){
+		border: 0 solid transparent;
+		border-bottom: 1px solid $line;
+		@include large(){ padding: 0; }
+		@include small(){
+			@include touch-scroll(nowrap);
+			padding: 12px 0;
+			> li:first-child > a { margin-left: $margin-small; }
+			> li:last-child > a { margin-right: $margin-small; }
+		}
+		> li {
+			@include font-size-base;
+			float: none;
+			display: inline-block;
+			background: transparent !important;
+			margin: 0 0 -1px;
+			> a {
+				word-spacing: normal;
+				@include large(){
+					padding: 16px 0 18px;
+					margin: 0 10px;
+				}
+				border-width: 0 0 1px !important;
+				background: transparent !important;
+				@include small(){
+					padding: 4px 0;
+					border-width: 0 !important;
+					margin: 0 10px;
+				}
+			}
+			&.active > a {
+				color: inherit;
+				&, &:hover { color: $dark; }
+			}
+			@include large(){
+				&:not(.active):hover > a { border-color: $light !important; }
+				&.active > a { border-color: $brand !important; }
+				&:first-child > a { margin-left: 0; }
+				&:last-child > a { margin-right: 0; }
+			}
+		}
+	}
+}
+
+@include screen(){
+	@include small(){
+		.row {
+			.nav-tabs {
+				margin-left: $margin-small*-1;
+				margin-right: $margin-small*-1;
+			}
+		}
+	}
+	.tabs {
+		&.tabs-center {
+			.nav-tabs {
+				text-align: center;
+			}
+		}	
+	}
+}
+
+.tab-content{
+	> .tab-pane {
+		height: 0;
+		display: block;
+		overflow: hidden;
+		&.active {
+			height: auto;
+			overflow: visible;
+		}
+	}
+}
