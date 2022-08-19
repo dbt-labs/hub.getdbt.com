@@ -97,7 +97,7 @@ packages:
 
 <script>
   $.get('<%= version._source.readme %>').done(function(data) {
-      document.getElementById('readme').innerHTML = marked(data)
+      document.getElementById('readme').innerHTML = marked.parse(data)
 
   });
   $('#install').each(function(i, block) {
