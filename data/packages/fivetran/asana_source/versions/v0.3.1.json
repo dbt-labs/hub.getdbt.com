@@ -2,7 +2,7 @@
     "id": "fivetran/asana_source/v0.3.1",
     "name": "asana_source",
     "version": "v0.3.1",
-    "published_at": "2021-04-12T21:02:42.954461+00:00",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
     "packages": [
         {
             "package": "fishtown-analytics/dbt_utils",
@@ -15,6 +15,10 @@
             "git": "https://github.com/fivetran/dbt_fivetran_utils.git",
             "warn-unpinned": false
         }
+    ],
+    "require_dbt_version": [
+        ">=0.18.0",
+        "<0.20.0"
     ],
     "works_with": [],
     "_source": {
