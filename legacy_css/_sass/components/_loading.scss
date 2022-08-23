@@ -1,0 +1,61 @@
+.loading {
+	text-align: center;
+	margin: 20px 0;
+	&:after {
+		margin: 0 auto;
+		content: '';
+		display: block;
+		font-size: 30px;
+		width: 1em;
+		height: 1em;
+		@include circle;
+		color: $brand;
+		border: 1px solid;
+		border-top-color: $outline;
+		border-right-color: $outline;
+		@include spinning;
+	}
+	&.loading-inline {
+		height: 10px;
+		display: inline-block;
+		margin: 0 10px 0 0;
+		vertical-align: middle;
+		&:after {
+			margin: -10px 0;
+		}
+	}
+	&.loading-small {
+		&.loading-inline {
+			top: -1px;
+		}
+		&:after {
+			font-size: 12px;
+			margin: -1px auto;
+		}
+	}
+}
+
+.btn {
+	.loading {
+		&:after {
+			color: inherit;
+		}
+	}
+}
+
+.loading-overlay {
+	background: $silver-light;
+	border-radius: $border-radius-base;
+	> * {
+		pointer-events: none;
+		opacity: .15;
+	}
+	.loading {
+		@include fill;
+		margin: 0;
+		opacity: 1;
+		&:after {
+			@include middle;
+		}
+	}
+}

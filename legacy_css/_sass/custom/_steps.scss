@@ -1,0 +1,42 @@
+.steps {
+	background: white;
+	margin: 3rem 0;
+	border-radius: 6px;
+	@include shadow;
+	&, #{h()} { color: $normal; }
+	text-align: left;
+}
+.step {
+	&:nth-child(2n) {
+		background: $silver-light;
+		border: 1px solid $line;
+		border-width: 1px 0;
+		.step-graphic {
+			@include large {
+				@include flex-order(2);
+			}
+		}
+	}
+	padding: 5%;
+}
+.step-content {
+	@include flex-row;
+	@include flex-wrap;
+	width: 100%;
+	> * {
+		padding: 10px 20px;
+		@include box-sizing(content-box);
+	}
+}
+.step-graphic {
+	@include flex(0,0,150px);
+}
+.step-body {
+	@include flex(1,0,275px);
+}
+.step-title {
+	@include font-size-h3;
+	strong {
+		color: $brand;
+	}
+}

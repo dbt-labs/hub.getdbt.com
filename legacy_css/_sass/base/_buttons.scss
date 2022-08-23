@@ -1,0 +1,186 @@
+@mixin btn-gradient($start,$stop){
+	@include gradient($start,$stop,135deg);
+	@include active {
+		@include gradient(dark($start),dark($stop),135deg);
+		@include shadow(10px);
+	}
+}
+
+.btn {
+	@include transitions(.25s);
+	font-weight: bold;
+	border-width: 0;
+	&.btn-red { @include button-variant(white,$red,$red); }
+	&.btn-blue { @include button-variant(white,$blue,$blue); }
+	&.btn-navy { @include button-variant(white,$navy,$navy); }
+	&.btn-green { @include button-variant(white,$green,$green); }
+	&.btn-orange { @include button-variant(white,$orange,$orange); }
+	&.btn-purple { @include button-variant(white,$purple,$purple); }
+	&.btn-yellow { @include button-variant(white,mix($orange,$yellow),mix($orange,$yellow)); }
+	&.btn-blue-gradient { color: white; @include btn-gradient($blue,$purple); }
+	&.btn-green-gradient { color: white; @include btn-gradient($green,$blue); }
+	&.btn-red-gradient { color: white; @include btn-gradient($orange,$red); }
+	&.btn-orange-gradient { color: white; @include btn-gradient($yellow,$orange); }
+	&.btn-yellow-gradient { color: white; @include btn-gradient($yellow,$green); }
+	&.btn-shadow { @include shadow; }
+	&.btn-white { @include button-variant($dark,white,white); @include shadow; }
+	&.btn-shade {
+		background: transparent;
+		&:before {
+			content: '';
+			@include fill;
+			border-radius: inherit;
+			background: currentColor;
+			opacity: .1;
+		}
+	}
+	height: $component-height-base;
+	&:not(.btn-lg):not(.btn-sm) { @include font-size-base; }
+	&.btn-lg { height: $component-height-large; @include font-size-large; }
+	&.btn-sm { height: $component-height-small; @include font-size-small; }
+	line-height: $component-line-height !important;
+	&.btn-pill { @include pill; }
+
+
+
+	&.btn-icon {
+		padding-left: .75em;
+		padding-right: .75em;
+		&.btn-lg {
+			padding-left: .95em;
+			padding-right: .95em;
+		}
+		&.btn-sm {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		[data-symbol] {
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+	}
+	&.btn-icon-sm {
+		@include small{
+			padding-left: $padding-base-vertical;
+			padding-right: $padding-base-vertical;
+			[data-icon] { margin-right: 0; margin-left: 0; }
+		}
+	}
+
+	&:not(.btn-icon) {
+		[data-icon] {
+			&:not(.icon-end) { margin-right: .375em; }
+			&.icon-end { margin-right: -5px; }
+		}
+	}
+	&:active,
+	&.active {
+		@include box-shadow(none);
+	}
+	&[disabled],
+	&.disabled {
+		opacity: .375;
+	}
+	.table & {
+		margin-top: -3px;
+		margin-bottom: -2px;
+	}
+	&.btn-lg { height: $component-height-large; @include font-size-base; }
+	&.btn-sm { height: $component-height-small; }
+	background-repeat: repeat;
+	background-position: 50% -1px;
+	background-size: 105% 200%;
+
+
+	&:hover, &:focus { background-position: 50% 95%; }
+
+	&.btn-block {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	&.btn-default {
+		display: inline-block;
+		border-color: transparent;
+		box-shadow: none !important;
+		&:hover, &:focus { background-color: $silver-dark; }
+
+	}
+	&.btn-outline {
+		box-shadow: inset 0 0 0 1px currentColor;
+		background: transparent;
+	}
+	&.btn-sm {
+		height: $input-height-small;
+	}
+	&.btn-slim {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+[data-size="small"] {
+	.btn {
+		display: block;
+	}
+}
+
+.btn-link {
+	//font-style: oblique;
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+}
+
+.btn-text {
+	background: transparent;
+	font-weight: normal;
+	// padding-left: $padding-base-horizontal/2 !important;
+	// padding-right: $padding-base-horizontal/2 !important;
+	color: $normal;
+	strong {
+		font-weight: inherit;
+		color: $dark;
+	}
+}
+
+.btn-skinny {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.btn-file {
+	&:before { content: attr(data-placeholder); }
+	&[data-value]:before { content: attr(data-placeholder)":"; }
+	&[data-value]:after { content: attr(data-value); font-style: oblique; opacity: .5; }
+	cursor: pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	input {
+		position: absolute;
+		opacity: .01;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+.btn-inliner {
+	margin: -.45rem -.3rem;
+	display: block;
+	.btn {
+		margin: .45rem .3rem;
+	}
+}
+
+
+table.table-hover {
+	tr:hover {
+		.btn-default {
+			//background-color: $btn-default-bg-hover;
+		}
+	}
+}
+
+.btn, .dropdown-inline {
+	& + & {
+		//margin-left: .125rem;
+	}
+}

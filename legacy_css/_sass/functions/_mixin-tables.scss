@@ -1,0 +1,34 @@
+
+@mixin table($align:baseline,$width:100%) {
+  display: table; 
+  width: $width;
+  > * { 
+    display: table-cell; 
+    vertical-align: $align; 
+  }
+}
+
+@mixin no-table() {
+  &, > * { display: block; }
+}
+
+@mixin table-rows($align:baseline,$width:100%) {
+  display: table; 
+  width: $width;
+  > * { 
+    display: table-row;
+    > * {
+      display: table-cell; 
+      vertical-align: $align; 
+    }
+  }
+}
+
+@mixin table-body($align:baseline,$width:100%) {
+  display: table; 
+  width: $width;
+  > * { 
+    @include table-rows($align);
+    display: table-row-group;
+  }
+}

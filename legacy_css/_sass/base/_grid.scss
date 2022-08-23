@@ -1,0 +1,30 @@
+
+//.row { margin: 0; }
+
+.container {
+	padding-left: 0;
+	padding-right: 0;
+	@include large(){
+		width: 90%;
+		max-width: 1320px;
+	}
+	@include small(){
+		width: auto;
+	}
+}
+
+@include small(){
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+		> [class*="col-md-"],
+		> [class*="col-lg-"] {
+			padding: $component-buffer/2 0;
+		}
+	}
+	.mobile-expand {
+		margin-left: $margin-small*-1;
+		margin-right: $margin-small*-1;
+		border-radius: 0;
+	}
+}

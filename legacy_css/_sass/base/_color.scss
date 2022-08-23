@@ -1,0 +1,35 @@
+$colors: ("red":$red,"orange":$orange,"yellow":$yellow,"green":$green,"blue":$blue,"purple":$purple,"navy":$navy,"gray":$gray);
+
+@each $var, $color in $colors {
+
+	.text-#{$var} { color: $color; }
+	.text-#{$var}-dark { color: dark($color); }
+	.text-#{$var}-darker { color: darker($color); }
+	.text-#{$var}-darkest { color: darkest($color); }
+	.text-#{$var}-light { color: light($color); }
+	.text-#{$var}-lighter { color: lighter($color); }
+	.text-#{$var}-lightest { color: lightest($color); }
+	.text-#{$var}-highlight { color: highlight($color); }
+
+	.bg-#{$var} { background: $color; }
+	.bg-#{$var}-dark { background: dark($color); }
+	.bg-#{$var}-darker { background: darker($color); }
+	.bg-#{$var}-darkest { background: darkest($color); }
+	.bg-#{$var}-light { background: light($color); }
+	.bg-#{$var}-lighter { background: lighter($color); }
+	.bg-#{$var}-lightest { background: lightest($color); }
+	.bg-#{$var}-highlight { background: highlight($color); }
+
+}
+
+.text-silver { color: $silver; }
+.text-silver-light { color: $silver-light; }
+.text-silver-dark { color: $silver-dark; }
+.text-silver-darker { color: $silver-darker; }
+.text-silver-darkest { color: $silver-darkest; }
+
+.bg-silver { background: $silver; }
+.bg-silver-light { background: $silver-light; }
+.bg-silver-dark { background: $silver-dark; }
+.bg-silver-darker { background: $silver-darker; }
+.bg-silver-darkest { background: $silver-darkest; }

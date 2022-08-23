@@ -1,0 +1,37 @@
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transitions($speed:.25s, $curve:$bezier) { @include transition(all $speed $curve); }
+
+@mixin transform($transform,$origin:(50% 50%)) {
+  -webkit-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+  -webkit-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+       -o-animation: $animation;
+          animation: $animation;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} { @content; }
+  @-moz-keyframes #{$name} { @content; }
+  @-o-keyframes #{$name} { @content; }
+  @keyframes #{$name} { @content; }
+}
+
+@if $readme == false {
+	@include keyframes(spinning) { 0% { @include transform(rotate(0)); } 100% {  @include transform(rotate(360deg)); } }
+	@include keyframes(pulsing) { 0% { @include transform(scale(1)); opacity: .5; } 20% { @include transform(scale(1.5)); opacity: 1; } 40% { @include transform(scale(1)); opacity: .5; } }
+}
+
+@mixin spinning($duration:.5s,$timing: 0s) { @include animation(spinning $duration $timing linear infinite); }
+@mixin pulsing($duration:2s,$timing: 0s) { @include animation(pulsing $duration $timing linear infinite); }

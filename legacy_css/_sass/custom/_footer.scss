@@ -1,0 +1,20 @@
+.footer {
+	.footer-content {
+		margin: 0 -1rem;
+		.footer-links {
+			text-align: center;
+			color: rgba(255,255,255,.5);
+			a {
+				padding: .5em 1rem;
+				color: inherit;
+				strong { font-weight: inherit; color: white; }
+			}
+			ul { @include inlinelist; }
+			@include large {
+				@include table(middle);
+				ul:first-child:not(:last-child) { text-align: left; }
+				ul:last-child:not(:first-child) { text-align: right; }
+			}
+		}
+	}
+}

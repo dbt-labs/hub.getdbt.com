@@ -1,0 +1,12 @@
+select:not([multiple]).form-control {
+	text-indent: $padding-base-horizontal - 8;
+}
+
+select.form-control {
+	//height: $input-height-base;
+	line-height: 1;
+	&[data-status="default"] {
+		color: $light;
+		font-style: oblique;
+	}
+}

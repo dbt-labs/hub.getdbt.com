@@ -1,0 +1,83 @@
+.card {
+	@include component;
+	margin: 20px 0;
+	@include flex-column;
+	> .card-header, > .card-footer {
+		@include flex(0,0);
+	}
+	> .card-body {
+		@include flex(1,0	);
+	}
+}
+
+.card-footer,
+.card-header,
+.card-body {
+	padding: $component-padding;
+}
+
+.card-body { padding-bottom: $component-padding-horizontal; }
+
+.card-header {
+	#{h()} { margin: 0; }
+}
+
+.card-flush-top { padding-top: 0; }
+.card-flush-bottom { padding-bottom: 0; }
+.card-flush { padding: 0; }
+
+.card-control {
+	display: block;
+	.btn,
+	.form-control,
+	.input-group-addon,
+	.form-control-static {
+		display: block;
+		margin: 0 !important;
+		height: $input-height-large;
+		padding: ( ( $component-height-large - $font-size-base * $component-line-height ) / 2 ) $component-padding-horizontal;
+		border-radius: 0;
+		width: 100%;
+	}
+	.form-control {
+		background: white;
+	}
+	.btn,
+	.input-group-addon {
+		text-align: center;
+	}
+}
+
+.card-toolbar {
+	@include flex-row;
+	@include flex-wrap;
+	padding: 0;
+	.card-control {
+		display: block;
+		@include flex(1,0,auto);
+	}
+	&.card-footer {
+		.card-control {
+			&:first-child { .btn, .form-control, .input-group-addon, .form-control-static { border-bottom-left-radius: $component-border-radius; } }
+			&:last-child { .btn, .form-control, .input-group-addon, .form-control-static { border-bottom-right-radius: $component-border-radius; } }
+		}
+	}
+}
+
+.card-form {
+	padding: 0;
+	display: table;
+	width: 100%;
+	.card-formrow {
+		display: table-row;
+		.card-control {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		&:not(:last-child) {
+			.card-control {
+				border-bottom: 1px solid $line;
+			}
+		}
+	}
+}

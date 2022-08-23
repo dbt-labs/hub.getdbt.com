@@ -1,0 +1,73 @@
+.navigation {
+	.header & {
+		position: absolute;
+		width: 100%;
+		z-index: 3;
+	}
+}
+
+.navigation-content {
+	@include table(middle);
+	height: $nav-height;
+	> * {
+		padding: 0 10px;
+		left: 10px;
+		> * { display: block; }
+		&.navigation-brand { left: -10px; }
+		&:not(.navigation-brand) { white-space: nowrap; width: 1px; }
+	}
+	.btn-outline, .btn-text {
+		color: white;
+		@include active {
+			background: transparentize($red,.5);
+		}
+	}
+}
+
+.navigation-brand {
+	.nav-logo {
+		max-width: 120px;
+		@include transitions;
+		@include active {
+			@include transform(scale(1.1));
+		}
+	}
+	.hub-logo {
+		max-width: 210px;
+		@include transitions;
+		@include active {
+			@include transform(scale(1.1));
+		}
+	}
+	.nav-logo-text { display: none; }
+	.nav-logo-mark {
+		&:before {
+			content: '';
+			display: block;
+			padding-bottom: percentage(100/256);
+			background: transparent url(../img/logos/logo-white.svg) no-repeat 50% 50% / contain;
+		}
+	}
+	.hub-logo-mark {
+		&:before {
+			content: '';
+			display: block;
+			padding-bottom: percentage(100/256);
+			min-width: 210px;
+			background: transparent url(../img/brand/logos/hub-lockup-white-md.png) no-repeat 50% 50% / contain;
+		}
+	}
+
+}
+
+.navigation-link {
+	@include max-phablet {
+		display: none;
+	}
+}
+
+.navigation-menu {
+	@include min-phablet {
+		display: none;
+	}
+}

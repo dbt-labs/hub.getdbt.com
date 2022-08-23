@@ -1,0 +1,42 @@
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	@include font-size-root;
+}
+
+body, *, *:before, *:after {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+  position: relative;
+  //@include transition(none .2s cubic-bezier(0,.5,.5,1));
+  outline: none !important;
+}
+
+body,html { width: 100%; min-height: 100vh; }
+
+iframe { margin: 0; }
+
+//.page { background: white; }
+
+body {
+	position: relative;
+	&.dbt {
+		@include gradient(dark($dark),$dark,135deg);
+		&:before { content: ''; @include fill; background: transparent url(../img/bg/grid-dark.svg) repeat 50% 50% / 112px 192px; opacity: .2; background-attachment: fixed; }
+	}
+	&.transparent {
+		&, .page { background: transparent; }
+	}
+	&.white {
+		background: white;
+	}
+}
+
+.transitions { @include transitions(.5s); }
+.object { @include shadow; }

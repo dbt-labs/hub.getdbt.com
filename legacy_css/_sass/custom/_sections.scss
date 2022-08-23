@@ -1,0 +1,71 @@
+.header {
+	#{h()} { color: white; }
+	#{h()}, p {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	p {
+		@include font-size-large;
+		color: rgba(255,255,255,.5);
+		//font-style: oblique;
+		a { color: white; }
+	}
+	a {
+		@include active {
+			text-decoration: underline;
+		}
+	}
+}
+
+$section-buffer: 4vw;
+$section-buffer-extra: 50px;
+$section-buffer-overlap: 30px;
+
+.section {
+	padding: calc( #{$section-buffer} + #{$section-buffer-extra} ) $margin-small;
+	&.section-slim, &.section-slim-bottom { padding-bottom: calc( #{$section-buffer/2} + #{$section-buffer-extra/2} ); }
+	&.section-slim, &.section-slim-top { padding-top: calc( #{$section-buffer/2} + #{$section-buffer-extra/2} ); }
+	&.white { background: white; }
+	&.orange { &, #{h()} { color: white; } @include gradient($red,$orange,135deg); }
+	&.silver { background: $silver-light; }
+	&.dark { &, #{h()}, a { color: white; }  @include gradient(dark($dark),$dark,135deg); }
+	&.gray { &, #{h()}, a { color: white; }  @include gradient($dark,light($dark),135deg); }
+	&.iso {
+		&:before { content: ''; @include fill; background: transparent url(../img/bg/grid-dark.svg) repeat 50% 50% / 112px 192px; opacity: .2; background-attachment: fixed; }
+		&.iso-small:before { background-size: 56px 96px; }
+		&.orange:before { background-image: url(../img/bg/grid-red.svg); }
+		&.silver:before { background-image: url(../img/bg/grid-white.svg); opacity: 1; }
+	}
+	&.border, &.border-top { border-top: 1px solid $line; }
+	&.border, &.border-bottom { border-bottom: 1px solid $line; }
+
+	&.orange, &.dark, &.gray {
+		.btn-shade {
+			@include active {
+				color: white;
+				&:before {
+					opacity: .2;
+				}
+			}
+		}
+	}
+	.navigation & { padding-top: 0 !important; padding-bottom: 0 !important; }
+	.header .navigation & {
+		background: transparent;
+		&:before { display: none; }
+	}
+}
+
+.section-content {
+	max-width: $laptop;
+	margin: auto;
+	&.section-content-small { max-width: $tablet; }
+	.header & { padding-top: $nav-height - $section-buffer-overlap*1.5; }
+	.navigation & { padding-top: 0 !important; padding-bottom: 0 !important; }
+
+}
+
+
+.overlap-section-top { margin-top: calc( -#{$section-buffer} - #{$section-buffer-extra} - #{$section-buffer-overlap} ) !important; z-index: 2; }
+.overlap-section-bottom { margin-bottom: calc( -#{$section-buffer} - #{$section-buffer-extra} - #{$section-buffer-overlap} ) !important; z-index: 2; }

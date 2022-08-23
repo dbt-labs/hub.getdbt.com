@@ -1,0 +1,129 @@
+$option-size:          17px;
+$option-bg:            $silver-dark;
+$option-bg-hover:      $silver-darkest;
+$option-bg-disabled:   $lighter;
+$option-color:         white;
+$option-bg-checked:    $blue;
+
+@mixin option-colors($default-bg, $hover-bg, $focus-bg, $checked-bg, $disabled-bg) {
+  @if $default-bg { .option-icon { background-color: $default-bg; } }
+
+  &:hover input:not(:disabled) ~ .option-icon,
+  input:not(:disabled):focus ~ .option-icon { background: $hover-bg; }
+
+  input:focus:not(:disabled) ~ .option-icon { background: focus-bg; }
+  
+  // standard checked options
+  input:checked:not(:disabled) ~ .option-icon { background: $checked-bg; }
+  
+  &:hover input:checked:not(:disabled) ~ .option-icon,
+  input:checked:not(:disabled):focus ~ .option-icon { background: darker($checked-bg); }
+  
+  // disabled unchecked options
+  input:disabled ~ .option-icon { background: $disabled-bg; }
+  // disabled checked options
+  input:checked:disabled ~ .option-icon { background: $disabled-bg; }
+}
+
+@mixin option-check(){
+  display: block;
+  border: 2px solid;
+  border-top-width: 0;
+  border-left-width: 0;
+  height: 10px;
+  width: 5px;
+  @include transform(rotate(45deg));
+  margin-left: 6px;
+  margin-top: 2px;
+}
+
+@mixin option-dot(){
+  display: block;
+  width: ( $option-size - 12 );
+  height: ( $option-size - 12 );
+  background: currentColor;
+  @include middle;
+  @include circle;
+}
+
+.option {
+  &.option-lg { font-size: $font-size-large; }
+  margin: 6px 0;
+  font-weight: normal;
+  position: relative;
+  vertical-align: middle;
+  display: block;
+  cursor: pointer;
+	.form-inline & {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+  .option-icon {
+    display: inline-block;
+    vertical-align: middle;
+    background: $option-bg;
+    width: $option-size;
+    height: $option-size;
+    margin-right: .5em;
+    color: $option-color;
+    @include transitions(.25s);
+    @include box-sizing(content-box);
+    margin-top: -2px;
+  }
+  
+  @include option-colors(false, $option-bg-hover, $option-color, $option-bg-checked, $option-bg-disabled);
+
+  input {
+    position: absolute;
+    left: 0;
+    opacity: .01;
+    &[type="checkbox"] {
+      ~ .option-icon { border-radius: $input-border-radius; }
+      &:checked ~ .option-icon:after {
+        content: '';
+        color: white;
+        @include option-check;
+      }
+    }
+    &[type="radio"] {
+      ~ .option-icon {
+        @include circle;
+        //padding: 1px;
+        //top: 0;
+        //left: -1px;
+      }
+      &:checked ~ .option-icon:after {
+        content: '';
+        color: white;
+        @include option-dot;
+      }
+    }
+  }
+  .form-inline & {
+    display: inline-block;
+  }
+  &:not(.option-inline) {
+    //&:first-child { margin-top: 10px; }
+    //&:last-child { margin-bottom: 10px; }
+  }
+  &.option-inline {
+    display: inline-block;
+    margin-right: 1em;
+    vertical-align: top;
+  }
+}
+
+.has-error .option {
+  @include option-colors($state-danger-bg, darken($state-danger-bg,7%), white, $brand-danger, darken($state-danger-bg,7%) );
+}
+
+.input-group-addon {
+  .option {
+    margin: 0;
+    height: 20px;
+    top: -2px;
+    .option-icon {
+      background: white;
+    }
+  }
+}

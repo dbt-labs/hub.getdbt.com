@@ -1,0 +1,55 @@
+$terminal-radius: 6px;
+
+.terminal {
+	border-top: 32px solid rgba(255,255,255,.3);
+	border-radius: $terminal-radius;
+	margin: 3rem 0;
+	@include shadow();
+	&:before {
+		content: '';
+		display: block;
+		width: 10px;
+		height: 10px;
+		@include circle;
+		background: white;
+		position: absolute;
+		top: -21px;
+		left: 11px;
+		box-shadow: 20px 0 0 white, 40px 0 0 white;
+	}
+	.terminal-body {
+		border-radius: 0 0 $terminal-radius $terminal-radius;
+		overflow: hidden;
+		img {
+			min-width: 640px;
+			max-width: none;
+			display: block;
+			width: 100%;
+			height: auto;
+			border-radius: 0 0 $terminal-radius $terminal-radius;
+		}
+	}
+	&.terminal-mini {
+		border-top: 0;
+		box-shadow: none;
+		width: 150px;
+		height: 80px;
+		margin: 0;
+		&:before {
+			opacity: .333;
+			width: 7px;
+			height: 7px;
+			top: 8px;
+			box-shadow: 14px 0 0 white, 28px 0 0 white;
+		}
+		&.red { @include gradient($red,$orange,135deg); }
+		&.purple { @include gradient($red,$purple,135deg); }
+		&.blue { @include gradient($blue,$purple,135deg); }
+		.terminal-body {
+			img {
+				@include fill;
+				min-width: none;
+			}
+		}
+	}
+}

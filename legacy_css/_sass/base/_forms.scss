@@ -1,0 +1,65 @@
+.form {
+
+}
+
+.form-group,
+.form-inline {
+	> * {
+		&:not(:last-child) { margin-right: .5em; 
+			.form-horizontal & { margin-right: 0; }
+		}
+		label {
+			vertical-align: middle;
+			margin: $padding-base-vertical 0;
+		}
+	}
+}
+
+.form-group, .form-inline {
+	> *:not(:last-child) {
+		margin-right: 1em;
+	}
+}
+
+.help-block {
+	color: $light;
+	font-style: oblique;
+	font-weight: normal;
+	@include font-size-small;
+	display: block;
+	&:empty {
+		display: none;
+	}
+	p { margin: 0; display: inline; }
+	&.help-block-inline {
+		display: inline;
+	}
+	&.help-block-margins {
+		margin: 10px 0;
+	}
+	ul, li {
+		color: inherit;
+	}
+}
+
+.form-group-lg {
+	@include font-size-large;
+}
+
+
+.form-footer {
+	padding: 20px 0;
+	&.form-footer-right {
+		text-align: right;
+	}
+}
+
+.has-error {
+	.option {
+		color: $state-danger-text;
+	}
+}
+
+.output {
+	@include font-size-base;
+}

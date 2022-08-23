@@ -1,0 +1,40 @@
+.panel {
+	margin: 20px 0;
+	border-width: 0;
+	@include component;
+	#{h(1)} { &.panel-title { @include font-size-h1; } }
+	#{h(2)} { &.panel-title { @include font-size-h2; } }
+	#{h(3)} { &.panel-title { @include font-size-h3; } }
+	#{h(4)} { &.panel-title { @include font-size-h4; } }
+	#{h(5)} { &.panel-title { @include font-size-h5; } }
+	#{h(6)} { &.panel-title { @include font-size-h6; } }
+	&, > .panel-heading, > .panel-footer, > .panel-body {
+		border-color: $panel-inner-border;
+	}
+	> .panel-heading, > .panel-footer, > .panel-body, > .panel-body > .panel-body-fill {
+		padding: $component-padding;
+		&.panel-flush { padding: 0 !important; }
+		&.panel-flush-top { padding-top: 0 !important; }
+		&.panel-flush-bottom { padding-bottom: 0 !important; }
+	}
+	&.panel-large {
+		> .panel-heading, > .panel-footer, > .panel-body, > .panel-body > .panel-body-fill {
+			padding: $component-padding-large;
+			@include small {
+				padding: ($margin-small*2/3) $margin-small;
+			}
+		}
+	}
+	@include flex-column;
+	> .panel-heading, > .panel-footer {
+		@include flex(0,0,auto);
+	}
+	> .panel-body {
+		@include flex(1,0,auto);
+		min-height: 80px;
+		> .panel-body-fill {
+			@include fill;
+			@include scroll;
+		}
+	}
+}

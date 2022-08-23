@@ -1,0 +1,125 @@
+@include table-row-variant('success', transparent);
+@include table-row-variant('info', transparent);
+@include table-row-variant('warning', transparent);
+@include table-row-variant('danger', transparent);
+
+@mixin table-row-status($class,$color) {
+  .table tr.#{$class} { box-shadow: inset $outline 0 0 $color; }
+}
+
+@include table-row-status(success,$green);
+@include table-row-status(info,$blue);
+@include table-row-status(warning,$yellow);
+@include table-row-status(danger,$red);
+
+.table {
+  margin-bottom: 40px;
+  > thead > tr > th {
+    border-width: 1px; 
+    @include labels;
+    color: $lighter;
+  }
+  &.table-borderless {
+    th, td { border: 0; }
+  }
+  &.table-flush {
+    td, th {
+      &:first-child { padding-left: 0; }
+      &:last-child { padding-right: 0; }
+    }
+  }
+  &.table-justified {
+    th, td {
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+  > thead > tr,
+  > tbody > tr,
+  > tfoot > tr {
+    &.success {
+
+    }
+    th, td {
+      // padding-top: 10px;
+      // padding-bottom: 10px;
+      padding-left: $padding-base-horizontal; 
+      padding-right: $padding-base-horizontal;
+    }
+  }
+  &.table-large {
+    th, td {
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+  }
+  &.table-condensed {
+    font-size: $font-size-small;
+  }
+  .pull-right {
+    z-index: 2;
+  }
+}
+
+// styles for using alternate elements within tables, like <a href="#">anchors</a>
+.table { display: table; }
+.table-caption { display: table-caption; }
+.table-colgroup { display: table-column-group; }
+.table-thead { display: table-header-group; }
+.table-tfoot { display: table-footer-group; }
+.table-tbody { display: table-row-group; }
+.table-td { display: table-cell; }
+.table-col { display: table-column; }
+.table-tr { display: table-row; }
+
+.table-responsive {
+  border-radius: $border-radius-base;
+  @include large(){ overflow: visible; }
+  @include small(){ @include scroll; }
+}
+
+.table-alignment {
+  @include large(){
+    margin-left: $padding-base-horizontal*-1;
+    margin-right: $padding-base-horizontal*-1;
+  }
+}
+
+.cell-link {
+  display: block;
+  &:not(.alternate):not(.text-light) {  
+    font-style: inherit;
+    font-weight: inherit;
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &.alternate {
+    font-style: oblique;
+  }
+}
+
+td, th {
+  &.sm {
+    width: 1px;
+    white-space: nowrap;
+  }
+  #{h(3)} { margin-top: -2px !important; }
+}
+
+.cell-right {
+  text-align: right;
+}
+
+.cell-protected {
+  color: $light !important;
+  font-weight: normal !important;
+  &:empty {
+    &:before {
+      content: '—';
+      color: $lighter;
+    }
+  }
+}

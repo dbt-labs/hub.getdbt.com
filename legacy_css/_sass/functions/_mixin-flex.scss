@@ -1,0 +1,70 @@
+@mixin flex-prefix($key,$val) {
+	-webkit-#{$key}: $val;
+	-ms-#{$key}: $val;
+	#{$key}: $val;
+}
+
+//
+// Flexbox Container
+// --------------------------------------------------
+
+@mixin flexbox(){
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex-row(){
+	@include flexbox;
+	@include flex-prefix(flex-direction,row);
+}
+
+@mixin flex-column(){
+	@include flexbox;
+	@include flex-prefix(flex-direction,column);
+}
+
+@mixin flex-justify($val){
+	@include flex-prefix(justify-content,$val);
+}
+
+@mixin flex-align($val){
+	@include flex-prefix(align-items,$val);
+}
+
+@mixin flex-align-content($val){
+	@include flex-prefix(align-content,$val);
+}
+
+@mixin flex-wrap($val:nowrap){
+	@include flex-prefix(flex-wrap,wrap);
+}
+
+
+//
+// Flexbox Items
+// --------------------------------------------------
+
+@mixin flex($grow:0,$shrink:1,$basis:auto){
+	//display: block;
+	-webkit-flex: $grow $shrink $basis;
+	@if $basis == 0 {
+		-ms-flex: $grow $shrink 0px;
+	} @else {
+		-ms-flex: $grow $shrink $basis;
+	}
+
+	flex: $grow $shrink $basis;
+}
+
+@mixin flex-order($n){
+	@include flex-prefix(order,$n);
+}
+
+@mixin flex-basis($n){
+	@if ( $n == 0 ) {
+		@include flex-prefix(basis,0px);
+	} @else {
+		@include flex-prefix(basis,$n);
+	}
+}
