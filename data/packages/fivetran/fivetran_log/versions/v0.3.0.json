@@ -2,7 +2,7 @@
     "id": "fivetran/fivetran_log/v0.3.0",
     "name": "fivetran_log",
     "version": "v0.3.0",
-    "published_at": "2021-03-17T00:02:40.257192+00:00",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
     "packages": [
         {
             "package": "fishtown-analytics/dbt_utils",
@@ -16,6 +16,10 @@
             "warn-unpinned": false
         }
     ],
+    "require_dbt_version": [
+        ">=0.18.0",
+        "<0.20.0"
+    ],
     "works_with": [],
     "_source": {
         "type": "github",
@@ -25,6 +29,6 @@
     "downloads": {
         "tarball": "https://codeload.github.com/fivetran/dbt_fivetran_log/tar.gz/v0.3.0",
         "format": "tgz",
-        "sha1": "06e79abcb7d488a6ec168985c69612c6a1c0342e"
+        "sha1": "4f4bad7b1ebcb9ba71626e4c4c463ed319074550"
     }
 }

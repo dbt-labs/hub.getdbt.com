@@ -2,7 +2,7 @@
     "id": "fivetran/greenhouse_source/v0.1.0",
     "name": "greenhouse_source",
     "version": "v0.1.0",
-    "published_at": "2021-03-02T23:01:02.033157+00:00",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
     "packages": [
         {
             "package": "fishtown-analytics/dbt_utils",
@@ -16,6 +16,10 @@
             "warn-unpinned": false
         }
     ],
+    "require_dbt_version": [
+        ">=0.18.0",
+        "<0.20.0"
+    ],
     "works_with": [],
     "_source": {
         "type": "github",
@@ -25,6 +29,6 @@
     "downloads": {
         "tarball": "https://codeload.github.com/fivetran/dbt_greenhouse_source/tar.gz/v0.1.0",
         "format": "tgz",
-        "sha1": "185136ecf152e19464e93881ba886e34b1e11373"
+        "sha1": "92f037a4660cf4c66fffb56747c9cf2149b2808c"
     }
 }

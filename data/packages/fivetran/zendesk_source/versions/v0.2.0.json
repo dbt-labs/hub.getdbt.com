@@ -2,7 +2,7 @@
     "id": "fivetran/zendesk_source/v0.2.0",
     "name": "zendesk_source",
     "version": "v0.2.0",
-    "published_at": "2021-02-25T23:02:07.620316+00:00",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
     "packages": [
         {
             "package": "fishtown-analytics/dbt_utils",
@@ -15,6 +15,10 @@
             "git": "https://github.com/fivetran/dbt_fivetran_utils.git",
             "warn-unpinned": false
         }
+    ],
+    "require_dbt_version": [
+        ">=0.18.0",
+        "<0.20.0"
     ],
     "works_with": [],
     "_source": {

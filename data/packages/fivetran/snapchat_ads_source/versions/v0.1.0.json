@@ -2,7 +2,7 @@
     "id": "fivetran/snapchat_ads_source/v0.1.0",
     "name": "snapchat_ads_source",
     "version": "v0.1.0",
-    "published_at": "2021-05-03T18:03:18.097132+00:00",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
     "packages": [
         {
             "package": "fishtown-analytics/dbt_utils",
@@ -13,7 +13,6 @@
         },
         {
             "git": "https://github.com/fivetran/dbt_fivetran_utils.git",
-            "revision": null,
             "warn-unpinned": false
         },
         {
@@ -24,6 +23,10 @@
             ]
         }
     ],
+    "require_dbt_version": [
+        ">=0.19.0",
+        "<0.20.0"
+    ],
     "works_with": [],
     "_source": {
         "type": "github",
@@ -33,6 +36,6 @@
     "downloads": {
         "tarball": "https://codeload.github.com/fivetran/dbt_snapchat_ads_source/tar.gz/v0.1.0",
         "format": "tgz",
-        "sha1": "22009ea6bad4f26c6fe82d9054f08324e7b4a6dd"
+        "sha1": "97a46073d633f2d928f7efc8b674ff5311233cdd"
     }
 }
