@@ -19,7 +19,13 @@ There are two components to the [dbt Hub](https://hub.getdbt.com/):
 
 ## Running locally
 
-### Development
+### Using Docker
+```shell
+docker-compose build
+docker-compose up
+```
+
+### Using local Ruby environment
 
 See the [installing Ruby for Mac](#installing-ruby-for-mac) and [troubleshooting](#troubleshooting) sections below as-needed.
 
