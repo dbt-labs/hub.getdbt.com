@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  web:
+    container_name: dbt-hub
+    build: .
+    command: bundle exec middleman serve --port 4567
+    volumes:
+      - '.:/app'
+    ports:
+      - "4567:4567"

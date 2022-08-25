@@ -1,5 +1,13 @@
 # Contributing to this repo
 
+## Table of contents
+- [Overview](#overview)
+- [Running locally](#running-locally)
+    - [Using Docker](#using-docker)
+- [Use with `dbt deps` from dbt Core](#use-with--dbt-deps--from-dbt-core)
+- [Managing the `Gemfile` and `Gemfile.lock`](#managing-the--gemfile--and--gemfilelock-)
+    - [Steps](#steps)
+
 ## Overview
 There are two components to the [dbt Hub](https://hub.getdbt.com/):
 
@@ -19,17 +27,24 @@ There are two components to the [dbt Hub](https://hub.getdbt.com/):
 
 ## Running locally
 
-### Development
+See [local-ruby-environment.md](local-ruby-environment.md) for non-Docker instructions.
 
-See the [installing Ruby for Mac](#installing-ruby-for-mac) and [troubleshooting](#troubleshooting) sections below as-needed.
-
-Install dependencies with `bundler` and run with middleman:
-```bash
-bundle install
-bundle exec middleman serve --port 4567
+### Using Docker
+```shell
+docker-compose build
+docker-compose up -d
 ```
 
-### Use with `dbt deps` from dbt Core
+Either of the following should launch the website in your default web browser:
+- http://127.0.0.1:4567
+- http://localhost:4567
+
+When finished:
+```shell
+docker-compose down
+```
+
+## Use with `dbt deps` from dbt Core
 
 **Note:** Make sure to remember to unset any environment variables that you set once you are done! `unset YOUR_VARIABLE_NAME_HERE` should work in bash/zsh. [`direnv`](https://direnv.net/) is one option for loading/unloading environment variables automatically when entering/exiting a directory.
 
@@ -54,67 +69,6 @@ Then `dbt deps` will use the JSON served from the following locations:
 - `data/packages/tnalpgge/cowsay/index.json`
 - `data/packages/tnalpgge/cowsay/versions/0.3.4.json`
 
-
-### Installing Ruby for Mac
-
-[These](https://antran.app/2021/m1_mac_part2/) instructions are summarized below. They were written with a M1 Mac in mind, but might work for other Macs too. Your mileage may vary.
-
-```bash
-# Install rbenv
-# Follow the printed instructions to load rbenv automatically for your shell
-brew install rbenv
-
-# Initialise rbenv
-rbenv init
-
-# Verify rbenv
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
-
-# Install Ruby
-rbenv install 2.7.2
-
-# Set global version
-rbenv global 2.7.2
-
-# Restart your shell
-```
-
-### Troubleshooting
-
-Some users may get the following errors during `bundle install`:
-
-> An error occurred while installing libv8 (3.16.14.19), and Bundler cannot continue.
-Make sure that `gem install libv8 -v '3.16.14.19' --source '<https://rubygems.org/'`> succeeds before bundling.
-
-or:
-
-> An error occurred while installing therubyracer (0.12.3), and Bundler cannot continue.
-Make sure that `gem install therubyracer -v '0.12.3' --source '<https://rubygems.org/'`> succeeds before bundling.
-
-```bash
-# Prerequisite
-brew install v8
-
-# Replace `12.1` below with macOS version
-# Replace `3.16.14.19` below with the version number of libv8 in the error message
-# https://gist.github.com/fernandoaleman/868b64cd60ab2d51ab24e7bf384da1ca?permalink_comment_id=3927309#gistcomment-3927309
-env \
-  CXX=clang++ \
-  GYPFLAGS=-Dmac_deployment_target=12.1 \
-gem install libv8 --version 3.16.14.19
-
-gem install therubyracer -- --with-v8-dir=/usr/local/opt/v8
-```
-
-Try re-running:
-```shell
-bundle install
-```
-
-#### In directory bundling
-
-To install gems to the project repo (as opposed to your system-user-level gem folder), use the `--install-dir` flag with the gem install commands above. However, place this flag and corresponding directory path argument _before_ the `--` (this is critical).
-
 ## Managing the `Gemfile` and `Gemfile.lock`
 
 Bundler manages gems used in a Ruby application. A file named `Gemfile` in your project root will contain gem names and optional version ranges.
@@ -123,8 +77,16 @@ Modifying the version of a Gem used is a two-step process. Modify the reference 
 
 ### Steps
 
-1. Add or modify a gem entry `gem '<gem name>', '<version range>'` in `Gemfile`
-2. Execute `bundle update <gem name needing update>`
-    - Special formatting in `Gemfile.lock` auto-updates
-    - Try not to run a bare `bundle update` as this will possibly update several gems and break your application
+If using Docker, start an interactive shell on the running container first:
+```shell
+docker exec -it dbt-hub sh
+```
+And `exit` when finished performing the bundle update outlined below.
+
+1. Add or modify a gem entry in `Gemfile` with the following syntax:
+    - `gem '<gem name>', '<version range>'`
+2. Update `Gemfile.lock` with:
+    - `bundle update <gem name needing update>` or just `bundle update`
+    - Running a bare `bundle update` may update multiple gems
+    - Either way, testing will be needed to verify the application still works as intended afterwards
 3. Commit `Gemfile` and `Gemfile.lock` changes in both to the repo
