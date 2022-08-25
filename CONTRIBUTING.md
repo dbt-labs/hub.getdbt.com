@@ -23,21 +23,9 @@ There are two components to the [dbt Hub](https://hub.getdbt.com/):
 
 See the [installing Ruby for Mac](#installing-ruby-for-mac) and [troubleshooting](#troubleshooting) sections below as-needed.
 
-Clone this repository and install submodules:
-
-```
-git submodule update --init
-```
-
-...then install dependencies with `bundler`:
-
+Install dependencies with `bundler` and run with middleman:
 ```bash
 bundle install
-```
-
-...and run with middleman:
-
-```bash
 bundle exec middleman serve --port 4567
 ```
 
