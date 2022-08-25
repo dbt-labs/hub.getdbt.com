@@ -60,7 +60,22 @@
 
       <div class="row">
         <div class="col-md-12">
-          <h3>Installation</h3>
+
+        <h3>Installation</h3>
+        
+        dbt version required: <%=
+        if version.require_dbt_version != nil && version.require_dbt_version.length() > 0
+          then 
+            if version.require_dbt_version.kind_of?(Array)
+              "<code>" + version.require_dbt_version.join(', ') + "</code>"
+            else
+              "<code>" + version.require_dbt_version + "</code>"
+            end
+          else
+            "Not defined" 
+          end
+      %>
+
           <p>Include the following in your <code>packages.yml</code> file:
           <pre id='install'>
 packages:
