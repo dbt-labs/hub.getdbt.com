@@ -22,7 +22,12 @@ There are two components to the [dbt Hub](https://hub.getdbt.com/):
 ### Using Docker
 ```shell
 docker-compose build
-docker-compose up
+docker-compose up -d
+```
+
+When finished:
+```shell
+docker-compose down
 ```
 
 ### Using local Ruby environment
