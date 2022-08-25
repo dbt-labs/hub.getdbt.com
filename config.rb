@@ -141,6 +141,10 @@ helpers do
   def is_latest(package, version)
     package.latest == version['version']
   end  
+
+  def is_valid_github_url(url)
+    url.split("/tree/").length == 2 && url.split("/").length >= 5
+  end  
 end
 
 ignore '/package.template.html.erb'
