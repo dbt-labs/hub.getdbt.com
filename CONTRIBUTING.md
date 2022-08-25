@@ -129,8 +129,16 @@ Modifying the version of a Gem used is a two-step process. Modify the reference 
 
 ### Steps
 
-1. Add or modify a gem entry `gem '<gem name>', '<version range>'` in `Gemfile`
-2. Execute `bundle update <gem name needing update>`
-    - Special formatting in `Gemfile.lock` auto-updates
-    - Try not to run a bare `bundle update` as this will possibly update several gems and break your application
+If using Docker, start an interactive shell on the running container first:
+```shell
+docker exec -it dbt-hub sh
+```
+And `exit` when finished performing the bundle update outlined below.
+
+1. Add or modify a gem entry in `Gemfile` with the following syntax:
+    - `gem '<gem name>', '<version range>'`
+2. Update `Gemfile.lock` with:
+    - `bundle update <gem name needing update>` or just `bundle update`
+    - Running a bare `bundle update` may update multiple gems
+    - Either way, testing will be needed to verify the application still works as intended afterwards
 3. Commit `Gemfile` and `Gemfile.lock` changes in both to the repo
