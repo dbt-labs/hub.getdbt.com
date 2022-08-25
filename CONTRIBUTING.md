@@ -27,6 +27,8 @@ There are two components to the [dbt Hub](https://hub.getdbt.com/):
 
 ## Running locally
 
+See [local-ruby-environment.md](local-ruby-environment.md) for non-Docker instructions.
+
 ### Using Docker
 ```shell
 docker-compose build
