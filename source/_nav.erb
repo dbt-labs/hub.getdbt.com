@@ -8,19 +8,6 @@
             		<img src='<%= site_url %>/img/logos/dbt-lockup.png' style="height: 48px"/>
 		  </a>
 		</div>
-		<% if defined?(version) && is_valid_github_url(version._source.url) %>
-		<div class="navigation-link">
-		     <a class="btn btn-teal btn-shadow github-button" style="background-color:#047377;color:#fff"
-			href="<%=version._source.url.split("/tree/")[0]%>"
-			data-size="large"
-			data-show-count="true"
-			aria-label="Star the package on GitHub"
-			target="_blank">
-			     <i data-icon="star"></i>
-			     <%= version._source.url.split("/")[3] %>/<%= version._source.url.split("/")[4] %>
-			</a>
-		</div>
-		<% end %>
 		<div class="navigation-link">
 		     <a class="btn btn-teal btn-shadow" style="background-color:#047377;color:#fff"
 			href="https://docs.getdbt.com/docs/building-a-dbt-project/package-management"

@@ -32,6 +32,19 @@
                   <%= package.namespace %>
                 </a>
               </em><br/>
+              <% if is_valid_github_url(version._source.url) %>
+              <div class="github-link" style="height: 30px;margin-bottom: 0" >
+               <a class="github-button"
+                href="<%=version._source.url.split("/tree/")[0]%>"
+                data-size="large"
+                data-show-count="true"
+                aria-label="Star the package on GitHub"
+                target="_blank">
+                     <i data-icon="star"></i>
+                     <%= version._source.url.split("/")[3] %>/<%= version._source.url.split("/")[4] %>
+                </a>
+              </div>
+              <% end %>
               <em><%= package.versions[package.latest].description %></em>
             </div>
           </div>
