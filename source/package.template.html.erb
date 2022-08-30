@@ -57,7 +57,7 @@
                       style="min-width: 225px"
                       id="version"
                       onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                <% for local_version, package_version in package.versions.sort_by { |v| Gem::Version.new(v[0]) }.reverse %>
+                <% for local_version, _package_version in package.versions.sort_by { |key, _val| Gem::Version.new(key) }.reverse %>
                 <option value="<%= site_url %>/<%= package.namespace %>/<%= package.name %>/<%= local_version %>"
                         <% if local_version == version.version %>selected="selected"<% end %>>
                   <%= local_version %><% if local_version == package.latest %> (latest)<% end %>
