@@ -1,0 +1,37 @@
+{
+    "id": "fivetran/microsoft_ads_source/v0.6.1",
+    "name": "microsoft_ads_source",
+    "version": "v0.6.1",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/fivetran_utils",
+            "version": [
+                ">=0.3.0",
+                "<0.4.0"
+            ]
+        },
+        {
+            "package": "dbt-labs/spark_utils",
+            "version": [
+                ">=0.3.0",
+                "<0.4.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.0.0",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_microsoft_ads_source/tree/v0.6.1/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_microsoft_ads_source/v0.6.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_microsoft_ads_source/tar.gz/v0.6.1",
+        "format": "tgz",
+        "sha1": "8eb456d31be923b7cc0c3cb927908727140b352b"
+    }
+}
