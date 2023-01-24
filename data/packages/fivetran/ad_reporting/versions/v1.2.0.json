@@ -1,0 +1,93 @@
+{
+    "id": "fivetran/ad_reporting/v1.2.0",
+    "name": "ad_reporting",
+    "version": "v1.2.0",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/apple_search_ads",
+            "version": [
+                ">=0.2.0",
+                "<0.3.0"
+            ]
+        },
+        {
+            "package": "fivetran/snapchat_ads",
+            "version": [
+                ">=0.5.0",
+                "<0.6.0"
+            ]
+        },
+        {
+            "package": "fivetran/facebook_ads",
+            "version": [
+                ">=0.6.0",
+                "<0.7.0"
+            ]
+        },
+        {
+            "package": "fivetran/google_ads",
+            "version": [
+                ">=0.9.0",
+                "<0.10.0"
+            ]
+        },
+        {
+            "package": "fivetran/pinterest",
+            "version": [
+                ">=0.7.0",
+                "<0.8.0"
+            ]
+        },
+        {
+            "package": "fivetran/linkedin",
+            "version": [
+                ">=0.6.0",
+                "<0.7.0"
+            ]
+        },
+        {
+            "package": "fivetran/microsoft_ads",
+            "version": [
+                ">=0.6.0",
+                "<0.7.0"
+            ]
+        },
+        {
+            "package": "fivetran/tiktok_ads",
+            "version": [
+                ">=0.3.0",
+                "<0.4.0"
+            ]
+        },
+        {
+            "package": "fivetran/twitter_ads",
+            "version": [
+                ">=0.6.0",
+                "<0.7.0"
+            ]
+        },
+        {
+            "package": "fivetran/amazon_ads",
+            "version": [
+                ">=0.1.0",
+                "<0.2.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.3.0",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_ad_reporting/tree/v1.2.0/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_ad_reporting/v1.2.0/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_ad_reporting/tar.gz/v1.2.0",
+        "format": "tgz",
+        "sha1": "8c2c5161fd2a3ec9e1bda550494961f05cf8dfa6"
+    }
+}
