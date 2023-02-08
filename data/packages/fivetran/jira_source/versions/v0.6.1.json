@@ -1,0 +1,37 @@
+{
+    "id": "fivetran/jira_source/v0.6.1",
+    "name": "jira_source",
+    "version": "v0.6.1",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/fivetran_utils",
+            "version": [
+                ">=0.4.0",
+                "<0.5.0"
+            ]
+        },
+        {
+            "package": "dbt-labs/spark_utils",
+            "version": [
+                ">=0.3.0",
+                "<0.4.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.3.0",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_jira_source/tree/v0.6.1/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_jira_source/v0.6.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_jira_source/tar.gz/v0.6.1",
+        "format": "tgz",
+        "sha1": "f3c3665339436fb36b7867fb0e46172cff4162ec"
+    }
+}
