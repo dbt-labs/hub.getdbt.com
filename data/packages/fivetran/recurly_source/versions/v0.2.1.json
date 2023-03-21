@@ -1,0 +1,37 @@
+{
+    "id": "fivetran/recurly_source/v0.2.1",
+    "name": "recurly_source",
+    "version": "v0.2.1",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/fivetran_utils",
+            "version": [
+                ">=0.4.0",
+                "<0.5.0"
+            ]
+        },
+        {
+            "package": "dbt-labs/spark_utils",
+            "version": [
+                ">=0.3.0",
+                "<0.4.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.3.0",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_recurly_source/tree/v0.2.1/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_recurly_source/v0.2.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_recurly_source/tar.gz/v0.2.1",
+        "format": "tgz",
+        "sha1": "d613172b9acb5d55a633192f4c9bf83a7ae9be94"
+    }
+}
