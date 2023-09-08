@@ -1,0 +1,37 @@
+{
+    "id": "fivetran/app_reporting/v0.3.2",
+    "name": "app_reporting",
+    "version": "v0.3.2",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/google_play",
+            "version": [
+                ">=0.3.0",
+                "<0.4.0"
+            ]
+        },
+        {
+            "package": "fivetran/apple_store",
+            "version": [
+                ">=0.3.0",
+                "<0.4.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.3.0",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_app_reporting/tree/v0.3.2/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_app_reporting/v0.3.2/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_app_reporting/tar.gz/v0.3.2",
+        "format": "tgz",
+        "sha1": "9a5fcf202615b9df7bb8dc46d00254b6b55d3b9f"
+    }
+}

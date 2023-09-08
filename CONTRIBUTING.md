@@ -55,7 +55,7 @@ export DBT_PACKAGE_HUB_URL=http://localhost:4567/
 
 Or if you have a Netlify preview created by a pull request:
 ```
-export DBT_PACKAGE_HUB_URL=https://deploy-preview-1717--flamboyant-mcclintock-92ba2d.netlify.app/
+export DBT_PACKAGE_HUB_URL=https://deploy-preview-1717--hub-getdbt-com.netlify.app/
 ```
 
 Suppose your `packages.yml` in your dbt project contains the following content:
