@@ -2,11 +2,10 @@
   <div class="tile-content">
     <div class="tile-body" style="padding: 30px 30px 30px 60px">
       <div class="tile-graphic">
-         <%= image_tag(package.assets.logo, {alt: package.name}) %>
+         <%= image_tag(package.assets.logo, {alt: package.name, style: "width:75px;height:75px"}) %>
       </div>
-      <div class="tile-text">
-         <h4 style="color: #3b3f43"><%= package.name %></h4>
-         <p style="color: #767d85"><%= package.description %></p>
+      <div class="tile-text" style="padding-top: 25px">
+         <h4 style="color: #3b3f43;font-size:1.2rem"><%= package.name %></h4>
       </div>
     </div>
   </div>
