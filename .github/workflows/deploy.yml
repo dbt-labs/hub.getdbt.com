@@ -21,4 +21,6 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          ./deploy.sh
+          bundle exec middleman build
+          aws s3 cp --recursive build/ s3://com.getdbt.hub/
+          aws cloudfront create-invalidation --distribution-id E39VJ0QVYMOHEU --paths *
