@@ -1,0 +1,12 @@
+name: Deploy hub.getdbt.com
+on:
+  push:
+    branches:
+    - 'master'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: |
+          ./deploy.sh
