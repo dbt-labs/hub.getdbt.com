@@ -7,12 +7,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-ruby@v1
-        with:
-          ruby-version: '2.7'
-
       - name: Checkout
         uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+          bundler-cache: true
 
       - name: Deploy
         env:
