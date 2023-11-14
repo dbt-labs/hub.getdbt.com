@@ -5,6 +5,7 @@ on:
     - 'master'
 jobs:
   deploy:
+    concurrency: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
