@@ -11,14 +11,16 @@ permissions: write-all
 
 
 jobs:
-  automerge:
+  autolabel:
     runs-on: ubuntu-latest
     steps:
       - name: Auto-label
         uses: actions/labeler@v4
         with:
           repo-token: ${{ secrets.AUTOMERGE_PAT }}
-
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
       - name: Auto-merge
         uses: pascalgn/automerge-action@v0.15.6
         env:
