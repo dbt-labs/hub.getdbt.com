@@ -1,0 +1,37 @@
+{
+    "id": "fivetran/pinterest_source/v0.10.1",
+    "name": "pinterest_source",
+    "version": "v0.10.1",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/fivetran_utils",
+            "version": [
+                ">=0.4.0",
+                "<0.5.0"
+            ]
+        },
+        {
+            "package": "dbt-labs/spark_utils",
+            "version": [
+                ">=0.3.0",
+                "<0.4.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.3.0",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_pinterest_source/tree/v0.10.1/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_pinterest_source/v0.10.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_pinterest_source/tar.gz/v0.10.1",
+        "format": "tgz",
+        "sha1": "8a20318cacfc6c9a5f782e1658ff70e0b43017db"
+    }
+}
