@@ -19,11 +19,11 @@ jobs:
         with:
           repo-token: ${{ secrets.AUTOMERGE_PAT }}
   automerge:
+    needs: autolabel
     runs-on: ubuntu-latest
     steps:
       - name: Auto-merge
         uses: pascalgn/automerge-action@v0.15.6
-        needs: autolabel
         env:
           GITHUB_TOKEN: ${{ secrets.AUTOMERGE_PAT }}
           MERGE_LABELS: "automerge,!work in progress,!ready for review"
