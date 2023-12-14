@@ -26,3 +26,5 @@ jobs:
           MERGE_LABELS: "automerge,!work in progress,!ready for review"
           MERGE_REMOVE_LABELS: "automerge"
           LOG: DEBUG
+          MERGE_RETRIES: 10
+          MERGE_RETRY_SLEEP: 60000
