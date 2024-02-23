@@ -16,6 +16,7 @@ ignore 'source/img'
 set :js_dir, 'javascripts'
 set :images_dir, 'img'
 
+activate :directory_indexes
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
