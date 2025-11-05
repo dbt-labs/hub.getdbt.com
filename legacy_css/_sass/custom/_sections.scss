@@ -31,6 +31,54 @@ $section-buffer-overlap: 30px;
 	&.silver { background: $silver-light; }
 	&.dark { &, #{h()}, a { color: white; }  @include gradient(dark($dark),$dark,135deg); }
 	&.gray { &, #{h()}, a { color: white; }  @include gradient($dark,light($dark),135deg); }
+	
+	&.ensemble{
+		background-color: #062ae0;
+		background-image: radial-gradient(circle at -35% 10%, #7655fd 12%, #0000 60%), radial-gradient(circle at -35% 100%, #7655fd 35%, #0000 60%), radial-gradient(circle at 70% -30%, #23daff 22%, #0000 50%), radial-gradient(circle at 48% 30%, #062ae0 20%, #0000 70%), radial-gradient(circle at 65% 110%, #062ae0 15%, #0000 45%), radial-gradient(circle at 100% 100%, #23daff 40%, #0000 70%);
+		overflow: hidden;
+
+		.section-content {
+			z-index: 2;
+		}
+
+		&::before {
+			content: "";
+			background-image: url(../img/bg/noise.0b501f65.svg);
+			background-size: 300px 300px;
+			background-repeat: repeat;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			position: absolute;
+			background-blend-mode: multiply;
+			opacity: .64;
+			z-index: 1;
+		}
+
+		&::after {
+			content: "";
+			aspect-ratio: 1;
+			pointer-events: none;
+			background-blend-mode: multiply;
+			opacity: .64;
+			z-index: 1;
+			background-image: radial-gradient(circle, #0af 0 20%, #0000 20.1%), radial-gradient(circle, #0000 0, #08f 40%, #0000 40.1%), radial-gradient(circle, #0000 0, #08f 60%, #0000 60.1%), radial-gradient(circle, #0000 0, #08f 80%, #0000 80.1%), radial-gradient(circle at 100% 0, #08f 0, #0000 80%);
+			background-position: 50%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 50%;
+			width: 125vw;
+			max-width: 125%;
+			height: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			box-shadow: 0 0 100px 40px #ff00ff4d;
+		}
+	}
+	
 	&.iso {
 		&:before { content: ''; @include fill; background: transparent url(../img/bg/grid-dark.svg) repeat 50% 50% / 112px 192px; opacity: .2; background-attachment: fixed; }
 		&.iso-small:before { background-size: 56px 96px; }
