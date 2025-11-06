@@ -37,12 +37,13 @@
 
 .tile-graphic {
 	@include flex(0,0,72px);
+	
 	img {
 		width: 90px;
 		height: 90px;
-		border-radius: 16px;
+		// border-radius: 16px;
 		max-width: none;
-		@include shadow;
+		// @include shadow;
 		margin-left: -46px;
 		top: 2px;
 	}
