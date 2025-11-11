@@ -27,8 +27,8 @@ iframe { margin: 0; }
 body {
 	position: relative;
 	&.dbt {
-		@include gradient(dark($dark),$dark,135deg);
-		&:before { content: ''; @include fill; background: transparent url(../img/bg/grid-dark.svg) repeat 50% 50% / 112px 192px; opacity: .2; background-attachment: fixed; }
+		// @include gradient(dark($dark),$dark,135deg);
+		// &:before { content: ''; @include fill; background: transparent url(../img/bg/grid-dark.svg) repeat 50% 50% / 112px 192px; opacity: .2; background-attachment: fixed; }
 	}
 	&.transparent {
 		&, .page { background: transparent; }
