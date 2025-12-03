@@ -44,7 +44,10 @@ img {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: 
+        url('/img/bg/noise.0b501f65.svg'),
+        linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-blend-mode: overlay;
     color: white;
     padding: 4px 10px;
     border-radius: 8px;
