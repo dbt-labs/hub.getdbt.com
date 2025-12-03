@@ -4,8 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('package-search');
   const fusionFilter = document.getElementById('fusion-filter');
   const noResultsMessage = document.getElementById('no-results');
+  const clearButton = document.getElementById('clear-search');
   
   if (!searchInput || !fusionFilter) return;
+  
+  // Show/hide clear button based on search input
+  function updateClearButton() {
+    if (clearButton) {
+      clearButton.style.display = searchInput.value ? 'block' : 'none';
+    }
+  }
   
   function filterPackages() {
     const searchTerm = searchInput.value.toLowerCase().trim();
@@ -58,8 +66,21 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Add event listeners
-  searchInput.addEventListener('input', filterPackages);
+  searchInput.addEventListener('input', function() {
+    updateClearButton();
+    filterPackages();
+  });
   fusionFilter.addEventListener('change', filterPackages);
+  
+  // Clear button click handler
+  if (clearButton) {
+    clearButton.addEventListener('click', function() {
+      searchInput.value = '';
+      updateClearButton();
+      filterPackages();
+      searchInput.focus();
+    });
+  }
   
   // Add clear button functionality (optional enhancement)
   searchInput.addEventListener('keydown', function(e) {
@@ -71,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Apply filters on page load if browser restored any values
   setTimeout(function() {
+    updateClearButton();
     if (fusionFilter.checked || searchInput.value) {
       filterPackages();
     }
