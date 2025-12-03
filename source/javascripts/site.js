@@ -68,4 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
       filterPackages();
     }
   });
+  
+  // Apply filters on page load if browser restored any values
+  setTimeout(function() {
+    if (fusionFilter.checked || searchInput.value) {
+      filterPackages();
+    }
+  }, 100);
 });
