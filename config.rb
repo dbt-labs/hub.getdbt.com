@@ -22,40 +22,82 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-def strip_leading_v(version)
-    if version.start_with?("v")
-      version[1..-1]
-    else
-      version
-    end
-end
+# Shared helper methods available to both config and templates
+module SiteHelpers
+  def strip_leading_v(version)
+    version.start_with?("v") ? version[1..-1] : version
+  end
 
-def _build_package(package, org, name)
+  def build_package(package, org, name)
     entry = package['index'].clone
     versions = package['versions']
 
     new_versions = {}
     versions.each do |version_num, version_data|
-        version_num = strip_leading_v(version_num)
-        version_data['version'] = strip_leading_v(version_data['version'])
-
-        new_versions[version_num] = version_data
+      version_num = strip_leading_v(version_num)
+      version_data['version'] = strip_leading_v(version_data['version'])
+      new_versions[version_num] = version_data
     end
     entry['versions'] = new_versions
     entry
+  end
+
+  def host_with_port
+    [config[:host], optional_port].compact.join(':')
+  end
+
+  def optional_port
+    config[:port] unless [80, 443].include? config[:port].to_i
+  end
+
+  def site_url
+    config[:protocol] + host_with_port
+  end
+
+  def is_hidden(package, version)
+    @app.data.blocklist.organizations.include?(package.namespace) || 
+      @app.data.blocklist.packages.include?(package.namespace + "/" + package.name)
+  end
+
+  def is_latest(package, version)
+    package.latest == version['version']
+  end
+
+  def is_valid_github_url(url)
+    url.split("/tree/").length == 2 && url.split("/").length >= 5
+  end
+
+  def is_fusion_conformant(package)
+    return false unless package.latest && package.versions && package.versions[package.latest]
+    
+    latest_version = package.versions[package.latest]
+    return false unless latest_version['require_dbt_version']
+    
+    requirements = latest_version['require_dbt_version']
+    return false unless requirements.is_a?(Array)
+    
+    begin
+      requirement = Gem::Requirement.new(requirements)
+      dbt_2_0 = Gem::Version.new('2.0.0')
+      requirement.satisfied_by?(dbt_2_0)
+    rescue StandardError
+      false
+    end
+  end
 end
+
+# Make helpers available in config scope
+include SiteHelpers
 
 def combine_packages(packages)
   package_map = {}
   packages.each do |org, org_packages|
-      org_packages.each do |name, package|
-          entry = _build_package(package, org, name)
-
-          qualified_name = "#{org}/#{name}"
-          package_map[qualified_name] = entry
-      end
+    org_packages.each do |name, package|
+      entry = build_package(package, org, name)
+      qualified_name = "#{org}/#{name}"
+      package_map[qualified_name] = entry
+    end
   end
-
   package_map
 end
 
@@ -122,52 +164,8 @@ set :protocol, 'https://'
 set :host, 'hub.getdbt.com'
 set :port, 443
 
-helpers do
-  def host_with_port
-    [config[:host], optional_port].compact.join(':')
-  end
-
-  def optional_port
-    config[:port] unless [80, 443].include? config[:port].to_i
-  end
-
-  def site_url
-    config[:protocol] + host_with_port
-  end
-
-  def is_hidden(package, version)
-    @app.data.blocklist.organizations.include?(package.namespace) or @app.data.blocklist.packages.include?(package.namespace + "/" + package.name)
-  end
-
-  def is_latest(package, version)
-    package.latest == version['version']
-  end  
-
-  def is_valid_github_url(url)
-    url.split("/tree/").length == 2 && url.split("/").length >= 5
-  end
-  
-  def is_fusion_conformant(package)
-    return false unless package.latest && package.versions && package.versions[package.latest]
-    
-    latest_version = package.versions[package.latest]
-    return false unless latest_version['require_dbt_version']
-    
-    requirements = latest_version['require_dbt_version']
-    return false unless requirements.is_a?(Array)
-    
-    # Use Ruby's Gem::Requirement to check if dbt 2.0.0 is satisfied
-    begin
-      requirement = Gem::Requirement.new(requirements)
-      dbt_2_0 = Gem::Version.new('2.0.0')
-      
-      # Package is Fusion Conformant if it accepts dbt 2.0.0
-      requirement.satisfied_by?(dbt_2_0)
-    rescue StandardError
-      false
-    end
-  end  
-end
+# Make helpers available to templates
+helpers SiteHelpers
 
 ignore '/package.template.html.erb'
 ignore '/author.template.html.erb'
