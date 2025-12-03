@@ -34,19 +34,56 @@
           <h4 class="h4">Package Index</h4>
         </div>
       </div>
+      
+      <!-- Search and Filter Section -->
+      <div class="row" style="margin-top: 30px; margin-bottom: 20px;">
+        <div class="col-md-12">
+          <div style="max-width: 600px; margin: 0 auto;">
+            <input 
+              type="text" 
+              id="package-search" 
+              placeholder="Search packages..." 
+              style="width: 100%; padding: 12px 16px; font-size: 1rem; border: 2px solid #e0e0e0; border-radius: 8px; margin-bottom: 12px;"
+            />
+            <div style="text-align: center;">
+              <label style="cursor: pointer; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px;">
+                <input 
+                  type="checkbox" 
+                  id="fusion-filter" 
+                  style="cursor: pointer; width: 18px; height: 18px;"
+                />
+                <span>Show only Fusion Conformant packages</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="no-results" style="display: none; text-align: center; padding: 40px; color: #999;">
+        <p style="font-size: 1.1rem;">No packages found matching your criteria.</p>
+      </div>
+      
       <br/>
       <% orgs = data.packages.to_hash.keys.sort_by {|k,v| k.downcase} %>
       <% orgs.each do |org| %>
         <% if not data.blocklist['organizations'].include?(org) %>
-          <div class="row" style="margin-top: 40px">
+          <div class="row package-org" style="margin-top: 40px" data-org="<%= org.downcase %>">
             <div class="col-md-12">
-              <h4><%= org %></h4>
+              <h4 class="org-name"><%= org %></h4>
               <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
                    <% packages = data.packages[org].sort_by {|name, package| name.downcase} %>
                    <% packages.each do |name, package| %>
                       <% if not data.blocklist['packages'].include?(org + "/" + name) %>
-                          <li>
+                          <% full_package = build_package(package, org, name) %>
+                          <% is_conformant = is_fusion_conformant(full_package) %>
+                          <li class="package-item" 
+                              data-package-name="<%= name.downcase %>" 
+                              data-full-name="<%= (org + '/' + name).downcase %>"
+                              data-fusion-conformant="<%= is_conformant %>">
                               <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
+                              <% if is_conformant %>
+                                <span style="color: #667eea; font-size: 0.8rem; margin-left: 4px;">✓</span>
+                              <% end %>
                           </li>
                       <% end %>
                   <% end %>
