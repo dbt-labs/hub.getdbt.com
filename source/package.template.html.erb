@@ -15,11 +15,11 @@
   <section class="section white section-slim">
     <div class="section-content">
 
-      <div class="row">
-
-        <div class="col-md-8">
-          <div class="tile-body"
-               style="box-shadow: none; overflow: visible">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
+        
+        <!-- Left column: Package info -->
+        <div style="flex: 1; min-width: 300px;">
+          <div class="tile-body" style="box-shadow: none; overflow: visible">
             <div class="tile-graphic">
               <%= image_tag(package.assets.logo, {alt: package.name}) %>
             </div>
@@ -33,15 +33,15 @@
                 </a>
               </em><br/>
               <% if is_valid_github_url(version._source.url) %>
-              <div class="github-link" style="height: 30px;margin-bottom: 0" >
-               <a class="github-button"
-                href="<%=version._source.url.split("/tree/")[0]%>"
-                data-size="large"
-                data-show-count="true"
-                aria-label="Star the package on GitHub"
-                target="_blank">
-                     <i data-icon="star"></i>
-                     <%= version._source.url.split("/")[3] %>/<%= version._source.url.split("/")[4] %>
+              <div class="github-link" style="height: 30px; margin-bottom: 0">
+                <a class="github-button"
+                   href="<%=version._source.url.split("/tree/")[0]%>"
+                   data-size="large"
+                   data-show-count="true"
+                   aria-label="Star the package on GitHub"
+                   target="_blank">
+                  <i data-icon="star"></i>
+                  <%= version._source.url.split("/")[3] %>/<%= version._source.url.split("/")[4] %>
                 </a>
               </div>
               <% end %>
@@ -49,8 +49,10 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <form class="form-inline margin" style="margin-top: 32px">
+        
+        <!-- Right column: Version selector and badge -->
+        <div style="flex: 0 0 auto; min-width: 250px; margin-top: 32px;">
+          <form class="form-inline">
             <div class="form-group select">
               <label for="version">Version</label>
               <select class="form-control"
@@ -67,13 +69,14 @@
             </div>
           </form>
           <% if is_fusion_conformant(package, version) %>
-            <div style="margin-top: 12px; margin-left: 0;">
+            <div>
               <span class="fusion-badge">
                 Fusion Conformant
               </span>
             </div>
           <% end %>
         </div>
+        
       </div>
 
       <hr/>
