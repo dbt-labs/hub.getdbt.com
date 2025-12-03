@@ -49,13 +49,28 @@ img {
         linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     background-blend-mode: overlay;
     color: white;
-    padding: 4px 10px;
+    padding: 4px 10px 4px 8px;
     border-radius: 8px;
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background-image: url('/img/fusion_atom.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-shrink: 0;
+    }
 }
 
 // Package Search Field
