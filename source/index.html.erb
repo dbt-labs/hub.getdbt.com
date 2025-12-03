@@ -87,7 +87,9 @@
                               data-fusion-conformant="<%= is_conformant %>">
                               <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
                               <% if is_conformant %>
-                                <span style="color: #667eea; font-size: 0.8rem; margin-left: 4px;">✓</span>
+                                <span class="fusion-atom-badge">
+                                  <%= image_tag('fusion_atom.svg', {alt: 'Fusion', class: 'fusion-atom-icon', style: 'width: 16px; height: 16px;'}) %>
+                                </span>
                               <% end %>
                           </li>
                       <% end %>
