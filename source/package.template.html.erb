@@ -66,6 +66,13 @@
               </select>
             </div>
           </form>
+          <% if is_fusion_conformant(package, version) %>
+            <div style="margin-top: 12px; margin-left: 0;">
+              <span class="fusion-badge">
+                Fusion Conformant
+              </span>
+            </div>
+          <% end %>
         </div>
       </div>
 
