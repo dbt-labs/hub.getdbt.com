@@ -52,22 +52,34 @@
         
         <!-- Right column: Version selector and badge -->
         <div style="flex: 0 0 auto; min-width: 250px; margin-top: 32px;">
-          <form class="form-inline">
-            <div class="form-group select">
-              <label for="version">Version</label>
-              <select class="form-control"
-                      style="min-width: 225px"
-                      id="version"
-                      onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                <% for local_version, _package_version in package.versions.sort_by { |key, _val| Gem::Version.new(key) }.reverse %>
-                <option value="<%= site_url %>/<%= package.namespace %>/<%= package.name %>/<%= local_version %>"
-                        <% if local_version == version.version %>selected="selected"<% end %>>
-                  <%= local_version %><% if local_version == package.latest %> (latest)<% end %>
-                </option>
+          <div class="form-group">
+            <label for="version-dropdown">Version</label>
+            <div class="custom-version-dropdown" id="version-dropdown">
+              <button type="button" class="custom-dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">
+                <span class="dropdown-selected-text">
+                  <%= version.version %><% if version.version == package.latest %> (latest)<% end %>
+                  <% if is_fusion_conformant(package, version) %>
+                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion Conformant', class: 'dropdown-fusion-icon'}) %>
+                  <% end %>
+                </span>
+                <span class="dropdown-arrow">▼</span>
+              </button>
+              <ul class="custom-dropdown-menu" role="listbox">
+                <% for local_version, local_package_version in package.versions.sort_by { |key, _val| Gem::Version.new(key) }.reverse %>
+                <li role="option" 
+                    data-value="<%= site_url %>/<%= package.namespace %>/<%= package.name %>/<%= local_version %>"
+                    <% if local_version == version.version %>class="selected"<% end %>>
+                  <span class="option-text">
+                    <%= local_version %><% if local_version == package.latest %> (latest)<% end %>
+                  </span>
+                  <% if is_fusion_conformant(package, local_package_version) %>
+                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion Conformant', class: 'dropdown-fusion-icon'}) %>
+                  <% end %>
+                </li>
                 <% end %>
-              </select>
+              </ul>
             </div>
-          </form>
+          </div>
           <% if is_fusion_conformant(package, version) %>
             <div>
               <span class="fusion-badge">
@@ -142,4 +154,51 @@ packages:
   $('#install').each(function(i, block) {
     hljs.highlightBlock(block);
   });
+
+  // Custom version dropdown behavior
+  (function() {
+    var dropdown = document.getElementById('version-dropdown');
+    if (!dropdown) return;
+    
+    var toggle = dropdown.querySelector('.custom-dropdown-toggle');
+    var menu = dropdown.querySelector('.custom-dropdown-menu');
+    var options = dropdown.querySelectorAll('li[role="option"]');
+    
+    // Toggle dropdown on click
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = menu.classList.contains('open');
+      menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', !isOpen);
+    });
+    
+    // Handle option selection
+    options.forEach(function(option) {
+      option.addEventListener('click', function() {
+        var url = this.getAttribute('data-value');
+        if (url) {
+          window.location = url;
+        }
+      });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target)) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Keyboard navigation
+    toggle.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle.click();
+      } else if (e.key === 'Escape') {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
 </script>
