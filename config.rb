@@ -67,13 +67,16 @@ module SiteHelpers
     url.split("/tree/").length == 2 && url.split("/").length >= 5
   end
 
-  def is_fusion_conformant(package)
-    return false unless package.latest && package.versions && package.versions[package.latest]
+  def is_fusion_conformant(package, version_to_check = nil)
+    # If no version specified, check the latest
+    version = version_to_check ? version_to_check['version'] : package.latest
     
-    latest_version = package.versions[package.latest]
-    return false unless latest_version['require_dbt_version']
+    return false unless package.versions && package.versions[version]
     
-    requirements = latest_version['require_dbt_version']
+    version_data = package.versions[version]
+    return false unless version_data['require_dbt_version']
+    
+    requirements = version_data['require_dbt_version']
     return false unless requirements.is_a?(Array)
     
     begin
