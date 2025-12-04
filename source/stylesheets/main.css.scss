@@ -41,35 +41,74 @@ img {
 
 // Fusion Conformant Badge
 .fusion-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     background: 
         url('/img/bg/noise.0b501f65.svg'),
         linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     background-blend-mode: overlay;
     color: white;
-    padding: 4px 10px 4px 8px;
-    border-radius: 8px;
-    font-size: 0.75rem;
+    padding: 5px 10px 5px 8px;
+    border-radius: 6px;
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    z-index: 10;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
     
     &::before {
         content: '';
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        background-image: url('/img/fusion_atom.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        width: 12px;
+        height: 12px;
+        background: url('/img/fusion_atom.svg') center/contain no-repeat;
         flex-shrink: 0;
+    }
+    
+    // Absolute positioning when inside a card tile
+    .tile & {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+    }
+}
+
+// Package title row - aligns name and badge
+.package-title-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 4px;
+    
+    h1 { 
+        margin: 0;
+        word-break: break-word;
+    }
+}
+
+// Package detail page header layout
+.package-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.package-info {
+    flex: 1 1 300px;
+    min-width: 0;
+}
+
+.package-version-selector {
+    flex: 0 0 auto;
+    min-width: 225px;
+    padding-top: 32px;
+    
+    @media (max-width: 600px) {
+        width: 100%;
+        padding-top: 20px;
     }
 }
 
