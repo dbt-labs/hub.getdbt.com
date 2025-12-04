@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
       packages.forEach(function(packageLi) {
         const packageName = packageLi.getAttribute('data-package-name');
         const fullName = packageLi.getAttribute('data-full-name');
-        const isFusion = packageLi.getAttribute('data-fusion-conformant') === 'true';
+        const isFusion = packageLi.getAttribute('data-fusion-compatible') === 'true';
         
         // Check if package matches search term
         const matchesSearch = !searchTerm || 
