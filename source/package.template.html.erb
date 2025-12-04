@@ -15,16 +15,21 @@
   <section class="section white section-slim">
     <div class="section-content">
 
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
+      <div class="package-header">
         
         <!-- Left column: Package info -->
-        <div style="flex: 1; min-width: 300px;">
+        <div class="package-info">
           <div class="tile-body" style="box-shadow: none; overflow: visible">
             <div class="tile-graphic">
               <%= image_tag(package.assets.logo, {alt: package.name}) %>
             </div>
             <div class="tile-text">
-              <h1><%= package.name %></h1>
+              <div class="package-title-row">
+                <h1><%= package.name %></h1>
+                <% if is_fusion_conformant(package, version) %>
+                  <span class="fusion-badge">Fusion Conformant</span>
+                <% end %>
+              </div>
               <em>
                 Created by
                 <a href="<%= site_url %>/<%= package.namespace %>/"
@@ -50,8 +55,8 @@
           </div>
         </div>
         
-        <!-- Right column: Version selector and badge -->
-        <div style="flex: 0 0 auto; min-width: 250px; margin-top: 32px;">
+        <!-- Right column: Version selector -->
+        <div class="package-version-selector">
           <div class="form-group">
             <label for="version-dropdown">Version</label>
             <div class="custom-version-dropdown" id="version-dropdown">
@@ -80,13 +85,6 @@
               </ul>
             </div>
           </div>
-          <% if is_fusion_conformant(package, version) %>
-            <div>
-              <span class="fusion-badge">
-                Fusion Conformant
-              </span>
-            </div>
-          <% end %>
         </div>
         
       </div>
