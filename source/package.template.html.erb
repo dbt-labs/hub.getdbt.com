@@ -26,8 +26,8 @@
             <div class="tile-text">
               <div class="package-title-row">
                 <h1><%= package.name %></h1>
-                <% if is_fusion_conformant(package, version) %>
-                  <span class="fusion-badge">Fusion Conformant</span>
+                <% if is_fusion_compatible(package, version) %>
+                  <span class="fusion-badge">Fusion compatible</span>
                 <% end %>
               </div>
               <em>
@@ -63,8 +63,8 @@
               <button type="button" class="custom-dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">
                 <span class="dropdown-selected-text">
                   <%= version.version %><% if version.version == package.latest %> (latest)<% end %>
-                  <% if is_fusion_conformant(package, version) %>
-                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion Conformant', class: 'dropdown-fusion-icon'}) %>
+                  <% if is_fusion_compatible(package, version) %>
+                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion compatible', class: 'dropdown-fusion-icon'}) %>
                   <% end %>
                 </span>
                 <span class="dropdown-arrow">▼</span>
@@ -77,8 +77,8 @@
                   <span class="option-text">
                     <%= local_version %><% if local_version == package.latest %> (latest)<% end %>
                   </span>
-                  <% if is_fusion_conformant(package, local_package_version) %>
-                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion Conformant', class: 'dropdown-fusion-icon'}) %>
+                  <% if is_fusion_compatible(package, local_package_version) %>
+                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion compatible', class: 'dropdown-fusion-icon'}) %>
                   <% end %>
                 </li>
                 <% end %>

@@ -67,7 +67,7 @@ module SiteHelpers
     url.split("/tree/").length == 2 && url.split("/").length >= 5
   end
 
-  def is_fusion_conformant(package, version_to_check = nil)
+  def is_fusion_compatible(package, version_to_check = nil)
     # If no version specified, check the latest
     version = version_to_check ? version_to_check['version'] : package.latest
     
