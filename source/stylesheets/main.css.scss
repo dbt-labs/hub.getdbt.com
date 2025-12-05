@@ -41,25 +41,21 @@ img {
 
 // Fusion compatible Badge
 .fusion-badge {
-    background: 
-        url('/img/bg/noise.0b501f65.svg'),
-        linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    background-blend-mode: overlay;
-    color: white;
-    padding: 5px 10px 5px 8px;
-    border-radius: 6px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    background: #f7f5ff;
+    color: #653cff;
+    padding: 3px 4px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    line-height: 18px;
     
     &::before {
         content: '';
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
         background: url('/img/fusion_atom.svg') center/contain no-repeat;
         flex-shrink: 0;
     }
@@ -70,6 +66,11 @@ img {
         top: 10px;
         right: 10px;
         z-index: 10;
+        
+        &::before {
+            width: 14px;
+            height: 14px;
+        }
     }
 }
 
@@ -137,7 +138,6 @@ img {
 
 .fusion-atom-icon {
     display: block;
-    filter: grayscale(1);
 }
 
 // Custom Version Dropdown (to support fusion_atom.svg in options)
