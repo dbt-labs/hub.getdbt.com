@@ -145,6 +145,27 @@ helpers do
 
   def is_valid_github_url(url)
     url.split("/tree/").length == 2 && url.split("/").length >= 5
+  end
+  
+  def is_fusion_conformant(package)
+    return false unless package.latest && package.versions && package.versions[package.latest]
+    
+    latest_version = package.versions[package.latest]
+    return false unless latest_version['require_dbt_version']
+    
+    requirements = latest_version['require_dbt_version']
+    return false unless requirements.is_a?(Array)
+    
+    # Use Ruby's Gem::Requirement to check if dbt 2.0.0 is satisfied
+    begin
+      requirement = Gem::Requirement.new(requirements)
+      dbt_2_0 = Gem::Version.new('2.0.0')
+      
+      # Package is Fusion Conformant if it accepts dbt 2.0.0
+      requirement.satisfied_by?(dbt_2_0)
+    rescue StandardError
+      false
+    end
   end  
 end
 
