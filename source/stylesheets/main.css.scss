@@ -38,3 +38,181 @@ img {
 .hub-logo > img {
     display: block;
 }
+
+// Fusion Compatible Badge
+.fusion-badge {
+    background: #f7f5ff;
+    color: #653cff;
+    padding: 3px 4px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 18px;
+    
+    &::before {
+        content: '';
+        width: 14px;
+        height: 14px;
+        background: url('/img/fusion_atom.svg') center/contain no-repeat;
+        flex-shrink: 0;
+    }
+    
+    // Absolute positioning when inside a card tile
+    .tile & {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+        
+        &::before {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
+
+// Package title row - aligns name and badge
+.package-title-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 4px;
+    
+    h1 { 
+        margin: 0;
+        word-break: break-word;
+    }
+}
+
+// Package detail page header layout
+.package-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.package-info {
+    flex: 1 1 300px;
+    min-width: 0;
+}
+
+.package-version-selector {
+    flex: 0 0 auto;
+    min-width: 225px;
+    padding-top: 32px;
+    
+    @media (max-width: 600px) {
+        width: 100%;
+        padding-top: 20px;
+    }
+}
+
+// Package Search Field
+#package-search {
+    box-shadow: none;
+    outline: none;
+    transition: box-shadow 0.8s ease-out;
+    
+    &:focus {
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.12), 
+                    0 2px 6px rgba(74, 144, 226, 0.08);
+        transition: box-shadow 0.3s ease-in;
+    }
+}
+
+// Fusion Atom Icon Badge
+.fusion-atom-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    vertical-align: middle;
+    line-height: 0;
+}
+
+.fusion-atom-icon {
+    display: block;
+}
+
+// Custom Version Dropdown (to support fusion_atom.svg in options)
+.custom-version-dropdown {
+    position: relative;
+    min-width: 225px;
+}
+
+.custom-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    
+    &:hover { border-color: #999; }
+    
+    &:focus {
+        outline: none;
+        border-color: #66afe9;
+        box-shadow: 0 0 0 2px rgba(102, 175, 233, 0.25);
+    }
+}
+
+.dropdown-selected-text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    color: #666;
+    margin-left: 8px;
+}
+
+.custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    margin: 2px 0 0 0;
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    
+    &.open { display: block; }
+    
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 12px;
+        cursor: pointer;
+        
+        &:hover { background: #f5f5f5; }
+        &.selected { background: #e8f4fc; font-weight: 600; }
+    }
+}
+
+.dropdown-fusion-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
