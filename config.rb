@@ -74,10 +74,12 @@ module SiteHelpers
     return false unless package.versions && package.versions[version]
     
     version_data = package.versions[version]
-    return false unless version_data['require_dbt_version']
-    
     requirements = version_data['require_dbt_version']
-    return false unless requirements.is_a?(Array)
+    
+    return false if requirements.nil?
+    return false if requirements.is_a?(Array) && requirements.empty?
+    return false if requirements.is_a?(String) && requirements.strip.empty?
+    return false unless requirements.is_a?(Array) || requirements.is_a?(String)
     
     begin
       requirement = Gem::Requirement.new(requirements)
