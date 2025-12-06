@@ -174,7 +174,7 @@ packages:
     options.forEach(function(option) {
       option.addEventListener('click', function() {
         var url = this.getAttribute('data-value');
-        if (url) {
+        if (url && (url.startsWith('/') || url.startsWith('<%= site_url %>'))) {
           window.location = url;
         }
       });
