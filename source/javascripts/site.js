@@ -8,7 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (!searchInput || !fusionFilter) return;
   
-  // Show/hide clear button based on search input
+  function debounce(func, wait) {
+    let timeout;
+    return function() {
+      clearTimeout(timeout);
+      timeout = setTimeout(func, wait);
+    };
+  }
+  
   function updateClearButton() {
     if (clearButton) {
       clearButton.style.display = searchInput.value ? 'block' : 'none';
@@ -65,14 +72,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Add event listeners
+  const debouncedFilter = debounce(filterPackages, 200);
+  
   searchInput.addEventListener('input', function() {
     updateClearButton();
-    filterPackages();
+    debouncedFilter();
   });
   fusionFilter.addEventListener('change', filterPackages);
   
-  // Clear button click handler
   if (clearButton) {
     clearButton.addEventListener('click', function() {
       searchInput.value = '';
@@ -82,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Add clear button functionality (optional enhancement)
   searchInput.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       searchInput.value = '';
@@ -90,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Apply filters on page load if browser restored any values
   setTimeout(function() {
     updateClearButton();
     if (fusionFilter.checked || searchInput.value) {
