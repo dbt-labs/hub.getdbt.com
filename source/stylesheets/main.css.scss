@@ -270,7 +270,7 @@ img { display: inline; }
         padding: 8px 12px;
         cursor: pointer;
         
-        &:hover { background: #f5f5f5; }
-        &.selected { background: #e8f4fc; font-weight: 600; }
+        &:hover, &.focused { background: #f5f5f5; }
+        &.selected { font-weight: 600; }
     }
 }

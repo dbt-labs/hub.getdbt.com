@@ -160,43 +160,44 @@ packages:
     
     var toggle = dropdown.querySelector('.custom-dropdown-toggle');
     var menu = dropdown.querySelector('.custom-dropdown-menu');
-    var options = dropdown.querySelectorAll('li[role="option"]');
+    var options = Array.from(dropdown.querySelectorAll('li[role="option"]'));
+    var focusIdx = options.findIndex(o => o.classList.contains('selected'));
     
-    // Toggle dropdown on click
-    toggle.addEventListener('click', function(e) {
+    function close() { menu.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+    
+    function setFocus(idx) {
+      options.forEach(o => o.classList.remove('focused'));
+      focusIdx = (idx + options.length) % options.length;
+      options[focusIdx].classList.add('focused');
+      options[focusIdx].scrollIntoView({ block: 'nearest' });
+    }
+    
+    function go(el) {
+      var url = el.getAttribute('data-value');
+      if (url) window.location.href = window.location.origin + url;
+    }
+    
+    toggle.addEventListener('click', e => {
       e.stopPropagation();
-      var isOpen = menu.classList.contains('open');
+      var opening = !menu.classList.contains('open');
       menu.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', !isOpen);
+      toggle.setAttribute('aria-expanded', opening);
+      if (opening) setFocus(Math.max(0, focusIdx));
     });
     
-    // Handle option selection
-    options.forEach(function(option) {
-      option.addEventListener('click', function() {
-        var url = this.getAttribute('data-value');
-        if (url && url.startsWith('/')) {
-          window.location.href = window.location.origin + url;
-        }
-      });
-    });
+    options.forEach(o => o.addEventListener('click', () => go(o)));
+    document.addEventListener('click', e => { if (!dropdown.contains(e.target)) close(); });
     
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!dropdown.contains(e.target)) {
-        menu.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-    
-    // Keyboard navigation
-    toggle.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') {
+    toggle.addEventListener('keydown', e => {
+      var isOpen = menu.classList.contains('open');
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
         e.preventDefault();
-        toggle.click();
-      } else if (e.key === 'Escape') {
-        menu.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
+        if (!isOpen) { menu.classList.add('open'); toggle.setAttribute('aria-expanded', 'true'); }
+        setFocus(focusIdx + (e.key === 'ArrowDown' ? 1 : -1));
+      } else if (e.key === 'Enter' && isOpen) {
+        e.preventDefault();
+        go(options[focusIdx]);
+      } else if (e.key === 'Escape') close();
     });
   })();
 </script>
