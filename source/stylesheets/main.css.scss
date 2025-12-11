@@ -22,6 +22,11 @@ pre {
     color: #24292e;
 }
 
+// Utility class for hiding elements (more performant than inline style.display)
+.hidden {
+    display: none !important;
+}
+
 
 // https://css-tricks.com/careful-when-changing-the-display-of-summary/
 summary {
@@ -126,7 +131,6 @@ img { display: inline; }
     color: #999;
     cursor: pointer;
     padding: 0;
-    display: none;
     width: 21px;
     height: 20px;
     line-height: 1;

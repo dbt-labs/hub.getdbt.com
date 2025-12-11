@@ -18,58 +18,53 @@ document.addEventListener('DOMContentLoaded', function() {
   
   function updateClearButton() {
     if (clearButton) {
-      clearButton.style.display = searchInput.value ? 'block' : 'none';
+      clearButton.classList.toggle('hidden', !searchInput.value);
     }
   }
   
   function filterPackages() {
-    const searchTerm = searchInput.value.toLowerCase().trim();
-    const showOnlyFusion = fusionFilter.checked;
-    
-    const allOrgs = document.querySelectorAll('.package-org');
-    let visibleCount = 0;
-    
-    allOrgs.forEach(function(orgDiv) {
-      const packages = orgDiv.querySelectorAll('.package-item');
-      let orgHasVisiblePackages = false;
+    // Use requestAnimationFrame to batch DOM updates into a single repaint
+    requestAnimationFrame(function() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      const showOnlyFusion = fusionFilter.checked;
       
-      packages.forEach(function(packageLi) {
-        const packageName = packageLi.getAttribute('data-package-name');
-        const fullName = packageLi.getAttribute('data-full-name');
-        const isFusion = packageLi.getAttribute('data-fusion-compatible') === 'true';
+      const allOrgs = document.querySelectorAll('.package-org');
+      let visibleCount = 0;
+      
+      allOrgs.forEach(function(orgDiv) {
+        const packages = orgDiv.querySelectorAll('.package-item');
+        let orgHasVisiblePackages = false;
         
-        // Check if package matches search term
-        const matchesSearch = !searchTerm || 
-                             packageName.includes(searchTerm) || 
-                             fullName.includes(searchTerm);
+        packages.forEach(function(packageLi) {
+          const packageName = packageLi.getAttribute('data-package-name');
+          const fullName = packageLi.getAttribute('data-full-name');
+          const isFusion = packageLi.getAttribute('data-fusion-compatible') === 'true';
+          
+          // Check if package matches search term
+          const matchesSearch = !searchTerm || 
+                               packageName.includes(searchTerm) || 
+                               fullName.includes(searchTerm);
+          
+          // Check if package matches fusion filter
+          const matchesFusion = !showOnlyFusion || isFusion;
+          
+          // Show or hide package using CSS class (more performant than inline styles)
+          if (matchesSearch && matchesFusion) {
+            packageLi.classList.remove('hidden');
+            orgHasVisiblePackages = true;
+            visibleCount++;
+          } else {
+            packageLi.classList.add('hidden');
+          }
+        });
         
-        // Check if package matches fusion filter
-        const matchesFusion = !showOnlyFusion || isFusion;
-        
-        // Show or hide package
-        if (matchesSearch && matchesFusion) {
-          packageLi.style.display = '';
-          orgHasVisiblePackages = true;
-          visibleCount++;
-        } else {
-          packageLi.style.display = 'none';
-        }
+        // Show or hide entire org section
+        orgDiv.classList.toggle('hidden', !orgHasVisiblePackages);
       });
       
-      // Show or hide entire org section
-      if (orgHasVisiblePackages) {
-        orgDiv.style.display = '';
-      } else {
-        orgDiv.style.display = 'none';
-      }
+      // Show "no results" message if nothing matches
+      noResultsMessage.classList.toggle('hidden', visibleCount > 0);
     });
-    
-    // Show "no results" message if nothing matches
-    if (visibleCount === 0) {
-      noResultsMessage.style.display = 'block';
-    } else {
-      noResultsMessage.style.display = 'none';
-    }
   }
   
   const debouncedFilter = debounce(filterPackages, 200);
