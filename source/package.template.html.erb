@@ -174,7 +174,7 @@ packages:
     
     function go(el) {
       var url = el.getAttribute('data-value');
-      if (url) window.location.href = window.location.origin + url;
+      if (url && /^\/[\w.\/-]+$/.test(url)) window.location.href = window.location.origin + url;
     }
     
     toggle.addEventListener('click', e => {
