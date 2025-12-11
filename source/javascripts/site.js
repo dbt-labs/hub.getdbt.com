@@ -8,6 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (!searchInput || !fusionFilter) return;
   
+  // Cache DOM queries on page load (these don't change without a full refresh)
+  const allOrgs = document.querySelectorAll('.package-org');
+  const orgData = Array.from(allOrgs).map(function(orgDiv) {
+    const packages = Array.from(orgDiv.querySelectorAll('.package-item')).map(function(li) {
+      return {
+        element: li,
+        packageName: li.getAttribute('data-package-name'),
+        fullName: li.getAttribute('data-full-name'),
+        isFusion: li.getAttribute('data-fusion-compatible') === 'true'
+      };
+    });
+    return { element: orgDiv, packages: packages };
+  });
+  
   function debounce(func, wait) {
     let timeout;
     return function() {
@@ -27,39 +41,32 @@ document.addEventListener('DOMContentLoaded', function() {
     requestAnimationFrame(function() {
       const searchTerm = searchInput.value.toLowerCase().trim();
       const showOnlyFusion = fusionFilter.checked;
-      
-      const allOrgs = document.querySelectorAll('.package-org');
       let visibleCount = 0;
       
-      allOrgs.forEach(function(orgDiv) {
-        const packages = orgDiv.querySelectorAll('.package-item');
+      orgData.forEach(function(org) {
         let orgHasVisiblePackages = false;
         
-        packages.forEach(function(packageLi) {
-          const packageName = packageLi.getAttribute('data-package-name');
-          const fullName = packageLi.getAttribute('data-full-name');
-          const isFusion = packageLi.getAttribute('data-fusion-compatible') === 'true';
-          
+        org.packages.forEach(function(pkg) {
           // Check if package matches search term
           const matchesSearch = !searchTerm || 
-                               packageName.includes(searchTerm) || 
-                               fullName.includes(searchTerm);
+                               pkg.packageName.includes(searchTerm) || 
+                               pkg.fullName.includes(searchTerm);
           
           // Check if package matches fusion filter
-          const matchesFusion = !showOnlyFusion || isFusion;
+          const matchesFusion = !showOnlyFusion || pkg.isFusion;
           
           // Show or hide package using CSS class (more performant than inline styles)
           if (matchesSearch && matchesFusion) {
-            packageLi.classList.remove('hidden');
+            pkg.element.classList.remove('hidden');
             orgHasVisiblePackages = true;
             visibleCount++;
           } else {
-            packageLi.classList.add('hidden');
+            pkg.element.classList.add('hidden');
           }
         });
         
         // Show or hide entire org section
-        orgDiv.classList.toggle('hidden', !orgHasVisiblePackages);
+        org.element.classList.toggle('hidden', !orgHasVisiblePackages);
       });
       
       // Show "no results" message if nothing matches
