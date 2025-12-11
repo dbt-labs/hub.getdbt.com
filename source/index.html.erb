@@ -34,19 +34,50 @@
           <h4 class="h4">Package Index</h4>
         </div>
       </div>
+      
+      <!-- Search and Filter Section -->
+      <div class="row search-filter-section">
+        <div class="col-md-12">
+          <div class="search-container">
+            <input type="text" id="package-search" placeholder="Search packages..." aria-label="Search packages by name" />
+            <button id="clear-search" class="hidden" aria-label="Clear search">×</button>
+            <div class="filter-container">
+              <label class="fusion-filter-label">
+                <input type="checkbox" id="fusion-filter" />
+                <span>Show only packages compatible with the dbt Fusion engine</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="no-results">
+        <p>No packages found matching your criteria.</p>
+      </div>
+      
       <br/>
       <% orgs = data.packages.to_hash.keys.sort_by {|k,v| k.downcase} %>
       <% orgs.each do |org| %>
         <% if not data.blocklist['organizations'].include?(org) %>
-          <div class="row" style="margin-top: 40px">
+          <div class="row package-org" data-org="<%= org.downcase %>">
             <div class="col-md-12">
-              <h4><%= org %></h4>
-              <ul style="list-style-type: disc; column-width: 250px; list-style-position: inside;">
+              <h4 class="org-name"><%= org %></h4>
+              <ul class="package-list">
                    <% packages = data.packages[org].sort_by {|name, package| name.downcase} %>
                    <% packages.each do |name, package| %>
                       <% if not data.blocklist['packages'].include?(org + "/" + name) %>
-                          <li>
+                          <% full_package = build_package(package, org, name) %>
+                          <% is_compatible = is_fusion_compatible(full_package) %>
+                          <li class="package-item" 
+                              data-package-name="<%= name.downcase %>" 
+                              data-full-name="<%= (org + '/' + name).downcase %>"
+                              data-fusion-compatible="<%= is_compatible %>">
                               <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
+                              <% if is_compatible %>
+                                <span class="fusion-icon-inline">
+                                  <%= image_tag('fusion_atom.svg', {alt: 'Fusion', class: 'fusion-icon'}) %>
+                                </span>
+                              <% end %>
                           </li>
                       <% end %>
                   <% end %>

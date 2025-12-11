@@ -15,16 +15,21 @@
   <section class="section white section-slim">
     <div class="section-content">
 
-      <div class="row">
-
-        <div class="col-md-8">
-          <div class="tile-body"
-               style="box-shadow: none; overflow: visible">
+      <div class="package-header">
+        
+        <!-- Left column: Package info -->
+        <div class="package-info">
+          <div class="tile-body" style="box-shadow: none; overflow: visible">
             <div class="tile-graphic">
               <%= image_tag(package.assets.logo, {alt: package.name}) %>
             </div>
             <div class="tile-text">
-              <h1><%= package.name %></h1>
+              <div class="package-title-row">
+                <h1><%= package.name %></h1>
+                <% if is_fusion_compatible(package, version) %>
+                  <span class="fusion-badge">Fusion compatible</span>
+                <% end %>
+              </div>
               <em>
                 Created by
                 <a href="<%= site_url %>/<%= package.namespace %>/"
@@ -33,15 +38,15 @@
                 </a>
               </em><br/>
               <% if is_valid_github_url(version._source.url) %>
-              <div class="github-link" style="height: 30px;margin-bottom: 0" >
-               <a class="github-button"
-                href="<%=version._source.url.split("/tree/")[0]%>"
-                data-size="large"
-                data-show-count="true"
-                aria-label="Star the package on GitHub"
-                target="_blank">
-                     <i data-icon="star"></i>
-                     <%= version._source.url.split("/")[3] %>/<%= version._source.url.split("/")[4] %>
+              <div class="github-link" style="height: 30px; margin-bottom: 0">
+                <a class="github-button"
+                   href="<%=version._source.url.split("/tree/")[0]%>"
+                   data-size="large"
+                   data-show-count="true"
+                   aria-label="Star the package on GitHub"
+                   target="_blank">
+                  <i data-icon="star"></i>
+                  <%= version._source.url.split("/")[3] %>/<%= version._source.url.split("/")[4] %>
                 </a>
               </div>
               <% end %>
@@ -49,24 +54,39 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <form class="form-inline margin" style="margin-top: 32px">
-            <div class="form-group select">
-              <label for="version">Version</label>
-              <select class="form-control"
-                      style="min-width: 225px"
-                      id="version"
-                      onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                <% for local_version, _package_version in package.versions.sort_by { |key, _val| Gem::Version.new(key) }.reverse %>
-                <option value="<%= site_url %>/<%= package.namespace %>/<%= package.name %>/<%= local_version %>"
-                        <% if local_version == version.version %>selected="selected"<% end %>>
-                  <%= local_version %><% if local_version == package.latest %> (latest)<% end %>
-                </option>
+        
+        <!-- Right column: Version selector -->
+        <div class="package-version-selector">
+          <div class="form-group">
+            <label for="version-dropdown">Version</label>
+            <div class="custom-version-dropdown" id="version-dropdown">
+              <button type="button" class="custom-dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">
+                <span class="dropdown-selected-text">
+                  <%= version.version %><% if version.version == package.latest %> (latest)<% end %>
+                  <% if is_fusion_compatible(package, version) %>
+                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion compatible', class: 'fusion-icon'}) %>
+                  <% end %>
+                </span>
+                <span class="dropdown-arrow">▼</span>
+              </button>
+              <ul class="custom-dropdown-menu" role="listbox">
+                <% for local_version, local_package_version in package.versions.sort_by { |key, _val| Gem::Version.new(key) }.reverse %>
+                <li role="option" 
+                    data-value="/<%= package.namespace %>/<%= package.name %>/<%= local_version %>"
+                    <% if local_version == version.version %>class="selected"<% end %>>
+                  <span class="option-text">
+                    <%= local_version %><% if local_version == package.latest %> (latest)<% end %>
+                  </span>
+                  <% if is_fusion_compatible(package, local_package_version) %>
+                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion compatible', class: 'fusion-icon'}) %>
+                  <% end %>
+                </li>
                 <% end %>
-              </select>
+              </ul>
             </div>
-          </form>
+          </div>
         </div>
+        
       </div>
 
       <hr/>
@@ -132,4 +152,52 @@ packages:
   $('#install').each(function(i, block) {
     hljs.highlightBlock(block);
   });
+
+  // Custom version dropdown behavior
+  (function() {
+    var dropdown = document.getElementById('version-dropdown');
+    if (!dropdown) return;
+    
+    var toggle = dropdown.querySelector('.custom-dropdown-toggle');
+    var menu = dropdown.querySelector('.custom-dropdown-menu');
+    var options = Array.from(dropdown.querySelectorAll('li[role="option"]'));
+    var focusIdx = options.findIndex(o => o.classList.contains('selected'));
+    
+    function close() { menu.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+    
+    function setFocus(idx) {
+      options.forEach(o => o.classList.remove('focused'));
+      focusIdx = (idx + options.length) % options.length;
+      options[focusIdx].classList.add('focused');
+      options[focusIdx].scrollIntoView({ block: 'nearest' });
+    }
+    
+    function go(el) {
+      var url = el.getAttribute('data-value');
+      if (url && /^\/[\w.\/-]+$/.test(url)) window.location.href = window.location.origin + url;
+    }
+    
+    toggle.addEventListener('click', e => {
+      e.stopPropagation();
+      var opening = !menu.classList.contains('open');
+      menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', opening);
+      if (opening) setFocus(Math.max(0, focusIdx));
+    });
+    
+    options.forEach(o => o.addEventListener('click', () => go(o)));
+    document.addEventListener('click', e => { if (!dropdown.contains(e.target)) close(); });
+    
+    toggle.addEventListener('keydown', e => {
+      var isOpen = menu.classList.contains('open');
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (!isOpen) { menu.classList.add('open'); toggle.setAttribute('aria-expanded', 'true'); }
+        setFocus(focusIdx + (e.key === 'ArrowDown' ? 1 : -1));
+      } else if (e.key === 'Enter' && isOpen) {
+        e.preventDefault();
+        go(options[focusIdx]);
+      } else if (e.key === 'Escape') close();
+    });
+  })();
 </script>
