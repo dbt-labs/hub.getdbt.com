@@ -72,7 +72,7 @@
               <ul class="custom-dropdown-menu" role="listbox">
                 <% for local_version, local_package_version in package.versions.sort_by { |key, _val| Gem::Version.new(key) }.reverse %>
                 <li role="option" 
-                    data-value="<%= site_url %>/<%= package.namespace %>/<%= package.name %>/<%= local_version %>"
+                    data-value="/<%= package.namespace %>/<%= package.name %>/<%= local_version %>"
                     <% if local_version == version.version %>class="selected"<% end %>>
                   <span class="option-text">
                     <%= local_version %><% if local_version == package.latest %> (latest)<% end %>
@@ -174,8 +174,8 @@ packages:
     options.forEach(function(option) {
       option.addEventListener('click', function() {
         var url = this.getAttribute('data-value');
-        if (url && (url.startsWith('/') || url.startsWith('<%= site_url %>'))) {
-          window.location = url;
+        if (url && url.startsWith('/')) {
+          window.location.href = window.location.origin + url;
         }
       });
     });
