@@ -1,11 +1,15 @@
 # Contributing to this repo
 
 ## Table of contents
-- [Overview](#overview)
-- [Running locally](#running-locally)
+- [Contributing to this repo](#contributing-to-this-repo)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Running locally](#running-locally)
     - [Using Docker](#using-docker)
-- [Use with `dbt deps` from dbt Core](#use-with--dbt-deps--from-dbt-core)
-- [Managing the `Gemfile` and `Gemfile.lock`](#managing-the--gemfile--and--gemfilelock-)
+  - [Use with `dbt deps` from dbt Core](#use-with-dbt-deps-from-dbt-core)
+    - [Using the dbt CLI in Docker](#using-the-dbt-cli-in-docker)
+    - [Using dbt CLI installed locally](#using-dbt-cli-installed-locally)
+  - [Managing the `Gemfile` and `Gemfile.lock`](#managing-the-gemfile-and-gemfilelock)
     - [Steps](#steps)
 
 ## Overview
@@ -30,14 +34,27 @@ There are two components to the [dbt Hub](https://hub.getdbt.com/):
 See [local-ruby-environment.md](local-ruby-environment.md) for non-Docker instructions.
 
 ### Using Docker
+
+docker compose will spin up three containers:
+* `dbt-hub`: the package hub app
+* `dbt-fusion`: dbt Fusion CLI
+* `dbt-core`: dbt core CLI
+It also add `tests/sample_project` directory to the `dbt-fusion` and `dbt-core` containers.
+
+To build and start:
 ```shell
 docker-compose build
 docker-compose up -d
 ```
 
-Either of the following should launch the website in your default web browser:
+To view package Hub, either of the following should launch the website in your default web browser:
 - http://127.0.0.1:4567
 - http://localhost:4567
+
+Both `dbt-fusion` and `dbt-core` are set up to use the `dbt-hub` container as the package hub URL, so to test your local hub with `dbt deps`, use these commands:
+- `docker-compose run dbt-core deps`
+- `docker-compose run dbt-fusion deps`
+These will use the project in `tests/sample_project`. If you want to use a different project, you can overwrite the project in that directory or change the `volumes` in `docker-compose.yml` to point to your own directory.
 
 When finished:
 ```shell
@@ -45,6 +62,12 @@ docker-compose down
 ```
 
 ## Use with `dbt deps` from dbt Core
+
+### Using the dbt CLI in Docker
+
+If you're using the `docker-compose` setup described in the "Using Docker" section, you can run `docker-compose run dbt-core deps` to run deps on the project in the `tests/sample_project` directory.
+
+### Using dbt CLI installed locally
 
 **Note:** Make sure to remember to unset any environment variables that you set once you are done! `unset YOUR_VARIABLE_NAME_HERE` should work in bash/zsh. [`direnv`](https://direnv.net/) is one option for loading/unloading environment variables automatically when entering/exiting a directory.
 
