@@ -1,0 +1,29 @@
+config-version: 2
+
+name: "jaffle_shop"
+version: "3.0.0"
+require-dbt-version: ">=1.5.0"
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["data-tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+profile: "test-dbt-hub"
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+vars:
+  "dbt_date:time_zone": "America/Los_Angeles"
+
+models:
+  jaffle_shop:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
