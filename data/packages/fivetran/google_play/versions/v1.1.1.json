@@ -1,0 +1,37 @@
+{
+    "id": "fivetran/google_play/v1.1.1",
+    "name": "google_play",
+    "version": "v1.1.1",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/fivetran_utils",
+            "version": [
+                ">=0.4.0",
+                "<0.5.0"
+            ]
+        },
+        {
+            "package": "dbt-labs/spark_utils",
+            "version": [
+                ">=0.3.0",
+                "<0.4.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.3.0",
+        "<3.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_google_play/tree/v1.1.1/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_google_play/v1.1.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_google_play/tar.gz/v1.1.1",
+        "format": "tgz",
+        "sha1": "931eaa4f2e9bf59aa7261d5896bf8f0bda82f53d"
+    }
+}
