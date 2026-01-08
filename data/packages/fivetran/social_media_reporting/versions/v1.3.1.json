@@ -1,0 +1,58 @@
+{
+    "id": "fivetran/social_media_reporting/v1.3.1",
+    "name": "social_media_reporting",
+    "version": "v1.3.1",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/facebook_pages",
+            "version": [
+                ">=1.2.0",
+                "<1.3.0"
+            ]
+        },
+        {
+            "package": "fivetran/instagram_business",
+            "version": [
+                ">=1.1.0",
+                "<1.2.0"
+            ]
+        },
+        {
+            "package": "fivetran/twitter_organic",
+            "version": [
+                ">=1.1.0",
+                "<1.2.0"
+            ]
+        },
+        {
+            "package": "fivetran/linkedin_pages",
+            "version": [
+                ">=1.1.0",
+                "<1.2.0"
+            ]
+        },
+        {
+            "package": "fivetran/youtube_analytics",
+            "version": [
+                ">=1.1.0",
+                "<1.2.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.3.0",
+        "<3.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_social_media_reporting/tree/v1.3.1/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_social_media_reporting/v1.3.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_social_media_reporting/tar.gz/v1.3.1",
+        "format": "tgz",
+        "sha1": "61c8743f5d0bd31a1bddb8c7595b83d5c42bd809"
+    }
+}
