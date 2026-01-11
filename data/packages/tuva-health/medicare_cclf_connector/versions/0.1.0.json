@@ -15,5 +15,169 @@
         "tarball": "https://codeload.github.com/tuva-health/medicare_claims_connector/tar.gz/0.1.0",
         "format": "tgz",
         "sha1": "47d56d8b29d04a6a947dde98eabebaabfa654636"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.0",
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 21,
+            "total_warnings": 9,
+            "errors": [
+                {
+                    "body": "Failed to create template: syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh-ras_medication_adherence_for_hypertension/quality_measures__int_adhras__performance_period.sql:64:26)",
+                    "error_code": 1000,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh-ras_medication_adherence_for_hypertension/quality_measures__int_adhras__performance_period.sql:64:26)\n  --> dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh-ras_medication_adherence_for_hypertension/quality_measures__int_adhras__performance_period.sql:64:26",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create template: syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh-ras_medication_adherence_for_hypertension/quality_measures__int_adhras_numerator.sql:149:34)",
+                    "error_code": 1000,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh-ras_medication_adherence_for_hypertension/quality_measures__int_adhras_numerator.sql:149:34)\n  --> dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh-ras_medication_adherence_for_hypertension/quality_measures__int_adhras_numerator.sql:149:34",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create template: syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh-statins_medication_adherence_for_cholestrol/quality_measures__int_adh_statins__performance_period.sql:64:26)",
+                    "error_code": 1000,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh-statins_medication_adherence_for_cholestrol/quality_measures__int_adh_statins__performance_period.sql:64:26)\n  --> dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh-statins_medication_adherence_for_cholestrol/quality_measures__int_adh_statins__performance_period.sql:64:26",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create template: syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh-statins_medication_adherence_for_cholestrol/quality_measures__int_adh_statins_numerator.sql:149:34)",
+                    "error_code": 1000,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh-statins_medication_adherence_for_cholestrol/quality_measures__int_adh_statins_numerator.sql:149:34)\n  --> dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh-statins_medication_adherence_for_cholestrol/quality_measures__int_adh_statins_numerator.sql:149:34",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create template: syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh_diabetes/quality_measures__int_adh_diabetes__performance_period.sql:52:26)",
+                    "error_code": 1000,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh_diabetes/quality_measures__int_adh_diabetes__performance_period.sql:52:26)\n  --> dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh_diabetes/quality_measures__int_adh_diabetes__performance_period.sql:52:26",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create template: syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh_diabetes/quality_measures__int_adh_diabetes_numerator.sql:146:34)",
+                    "error_code": 1000,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh_diabetes/quality_measures__int_adh_diabetes_numerator.sql:146:34)\n  --> dbt_packages/the_tuva_project/models/quality_measures/intermediate/adh_diabetes/quality_measures__int_adh_diabetes_numerator.sql:146:34",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create template: syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/cqm130_documentation_of_current_medications_in_the_medical_record/quality_measures__int_cqm130__performance_period.sql:56:26)",
+                    "error_code": 1000,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/cqm130_documentation_of_current_medications_in_the_medical_record/quality_measures__int_cqm130__performance_period.sql:56:26)\n  --> dbt_packages/the_tuva_project/models/quality_measures/intermediate/cqm130_documentation_of_current_medications_in_the_medical_record/quality_measures__int_cqm130__performance_period.sql:56:26",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create template: syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/cqm438_statin_therapy_for_patients_with_cardiovascular_disease/quality_measures__int_cqm438__performance_period.sql:51:26)",
+                    "error_code": 1000,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/cqm438_statin_therapy_for_patients_with_cardiovascular_disease/quality_measures__int_cqm438__performance_period.sql:51:26)\n  --> dbt_packages/the_tuva_project/models/quality_measures/intermediate/cqm438_statin_therapy_for_patients_with_cardiovascular_disease/quality_measures__int_cqm438__performance_period.sql:51:26",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create template: syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/nqf0420_pain_assessment_and_follow_up/quality_measures__int_nqf0420__performance_period.sql:50:26)",
+                    "error_code": 1000,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/nqf0420_pain_assessment_and_follow_up/quality_measures__int_nqf0420__performance_period.sql:50:26)\n  --> dbt_packages/the_tuva_project/models/quality_measures/intermediate/nqf0420_pain_assessment_and_follow_up/quality_measures__int_nqf0420__performance_period.sql:50:26",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create template: syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/supd_statin_use_in_persons_with_diabetes/quality_measures__int_supd__performance_period.sql:51:26)",
+                    "error_code": 1000,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in dbt_packages/the_tuva_project/models/quality_measures/intermediate/supd_statin_use_in_persons_with_diabetes/quality_measures__int_supd__performance_period.sql:51:26)\n  --> dbt_packages/the_tuva_project/models/quality_measures/intermediate/supd_statin_use_in_persons_with_diabetes/quality_measures__int_supd__performance_period.sql:51:26",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Test cannot have the same key 'tags' at the top-level and in config",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

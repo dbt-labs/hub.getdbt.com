@@ -30,5 +30,148 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_salesforce_source/tar.gz/v0.2.1",
         "format": "tgz",
         "sha1": "ddedd562e227b9e879ddbc53355a1b0c8b6ea370"
+    },
+    "fusion_compatibility": {
+        "version": "0.2.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 18,
+            "total_warnings": 1,
+            "errors": [
+                {
+                    "body": "Invalid model definition `salesforce_source.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 12 column 19\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/dbt_project.yml:12:19",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `salesforce_source.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 11 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/dbt_project.yml:11:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/models/src_salesforce.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/models/src_salesforce.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/models/src_salesforce.yml:15:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/models/src_salesforce.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/models/src_salesforce.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/models/src_salesforce.yml:118:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/models/src_salesforce.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/models/src_salesforce.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/models/src_salesforce.yml:195:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/models/src_salesforce.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/models/src_salesforce.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpsvryxxwk/models/src_salesforce.yml:330:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_salesforce__account.sql:20:31)\n(in macros/generate_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/generate_columns.sql:5:55",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_salesforce__opportunity.sql:19:33)\n(in macros/generate_columns.sql:49:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/generate_columns.sql:49:55",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_salesforce__user.sql:21:33)\n(in macros/generate_columns.sql:92:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/generate_columns.sql:92:55",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_salesforce__user_role.sql:19:33)\n(in macros/generate_columns.sql:131:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/generate_columns.sql:131:55",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

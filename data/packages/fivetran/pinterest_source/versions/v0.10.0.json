@@ -33,5 +33,43 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_pinterest_source/tar.gz/v0.10.0",
         "format": "tgz",
         "sha1": "faef7411f803dbbc2ffa4daf4b0628310f657408"
+    },
+    "fusion_compatibility": {
+        "version": "0.10.0",
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Duplicate key `version`. This key overwrites a previous definition of the same key at line 3 column 5. YAML path: `packages[0].version`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmp1dlgizxs/packages.yml:4:5",
+                    "error_code": 1059,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Duplicate key `version`. This key overwrites a previous definition of the same key at line 3 column 5. YAML path: `packages[0].version`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmp1dlgizxs/packages.yml:4:5",
+                    "error_code": 1059,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Duplicate key `version`. This key overwrites a previous definition of the same key at line 3 column 5. YAML path: `packages[0].version`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmp1dlgizxs/packages.yml:4:5",
+                    "error_code": 1059,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

@@ -26,5 +26,78 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_facebook_ads_creative_history/tar.gz/v0.2.0",
         "format": "tgz",
         "sha1": "ac2fbf007f68ef45356797c357e27c6c412b4c50"
+    },
+    "fusion_compatibility": {
+        "version": "0.2.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 8,
+            "total_warnings": 2,
+            "errors": [
+                {
+                    "body": "Invalid model definition `facebook_ads_creative_history.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 10 column 19\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpi0clx3a5/dbt_project.yml:10:19",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__account_history.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_account_history_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__account_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__ad_history.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_ad_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__ad_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__ad_set_history.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_ad_set_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__ad_set_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__basic_ad.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_basic_ad_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__basic_ad.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__campaign_history.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_campaign_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__campaign_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__creative_history.sql:14:33)\n(in dbt_packages/facebook_ads_source/macros/get_creative_history_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__creative_history.sql:14:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/redshift/utils__facebook_ads__numbers.sql:1:1)\n(in dbt_packages/dbt_utils/macros/sql/generate_series.sql:19:22)\n  --> models/redshift/utils__facebook_ads__numbers.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

@@ -26,5 +26,36 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_linkedin/tar.gz/v0.2.1",
         "format": "tgz",
         "sha1": "0856a3c87ded849ec977c4b5467629ce28848ba6"
+    },
+    "fusion_compatibility": {
+        "version": "0.2.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 5,
+            "errors": [
+                {
+                    "body": "Packages 'git:https://github.com/fivetran/dbt_fivetran_utils.git' and 'hub:fivetran/fivetran_utils' occupy the same namespace 'fivetran_utils'. Consider unifying on a single source. This can be caused by other packages depending on 'fivetran_utils', but using an outdated or different full name.",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Packages 'hub:fivetran/fivetran_utils' and 'git:https://github.com/fivetran/dbt_fivetran_utils.git' occupy the same namespace 'fivetran_utils'. Consider unifying on a single source. This can be caused by other packages depending on 'fivetran_utils', but using an outdated or different full name.",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

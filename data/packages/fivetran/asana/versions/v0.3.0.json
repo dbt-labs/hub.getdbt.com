@@ -26,5 +26,127 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_asana/tar.gz/v0.3.0",
         "format": "tgz",
         "sha1": "3ca9c3f76aea5fd86c8b03f0090e34ea12a4b1d9"
+    },
+    "fusion_compatibility": {
+        "version": "0.3.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 15,
+            "total_warnings": 2,
+            "errors": [
+                {
+                    "body": "Invalid model definition `asana.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 12 column 27\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmp2kp8b0ps/dbt_project.yml:12:27",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `asana.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 10 column 23\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmp2kp8b0ps/dbt_project.yml:10:23",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/source_unique_combination_of_c_3d3b475d4ba99e17ee1b563763e2ea5f.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/source_unique_combination_of_c_3d3b475d4ba99e17ee1b563763e2ea5f.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/source_unique_combination_of_c_0453a2910a8a0dc41e5330ffbe6c3b90.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/source_unique_combination_of_c_0453a2910a8a0dc41e5330ffbe6c3b90.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/source_unique_combination_of_c_e9a4bb91175935ae1fa3e560fbe90c64.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/source_unique_combination_of_c_e9a4bb91175935ae1fa3e560fbe90c64.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/source_unique_combination_of_c_d61d81ecceae981b21cf72baf088ad37.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/source_unique_combination_of_c_d61d81ecceae981b21cf72baf088ad37.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/asana_daily_metrics.sql:23:29)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/dateadd.sql:2:20)\n  --> models/asana_daily_metrics.sql:23:29",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/asana_project.sql:33:9)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/asana_project.sql:33:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/asana_team.sql:25:9)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/asana_team.sql:25:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/asana_user.sql:50:5)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/asana_user.sql:50:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/asana_task_comments.sql:15:9)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intermediate/asana_task_comments.sql:15:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/asana_task_followers.sql:19:9)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intermediate/asana_task_followers.sql:19:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/asana_task_open_length.sql:32:90)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/intermediate/asana_task_open_length.sql:32:90",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/asana_task_projects.sql:49:9)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intermediate/asana_task_projects.sql:49:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/asana_task_tags.sql:19:9)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intermediate/asana_task_tags.sql:19:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

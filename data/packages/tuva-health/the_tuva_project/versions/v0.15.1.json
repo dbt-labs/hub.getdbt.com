@@ -33,5 +33,43 @@
         "tarball": "https://codeload.github.com/tuva-health/the_tuva_project/tar.gz/v0.15.1",
         "format": "tgz",
         "sha1": "b9ffd8dfc126c262f24c1d31b33f73d3d1952144"
+    },
+    "fusion_compatibility": {
+        "version": "0.15.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Ignored unexpected key `\"install_prerelease\"`. YAML path: `packages[1].install_prerelease`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpl0pa9g_h/packages.yml:6:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"install_prerelease\"`. YAML path: `packages[1].install_prerelease`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpl0pa9g_h/packages.yml:6:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"install_prerelease\"`. YAML path: `packages[1].install_prerelease`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpl0pa9g_h/packages.yml:6:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

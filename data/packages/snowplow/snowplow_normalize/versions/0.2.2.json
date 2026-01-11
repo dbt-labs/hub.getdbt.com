@@ -26,5 +26,43 @@
         "tarball": "https://codeload.github.com/snowplow/dbt-snowplow-normalize/tar.gz/0.2.2",
         "format": "tgz",
         "sha1": "c82f2d22acf8cad03f1e4187a8a04e1b3a2ea54a"
+    },
+    "fusion_compatibility": {
+        "version": "0.2.2",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 2,
+            "total_errors": 0,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Invalid model definition `snowplow_normalize.base.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 68 column 20\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmp74gc1q2k/dbt_project.yml:68:20",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `snowplow_normalize.base.scratch.databricks.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> ",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `snowplow_normalize.base.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 72 column 20\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmp74gc1q2k/dbt_project.yml:72:20",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

@@ -26,5 +26,43 @@
         "tarball": "https://codeload.github.com/cerebriumai/airbyte_dbt_github/tar.gz/0.1.0",
         "format": "tgz",
         "sha1": "dc06f8dba8fe0d9b573c357cc50748aee607dc85"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 3,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Invalid model definition `airbyte_github.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 20 column 19\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe91rfi1h/dbt_project.yml:20:19",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `airbyte_github.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 22 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe91rfi1h/dbt_project.yml:22:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "YAML error: unknown variant `average`, expected one of `simple`, `ratio`, `cumulative`, `derived`, `conversion`\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe91rfi1h/models/schema.yml:273:11",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

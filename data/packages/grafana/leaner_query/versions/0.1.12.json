@@ -18,5 +18,92 @@
         "tarball": "https://codeload.github.com/grafana/dbt_leaner_query/tar.gz/0.1.12",
         "format": "tgz",
         "sha1": "9716f045899f6fdd8e44ec8f7d591a356b4dd353"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.12",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 10,
+            "total_warnings": 3,
+            "errors": [
+                {
+                    "body": "Invalid model definition `leaner_query.marts.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 21 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpqk26i0mv/dbt_project.yml:21:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `leaner_query.reports.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 24 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpqk26i0mv/dbt_project.yml:24:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `leaner_query.staging.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 27 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpqk26i0mv/dbt_project.yml:27:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `leaner_query.utils.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 33 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpqk26i0mv/dbt_project.yml:33:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"enable\"`. YAML path: `enable`.\n  --> models/reports/rpt_bigquery_dbt_metrics_daily.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"enable\"`. YAML path: `enable`.\n  --> models/reports/rpt_bigquery_query_alerting.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"enable\"`. YAML path: `enable`.\n  --> models/reports/rpt_bigquery_table_usage_daily.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"enable\"`. YAML path: `enable`.\n  --> models/reports/rpt_bigquery_usage_cost_daily.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"enable\"`. YAML path: `enable`.\n  --> models/reports/rpt_bigquery_user_metrics_daily.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpqk26i0mv/models/marts/bigquery_audit_log.yml:77:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

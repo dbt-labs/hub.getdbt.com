@@ -26,5 +26,36 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_amplitude/tar.gz/v0.1.0",
         "format": "tgz",
         "sha1": "faae824595f55e4c7fdbe5a4c9ea13d86a035931"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Invalid model definition `amplitude.staging.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 12 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpl7tebr1a/dbt_project.yml:12:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `amplitude.staging.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 14 column 23\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpl7tebr1a/dbt_project.yml:14:23",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

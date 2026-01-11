@@ -23,5 +23,21 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_quickbooks/tar.gz/v0.3.0",
         "format": "tgz",
         "sha1": "f327b721fced74ee7e612b3421087febec25f9bd"
+    },
+    "fusion_compatibility": {
+        "version": "0.3.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": true,
+        "parse_compatibility_result": {
+            "parse_exit_code": 0,
+            "total_errors": 0,
+            "total_warnings": 1,
+            "errors": [],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

@@ -26,5 +26,43 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_intercom/tar.gz/v0.9.1",
         "format": "tgz",
         "sha1": "d8c92008252baffe4a4ede6cac8b5ba275ead3f9"
+    },
+    "fusion_compatibility": {
+        "version": "0.9.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 3,
+            "total_warnings": 1,
+            "errors": [
+                {
+                    "body": "Invalid model definition `intercom.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 10 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpbt0py099/dbt_project.yml:10:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `intercom.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 8 column 19\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpbt0py099/dbt_project.yml:8:19",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpbt0py099/models/intercom.yml:13:35",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

@@ -26,5 +26,29 @@
         "tarball": "https://codeload.github.com/dbt-labs/dbt-project-evaluator/tar.gz/v0.14.3",
         "format": "tgz",
         "sha1": "15c2909fa4185a4099020d4d7642d4074555607a"
+    },
+    "fusion_compatibility": {
+        "version": "0.14.3",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to add template invalid operation: return() is called in a non-block context\n(in dbt_project_evaluator.default__calculate_number_lines:11:12)\n  --> dbt_project_evaluator.default__calculate_number_lines:11:12",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

@@ -26,5 +26,29 @@
         "tarball": "https://codeload.github.com/ScalefreeCOM/datavault4dbt/tar.gz/v1.2.1",
         "format": "tgz",
         "sha1": "af99256be71a3bdf468ddd176b5dd48c0ebfbf85"
+    },
+    "fusion_compatibility": {
+        "version": "1.2.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to parse macro SQL syntax error: unexpected 'endmacro' end of block identifier\n(in macros/internal/metadata_processing/concat_ws.sql:35:5)\n  --> macros/internal/metadata_processing/concat_ws.sql:35:5",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

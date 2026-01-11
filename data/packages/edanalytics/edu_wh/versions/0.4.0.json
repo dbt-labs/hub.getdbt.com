@@ -26,5 +26,57 @@
         "tarball": "https://codeload.github.com/edanalytics/edu_wh/tar.gz/0.4.0",
         "format": "tgz",
         "sha1": "626bf2d9d1137b9d5dd9e6411a26d6a78fbd9e5a"
+    },
+    "fusion_compatibility": {
+        "version": "0.4.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 2,
+            "total_errors": 0,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"base_ef3__student_education_organization_responsibility_associations\")' is longer than 63 characters\n  --> models/staging/edfi_3/base/base_ef3__student_education_organization_responsibility_associations.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"stg_ef3__discipline_actions__student_discipline_incident_behaviors\")' is longer than 63 characters\n  --> models/staging/edfi_3/stage/stg_ef3__discipline_actions__student_discipline_incident_behaviors.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"stg_ef3__student_discipline_incident_behavior_associations__participation_codes\")' is longer than 63 characters\n  --> models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_behavior_associations__participation_codes.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"stg_ef3__student_discipline_incident_non_offender_associations__participation_codes\")' is longer than 63 characters\n  --> models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_non_offender_associations__participation_codes.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"stg_ef3__student_education_organization_responsibility_associations\")' is longer than 63 characters\n  --> models/staging/edfi_3/stage/stg_ef3__student_education_organization_responsibility_associations.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

@@ -18,5 +18,29 @@
         "tarball": "https://codeload.github.com/brooklyn-data/dbt_artifacts/tar.gz/2.6.2",
         "format": "tgz",
         "sha1": "80a15ccd399f400530016114a960224817352a24"
+    },
+    "fusion_compatibility": {
+        "version": "2.6.2",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to parse macro SQL syntax error: unexpected 'endmacro' end of block identifier\n(in macros/upload_results/insert_into_metadata_table.sql:48:5)\n  --> macros/upload_results/insert_into_metadata_table.sql:48:5",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": true,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

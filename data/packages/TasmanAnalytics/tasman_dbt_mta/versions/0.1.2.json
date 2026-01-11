@@ -23,5 +23,71 @@
         "tarball": "https://codeload.github.com/TasmanAnalytics/tasman-dbt-mta/tar.gz/0.1.2",
         "format": "tgz",
         "sha1": "8d9ae0f3a9867ad5650052ebe07aae8716f9582f"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.2",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 7,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in models/prs_tasman_mta__attribution_performance_history.sql:15:13)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in target/generic_tests/in_past_int_tasman_mta__attrib_34d0cada600b459e7e380d4804c7c638.sql:1:1)\n(in macros/test_in_past.sql:5:52)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in target/generic_tests/in_past_int_tasman_mta__attributed_conversions_touch_timestamp.sql:1:1)\n(in macros/test_in_past.sql:5:52)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in target/generic_tests/in_past_int_tasman_mta__attributed_touches_conversion_timestamp.sql:1:1)\n(in macros/test_in_past.sql:5:52)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in target/generic_tests/in_past_int_tasman_mta__attributed_touches_touch_timestamp.sql:1:1)\n(in macros/test_in_past.sql:5:52)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in target/generic_tests/in_past_int_tasman_mta__filter_0deeb5482e3f1e65b97e2c385e898469.sql:1:1)\n(in macros/test_in_past.sql:5:52)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in target/generic_tests/in_past_int_tasman_mta__filtered_touch_events_touch_timestamp.sql:1:1)\n(in macros/test_in_past.sql:5:52)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

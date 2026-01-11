@@ -15,5 +15,36 @@
         "tarball": "https://codeload.github.com/dbt-labs/dbt-external-tables/tar.gz/0.1.2",
         "format": "tgz",
         "sha1": "cf9ad60edc2de50191a42e8999f2422c5769300e"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.2",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "'data-paths' cannot be specified in dbt_project.yml",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "'data-paths' cannot be specified in dbt_project.yml",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": true,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

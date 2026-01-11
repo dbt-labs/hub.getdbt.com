@@ -24,5 +24,36 @@
         "tarball": "https://codeload.github.com/google/fhir-dbt-analytics/tar.gz/1.0.0",
         "format": "tgz",
         "sha1": "8beb2b17cb5ea2124ffe445df5412a2dd0188e16"
+    },
+    "fusion_compatibility": {
+        "version": "1.0.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "YAML error: mapping values are not allowed in this context at line 29 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpu604gu51/profiles.yml:29:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "YAML error: mapping values are not allowed in this context at line 29 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpu604gu51/profiles.yml:29:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

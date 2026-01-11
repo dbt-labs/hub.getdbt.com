@@ -26,5 +26,36 @@
         "tarball": "https://codeload.github.com/snowplow/dbt-snowplow-web/tar.gz/0.10.0",
         "format": "tgz",
         "sha1": "019ec6e46448a130e2df2600996585daadf76771"
+    },
+    "fusion_compatibility": {
+        "version": "0.10.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "'source-paths' cannot be specified in dbt_project.yml",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "'source-paths' cannot be specified in dbt_project.yml",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

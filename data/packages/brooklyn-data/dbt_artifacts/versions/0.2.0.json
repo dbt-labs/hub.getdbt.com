@@ -23,5 +23,43 @@
         "tarball": "https://codeload.github.com/brooklyn-data/dbt_artifacts/tar.gz/0.2.0",
         "format": "tgz",
         "sha1": "2127c3a272d33945f894a063abd5bc1a7caafee7"
+    },
+    "fusion_compatibility": {
+        "version": "0.2.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 3,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/fct_dbt__run_results.sql:3:28)\n(in dbt_packages/dbt_utils/macros/sql/get_column_values.sql:14:22)\n  --> models/fct_dbt__run_results.sql:3:28",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/staging/stg_dbt__model_executions.sql:43:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/staging/stg_dbt__model_executions.sql:43:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/staging/stg_dbt__models.sql:38:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/staging/stg_dbt__models.sql:38:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": true,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

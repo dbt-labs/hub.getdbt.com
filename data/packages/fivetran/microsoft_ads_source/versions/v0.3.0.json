@@ -32,5 +32,50 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_microsoft_ads_source/tar.gz/v0.3.0",
         "format": "tgz",
         "sha1": "5bb92c40a2662fcc4090cfc7e8bcbf8e82c17270"
+    },
+    "fusion_compatibility": {
+        "version": "0.3.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 4,
+            "total_warnings": 1,
+            "errors": [
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_microsoft_ads__account_history.sql:18:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/stg_microsoft_ads__account_history.sql:18:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_microsoft_ads__ad_group_history.sql:19:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/stg_microsoft_ads__ad_group_history.sql:19:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_microsoft_ads__ad_history.sql:19:9)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/split_part.sql:2:20)\n  --> models/stg_microsoft_ads__ad_history.sql:19:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_microsoft_ads__campaign_history.sql:19:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/stg_microsoft_ads__campaign_history.sql:19:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

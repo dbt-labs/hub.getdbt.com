@@ -15,5 +15,21 @@
         "tarball": "https://codeload.github.com/Snowflake-Labs/dbt_constraints/tar.gz/0.6.0",
         "format": "tgz",
         "sha1": "2fb0d85583984c6cb0679c27335520803523cf73"
+    },
+    "fusion_compatibility": {
+        "version": "0.6.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": true,
+        "parse_compatibility_result": {
+            "parse_exit_code": 0,
+            "total_errors": 0,
+            "total_warnings": 0,
+            "errors": [],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": true,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

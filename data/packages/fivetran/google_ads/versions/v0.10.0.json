@@ -26,5 +26,64 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_google_ads/tar.gz/v0.10.0",
         "format": "tgz",
         "sha1": "20bbb7efa1496d4ec4a4d4a6f86e59c1a9da7f95"
+    },
+    "fusion_compatibility": {
+        "version": "0.10.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 6,
+            "total_warnings": 3,
+            "errors": [
+                {
+                    "body": "Invalid model definition `google_ads.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 10 column 19\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmp7e4zcy8f/dbt_project.yml:10:19",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/google_ads_source/models/stg_google_ads__click_performance.sql:15:33)\n(in dbt_packages/google_ads_source/macros/staging_columns.sql:28:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/google_ads_source/models/stg_google_ads__click_performance.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/google_ads_source/models/stg_google_ads__criteria_performance.sql:15:33)\n(in dbt_packages/google_ads_source/macros/staging_columns.sql:51:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/google_ads_source/models/stg_google_ads__criteria_performance.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/google_ads_source/models/stg_google_ads__final_url_performance.sql:15:33)\n(in dbt_packages/google_ads_source/macros/staging_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/google_ads_source/models/stg_google_ads__final_url_performance.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/criteria/google_ads__criteria_ad_adapter.sql:22:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> models/criteria/google_ads__criteria_ad_adapter.sql:22:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/url/google_ads__url_ad_adapter.sql:28:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> models/url/google_ads__url_ad_adapter.sql:28:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

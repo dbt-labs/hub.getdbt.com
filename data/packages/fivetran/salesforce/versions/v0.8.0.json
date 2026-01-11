@@ -26,5 +26,36 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_salesforce/tar.gz/v0.8.0",
         "format": "tgz",
         "sha1": "dbc8cc5c4a750536851e4bee0ff3c9db9995d15d"
+    },
+    "fusion_compatibility": {
+        "version": "0.8.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 1,
+            "errors": [
+                {
+                    "body": "Invalid model definition `salesforce.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 9 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpfbm13vj2/dbt_project.yml:9:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `salesforce.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 7 column 19\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpfbm13vj2/dbt_project.yml:7:19",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

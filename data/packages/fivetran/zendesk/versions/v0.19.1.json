@@ -33,5 +33,29 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_zendesk/tar.gz/v0.19.1",
         "format": "tgz",
         "sha1": "2c976e2d5e7cfb2af87e8dd5d490aeb4488a310f"
+    },
+    "fusion_compatibility": {
+        "version": "0.19.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 1,
+            "errors": [
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"dev_snowflake\"`. YAML path: `columns[110].dev_snowflake`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpx7f401wm/models/zendesk.yml:450:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

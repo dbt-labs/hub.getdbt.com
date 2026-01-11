@@ -68,5 +68,687 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_ad_reporting/tar.gz/v0.2.3",
         "format": "tgz",
         "sha1": "4ac653bb35083e2248ff4d14357e91cda151575d"
+    },
+    "fusion_compatibility": {
+        "version": "0.2.3",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 95,
+            "total_warnings": 7,
+            "errors": [
+                {
+                    "body": "Invalid model definition `facebook_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 43 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:43:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `facebook_ads_creative_history.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 47 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:47:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `facebook_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 45 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:45:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `google_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 50 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:50:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `google_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 52 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:52:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `linkedin.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 33 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:33:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `linkedin_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 35 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:35:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `microsoft_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 28 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:28:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `microsoft_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 30 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:30:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `pinterest.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 23 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:23:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `pinterest_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 25 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:25:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `snapchat_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 55 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:55:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `snapchat_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 57 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:57:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `twitter_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 38 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:38:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `twitter_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 40 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpe5btzxrr/dbt_project.yml:40:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__account_history.sql:18:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__account_history.sql:18:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__account_history.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_account_history_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__account_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/google_ads_source/models/stg_google_ads__click_performance.sql:15:33)\n(in dbt_packages/google_ads_source/macros/staging_columns.sql:28:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/google_ads_source/models/stg_google_ads__click_performance.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__ad_group_history.sql:19:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__ad_group_history.sql:19:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/pinterest_source/models/stg_pinterest_ads__ad_group_history.sql:12:33)\n(in dbt_packages/pinterest_source/macros/get_ad_group_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/pinterest_source/models/stg_pinterest_ads__ad_group_history.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin_source/models/stg_linkedin__account_history.sql:12:33)\n(in dbt_packages/linkedin_source/macros/get_account_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/linkedin_source/models/stg_linkedin__account_history.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__ad_history.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_ad_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__ad_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/google_ads_source/models/stg_google_ads__criteria_performance.sql:15:33)\n(in dbt_packages/google_ads_source/macros/staging_columns.sql:51:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/google_ads_source/models/stg_google_ads__criteria_performance.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__ad_history.sql:19:9)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/split_part.sql:2:20)\n  --> dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__ad_history.sql:19:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads_source/models/stg_snapchat__ad_account_history.sql:15:33)\n(in dbt_packages/snapchat_ads_source/macros/get_ad_account_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/snapchat_ads_source/models/stg_snapchat__ad_account_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/pinterest_source/models/stg_pinterest_ads__campaign_history.sql:12:33)\n(in dbt_packages/pinterest_source/macros/get_campaign_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/pinterest_source/models/stg_pinterest_ads__campaign_history.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin_source/models/stg_linkedin__ad_analytics_by_creative.sql:12:33)\n(in dbt_packages/linkedin_source/macros/get_ad_analytics_by_creative_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/linkedin_source/models/stg_linkedin__ad_analytics_by_creative.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__ad_set_history.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_ad_set_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__ad_set_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/google_ads_source/models/stg_google_ads__final_url_performance.sql:15:33)\n(in dbt_packages/google_ads_source/macros/staging_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/google_ads_source/models/stg_google_ads__final_url_performance.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__basic_ad.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_basic_ad_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__basic_ad.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads_source/models/stg_snapchat__ad_history.sql:15:33)\n(in dbt_packages/snapchat_ads_source/macros/get_ad_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/snapchat_ads_source/models/stg_snapchat__ad_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin_source/models/stg_linkedin__campaign_group_history.sql:12:33)\n(in dbt_packages/linkedin_source/macros/get_campaign_group_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/linkedin_source/models/stg_linkedin__campaign_group_history.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/pinterest_source/models/stg_pinterest_ads__pin_promotion_history.sql:13:33)\n(in dbt_packages/pinterest_source/macros/get_pin_promotion_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/pinterest_source/models/stg_pinterest_ads__pin_promotion_history.sql:13:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__campaign_history.sql:19:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__campaign_history.sql:19:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads_source/models/stg_snapchat__ad_hourly_report.sql:15:33)\n(in dbt_packages/snapchat_ads_source/macros/get_ad_hourly_report_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/snapchat_ads_source/models/stg_snapchat__ad_hourly_report.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/twitter_ads_source/models/stg_twitter_ads__account_history.sql:15:33)\n(in dbt_packages/twitter_ads_source/macros/staging_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/twitter_ads_source/models/stg_twitter_ads__account_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__campaign_history.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_campaign_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__campaign_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/pinterest_source/models/stg_pinterest_ads__pin_promotion_report.sql:12:33)\n(in dbt_packages/pinterest_source/macros/get_pin_promotion_report_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/pinterest_source/models/stg_pinterest_ads__pin_promotion_report.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin_source/models/stg_linkedin__campaign_history.sql:12:33)\n(in dbt_packages/linkedin_source/macros/get_campaign_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/linkedin_source/models/stg_linkedin__campaign_history.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads_source/models/stg_snapchat__ad_squad_history.sql:15:33)\n(in dbt_packages/snapchat_ads_source/macros/get_ad_squad_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/snapchat_ads_source/models/stg_snapchat__ad_squad_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/twitter_ads_source/models/stg_twitter_ads__campaign_history.sql:15:33)\n(in dbt_packages/twitter_ads_source/macros/staging_columns.sql:26:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/twitter_ads_source/models/stg_twitter_ads__campaign_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin_source/models/stg_linkedin__creative_history.sql:12:33)\n(in dbt_packages/linkedin_source/macros/get_creative_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/linkedin_source/models/stg_linkedin__creative_history.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__creative_history.sql:14:33)\n(in dbt_packages/facebook_ads_source/macros/get_creative_history_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__creative_history.sql:14:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads_source/models/stg_snapchat__campaign_history.sql:15:33)\n(in dbt_packages/snapchat_ads_source/macros/get_campaign_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/snapchat_ads_source/models/stg_snapchat__campaign_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads_source/models/stg_snapchat__creative_history.sql:15:33)\n(in dbt_packages/snapchat_ads_source/macros/get_creative_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/snapchat_ads_source/models/stg_snapchat__creative_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/twitter_ads_source/models/stg_twitter_ads__line_item_history.sql:15:33)\n(in dbt_packages/twitter_ads_source/macros/staging_columns.sql:53:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/twitter_ads_source/models/stg_twitter_ads__line_item_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads_source/models/stg_snapchat__creative_url_tag_history.sql:15:33)\n(in dbt_packages/snapchat_ads_source/macros/get_creative_url_tag_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/snapchat_ads_source/models/stg_snapchat__creative_url_tag_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/twitter_ads_source/models/stg_twitter_ads__promoted_tweet_history.sql:15:33)\n(in dbt_packages/twitter_ads_source/macros/staging_columns.sql:87:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/twitter_ads_source/models/stg_twitter_ads__promoted_tweet_history.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/twitter_ads_source/models/stg_twitter_ads__promoted_tweet_report.sql:15:33)\n(in dbt_packages/twitter_ads_source/macros/staging_columns.sql:121:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/twitter_ads_source/models/stg_twitter_ads__promoted_tweet_report.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/twitter_ads_source/models/stg_twitter_ads__tweet_url.sql:15:33)\n(in dbt_packages/twitter_ads_source/macros/staging_columns.sql:105:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/twitter_ads_source/models/stg_twitter_ads__tweet_url.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/google_ads/models/criteria/google_ads__criteria_ad_adapter.sql:22:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/google_ads/models/criteria/google_ads__criteria_ad_adapter.sql:22:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/google_ads/models/url/google_ads__url_ad_adapter.sql:28:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/google_ads/models/url/google_ads__url_ad_adapter.sql:28:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin/models/linkedin__account_ad_report.sql:16:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/linkedin/models/linkedin__account_ad_report.sql:16:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/microsoft_ads/models/microsoft_ads__account_report.sql:16:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/microsoft_ads/models/microsoft_ads__account_report.sql:16:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads/models/intermediate/snapchat__creative_history_prep.sql:32:9)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/split_part.sql:2:20)\n  --> dbt_packages/snapchat_ads/models/intermediate/snapchat__creative_history_prep.sql:32:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/microsoft_ads/models/microsoft_ads__ad_adapter.sql:60:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/microsoft_ads/models/microsoft_ads__ad_adapter.sql:60:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin/models/linkedin__ad_adapter.sql:57:13)\n(in dbt_packages/fivetran_utils/macros/timestamp_add.sql:3:11)\n  --> dbt_packages/linkedin/models/linkedin__ad_adapter.sql:57:13",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/twitter_ads/models/twitter__ad_adapter.sql:64:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/twitter_ads/models/twitter__ad_adapter.sql:64:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/microsoft_ads/models/microsoft_ads__ad_group_report.sql:20:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/microsoft_ads/models/microsoft_ads__ad_group_report.sql:20:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads/models/snapchat__account_report.sql:16:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/snapchat_ads/models/snapchat__account_report.sql:16:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin/models/linkedin__campaign_ad_report.sql:20:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/linkedin/models/linkedin__campaign_ad_report.sql:20:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/twitter_ads/models/twitter__campaign_report.sql:17:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/twitter_ads/models/twitter__campaign_report.sql:17:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/pinterest/models/pinterest_ads__ad_adapter.sql:55:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> dbt_packages/pinterest/models/pinterest_ads__ad_adapter.sql:55:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/microsoft_ads/models/microsoft_ads__campaign_report.sql:18:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/microsoft_ads/models/microsoft_ads__campaign_report.sql:18:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin/models/linkedin__campaign_group_ad_report.sql:18:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/linkedin/models/linkedin__campaign_group_ad_report.sql:18:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/twitter_ads/models/twitter__line_item_report.sql:19:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/twitter_ads/models/twitter__line_item_report.sql:19:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/pinterest/models/pinterest_ads__ad_group_ad_report.sql:21:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/pinterest/models/pinterest_ads__ad_group_ad_report.sql:21:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads/models/snapchat__ad_adapter.sql:71:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/snapchat_ads/models/snapchat__ad_adapter.sql:71:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/pinterest/models/pinterest_ads__campaign_ad_report.sql:19:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/pinterest/models/pinterest_ads__campaign_ad_report.sql:19:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads/models/snapchat__ad_squad_report.sql:20:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/snapchat_ads/models/snapchat__ad_squad_report.sql:20:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads/models/snapchat__campaign_report.sql:18:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> dbt_packages/snapchat_ads/models/snapchat__campaign_report.sql:18:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_creative_history/models/redshift/utils__facebook_ads__numbers.sql:1:1)\n(in dbt_packages/dbt_utils/macros/sql/generate_series.sql:19:22)\n  --> dbt_packages/facebook_ads_creative_history/models/redshift/utils__facebook_ads__numbers.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__url_tag'\n  --> models/spark/stg_facebook_ads__url_tag.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__url_tag'\n  --> models/snowflake/stg_facebook_ads__url_tag.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__url_tag'\n  --> models/redshift/stg_facebook_ads__url_tag.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__url_tag'\n  --> models/postgres/stg_facebook_ads__url_tag.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__creative_history_asset_feed_spec_link_url'\n  --> models/spark/stg_facebook_ads__creative_history_asset_feed_spec_link_url.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__creative_history_asset_feed_spec_link_url'\n  --> models/snowflake/stg_facebook_ads__creative_history_asset_feed_spec_link_url.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__creative_history_asset_feed_spec_link_url'\n  --> models/redshift/stg_facebook_ads__creative_history_asset_feed_spec_link_url.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__carousel_media_url_tags'\n  --> models/spark/stg_facebook_ads__carousel_media_url_tags.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__carousel_media_url_tags'\n  --> models/snowflake/stg_facebook_ads__carousel_media_url_tags.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__carousel_media_url_tags'\n  --> models/redshift/stg_facebook_ads__carousel_media_url_tags.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__carousel_media_url_tags'\n  --> models/postgres/stg_facebook_ads__carousel_media_url_tags.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__carousel_media'\n  --> models/spark/stg_facebook_ads__carousel_media.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__carousel_media'\n  --> models/snowflake/stg_facebook_ads__carousel_media.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__carousel_media'\n  --> models/redshift/stg_facebook_ads__carousel_media.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__carousel_media'\n  --> models/postgres/stg_facebook_ads__carousel_media.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__app_link'\n  --> models/spark/stg_facebook_ads__app_link.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__app_link'\n  --> models/snowflake/stg_facebook_ads__app_link.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__app_link'\n  --> models/redshift/stg_facebook_ads__app_link.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'stg_facebook_ads__app_link'\n  --> models/postgres/stg_facebook_ads__app_link.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'int__facebook_ads__carousel_media_prep'\n  --> models/spark/int__facebook_ads__carousel_media_prep.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'int__facebook_ads__carousel_media_prep'\n  --> models/snowflake/int__facebook_ads__carousel_media_prep.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'int__facebook_ads__carousel_media_prep'\n  --> models/redshift/int__facebook_ads__carousel_media_prep.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'int__facebook_ads__carousel_media_prep'\n  --> models/postgres/int__facebook_ads__carousel_media_prep.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

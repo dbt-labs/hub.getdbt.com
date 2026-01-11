@@ -26,5 +26,29 @@
         "tarball": "https://codeload.github.com/re-data/dbt-re-data/tar.gz/0.6.0",
         "format": "tgz",
         "sha1": "2bbbbdd2f22a760b29012640c6f877696a77f38d"
+    },
+    "fusion_compatibility": {
+        "version": "0.6.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Invalid model definition `re_data.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 51 column 14\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmp66b302tw/dbt_project.yml:51:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

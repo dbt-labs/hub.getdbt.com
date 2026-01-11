@@ -30,5 +30,50 @@
         "tarball": "https://codeload.github.com/calogica/dbt-date/tar.gz/0.2.5",
         "format": "tgz",
         "sha1": "ebc3f1b5ac865144b315f154cdcbbca133df869e"
+    },
+    "fusion_compatibility": {
+        "version": "0.2.5",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 4,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Invalid model definition `dbt_date.example_models.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 24 column 22\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpodhuzxtb/dbt_project.yml:24:22",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/example_models/dates.sql:2:5)\n(in macros/get_date_dimension.sql:2:15)\n  --> macros/get_date_dimension.sql:2:15",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/example_models/dim_date.sql:5:5)\n(in macros/fiscal_date/get_fiscal_periods.sql:7:5)\n(in macros/fiscal_date/get_fiscal_year_dates.sql:2:11)\n  --> macros/fiscal_date/get_fiscal_year_dates.sql:2:11",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/example_models/dim_date_fiscal.sql:2:5)\n(in macros/fiscal_date/get_fiscal_periods.sql:7:5)\n(in macros/fiscal_date/get_fiscal_year_dates.sql:2:11)\n  --> macros/fiscal_date/get_fiscal_year_dates.sql:2:11",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

@@ -15,5 +15,36 @@
         "tarball": "https://codeload.github.com/dbt-labs/snowplow/tar.gz/0.3.1",
         "format": "tgz",
         "sha1": "dfc750794d5300d226ac68cd4a6be1f04c824e8c"
+    },
+    "fusion_compatibility": {
+        "version": "0.3.1",
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "'data-paths' cannot be specified in dbt_project.yml",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "'data-paths' cannot be specified in dbt_project.yml",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

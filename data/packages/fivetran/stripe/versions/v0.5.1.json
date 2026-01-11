@@ -25,5 +25,21 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_stripe/tar.gz/v0.5.1",
         "format": "tgz",
         "sha1": "75b69bc6ba3c17f6150e8cf450ce53f1e72fc306"
+    },
+    "fusion_compatibility": {
+        "version": "0.5.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": true,
+        "parse_compatibility_result": {
+            "parse_exit_code": 0,
+            "total_errors": 0,
+            "total_warnings": 2,
+            "errors": [],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

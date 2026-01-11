@@ -18,5 +18,99 @@
         "tarball": "https://codeload.github.com/datooine/dbt-buckets/tar.gz/0.1.0",
         "format": "tgz",
         "sha1": "17f834c6746b708bab37bcc475a70006423e1da8"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 11,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: dbt_buckets: bucket_map not implemented for adapter '{{ target.type }}'. Supported: bigquery.\n(in models/tests/macro_apply_bucket_map_basic.sql:4:3)\n(in macros/bucket_map.sql:19:23)\n(in macros/bucket_map.sql:49:3)\n  --> macros/bucket_map.sql:49:3",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: dbt_buckets: bucket_map not implemented for adapter '{{ target.type }}'. Supported: bigquery.\n(in models/tests/macro_apply_bucket_map_drift.sql:4:3)\n(in macros/bucket_map.sql:19:23)\n(in macros/bucket_map.sql:49:3)\n  --> macros/bucket_map.sql:49:3",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: dbt_buckets: bucket_map not implemented for adapter '{{ target.type }}'. Supported: bigquery.\n(in models/tests/macro_bucket_map_min_categories.sql:4:3)\n(in macros/bucket_map.sql:19:23)\n(in macros/bucket_map.sql:49:3)\n  --> macros/bucket_map.sql:49:3",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: dbt_buckets: bucket_map not implemented for adapter '{{ target.type }}'. Supported: bigquery.\n(in models/tests/macro_bucket_map_min_threshold.sql:4:3)\n(in macros/bucket_map.sql:19:23)\n(in macros/bucket_map.sql:49:3)\n  --> macros/bucket_map.sql:49:3",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: dbt_buckets: bucket_map not implemented for adapter '{{ target.type }}'. Supported: bigquery.\n(in models/tests/macro_bucket_map_pareto.sql:4:3)\n(in macros/bucket_map.sql:19:23)\n(in macros/bucket_map.sql:49:3)\n  --> macros/bucket_map.sql:49:3",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: dbt_buckets: bucket_map not implemented for adapter '{{ target.type }}'. Supported: bigquery.\n(in models/tests/macro_bucket_map_pins.sql:4:3)\n(in macros/bucket_map.sql:19:23)\n(in macros/bucket_map.sql:49:3)\n  --> macros/bucket_map.sql:49:3",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: dbt_buckets: bucket_map not implemented for adapter '{{ target.type }}'. Supported: bigquery.\n(in models/tests/macro_bucket_map_top_k.sql:4:3)\n(in macros/bucket_map.sql:19:23)\n(in macros/bucket_map.sql:49:3)\n  --> macros/bucket_map.sql:49:3",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: dbt_buckets: bucket_map not implemented for adapter '{{ target.type }}'. Supported: bigquery.\n(in analyses/apply_bucket_map_demo.sql:16:5)\n(in macros/bucket_map.sql:19:23)\n(in macros/bucket_map.sql:49:3)\n  --> macros/bucket_map.sql:49:3",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: dbt_buckets: bucket_map not implemented for adapter '{{ target.type }}'. Supported: bigquery.\n(in analyses/bucket_map_min_threshold_country.sql:3:3)\n(in macros/bucket_map.sql:19:23)\n(in macros/bucket_map.sql:49:3)\n  --> macros/bucket_map.sql:49:3",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: dbt_buckets: bucket_map not implemented for adapter '{{ target.type }}'. Supported: bigquery.\n(in analyses/bucket_map_pareto_mobile_brand.sql:3:3)\n(in macros/bucket_map.sql:19:23)\n(in macros/bucket_map.sql:49:3)\n  --> macros/bucket_map.sql:49:3",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: dbt_buckets: bucket_map not implemented for adapter '{{ target.type }}'. Supported: bigquery.\n(in analyses/bucket_map_topk_medium.sql:3:3)\n(in macros/bucket_map.sql:19:23)\n(in macros/bucket_map.sql:49:3)\n  --> macros/bucket_map.sql:49:3",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

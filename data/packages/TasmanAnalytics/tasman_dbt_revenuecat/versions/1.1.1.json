@@ -18,5 +18,29 @@
         "tarball": "https://codeload.github.com/TasmanAnalytics/tasman-dbt-revenuecat/tar.gz/1.1.1",
         "format": "tgz",
         "sha1": "1d0a0bc067864af2852ca980b2695ccfc97ae885"
+    },
+    "fusion_compatibility": {
+        "version": "1.1.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to eval the compiled Jinja expression invalid operation: Missing context variable 'this'. Var should be initialized for package: tasman_dbt_revenuecat\n(in :1:2)\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpibapmcdy/models/sources.yml:9:21",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

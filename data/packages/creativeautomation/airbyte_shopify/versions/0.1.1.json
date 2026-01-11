@@ -15,5 +15,50 @@
         "tarball": "https://codeload.github.com/creativeautomation/dbt-airbyte-shopify/tar.gz/0.1.1",
         "format": "tgz",
         "sha1": "8bcc05589aa31219ec5522db1a066526a14b7451"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.1",
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 4,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Invalid model definition `airbyte_shopify.marts.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 24 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpzn0gb1ff/dbt_project.yml:24:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `airbyte_shopify.staging.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 22 column 21\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpzn0gb1ff/dbt_project.yml:22:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpzn0gb1ff/models/staging/shopify/src_shopify.yml:314:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmpzn0gb1ff/models/staging/shopify/src_shopify.yml:315:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

@@ -25,5 +25,21 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_google_ads/tar.gz/v0.3.1",
         "format": "tgz",
         "sha1": "ae4aef4607d91d01c07828e9196f19bff4a8cb88"
+    },
+    "fusion_compatibility": {
+        "version": "0.3.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": true,
+        "parse_compatibility_result": {
+            "parse_exit_code": 0,
+            "total_errors": 0,
+            "total_warnings": 3,
+            "errors": [],
+            "warnings": []
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }

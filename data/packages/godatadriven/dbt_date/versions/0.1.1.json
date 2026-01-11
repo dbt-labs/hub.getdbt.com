@@ -23,5 +23,29 @@
         "tarball": "https://codeload.github.com/godatadriven/dbt-date/tar.gz/0.1.1",
         "format": "tgz",
         "sha1": "870fcd679cdd173958641db4164c1bf60b4c88c6"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Invalid model definition `vars.dbt_date:time_zone`: invalid type: string \"America/Los_Angeles\", expected struct ProjectModelConfig at line 19 column 31\n  --> ../../../../../../private/var/folders/xf/r3bz6sxx0m57976q8nb2d1fh0000gp/T/tmp5gugasuz/dbt_project.yml:19:31",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": []
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false,
+        "fusion_version_tested": "2.0.0-preview.89"
     }
 }
