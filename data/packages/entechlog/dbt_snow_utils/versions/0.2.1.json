@@ -20,5 +20,43 @@
         "tarball": "https://codeload.github.com/entechlog/dbt-snow-utils/tar.gz/0.2.1",
         "format": "tgz",
         "sha1": "bcf3571f5350b2824f0d9576b9db705cdd36cee7"
+    },
+    "fusion_compatibility": {
+        "version": "0.2.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 3,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: \nWarning: `dbt_utils.surrogate_key` has been replaced by \n`dbt_utils.generate_surrogate_key`. The new macro treats null values \ndifferently to empty strings. To restore the behaviour of the original \nmacro, add a global variable in dbt_project.yml called \n`surrogate_key_treat_nulls_as_empty_strings` to your \ndbt_project.yml file with a value of True. \nThe dbt_snow_utils.stg_snowpipe__copy_history model triggered this warning. \n\n(in models/staging/snowpipe/stg_snowpipe__copy_history.sql:23:2)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:3:31)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:18:18)\n  --> models/staging/snowpipe/stg_snowpipe__copy_history.sql:23:2",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: \nWarning: `dbt_utils.surrogate_key` has been replaced by \n`dbt_utils.generate_surrogate_key`. The new macro treats null values \ndifferently to empty strings. To restore the behaviour of the original \nmacro, add a global variable in dbt_project.yml called \n`surrogate_key_treat_nulls_as_empty_strings` to your \ndbt_project.yml file with a value of True. \nThe dbt_snow_utils.stg_snowpipe__usage_history model triggered this warning. \n\n(in models/staging/snowpipe/stg_snowpipe__usage_history.sql:11:2)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:3:31)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:18:18)\n  --> models/staging/snowpipe/stg_snowpipe__usage_history.sql:11:2",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "dbt found two resources with the database relation \"postgres\".\"public\".\"snowflake__query_history\". Nodes: model.dbt_snow_utils.pt_snowflake__query_history, model.dbt_snow_utils.mart_snowflake__query_history",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

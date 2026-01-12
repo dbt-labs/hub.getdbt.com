@@ -25,5 +25,29 @@
         "tarball": "https://codeload.github.com/hightouchio/dbt-hightouch/tar.gz/0.1.6",
         "format": "tgz",
         "sha1": "d95d600df5c88fbada265040598cbd52f9955e1e"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.6",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `datediff` is unknown\n(in models/staging/stg_hightouch_audit__sync_runs.sql:17:5)\n  --> models/staging/stg_hightouch_audit__sync_runs.sql:17:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

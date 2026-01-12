@@ -23,5 +23,36 @@
         "tarball": "https://codeload.github.com/calogica/dbt-date/tar.gz/0.1.4",
         "format": "tgz",
         "sha1": "b781d034afca86a0651e0c1961bbfd333a7d8f74"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.4",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Invalid model definition `vars.dbt_date:time_zone`: invalid type: string \"America/Los_Angeles\", expected struct ProjectModelConfig at line 17 column 31\n  --> dbt_project.yml:17:31",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/examples/dim_date.sql:6:1)\n(in macros/get_date_dimension.sql:2:1)\n  --> macros/get_date_dimension.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false
     }
 }

@@ -15,5 +15,29 @@
         "tarball": "https://codeload.github.com/Delphi-Data/dbt_natural_language/tar.gz/0.0.2",
         "format": "tgz",
         "sha1": "110ed5520197d4f3e0d2e9ef279d03cf6f11e914"
+    },
+    "fusion_compatibility": {
+        "version": "0.0.2",
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to parse macro SQL syntax error: unexpected identifier, expected `,`\n(in macros/setup.sql:3:9)\n  --> macros/setup.sql:3:9",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

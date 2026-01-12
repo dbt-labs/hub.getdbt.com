@@ -26,5 +26,29 @@
         "tarball": "https://codeload.github.com/irvingpop/dbt_otel_export/tar.gz/v1.1.3",
         "format": "tgz",
         "sha1": "2241cb988e6a343047ed8212c6cc6aa2a82b06a9"
+    },
+    "fusion_compatibility": {
+        "version": "1.1.3",
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Duplicate key `quote`. This key overwrites a previous definition of the same key at line 32 column 11. YAML path: `models[0].columns[8].quote`.\n  --> models/models.yml:34:11",
+                    "error_code": 1059,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

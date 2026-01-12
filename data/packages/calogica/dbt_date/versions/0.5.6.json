@@ -26,5 +26,29 @@
         "tarball": "https://codeload.github.com/calogica/dbt-date/tar.gz/0.5.6",
         "format": "tgz",
         "sha1": "e20d3b744e822fc19642926d230e6dce2be1bb2e"
+    },
+    "fusion_compatibility": {
+        "version": "0.5.6",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to parse macro SQL syntax error: unexpected end of variable block, expected `,`\n(in macros/calendar_date/convert_timezone.sql:35:67)\n  --> macros/calendar_date/convert_timezone.sql:35:67",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false
     }
 }

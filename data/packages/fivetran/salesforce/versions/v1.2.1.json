@@ -26,5 +26,36 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_salesforce/tar.gz/v1.2.1",
         "format": "tgz",
         "sha1": "6a4408650c8e0dd0de7ca8f93526e746531fdbb0"
+    },
+    "fusion_compatibility": {
+        "version": "1.2.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 1,
+            "errors": [
+                {
+                    "body": "Invalid model definition `salesforce.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 9 column 21\n  --> dbt_project.yml:9:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `salesforce.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 7 column 19\n  --> dbt_project.yml:7:19",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false
     }
 }

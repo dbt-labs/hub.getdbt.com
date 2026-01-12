@@ -26,5 +26,36 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_github/tar.gz/v0.6.0",
         "format": "tgz",
         "sha1": "36f8462b0ee17d5af612b85dee5e1f94e741cc97"
+    },
+    "fusion_compatibility": {
+        "version": "0.6.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 1,
+            "errors": [
+                {
+                    "body": "Invalid model definition `github.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 9 column 21\n  --> dbt_project.yml:9:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `github.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 7 column 19\n  --> dbt_project.yml:7:19",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

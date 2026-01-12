@@ -22,5 +22,29 @@
         "tarball": "https://codeload.github.com/infinitelambda/carbon-analytics/tar.gz/0.1.0",
         "format": "tgz",
         "sha1": "422e826edfe6a37f025ae0a671316c3416c562bd"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.0",
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Duplicate key `customer.company_locations`. This key overwrites a previous definition of the same key at line 51 column 3. YAML path: `vars.customer.company_locations`.\n  --> dbt_project.yml:60:3",
+                    "error_code": 1059,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

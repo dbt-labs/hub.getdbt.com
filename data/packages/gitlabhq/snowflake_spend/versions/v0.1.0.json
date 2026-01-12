@@ -15,5 +15,29 @@
         "tarball": "https://codeload.github.com/gitlabhq/snowflake_spend/tar.gz/v0.1.0",
         "format": "tgz",
         "sha1": "1175365d172661ca16f6c45ed0264749d88bb422"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Ref 'snowflake_contract_rates' not found in project. Searched for 'snowflake_spend.snowflake_contract_rates, snowflake_contract_rates'\n  --> models/base/snowflake_amortized_rates.sql:4:10",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

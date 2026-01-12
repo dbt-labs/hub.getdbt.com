@@ -18,5 +18,29 @@
         "tarball": "https://codeload.github.com/calogica/dbt-date/tar.gz/0.10.0",
         "format": "tgz",
         "sha1": "38c8a0857f8b429de35f99b19ecbf1db246cd3bc"
+    },
+    "fusion_compatibility": {
+        "version": "0.10.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Invalid model definition `vars.dbt_date:time_zone`: invalid type: string \"America/Los_Angeles\", expected struct ProjectModelConfig at line 17 column 31\n  --> dbt_project.yml:17:31",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false
     }
 }

@@ -26,5 +26,36 @@
         "tarball": "https://codeload.github.com/dbt-labs/dbt-project-evaluator/tar.gz/v1.1.2",
         "format": "tgz",
         "sha1": "e004f2a8c9832633e0c100e31e878a4df5f1a86b"
+    },
+    "fusion_compatibility": {
+        "version": "1.1.2",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"name\"`. YAML path: `columns[0].data_tests[0].dbt_utils.accepted_range.config.name`.\n  --> models/marts/documentation/documentation.yml:14:17",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"name\"`. YAML path: `columns[1].data_tests[0].dbt_utils.accepted_range.config.name`.\n  --> models/marts/tests/testing.yml:18:17",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }
