@@ -25,5 +25,36 @@
         "tarball": "https://codeload.github.com/dbt-labs/redshift/tar.gz/0.3.1",
         "format": "tgz",
         "sha1": "5921e40efcc7a5f0b173fb7c971060dbc09d8bad"
+    },
+    "fusion_compatibility": {
+        "version": "0.3.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "'source-paths' cannot be specified in dbt_project.yml",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "'source-paths' cannot be specified in dbt_project.yml",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

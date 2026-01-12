@@ -26,5 +26,344 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_zendesk/tar.gz/v0.5.1",
         "format": "tgz",
         "sha1": "105318684632db5ab2588bcc3e8cfdb0dca97d5f"
+    },
+    "fusion_compatibility": {
+        "version": "0.5.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 46,
+            "total_warnings": 2,
+            "errors": [
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__brand.sql:21:33)\n(in dbt_packages/zendesk_source/macros/get_brand_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__brand.sql:21:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__domain_name.sql:23:33)\n(in dbt_packages/zendesk_source/macros/get_domain_name_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__domain_name.sql:23:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__group.sql:21:33)\n(in dbt_packages/zendesk_source/macros/get_group_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__group.sql:21:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__organization.sql:21:33)\n(in dbt_packages/zendesk_source/macros/get_organization_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__organization.sql:21:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__organization_tag.sql:23:33)\n(in dbt_packages/zendesk_source/macros/get_organization_tag_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__organization_tag.sql:23:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__schedule.sql:23:33)\n(in dbt_packages/zendesk_source/macros/get_schedule_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__schedule.sql:23:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__ticket.sql:21:33)\n(in dbt_packages/zendesk_source/macros/get_ticket_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__ticket.sql:21:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__ticket_comment.sql:21:33)\n(in dbt_packages/zendesk_source/macros/get_ticket_comment_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__ticket_comment.sql:21:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__ticket_field_history.sql:21:33)\n(in dbt_packages/zendesk_source/macros/get_ticket_field_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__ticket_field_history.sql:21:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__ticket_form_history.sql:23:33)\n(in dbt_packages/zendesk_source/macros/get_ticket_form_history_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__ticket_form_history.sql:23:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__ticket_schedule.sql:23:33)\n(in dbt_packages/zendesk_source/macros/get_ticket_schedule_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__ticket_schedule.sql:23:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__ticket_tag.sql:21:33)\n(in dbt_packages/zendesk_source/macros/get_ticket_tag_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__ticket_tag.sql:21:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__user.sql:21:33)\n(in dbt_packages/zendesk_source/macros/get_user_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__user.sql:21:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/zendesk_source/models/stg_zendesk__user_tag.sql:23:33)\n(in dbt_packages/zendesk_source/macros/get_user_tag_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/zendesk_source/models/stg_zendesk__user_tag.sql:23:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/agent_work_time/int_zendesk__ticket_work_time_business.sql:29:13)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/agent_work_time/int_zendesk__ticket_work_time_business.sql:29:13",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_zendesk__organization_aggregates.sql:14:9)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intermediate/int_zendesk__organization_aggregates.sql:14:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_zendesk__ticket_aggregates.sql:18:5)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intermediate/int_zendesk__ticket_aggregates.sql:18:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_zendesk__ticket_historical_assignee.sql:26:18)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datediff.sql:2:20)\n  --> models/intermediate/int_zendesk__ticket_historical_assignee.sql:26:18",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_zendesk__ticket_historical_status.sql:18:49)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/intermediate/int_zendesk__ticket_historical_status.sql:18:49",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_zendesk__ticket_schedules.sql:53:9)\n(in dbt_packages/fivetran_utils/macros/timestamp_add.sql:3:11)\n  --> models/intermediate/int_zendesk__ticket_schedules.sql:53:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_zendesk__updates.sql:24:27)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> models/intermediate/int_zendesk__updates.sql:24:27",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_zendesk__user_aggregates.sql:15:5)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intermediate/int_zendesk__user_aggregates.sql:15:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/reply_times/int_zendesk__ticket_first_reply_time_business.sql:36:27)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/reply_times/int_zendesk__ticket_first_reply_time_business.sql:36:27",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/reply_times/int_zendesk__ticket_reply_times.sql:34:5)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/reply_times/int_zendesk__ticket_reply_times.sql:34:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/resolution_times/int_zendesk__ticket_first_resolution_time_business.sql:26:27)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/resolution_times/int_zendesk__ticket_first_resolution_time_business.sql:26:27",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/resolution_times/int_zendesk__ticket_full_resolution_time_business.sql:26:27)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/resolution_times/int_zendesk__ticket_full_resolution_time_business.sql:26:27",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/resolution_times/int_zendesk__ticket_resolution_times_calendar.sql:56:5)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/resolution_times/int_zendesk__ticket_resolution_times_calendar.sql:56:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/agent_work_time/int_zendesk__agent_work_time_business_hours.sql:37:11)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/sla_policy/agent_work_time/int_zendesk__agent_work_time_business_hours.sql:37:11",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/agent_work_time/int_zendesk__agent_work_time_calendar_hours.sql:12:5)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/sla_policy/agent_work_time/int_zendesk__agent_work_time_calendar_hours.sql:12:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/agent_work_time/int_zendesk__agent_work_time_filtered_statuses.sql:20:64)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/sla_policy/agent_work_time/int_zendesk__agent_work_time_filtered_statuses.sql:20:64",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/int_zendesk__sla_policy_applied.sql:31:10)\n(in dbt_packages/fivetran_utils/macros/json_extract.sql:3:11)\n  --> models/sla_policy/int_zendesk__sla_policy_applied.sql:31:10",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/reply_time/int_zendesk__reply_time_business_hours.sql:36:23)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/sla_policy/reply_time/int_zendesk__reply_time_business_hours.sql:36:23",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/reply_time/int_zendesk__reply_time_calendar_hours.sql:14:38)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/sla_policy/reply_time/int_zendesk__reply_time_calendar_hours.sql:14:38",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/reply_time/int_zendesk__reply_time_combined.sql:112:5)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datediff.sql:2:20)\n  --> models/sla_policy/reply_time/int_zendesk__reply_time_combined.sql:112:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/requester_wait_time/int_zendesk__requester_wait_time_business_hours.sql:37:11)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/sla_policy/requester_wait_time/int_zendesk__requester_wait_time_business_hours.sql:37:11",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/requester_wait_time/int_zendesk__requester_wait_time_calendar_hours.sql:12:5)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/sla_policy/requester_wait_time/int_zendesk__requester_wait_time_calendar_hours.sql:12:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/requester_wait_time/int_zendesk__requester_wait_time_filtered_statuses.sql:20:64)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/sla_policy/requester_wait_time/int_zendesk__requester_wait_time_filtered_statuses.sql:20:64",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/ticket_history/int_zendesk__field_calendar_spine.sql:35:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/ticket_history/int_zendesk__field_calendar_spine.sql:35:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/ticket_history/int_zendesk__field_history_pivot.sql:64:14)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/ticket_history/int_zendesk__field_history_pivot.sql:64:14",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/ticket_history/int_zendesk__field_history_scd.sql:17:14)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/ticket_history/int_zendesk__field_history_scd.sql:17:14",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/utils/int_zendesk__calendar_spine.sql:27:29)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/dateadd.sql:2:20)\n  --> models/utils/int_zendesk__calendar_spine.sql:27:29",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/zendesk__sla_policies.sql:55:5)\n(in dbt_packages/fivetran_utils/macros/max_bool.sql:3:11)\n  --> models/zendesk__sla_policies.sql:55:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/zendesk__ticket_backlog.sql:85:72)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:72:20)\n  --> models/zendesk__ticket_backlog.sql:85:72",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/zendesk__ticket_field_history.sql:90:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/zendesk__ticket_field_history.sql:90:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/zendesk__ticket_metrics.sql:92:86)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/zendesk__ticket_metrics.sql:92:86",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/zendesk__ticket_summary.sql:11:19)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/zendesk__ticket_summary.sql:11:19",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false
     }
 }

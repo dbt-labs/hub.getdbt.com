@@ -26,5 +26,43 @@
         "tarball": "https://codeload.github.com/edanalytics/edu_wh/tar.gz/0.2.7",
         "format": "tgz",
         "sha1": "5ec1f2142a7da243454c45d06589b2799e37cb57"
+    },
+    "fusion_compatibility": {
+        "version": "0.2.7",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 2,
+            "total_errors": 0,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"stg_ef3__discipline_actions__student_discipline_incident_behaviors\")' is longer than 63 characters\n  --> models/staging/edfi_3/stage/stg_ef3__discipline_actions__student_discipline_incident_behaviors.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"stg_ef3__student_discipline_incident_behavior_associations__participation_codes\")' is longer than 63 characters\n  --> models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_behavior_associations__participation_codes.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"stg_ef3__student_discipline_incident_non_offender_associations__participation_codes\")' is longer than 63 characters\n  --> models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_non_offender_associations__participation_codes.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

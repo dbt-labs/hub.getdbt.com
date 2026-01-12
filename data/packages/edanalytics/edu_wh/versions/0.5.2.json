@@ -26,5 +26,1842 @@
         "tarball": "https://codeload.github.com/edanalytics/edu_wh/tar.gz/0.5.2",
         "format": "tgz",
         "sha1": "7924584b04d5f80c3ceffb5250d0ad994f0f49ea"
+    },
+    "fusion_compatibility": {
+        "version": "0.5.2",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 260,
+            "total_warnings": 14,
+            "errors": [
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__survey_section_responses.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__survey_section_responses.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__schools__grade_levels.sql:11:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__schools__grade_levels.sql:11:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__locations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__locations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__assessments.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__assessments.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__contacts__emails.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:18:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__contacts__emails.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_discipline_incident_associations.sql:3:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_discipline_incident_associations.sql:3:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__schools__identification_codes.sql:12:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__schools__identification_codes.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_assessments__performance_levels.sql:16:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_assessments__performance_levels.sql:16:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__bell_schedules.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__bell_schedules.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__cohort_years.sql:17:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__cohort_years.sql:17:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__survey_sections.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__survey_sections.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__contacts__telephones.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:41:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__contacts__telephones.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_discipline_incident_behavior_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_discipline_incident_behavior_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__objective_assessments.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__objective_assessments.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__parents.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__parents.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__schools__school_categories.sql:11:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__schools__school_categories.sql:11:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_assessments__score_results.sql:16:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_assessments__score_results.sql:16:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__surveys.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__surveys.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__calendar_dates.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__calendar_dates.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_discipline_incident_non_offender_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_discipline_incident_non_offender_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__disabilities.sql:22:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__disabilities.sql:22:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_education_organization_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_education_organization_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__calendars.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__calendars.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__people.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__people.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__class_periods.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__class_periods.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__post_secondary_institutions.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__post_secondary_institutions.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__emails.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:18:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__emails.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_education_organization_responsibility_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_education_organization_responsibility_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/intermediate/int_ef3__student_assessments__identify_subject.sql:42:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/intermediate/int_ef3__student_assessments__identify_subject.sql:42:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__programs.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__programs.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__cohorts.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__cohorts.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__identification_codes.sql:17:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__identification_codes.sql:17:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_homeless_program_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_homeless_program_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__assessments.sql:11:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__assessments.sql:11:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_language_instruction_program_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_language_instruction_program_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__restraint_events.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__restraint_events.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__indicators.sql:20:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__indicators.sql:20:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__contacts.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__contacts.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__schools.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__schools.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__languages.sql:16:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__languages.sql:16:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__assessments__grade_levels.sql:11:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__assessments__grade_levels.sql:11:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__course_offerings.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__course_offerings.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_migrant_education_program_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_migrant_education_program_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__sections.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__sections.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_parent_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_parent_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__races.sql:15:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__races.sql:15:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__sessions.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__sessions.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__course_transcripts.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__course_transcripts.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__assessments__performance_levels.sql:13:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__assessments__performance_levels.sql:13:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_program_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_program_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__staff_education_organization_assignment_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__staff_education_organization_assignment_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__telephones.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:41:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__telephones.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_school_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_school_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__courses.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__courses.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__assessments__scores.sql:12:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__assessments__scores.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_homeless__program_services.sql:27:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_homeless__program_services.sql:27:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_school_attendance_events.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_school_attendance_events.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__staff_education_organization_contact_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__staff_education_organization_contact_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__credentials.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__credentials.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_school_food_service_program_association.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_school_food_service_program_association.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_lang_instr__proficiency_assessments.sql:24:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_lang_instr__proficiency_assessments.sql:24:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_section_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_section_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__course_offerings__level_characteristics.sql:12:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__course_offerings__level_characteristics.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__staff_education_organization_employment_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__staff_education_organization_employment_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__grades__learning_standards.sql:19:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__grades__learning_standards.sql:19:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_section_attendance_events.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_section_attendance_events.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__staff_school_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__staff_school_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_lang_instr__program_services.sql:27:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_lang_instr__program_services.sql:27:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__discipline_actions.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__discipline_actions.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__staff_section_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__staff_section_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_special_education_program_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_special_education_program_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__sections__class_periods.sql:11:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__sections__class_periods.sql:11:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_migrant_edu__program_services.sql:26:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_migrant_edu__program_services.sql:26:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__discipline_incidents.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__discipline_incidents.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__staffs.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__staffs.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_title_i_part_a_program_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_title_i_part_a_program_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__sections__course_level_characteristics.sql:12:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__sections__course_level_characteristics.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_school_food_service__program_services.sql:26:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_school_food_service__program_services.sql:26:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__education_organization_network_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__education_organization_network_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__students.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__students.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__sections__section_characteristics.sql:12:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__sections__section_characteristics.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__state_education_agencies.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__state_education_agencies.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_spec_ed__disabilities.sql:21:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_spec_ed__disabilities.sql:21:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__education_organization_networks.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__education_organization_networks.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__survey_question_responses.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__survey_question_responses.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__bell_schedules__class_periods.sql:14:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__bell_schedules__class_periods.sql:14:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_academic_records.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_academic_records.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_spec_ed__program_services.sql:27:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_spec_ed__program_services.sql:27:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__education_service_centers.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__education_service_centers.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_assessments.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_assessments.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__bell_schedules__dates.sql:12:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__bell_schedules__dates.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__survey_questions.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__survey_questions.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_title_i_part_a__program_services.sql:27:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_title_i_part_a__program_services.sql:27:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__grades.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__grades.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__bell_schedules__grade_levels.sql:12:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__bell_schedules__grade_levels.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__survey_response_education_organization_target_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__survey_response_education_organization_target_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_cohort_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_cohort_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_title_i_part_a__services.sql:24:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_title_i_part_a__services.sql:24:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__grading_periods.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__grading_periods.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__survey_responses.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__survey_responses.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_contact_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_contact_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__graduation_plans.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__graduation_plans.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_cte_program_associations.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__student_cte_program_associations.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__learning_standards.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__learning_standards.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_ci_get' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_ci_get', 'edu_wh.default__json_ci_get', 'edu_edfi_source.postgres__json_ci_get', 'edu_edfi_source.default__json_ci_get'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__local_education_agencies.sql:2:5)\n(in dbt_packages/edu_edfi_source/macros/source_edfi3.sql:7:13)\n(in dbt_packages/edu_edfi_source/macros/json_ci_get.sql:13:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/base/base_ef3__local_education_agencies.sql:2:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__courses__academic_subjects.sql:11:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__courses__academic_subjects.sql:11:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__sessions__grading_periods.sql:11:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__sessions__grading_periods.sql:11:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__courses__identification_codes.sql:14:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__courses__identification_codes.sql:14:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_object_construct' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_object_construct', 'edu_wh.default__json_object_construct', 'edu_edfi_source.postgres__json_object_construct', 'edu_edfi_source.default__json_object_construct'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_behavior_associations.sql:29:17)\n(in dbt_packages/edu_edfi_source/macros/json_object_construct.sql:27:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_behavior_associations.sql:29:17",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__courses__level_characteristics.sql:11:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__courses__level_characteristics.sql:11:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__calendar_dates__calendar_events.sql:13:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__calendar_dates__calendar_events.sql:13:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_behavior_associations__participation_codes.sql:13:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_behavior_associations__participation_codes.sql:13:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_object_construct' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_object_construct', 'edu_wh.default__json_object_construct', 'edu_edfi_source.postgres__json_object_construct', 'edu_edfi_source.default__json_object_construct'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_non_offender_associations.sql:24:17)\n(in dbt_packages/edu_edfi_source/macros/json_object_construct.sql:27:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_non_offender_associations.sql:24:17",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_academic_records__academic_honors.sql:25:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_academic_records__academic_honors.sql:25:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_non_offender_associations__participation_codes.sql:13:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_non_offender_associations__participation_codes.sql:13:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_academic_records__diplomas.sql:27:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_academic_records__diplomas.sql:27:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_academic_records__gpas.sql:16:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_academic_records__gpas.sql:16:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__calendars__grade_levels.sql:11:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__calendars__grade_levels.sql:11:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__local_education_agencies__addresses.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:75:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__local_education_agencies__addresses.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__students__other_names.sql:17:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__students__other_names.sql:17:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__local_education_agencies__identification_codes.sql:12:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__local_education_agencies__identification_codes.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__discipline_actions__disciplines.sql:17:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__discipline_actions__disciplines.sql:17:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__discipline_actions__staffs.sql:15:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__discipline_actions__staffs.sql:15:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__discipline_actions__student_discipline_incident_behaviors.sql:20:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__discipline_actions__student_discipline_incident_behaviors.sql:20:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__objective_assessments.sql:18:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__objective_assessments.sql:18:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__contacts__addresses.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:75:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__contacts__addresses.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__objective_assessments__performance_levels.sql:13:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__objective_assessments__performance_levels.sql:13:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__survey_question_responses__values.sql:15:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__survey_question_responses__values.sql:15:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__objective_assessments__scores.sql:12:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__objective_assessments__scores.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__discipline_incidents__behaviors.sql:13:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__discipline_incidents__behaviors.sql:13:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__staffs__emails.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:18:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__staffs__emails.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__parents__addresses.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:75:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__parents__addresses.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__survey_questions__response_choices.sql:14:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__survey_questions__response_choices.sql:14:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__staffs__identification_codes.sql:13:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__staffs__identification_codes.sql:13:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__parents__emails.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:18:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__parents__emails.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__staffs__races.sql:11:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__staffs__races.sql:11:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__parents__telephones.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:41:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__parents__telephones.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_cte__program_services.sql:27:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_cte__program_services.sql:27:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__addresses.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:75:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__addresses.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__characteristics.sql:18:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__stu_ed_org__characteristics.sql:18:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__education_service_centers__addresses.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:75:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__education_service_centers__addresses.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__education_service_centers__identification_codes.sql:12:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__education_service_centers__identification_codes.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_objective_assessments.sql:38:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_objective_assessments.sql:38:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_objective_assessments__performance_levels.sql:16:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_objective_assessments__performance_levels.sql:16:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_objective_assessments__score_results.sql:16:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__student_objective_assessments__score_results.sql:16:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__schools__addresses.sql:1:1)\n(in dbt_packages/edu_edfi_source/macros/flatten_arrays.sql:75:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/models/staging/edfi_3/stage/stg_ef3__schools__addresses.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"base_ef3__student_education_organization_responsibility_associations\")' is longer than 63 characters\n  --> models/staging/edfi_3/base/base_ef3__student_education_organization_responsibility_associations.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"base_ef3__survey_response_education_organization_target_associations\")' is longer than 63 characters\n  --> models/staging/edfi_3/base/base_ef3__survey_response_education_organization_target_associations.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"stg_ef3__discipline_actions__student_discipline_incident_behaviors\")' is longer than 63 characters\n  --> models/staging/edfi_3/stage/stg_ef3__discipline_actions__student_discipline_incident_behaviors.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"stg_ef3__student_discipline_incident_behavior_associations__participation_codes\")' is longer than 63 characters\n  --> models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_behavior_associations__participation_codes.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"stg_ef3__student_discipline_incident_non_offender_associations__participation_codes\")' is longer than 63 characters\n  --> models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_non_offender_associations__participation_codes.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"stg_ef3__student_education_organization_responsibility_associations\")' is longer than 63 characters\n  --> models/staging/edfi_3/stage/stg_ef3__student_education_organization_responsibility_associations.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"stg_ef3__survey_response_education_organization_target_associations\")' is longer than 63 characters\n  --> models/staging/edfi_3/stage/stg_ef3__survey_response_education_organization_target_associations.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in dbt_packages/edu_edfi_source/tests/config_tests/cfg_student_assessment_subjects.sql:35:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> dbt_packages/edu_edfi_source/tests/config_tests/cfg_student_assessment_subjects.sql:35:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'star' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__star', 'edu_wh.default__star', 'edu_edfi_source.postgres__star', 'edu_edfi_source.default__star'\n(in models/core_warehouse/fct_student_diploma.sql:71:8)\n(in dbt_packages/edu_edfi_source/macros/star.sql:17:31)\n  --> models/core_warehouse/fct_student_diploma.sql:71:8",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_array_agg' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_array_agg', 'edu_wh.default__json_array_agg', 'edu_edfi_source.postgres__json_array_agg', 'edu_edfi_source.default__json_array_agg'\n(in models/build/edfi_3/students/bld_ef3__student_program__special_education__program_services.sql:15:9)\n(in dbt_packages/edu_edfi_source/macros/json_array_agg.sql:30:31)\n  --> models/build/edfi_3/students/bld_ef3__student_program__special_education__program_services.sql:15:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_object_construct' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_object_construct', 'edu_wh.default__json_object_construct', 'edu_edfi_source.postgres__json_object_construct', 'edu_edfi_source.default__json_object_construct'\n(in models/build/edfi_3/assessments/bld_ef3__assessment_performance_levels.sql:11:32)\n(in dbt_packages/edu_edfi_source/macros/json_object_construct.sql:27:31)\n  --> models/build/edfi_3/assessments/bld_ef3__assessment_performance_levels.sql:11:32",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_array_agg' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_array_agg', 'edu_wh.default__json_array_agg', 'edu_edfi_source.postgres__json_array_agg', 'edu_edfi_source.default__json_array_agg'\n(in models/build/edfi_3/students/bld_ef3__student_program__homeless__program_services.sql:15:9)\n(in dbt_packages/edu_edfi_source/macros/json_array_agg.sql:30:31)\n  --> models/build/edfi_3/students/bld_ef3__student_program__homeless__program_services.sql:15:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_object_construct' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_object_construct', 'edu_wh.default__json_object_construct', 'edu_edfi_source.postgres__json_object_construct', 'edu_edfi_source.default__json_object_construct'\n(in models/build/edfi_3/assessments/bld_ef3__objective_assessment_performance_levels.sql:11:32)\n(in dbt_packages/edu_edfi_source/macros/json_object_construct.sql:27:31)\n  --> models/build/edfi_3/assessments/bld_ef3__objective_assessment_performance_levels.sql:11:32",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_array_agg' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_array_agg', 'edu_wh.default__json_array_agg', 'edu_edfi_source.postgres__json_array_agg', 'edu_edfi_source.default__json_array_agg'\n(in models/build/edfi_3/students/bld_ef3__student_program__title_i_part_a__program_services.sql:15:9)\n(in dbt_packages/edu_edfi_source/macros/json_array_agg.sql:30:31)\n  --> models/build/edfi_3/students/bld_ef3__student_program__title_i_part_a__program_services.sql:15:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_object_construct' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_object_construct', 'edu_wh.default__json_object_construct', 'edu_edfi_source.postgres__json_object_construct', 'edu_edfi_source.default__json_object_construct'\n(in models/build/edfi_3/students/bld_ef3__student_cohort_years.sql:11:32)\n(in dbt_packages/edu_edfi_source/macros/json_object_construct.sql:27:31)\n  --> models/build/edfi_3/students/bld_ef3__student_cohort_years.sql:11:32",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_array_agg' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_array_agg', 'edu_wh.default__json_array_agg', 'edu_edfi_source.postgres__json_array_agg', 'edu_edfi_source.default__json_array_agg'\n(in models/build/edfi_3/students/bld_ef3__student_program__language_instruction__program_services.sql:15:9)\n(in dbt_packages/edu_edfi_source/macros/json_array_agg.sql:30:31)\n  --> models/build/edfi_3/students/bld_ef3__student_program__language_instruction__program_services.sql:15:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in models/core_warehouse/fct_student_discipline_actions.sql:37:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> models/core_warehouse/fct_student_discipline_actions.sql:37:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_flatten' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_flatten', 'edu_wh.default__json_flatten', 'edu_edfi_source.postgres__json_flatten', 'edu_edfi_source.default__json_flatten'\n(in models/build/edfi_3/courses/bld_ef3__course_char__combined_long.sql:26:9)\n(in dbt_packages/edu_edfi_source/macros/json_flatten.sql:11:31)\n  --> models/build/edfi_3/courses/bld_ef3__course_char__combined_long.sql:26:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_object_construct' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_object_construct', 'edu_wh.default__json_object_construct', 'edu_edfi_source.postgres__json_object_construct', 'edu_edfi_source.default__json_object_construct'\n(in models/core_warehouse/dim_discipline_incident.sql:22:32)\n(in dbt_packages/edu_edfi_source/macros/json_object_construct.sql:27:31)\n  --> models/core_warehouse/dim_discipline_incident.sql:22:32",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_array_agg' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_array_agg', 'edu_wh.default__json_array_agg', 'edu_edfi_source.postgres__json_array_agg', 'edu_edfi_source.default__json_array_agg'\n(in models/core_warehouse/fct_student_discipline_incident_behaviors.sql:36:9)\n(in dbt_packages/edu_edfi_source/macros/json_array_agg.sql:30:31)\n  --> models/core_warehouse/fct_student_discipline_incident_behaviors.sql:36:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_object_agg' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_object_agg', 'edu_wh.default__json_object_agg', 'edu_edfi_source.postgres__json_object_agg', 'edu_edfi_source.default__json_object_agg'\n(in models/core_warehouse/fct_student_objective_assessment.sql:25:9)\n(in dbt_packages/edu_edfi_source/macros/json_object_agg.sql:14:31)\n  --> models/core_warehouse/fct_student_objective_assessment.sql:25:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_array_agg' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_array_agg', 'edu_wh.default__json_array_agg', 'edu_edfi_source.postgres__json_array_agg', 'edu_edfi_source.default__json_array_agg'\n(in models/core_warehouse/fct_student_discipline_incident_non_offenders.sql:31:9)\n(in dbt_packages/edu_edfi_source/macros/json_array_agg.sql:30:31)\n  --> models/core_warehouse/fct_student_discipline_incident_non_offenders.sql:31:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_get_first' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_get_first', 'edu_wh.default__json_get_first', 'edu_edfi_source.postgres__json_get_first', 'edu_edfi_source.default__json_get_first'\n(in models/core_warehouse/dim_class_period.sql:26:9)\n(in dbt_packages/edu_edfi_source/macros/json_get_first.sql:16:31)\n  --> models/core_warehouse/dim_class_period.sql:26:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'json_object_agg' found within namespace: 'edu_edfi_source'\n    Searched for: 'edu_wh.postgres__json_object_agg', 'edu_wh.default__json_object_agg', 'edu_edfi_source.postgres__json_object_agg', 'edu_edfi_source.default__json_object_agg'\n(in models/core_warehouse/fct_student_assessment.sql:24:9)\n(in dbt_packages/edu_edfi_source/macros/json_object_agg.sql:14:31)\n  --> models/core_warehouse/fct_student_assessment.sql:24:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to create relation invalid operation: Relation name 'Some(\"bld_ef3__student_program__language_instruction__program_services\")' is longer than 63 characters\n  --> models/build/edfi_3/students/bld_ef3__student_program__language_instruction__program_services.sql",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/dim_school.yml:19:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_course_transcripts.yml:45:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_cohort_association.yml:18:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_cte_program_associations.yml:20:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_daily_attendance.yml:29:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_discipline_actions_summary.yml:23:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_discipline_incident_summary.yml:23:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_grades.yml:28:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_homeless_program_association.yml:20:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_language_instruction_program_association.yml:20:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_learning_standard_grades.yml:39:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_migrant_education_program_associations.yml:20:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_parent_association.yml:22:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_program_association.yml:15:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_program_service.yml:84:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_school_association.yml:59:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_school_attendance_event.yml:22:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_school_food_service_program_associations.yml:20:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_section_association.yml:20:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_special_education_program_association.yml:19:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_subgroup.yml:84:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_title_i_part_a_program_association.yml:20:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._descriptors' not found in project. Searched for '_descriptors'\n  --> models/staging/edfi_3/base/base_ef3__descriptors.sql:21:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'base_ef3__student_education_organization_responsibility_associations' not found in project. Searched for 'edu_edfi_source.base_ef3__student_education_organization_responsibility_associations, edu_wh.base_ef3__student_education_organization_responsibility_associations, base_ef3__student_education_organization_responsibility_associations'\n  --> models/staging/edfi_3/stage/stg_ef3__student_education_organization_responsibility_associations.sql:2:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'base_ef3__survey_response_education_organization_target_associations' not found in project. Searched for 'edu_edfi_source.base_ef3__survey_response_education_organization_target_associations, edu_wh.base_ef3__survey_response_education_organization_target_associations, base_ef3__survey_response_education_organization_target_associations'\n  --> models/staging/edfi_3/stage/stg_ef3__survey_response_education_organization_target_associations.sql:2:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__applicant_profiles'\n  --> models/staging/tpdm/stage/stg_tpdm__applicant_profiles.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__applications'\n  --> models/staging/tpdm/stage/stg_tpdm__applications.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__candidate_educator_preparation_program_associations'\n  --> models/staging/tpdm/stage/stg_tpdm__candidate_educator_preparation_program_associations.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__candidate_relationship_to_staff_associations'\n  --> models/staging/tpdm/stage/stg_tpdm__candidate_relationship_to_staff_associations.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__candidates'\n  --> models/staging/tpdm/stage/stg_tpdm__candidates.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__certification_exam_results'\n  --> models/staging/tpdm/stage/stg_tpdm__certification_exam_results.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__certification_exams'\n  --> models/staging/tpdm/stage/stg_tpdm__certification_exams.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__certifications'\n  --> models/staging/tpdm/stage/stg_tpdm__certifications.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__educator_preparation_programs'\n  --> models/staging/tpdm/stage/stg_tpdm__educator_preparation_programs.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__evaluation_element_ratings'\n  --> models/staging/tpdm/stage/stg_tpdm__evaluation_element_ratings.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__evaluation_elements'\n  --> models/staging/tpdm/stage/stg_tpdm__evaluation_elements.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__evaluation_objective_ratings'\n  --> models/staging/tpdm/stage/stg_tpdm__evaluation_objective_ratings.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__evaluation_objectives'\n  --> models/staging/tpdm/stage/stg_tpdm__evaluation_objectives.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__evaluation_ratings'\n  --> models/staging/tpdm/stage/stg_tpdm__evaluation_ratings.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__evaluations'\n  --> models/staging/tpdm/stage/stg_tpdm__evaluations.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__fieldwork_experiences'\n  --> models/staging/tpdm/stage/stg_tpdm__fieldwork_experiences.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__financial_aids'\n  --> models/staging/tpdm/stage/stg_tpdm__financial_aids.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__performance_evaluation_ratings'\n  --> models/staging/tpdm/stage/stg_tpdm__performance_evaluation_ratings.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__performance_evaluations'\n  --> models/staging/tpdm/stage/stg_tpdm__performance_evaluations.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__rubric_dimensions'\n  --> models/staging/tpdm/stage/stg_tpdm__rubric_dimensions.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Attempted to use disabled ref 'base_tpdm__survey_response_person_target_associations'\n  --> models/staging/tpdm/stage/stg_tpdm__survey_response_person_target_associations.sql:2:19",
+                    "error_code": 1062,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_course_level_characteristics' not found in project. Searched for 'edu_wh.xwalk_course_level_characteristics, xwalk_course_level_characteristics'\n  --> models/build/edfi_3/courses/bld_ef3__course_char__combined_wide.sql:6:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_course_level_characteristics' not found in project. Searched for 'edu_wh.xwalk_course_level_characteristics, xwalk_course_level_characteristics'\n  --> models/build/edfi_3/courses/bld_ef3__course_char__combined_wide.sql:4:26",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_parent_email_types' not found in project. Searched for 'edu_wh.xwalk_parent_email_types, xwalk_parent_email_types'\n  --> models/build/edfi_3/parents/bld_ef3__parent_wide_emails.sql:7:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_parent_email_types' not found in project. Searched for 'edu_wh.xwalk_parent_email_types, xwalk_parent_email_types'\n  --> models/build/edfi_3/parents/bld_ef3__parent_wide_emails.sql:4:26",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_parent_phone_number_types' not found in project. Searched for 'edu_wh.xwalk_parent_phone_number_types, xwalk_parent_phone_number_types'\n  --> models/build/edfi_3/parents/bld_ef3__parent_wide_phone_numbers.sql:7:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_parent_phone_number_types' not found in project. Searched for 'edu_wh.xwalk_parent_phone_number_types, xwalk_parent_phone_number_types'\n  --> models/build/edfi_3/parents/bld_ef3__parent_wide_phone_numbers.sql:4:26",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'stg_ef3__discipline_actions__student_discipline_incident_behaviors' not found in project. Searched for 'edu_wh.stg_ef3__discipline_actions__student_discipline_incident_behaviors, stg_ef3__discipline_actions__student_discipline_incident_behaviors'\n  --> models/build/edfi_3/discipline/bld_ef3__stu_discipline_action__stu_incident_behavior.sql:2:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_grade_levels' not found in project. Searched for 'edu_wh.xwalk_grade_levels, xwalk_grade_levels'\n  --> models/build/edfi_3/students/bld_ef3__stu_grade_level.sql:5:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_assessment_scores' not found in project. Searched for 'edu_wh.xwalk_assessment_scores, xwalk_assessment_scores'\n  --> models/build/edfi_3/assessments/bld_ef3__student_assessments_long_results.sql:2:62",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_assessment_scores' not found in project. Searched for 'edu_wh.xwalk_assessment_scores, xwalk_assessment_scores'\n  --> models/build/edfi_3/assessments/bld_ef3__student_assessments_long_results.sql:24:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_student_characteristics' not found in project. Searched for 'edu_wh.xwalk_student_characteristics, xwalk_student_characteristics'\n  --> models/build/edfi_3/students/bld_ef3__student_characteristics.sql:5:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_student_characteristics' not found in project. Searched for 'edu_wh.xwalk_student_characteristics, xwalk_student_characteristics'\n  --> models/build/edfi_3/students/bld_ef3__student_characteristics.sql:4:26",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_student_indicators' not found in project. Searched for 'edu_wh.xwalk_student_indicators, xwalk_student_indicators'\n  --> models/build/edfi_3/students/bld_ef3__student_indicators.sql:5:10",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_student_indicators' not found in project. Searched for 'edu_wh.xwalk_student_indicators, xwalk_student_indicators'\n  --> models/build/edfi_3/students/bld_ef3__student_indicators.sql:13:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_student_indicators' not found in project. Searched for 'edu_wh.xwalk_student_indicators, xwalk_student_indicators'\n  --> models/build/edfi_3/students/bld_ef3__student_indicators.sql:4:26",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_objective_assessment_scores' not found in project. Searched for 'edu_wh.xwalk_objective_assessment_scores, xwalk_objective_assessment_scores'\n  --> models/build/edfi_3/assessments/bld_ef3__student_objective_assessments_long_results.sql:5:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_student_programs' not found in project. Searched for 'edu_wh.xwalk_student_programs, xwalk_student_programs'\n  --> models/build/edfi_3/students/bld_ef3__student_programs.sql:8:10",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_student_programs' not found in project. Searched for 'edu_wh.xwalk_student_programs, xwalk_student_programs'\n  --> models/build/edfi_3/students/bld_ef3__student_programs.sql:28:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_id_types_course' not found in project. Searched for 'edu_wh.xwalk_id_types_course, xwalk_id_types_course'\n  --> models/build/edfi_3/courses/bld_ef3__wide_ids_course.sql:5:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_id_types_course' not found in project. Searched for 'edu_wh.xwalk_id_types_course, xwalk_id_types_course'\n  --> models/build/edfi_3/courses/bld_ef3__wide_ids_course.sql:13:34",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_id_types_ed_org' not found in project. Searched for 'edu_wh.xwalk_id_types_ed_org, xwalk_id_types_ed_org'\n  --> models/build/edfi_3/bld_ef3__wide_ids_lea.sql:5:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_id_types_ed_org' not found in project. Searched for 'edu_wh.xwalk_id_types_ed_org, xwalk_id_types_ed_org'\n  --> models/build/edfi_3/bld_ef3__wide_ids_lea.sql:13:34",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_id_types_ed_org' not found in project. Searched for 'edu_wh.xwalk_id_types_ed_org, xwalk_id_types_ed_org'\n  --> models/build/edfi_3/bld_ef3__wide_ids_school.sql:5:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_id_types_ed_org' not found in project. Searched for 'edu_wh.xwalk_id_types_ed_org, xwalk_id_types_ed_org'\n  --> models/build/edfi_3/bld_ef3__wide_ids_school.sql:12:34",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_id_types_staff' not found in project. Searched for 'edu_wh.xwalk_id_types_staff, xwalk_id_types_staff'\n  --> models/build/edfi_3/staffs/bld_ef3__wide_ids_staff.sql:5:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_id_types_staff' not found in project. Searched for 'edu_wh.xwalk_id_types_staff, xwalk_id_types_staff'\n  --> models/build/edfi_3/staffs/bld_ef3__wide_ids_staff.sql:13:34",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_id_types_student' not found in project. Searched for 'edu_wh.xwalk_id_types_student, xwalk_id_types_student'\n  --> models/build/edfi_3/students/bld_ef3__wide_ids_student.sql:5:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_id_types_student' not found in project. Searched for 'edu_wh.xwalk_id_types_student, xwalk_id_types_student'\n  --> models/build/edfi_3/students/bld_ef3__wide_ids_student.sql:15:34",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_network_association_types' not found in project. Searched for 'edu_wh.xwalk_network_association_types, xwalk_network_association_types'\n  --> models/build/edfi_3/bld_ef3__wide_school_network_assoc.sql:6:17",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_network_association_types' not found in project. Searched for 'edu_wh.xwalk_network_association_types, xwalk_network_association_types'\n  --> models/build/edfi_3/bld_ef3__wide_school_network_assoc.sql:45:34",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_calendar_events' not found in project. Searched for 'edu_wh.xwalk_calendar_events, xwalk_calendar_events'\n  --> models/core_warehouse/dim_calendar_date.sql:24:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_network_association_types' not found in project. Searched for 'edu_wh.xwalk_network_association_types, xwalk_network_association_types'\n  --> models/core_warehouse/dim_school.sql:51:34",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_network_association_types' not found in project. Searched for 'edu_wh.xwalk_network_association_types, xwalk_network_association_types'\n  --> models/core_warehouse/dim_school.sql:2:34",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_subgroup_value_display_names' not found in project. Searched for 'edu_wh.xwalk_subgroup_value_display_names, xwalk_subgroup_value_display_names'\n  --> models/core_warehouse/dim_subgroup.sql:15:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_subgroup_category_display_names' not found in project. Searched for 'edu_wh.xwalk_subgroup_category_display_names, xwalk_subgroup_category_display_names'\n  --> models/core_warehouse/dim_subgroup.sql:18:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'absentee_categories' not found in project. Searched for 'edu_wh.absentee_categories, absentee_categories'\n  --> models/core_warehouse/fct_student_daily_attendance.sql:28:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'stg_ef3__discipline_actions__student_discipline_incident_behaviors' not found in project. Searched for 'edu_wh.stg_ef3__discipline_actions__student_discipline_incident_behaviors, stg_ef3__discipline_actions__student_discipline_incident_behaviors'\n  --> models/core_warehouse/fct_student_discipline_actions_summary.sql:13:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'stg_ef3__discipline_actions__student_discipline_incident_behaviors' not found in project. Searched for 'edu_wh.stg_ef3__discipline_actions__student_discipline_incident_behaviors, stg_ef3__discipline_actions__student_discipline_incident_behaviors'\n  --> models/core_warehouse/fct_student_discipline_incident_summary.sql:15:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_letter_grades' not found in project. Searched for 'edu_wh.xwalk_letter_grades, xwalk_letter_grades'\n  --> models/core_warehouse/fct_student_grades.sql:34:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_grade_levels' not found in project. Searched for 'edu_wh.xwalk_grade_levels, xwalk_grade_levels'\n  --> models/core_warehouse/fct_student_school_association.sql:33:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_attendance_events' not found in project. Searched for 'edu_wh.xwalk_attendance_events, xwalk_attendance_events'\n  --> models/core_warehouse/fct_student_school_attendance_event.sql:48:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_attendance_events' not found in project. Searched for 'edu_wh.xwalk_attendance_events, xwalk_attendance_events'\n  --> models/core_warehouse/fct_student_section_attendance_event.sql:25:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'absentee_categories' not found in project. Searched for 'edu_wh.absentee_categories, absentee_categories'\n  --> models/core_warehouse/msr_student_cumulative_attendance.sql:21:19",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

@@ -15,5 +15,29 @@
         "tarball": "https://codeload.github.com/yu-iskw/dbt-gcp-billing/tar.gz/0.1.0",
         "format": "tgz",
         "sha1": "29225848f7420e4f3300aa08272c0b63902c4c22"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to eval the compiled Jinja expression invalid operation: Missing context variable 'this'. Var should be initialized for package: dbt_gcp_billing\n(in :1:2)\n  --> models/sources/detailed_usage_cost.yml:19:11",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

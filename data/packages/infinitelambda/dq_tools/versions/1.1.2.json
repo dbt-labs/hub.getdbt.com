@@ -15,5 +15,29 @@
         "tarball": "https://codeload.github.com/infinitelambda/dq-tools/tar.gz/1.1.2",
         "format": "tgz",
         "sha1": "48294a31df0acf2da506220de078b55c990931a1"
+    },
+    "fusion_compatibility": {
+        "version": "1.1.2",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to eval the compiled Jinja expression invalid operation: Missing context variable 'this'. Var should be initialized for package: dq_tools\n(in :1:2)\n  --> models/01_lake/source_dq_tools.yml:5:13",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

@@ -33,5 +33,29 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_fivetran_log/tar.gz/v2.3.0-a1",
         "format": "tgz",
         "sha1": "e27d1ee3dc1f3d761326778de2b8ec6ea56f89e8"
+    },
+    "fusion_compatibility": {
+        "version": "2.3.0-a1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to add template invalid operation: return() is called in a non-block context\n(in fivetran_log.default__is_databricks_all_purpose_cluster:7:12)\n  --> fivetran_log.default__is_databricks_all_purpose_cluster:7:12",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false
     }
 }

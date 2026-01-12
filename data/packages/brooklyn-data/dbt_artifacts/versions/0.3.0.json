@@ -23,5 +23,50 @@
         "tarball": "https://codeload.github.com/brooklyn-data/dbt_artifacts/tar.gz/0.3.0",
         "format": "tgz",
         "sha1": "256f5f9a4a28df9ad5de5a4e76a3ca6e059e5bf1"
+    },
+    "fusion_compatibility": {
+        "version": "0.3.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 4,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `columns[9].columns`.\n  --> models/schemas.yml:109:7",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/incremental/fct_dbt__run_results.sql:3:28)\n(in dbt_packages/dbt_utils/macros/sql/get_column_values.sql:14:22)\n  --> models/incremental/fct_dbt__run_results.sql:3:28",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/staging/stg_dbt__model_executions.sql:53:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/staging/stg_dbt__model_executions.sql:53:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/staging/stg_dbt__models.sql:38:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/staging/stg_dbt__models.sql:38:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": true
     }
 }

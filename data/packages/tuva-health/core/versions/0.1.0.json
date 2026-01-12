@@ -15,5 +15,43 @@
         "tarball": "https://codeload.github.com/tuva-health/core/tar.gz/0.1.0",
         "format": "tgz",
         "sha1": "8f8e930b8ae3c9863c63cf69f383d47a27009e00"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Ignored unexpected key `\"install_prerelease\"`. YAML path: `packages[1].install_prerelease`.\n  --> packages.yml:6:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"install_prerelease\"`. YAML path: `packages[1].install_prerelease`.\n  --> packages.yml:6:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"install_prerelease\"`. YAML path: `packages[1].install_prerelease`.\n  --> packages.yml:6:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

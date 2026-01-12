@@ -18,5 +18,43 @@
         "tarball": "https://codeload.github.com/metaops-solutions/dbt-camunda/tar.gz/v0.0.2",
         "format": "tgz",
         "sha1": "023dd77ce14b24759f54d02f6c49fbd0b0f43691"
+    },
+    "fusion_compatibility": {
+        "version": "0.0.2",
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 3,
+            "total_warnings": 1,
+            "errors": [
+                {
+                    "body": "Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/staging/schema.yml:191:13",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/staging/schema.yml:201:13",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"type\"`. YAML path: `columns[8].type`.\n  --> models/staging/schema.yml:223:13",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

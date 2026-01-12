@@ -15,5 +15,21 @@
         "tarball": "https://codeload.github.com/brooklyn-data/dbt_artifacts/tar.gz/2.1.1",
         "format": "tgz",
         "sha1": "32b850905bbabee84a19208a98b3241998259279"
+    },
+    "fusion_compatibility": {
+        "version": "2.1.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": true,
+        "parse_compatibility_result": {
+            "parse_exit_code": 0,
+            "total_errors": 0,
+            "total_warnings": 0,
+            "errors": [],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": true
     }
 }

@@ -26,5 +26,21 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_zuora/tar.gz/v0.2.1",
         "format": "tgz",
         "sha1": "dbe5201387e5f87e77e452bb2f26c360b00bb52f"
+    },
+    "fusion_compatibility": {
+        "version": "0.2.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": true,
+        "parse_compatibility_result": {
+            "parse_exit_code": 0,
+            "total_errors": 0,
+            "total_warnings": 1,
+            "errors": [],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

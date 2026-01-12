@@ -26,5 +26,43 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_asana/tar.gz/v0.5.0",
         "format": "tgz",
         "sha1": "1e529ac7d49aa03127008f27bdefe6200889a25d"
+    },
+    "fusion_compatibility": {
+        "version": "0.5.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 3,
+            "total_warnings": 2,
+            "errors": [
+                {
+                    "body": "Invalid model definition `asana.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 13 column 27\n  --> dbt_project.yml:13:27",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `asana.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 11 column 23\n  --> dbt_project.yml:11:23",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/intermediate/intermediate_asana.yml:17:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

@@ -15,5 +15,29 @@
         "tarball": "https://codeload.github.com/rlsalcido24/lakehouse_utils/tar.gz/v1.2.7",
         "format": "tgz",
         "sha1": "4f4713c9ef72666bcf548650d51f7766122c17b8"
+    },
+    "fusion_compatibility": {
+        "version": "1.2.7",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Ignored unexpected key `\"tag\"`. YAML path: `tag`.\n  --> tmp/snow/lineitemdb.sql:2:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

@@ -26,5 +26,43 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_microsoft_ads_source/tar.gz/v0.1.1",
         "format": "tgz",
         "sha1": "392668a777c261f2b7385ae0750f543aed9f2036"
+    },
+    "fusion_compatibility": {
+        "version": "0.1.1",
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Duplicate key `version`. This key overwrites a previous definition of the same key at line 3 column 5. YAML path: `packages[0].version`.\n  --> packages.yml:4:5",
+                    "error_code": 1059,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Duplicate key `version`. This key overwrites a previous definition of the same key at line 3 column 5. YAML path: `packages[0].version`.\n  --> packages.yml:4:5",
+                    "error_code": 1059,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Duplicate key `version`. This key overwrites a previous definition of the same key at line 3 column 5. YAML path: `packages[0].version`.\n  --> packages.yml:4:5",
+                    "error_code": 1059,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

@@ -26,5 +26,827 @@
         "tarball": "https://codeload.github.com/bqbooster/dbt-bigquery-monitoring/tar.gz/0.5.1",
         "format": "tgz",
         "sha1": "d822dfff8204cb8fb5a7c2b503e9d58de706e8d9"
+    },
+    "fusion_compatibility": {
+        "version": "0.5.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 115,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Invalid model definition `+start`: invalid type: string \"Jan 1 2017\", expected struct ProjectModelConfig at line 15 column 11\n  --> dbt_project.yml:15:11",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_expensive_jobs.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/storage/datamart/most_expensive_tables.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/search_indexes/information_schema_search_index_columns.sql:15:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/tables/information_schema_table_storage_usage_timeline.sql:15:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/reservations/information_schema_capacity_commitment_changes.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/write_api/information_schema_write_api_timeline.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/datasets/information_schema_links.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/access_control/information_schema_object_privileges.sql:9:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/jobs/information_schema_jobs_by_project.sql:18:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/tables/information_schema_columns.sql:15:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/search_indexes/information_schema_search_indexes.sql:15:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/storage/datamart/read_heavy_tables.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_expensive_models.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/datasets/information_schema_schemata.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/sessions/information_schema_sessions_by_project.sql:11:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/bi_engine/information_schema_bi_capacities.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/tables/information_schema_table_storage_usage_timeline_by_organization.sql:16:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/write_api/information_schema_write_api_timeline_by_folder.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/jobs/information_schema_jobs_by_user.sql:18:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/reservations/information_schema_capacity_commitments.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/tables/information_schema_constraint_column_usage.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_expensive_users.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/datasets/information_schema_schemata_options.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/sessions/information_schema_sessions_by_user.sql:11:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/reservations/information_schema_reservation_changes.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/tables/information_schema_key_column_usage.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/jobs_timeline/information_schema_jobs_timeline.sql:11:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/datasets/information_schema_schemata_replicas.sql:23:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/tables/information_schema_tables.sql:16:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/bi_engine/information_schema_bi_capacity_changes.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/write_api/information_schema_write_api_timeline_by_organization.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_repeated_jobs.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/tables/information_schema_table_constraints.sql:18:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/configuration/information_schema_effective_project_options.sql:9:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/jobs_timeline/information_schema_jobs_timeline_by_folder.sql:12:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/reservations/information_schema_reservations.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/streaming/information_schema_streaming_timeline.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/datasets/information_schema_shared_dataset_usage.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/vector_indexes/information_schema_vector_index_columns.sql:15:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/storage/datamart/unused_tables.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_repeated_models.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/base/jobs_by_project_with_cost.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/reservations/information_schema_reservations_timeline.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/jobs_timeline/information_schema_jobs_timeline_by_organization.sql:13:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/vector_indexes/information_schema_vector_index_options.sql:15:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/tables/information_schema_table_options.sql:16:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/configuration/information_schema_organization_options.sql:10:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/streaming/information_schema_streaming_timeline_by_folder.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/routines/information_schema_parameters.sql:14:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/jobs/information_schema_jobs.sql:18:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/jobs_timeline/information_schema_jobs_timeline_by_user.sql:11:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/vector_indexes/information_schema_vector_indexes.sql:15:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/global/datamart/daily_spend.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/tables/information_schema_table_snapshots.sql:8:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/slowest_jobs.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/base/jobs_with_cost.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/jobs/information_schema_jobs_by_folder.sql:18:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/routines/information_schema_routine_options.sql:14:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/streaming/information_schema_streaming_timeline_by_organization.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/tables/information_schema_table_storage.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/reservations/information_schema_assignment_changes.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/views/information_schema_materialized_views.sql:43:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/configuration/information_schema_organization_options_changes.sql:18:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/routines/information_schema_routines.sql:14:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/jobs/information_schema_jobs_by_organization.sql:18:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/tables/information_schema_table_storage_by_organization.sql:16:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/reservations/information_schema_assignments.sql:3:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/tables/information_schema_column_field_paths.sql:15:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/configuration/information_schema_project_options.sql:10:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/views/information_schema_views.sql:15:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/base/storage_with_cost.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/google/configuration/information_schema_project_options_changes.sql:8:7)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/table_and_storage_with_cost.yml:11:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/table_and_storage_with_cost.yml:15:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/table_and_storage_with_cost.yml:19:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/table_and_storage_with_cost.yml:23:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/table_and_storage_with_cost.yml:27:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/table_and_storage_with_cost.yml:31:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[6].type`.\n  --> models/base/table_and_storage_with_cost.yml:35:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[7].type`.\n  --> models/base/table_and_storage_with_cost.yml:39:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[8].type`.\n  --> models/base/table_and_storage_with_cost.yml:43:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[9].type`.\n  --> models/base/table_and_storage_with_cost.yml:47:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[10].type`.\n  --> models/base/table_and_storage_with_cost.yml:51:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[11].type`.\n  --> models/base/table_and_storage_with_cost.yml:55:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[12].type`.\n  --> models/base/table_and_storage_with_cost.yml:59:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[13].type`.\n  --> models/base/table_and_storage_with_cost.yml:63:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[14].type`.\n  --> models/base/table_and_storage_with_cost.yml:67:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[15].type`.\n  --> models/base/table_and_storage_with_cost.yml:71:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[16].type`.\n  --> models/base/table_and_storage_with_cost.yml:75:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[17].type`.\n  --> models/base/table_and_storage_with_cost.yml:79:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[18].type`.\n  --> models/base/table_and_storage_with_cost.yml:83:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[19].type`.\n  --> models/base/table_and_storage_with_cost.yml:87:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[20].type`.\n  --> models/base/table_and_storage_with_cost.yml:91:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[21].type`.\n  --> models/base/table_and_storage_with_cost.yml:95:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[22].type`.\n  --> models/base/table_and_storage_with_cost.yml:99:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[23].type`.\n  --> models/base/table_and_storage_with_cost.yml:103:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[24].type`.\n  --> models/base/table_and_storage_with_cost.yml:107:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[25].type`.\n  --> models/base/table_and_storage_with_cost.yml:111:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[26].type`.\n  --> models/base/table_and_storage_with_cost.yml:115:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[27].type`.\n  --> models/base/table_and_storage_with_cost.yml:119:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[28].type`.\n  --> models/base/table_and_storage_with_cost.yml:123:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[29].type`.\n  --> models/base/table_and_storage_with_cost.yml:127:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[30].type`.\n  --> models/base/table_and_storage_with_cost.yml:131:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[31].type`.\n  --> models/base/table_and_storage_with_cost.yml:135:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[32].type`.\n  --> models/base/table_and_storage_with_cost.yml:139:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[33].type`.\n  --> models/base/table_and_storage_with_cost.yml:143:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[34].type`.\n  --> models/base/table_and_storage_with_cost.yml:147:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[35].type`.\n  --> models/base/table_and_storage_with_cost.yml:151:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[36].type`.\n  --> models/base/table_and_storage_with_cost.yml:155:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[37].type`.\n  --> models/base/table_and_storage_with_cost.yml:159:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[38].type`.\n  --> models/base/table_and_storage_with_cost.yml:163:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[39].type`.\n  --> models/base/table_and_storage_with_cost.yml:167:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[40].type`.\n  --> models/base/table_and_storage_with_cost.yml:171:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/compute_cost_per_hour.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

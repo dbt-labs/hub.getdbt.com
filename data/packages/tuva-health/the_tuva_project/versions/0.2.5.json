@@ -65,5 +65,36 @@
         "tarball": "https://codeload.github.com/tuva-health/the_tuva_project/tar.gz/0.2.5",
         "format": "tgz",
         "sha1": "c4a1600859183548da10c93929ea39da23274943"
+    },
+    "fusion_compatibility": {
+        "version": "0.2.5",
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to open tar file: No such file or directory (os error 2)",
+                    "error_code": 1001,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to open tar file: No such file or directory (os error 2)",
+                    "error_code": 1001,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

@@ -18,5 +18,36 @@
         "tarball": "https://codeload.github.com/oleg-solovyev/dbt_facebook_ads/tar.gz/0.0.1",
         "format": "tgz",
         "sha1": "4fa0b45f4004d952bfb9908e362a3c37227a92fb"
+    },
+    "fusion_compatibility": {
+        "version": "0.0.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 1,
+            "errors": [
+                {
+                    "body": "Ref 'report' not found in project. Searched for 'dbt_facebook_ads.report, report'\n  --> models/facebook_ads_ad_report.sql:1:1",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'ad' not found in project. Searched for 'dbt_facebook_ads.ad, ad'\n  --> models/facebook_ads_ad_report.sql:1:1",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.92"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }
