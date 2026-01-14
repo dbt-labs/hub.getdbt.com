@@ -87,6 +87,15 @@ img { display: inline; }
         right: 10px;
         z-index: 10;
     }
+    
+    .github-fusion-row & {
+        height: 27px;
+        padding: 4px 10px;
+        border: 1px solid rgba(101, 60, 255, 0.4);
+        border-radius: 3px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
 }
 
 // ======================
@@ -192,6 +201,14 @@ img { display: inline; }
     gap: 12px;
     margin-bottom: 4px;
     h1 { margin: 0; word-break: break-word; }
+}
+
+.github-fusion-row {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
 }
 
 .package-version-selector {
