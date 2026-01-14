@@ -26,9 +26,6 @@
             <div class="tile-text">
               <div class="package-title-row">
                 <h1><%= package.name %></h1>
-                <% if is_fusion_compatible(package, version) %>
-                  <span class="fusion-badge">Fusion compatible</span>
-                <% end %>
               </div>
               <em>
                 Created by
@@ -37,8 +34,8 @@
                   <%= package.namespace %>
                 </a>
               </em><br/>
-              <% if is_valid_github_url(version._source.url) %>
-              <div class="github-link" style="height: 30px; margin-bottom: 0">
+              <div class="github-fusion-row">
+                <% if is_valid_github_url(version._source.url) %>
                 <a class="github-button"
                    href="<%=version._source.url.split("/tree/")[0]%>"
                    data-size="large"
@@ -48,8 +45,11 @@
                   <i data-icon="star"></i>
                   <%= version._source.url.split("/")[3] %>/<%= version._source.url.split("/")[4] %>
                 </a>
+                <% end %>
+                <% if is_fusion_compatible(package, version) %>
+                  <span class="fusion-badge">Fusion compatible</span>
+                <% end %>
               </div>
-              <% end %>
               <em><%= package.versions[package.latest].description %></em>
             </div>
           </div>
