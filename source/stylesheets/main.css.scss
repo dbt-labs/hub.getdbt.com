@@ -98,6 +98,29 @@ img { display: inline; }
     }
 }
 
+.fusion-badge-incompatible {
+    background: #ffe2d7;
+    color: #1c1a19;
+    padding: 3px 4px;
+    border-radius: 3px;
+    border: 1px solid rgba(247, 153, 0, 0.4);
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 27px;
+    box-sizing: border-box;
+    
+    &::before {
+        content: '';
+        width: 14px;
+        height: 14px;
+        background: url('/img/warning_icon.svg') center/contain no-repeat;
+        flex-shrink: 0;
+    }
+}
+
 // ======================
 // Package Index Page
 // ======================

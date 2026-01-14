@@ -48,6 +48,8 @@
                 <% end %>
                 <% if is_fusion_compatible(package, version) %>
                   <span class="fusion-badge">Fusion compatible</span>
+                <% else %>
+                  <span class="fusion-badge-incompatible">Not Fusion compatible</span>
                 <% end %>
               </div>
               <em><%= package.versions[package.latest].description %></em>
