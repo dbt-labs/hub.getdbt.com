@@ -91,7 +91,7 @@ img { display: inline; }
     .github-fusion-row & {
         height: 27px;
         padding: 4px 10px;
-        border: 1px solid rgba(101, 60, 255, 0.4);
+        border: 1px solid #d1d5db;
         border-radius: 3px;
         font-size: 14px;
         box-sizing: border-box;
@@ -103,7 +103,7 @@ img { display: inline; }
     color: #1c1a19;
     padding: 3px 4px;
     border-radius: 3px;
-    border: 1px solid rgba(247, 153, 0, 0.4);
+    border: 1px solid #d1d5db;
     font-size: 14px;
     font-weight: 500;
     display: inline-flex;
@@ -313,4 +313,165 @@ img { display: inline; }
         &:hover, &.focused { background: #f5f5f5; }
         &.selected { font-weight: 600; }
     }
+}
+
+// ======================
+// Package Content Layout (two-column)
+// ======================
+
+.package-content-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
+}
+
+.package-main-content {
+    flex: 1 1 0;
+    min-width: 0;
+    order: 1;
+}
+
+.package-sidebar {
+    flex: 0 0 350px;
+    position: sticky;
+    top: 20px;
+    order: 2;
+    
+    @media (max-width: 900px) {
+        flex: 1 1 auto;
+        width: 100%;
+        position: static;
+    }
+}
+
+// ======================
+// Fusion Compatibility Section
+// ======================
+
+.fusion-compatibility-section {
+    background: #fff;
+    border: 2px solid #ebe9e9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.fc-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+    
+    h3 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 600;
+        color: #3b3f43;
+        line-height: 1;
+    }
+}
+
+.fc-header-icon {
+    width: 42px;
+    height: 42px;
+    background: #f3e8ff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.fc-atom-icon {
+    width: 21px;
+    height: 21px;
+}
+
+.fc-group {
+    margin-bottom: 14px;
+}
+
+.fc-group-label {
+    font-size: 14px;
+    color: #767d85;
+    margin-bottom: 6px;
+}
+
+.fc-block {
+    background: #f6f6f6;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+.fc-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 34px;
+    
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.fc-row--link {
+    justify-content: flex-end;
+}
+
+.fc-label {
+    font-size: 16px;
+    color: #767d85;
+}
+
+.fc-code {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 8px 13px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: #3b3f43;
+}
+
+.fc-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+}
+
+.fc-status-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.fc-status--success {
+    color: #188435;
+}
+
+.fc-status--error {
+    color: #ab5100;
+}
+
+.fc-status--warning {
+    color: #ab5100;
+}
+
+.fc-link {
+    color: #f56249;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.fc-footer {
+    font-size: 16px;
+    color: #767d85;
+    line-height: 1.7;
+    margin: 0;
 }

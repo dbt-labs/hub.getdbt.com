@@ -67,15 +67,7 @@ module SiteHelpers
     url.split("/tree/").length == 2 && url.split("/").length >= 5
   end
 
-  def is_fusion_compatible(package, version_to_check = nil)
-    # If no version specified, check the latest
-    version = version_to_check ? version_to_check['version'] : package.latest
-    
-    return false unless package.versions && package.versions[version]
-    
-    version_data = package.versions[version]
-    requirements = version_data['require_dbt_version']
-    
+  def is_require_dbt_version_fusion_compatible(requirements)
     return false if requirements.nil?
     return false if requirements.is_a?(Array) && requirements.empty?
     return false if requirements.is_a?(String) && requirements.strip.empty?
@@ -88,6 +80,28 @@ module SiteHelpers
     rescue StandardError
       false
     end
+  end
+
+  def is_fusion_compatible(package, version_to_check = nil)
+    # If no version specified, check the latest
+    version = version_to_check ? version_to_check['version'] : package.latest
+    
+    return false unless package.versions && package.versions[version]
+    
+    version_data = package.versions[version]
+    fusion_compat = version_data['fusion_compatibility']
+    
+    # 1. Always respect manually verified info first
+    if fusion_compat
+      return true if fusion_compat['manually_verified_compatible']
+      return false if fusion_compat['manually_verified_incompatible']
+      
+      # 2. Project must pass Parse conformance
+      return false if fusion_compat['parse_compatible'] == false
+    end
+    
+    # 3. Check if require_dbt_version satisfies >= 2.0.0
+    is_require_dbt_version_fusion_compatible(version_data['require_dbt_version'])
   end
 end
 
