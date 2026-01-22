@@ -17,3 +17,9 @@ To notify users of a new package name, add a `"redirectname"` key to `data/packa
 To remove an old package name from the hub homepage, add it to [blocklist.json](data/blocklist.json).
 
 See [#1539](https://github.com/dbt-labs/hub.getdbt.com/pull/1539/files) for an example of both steps. 
+
+## JSON data
+
+Structure unlikely to change, but not guaranteed!
+- All packages (including hidden/redirected ones): <https://hub.getdbt.com/api/v1/index.json>
+- All versions of a single package: <https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json>
