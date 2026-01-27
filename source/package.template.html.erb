@@ -47,9 +47,9 @@
                 </a>
                 <% end %>
                 <% if is_fusion_compatible(package, version) %>
-                  <span class="fusion-badge">Fusion compatible</span>
+                  <span class="fusion-badge<% if defined?(version.fusion_compatibility) && version.fusion_compatibility && version.fusion_compatibility['manually_verified_compatible'] == true %> has-popover<% end %>" <% if defined?(version.fusion_compatibility) && version.fusion_compatibility && version.fusion_compatibility['manually_verified_compatible'] == true %>data-popover="dbt has manually verified that this package version is compatible with Fusion"<% end %>>Fusion compatible</span>
                 <% else %>
-                  <span class="fusion-badge-incompatible">Not Fusion compatible</span>
+                  <span class="fusion-badge-incompatible<% if defined?(version.fusion_compatibility) && version.fusion_compatibility && version.fusion_compatibility['manually_verified_incompatible'] == true %> has-popover<% end %>" <% if defined?(version.fusion_compatibility) && version.fusion_compatibility && version.fusion_compatibility['manually_verified_incompatible'] == true %>data-popover="dbt has manually verified that this package version is not compatible with Fusion"<% end %>>Not Fusion compatible</span>
                 <% end %>
               </div>
               <em><%= package.versions[package.latest].description %></em>
