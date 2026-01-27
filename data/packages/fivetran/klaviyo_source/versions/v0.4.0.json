@@ -37,12 +37,12 @@
     "fusion_compatibility": {
         "version": "0.4.0",
         "require_dbt_version_defined": true,
-        "require_dbt_version_compatible": true,
+        "require_dbt_version_compatible": false,
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
             "total_errors": 19,
-            "total_warnings": 1,
+            "total_warnings": 0,
             "errors": [
                 {
                     "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_klaviyo.yml:11:5",
@@ -143,35 +143,35 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_klaviyo.yml:106:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_klaviyo.yml:108:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_klaviyo.yml:136:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_klaviyo.yml:138:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_klaviyo.yml:217:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_klaviyo.yml:219:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_klaviyo.yml:161:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_klaviyo.yml:163:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test configs: [\"severity\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/stg_klaviyo.yml:186:25",
+                    "body": "Deprecated test configs: [\"severity\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/stg_klaviyo.yml:188:25",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -179,7 +179,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

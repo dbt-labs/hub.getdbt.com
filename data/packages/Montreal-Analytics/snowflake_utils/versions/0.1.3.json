@@ -25,14 +25,29 @@
         "version": "0.1.3",
         "require_dbt_version_defined": true,
         "require_dbt_version_compatible": true,
-        "parse_compatible": true,
+        "parse_compatible": false,
         "parse_compatibility_result": {
-            "parse_exit_code": 0,
-            "total_errors": 0,
+            "parse_exit_code": 1,
+            "total_errors": 1,
             "total_warnings": 0,
-            "errors": [],
+            "errors": [
+                {
+                    "body": "'source-paths' cannot be specified in dbt_project.yml",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "'source-paths' cannot be specified in dbt_project.yml",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

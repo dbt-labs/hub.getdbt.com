@@ -34,7 +34,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 16,
+            "total_errors": 26,
             "total_warnings": 0,
             "errors": [
                 {
@@ -101,49 +101,119 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:9:13",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_xero.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_xero.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_xero.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_xero.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_xero.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:8:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:38:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:37:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:101:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:100:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:59:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:58:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:191:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:243:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:151:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:190:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:222:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:150:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:268:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:221:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:295:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:347:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_xero.yml:317:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -151,7 +221,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

@@ -25,325 +25,276 @@
     },
     "fusion_compatibility": {
         "version": "0.1.0",
-        "require_dbt_version_defined": true,
-        "require_dbt_version_compatible": false,
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 44,
-            "total_warnings": 0,
+            "total_errors": 37,
+            "total_warnings": 1,
             "errors": [
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Invalid model definition `stripe_source.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 8 column 23\n  --> dbt_project.yml:8:23",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:118:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:335:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:304:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:176:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:230:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_stripe.yml:8:5",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:810:13",
-                    "error_code": 102,
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:9:13",
-                    "error_code": 102,
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:50:13",
-                    "error_code": 102,
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:96:13",
-                    "error_code": 102,
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:202:13",
-                    "error_code": 102,
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:1048:13",
-                    "error_code": 102,
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:415:9",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:865:13",
-                    "error_code": 102,
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:271:13",
-                    "error_code": 102,
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:554:13",
-                    "error_code": 102,
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:276:9",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:506:13",
-                    "error_code": 102,
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/dbt_stripe_source.yml:8:5",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:299:13",
-                    "error_code": 102,
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:10:5",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:383:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:350:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:406:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:453:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:687:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:1003:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:469:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:634:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_stripe.yml:960:13",
-                    "error_code": 102,
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/dbt_stripe_source.yml:382:9",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

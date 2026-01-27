@@ -31,7 +31,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 12,
+            "total_errors": 14,
             "total_warnings": 1,
             "errors": [
                 {
@@ -49,70 +49,84 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/github_daily_metrics.sql:14:7)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:3)\n  --> models/github_daily_metrics.sql:14:7",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/dbt_utils_source_unique_combin_5a5efad5b7d3062ccd696dc210bda23d.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/dbt_utils_source_unique_combin_5a5efad5b7d3062ccd696dc210bda23d.sql:1:1",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/github_monthly_metrics.sql:9:3)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:3)\n  --> models/github_monthly_metrics.sql:9:3",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/dbt_utils_source_unique_combin_37aedc3232cf839f332836ebb828b805.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/dbt_utils_source_unique_combin_37aedc3232cf839f332836ebb828b805.sql:1:1",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/github_quarterly_metrics.sql:10:3)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:3)\n  --> models/github_quarterly_metrics.sql:10:3",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/github_daily_metrics.sql:14:7)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/github_daily_metrics.sql:14:7",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/github_weekly_metrics.sql:10:3)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:3)\n  --> models/github_weekly_metrics.sql:10:3",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/github_monthly_metrics.sql:9:3)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/github_monthly_metrics.sql:9:3",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/intermediate/github_issue_assignees.sql:15:3)\n(in macros/string_agg.sql:3:1)\n  --> macros/string_agg.sql:3:1",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/github_quarterly_metrics.sql:10:3)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/github_quarterly_metrics.sql:10:3",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/intermediate/github_issue_joined.sql:55:3)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/concat.sql:2:3)\n  --> models/intermediate/github_issue_joined.sql:55:3",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/github_weekly_metrics.sql:10:3)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/github_weekly_metrics.sql:10:3",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/intermediate/github_issue_labels.sql:10:3)\n(in macros/string_agg.sql:3:1)\n  --> macros/string_agg.sql:3:1",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/github_issue_assignees.sql:15:3)\n(in macros/string_agg.sql:3:11)\n  --> macros/string_agg.sql:3:11",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/intermediate/github_issue_open_length.sql:29:81)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:3)\n  --> models/intermediate/github_issue_open_length.sql:29:81",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/github_issue_joined.sql:55:3)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/concat.sql:4:20)\n  --> models/intermediate/github_issue_joined.sql:55:3",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/intermediate/github_pull_request_reviewers.sql:15:3)\n(in macros/string_agg.sql:3:1)\n  --> macros/string_agg.sql:3:1",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/github_issue_labels.sql:10:3)\n(in macros/string_agg.sql:3:11)\n  --> macros/string_agg.sql:3:11",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/intermediate/github_pull_request_times.sql:55:83)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:3)\n  --> models/intermediate/github_pull_request_times.sql:55:83",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/github_issue_open_length.sql:29:81)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/intermediate/github_issue_open_length.sql:29:81",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/github_pull_request_reviewers.sql:15:3)\n(in macros/string_agg.sql:3:11)\n  --> macros/string_agg.sql:3:11",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/github_pull_request_times.sql:55:83)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/intermediate/github_pull_request_times.sql:55:83",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -120,7 +134,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

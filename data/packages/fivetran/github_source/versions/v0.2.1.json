@@ -38,7 +38,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 48,
+            "total_errors": 54,
             "total_warnings": 1,
             "errors": [
                 {
@@ -196,7 +196,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_github.yml:109:9",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_github.yml:111:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -217,7 +217,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_github.yml:94:9",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_github.yml:96:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -238,7 +238,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_github.yml:123:9",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_github.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_github.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_github.yml:133:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -259,7 +273,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_github.yml:135:9",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_github.yml:145:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -280,7 +294,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_github.yml:149:9",
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_github.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_github.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_github.yml:175:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -343,7 +371,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/stg_github.yml:124:5",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_github__repo_team.sql:22:33)\n(in macros/get_repo_team_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_repo_team_columns.sql:4:55",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/stg_github.yml:140:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -364,14 +399,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/stg_github.yml:150:5",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_github__team.sql:22:33)\n(in macros/get_team_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_team_columns.sql:4:55",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/stg_github.yml:185:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_github__user.sql:18:33)\n(in macros/get_user_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_user_columns.sql:4:55",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_github__user.sql:18:33)\n(in macros/get_user_columns.sql:4:46)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> macros/get_user_columns.sql:4:46",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -379,7 +421,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

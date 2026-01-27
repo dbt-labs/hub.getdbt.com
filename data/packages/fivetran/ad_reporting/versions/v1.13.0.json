@@ -104,61 +104,19 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 7,
-            "total_warnings": 23,
+            "total_errors": 1,
+            "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/ad_reporting_models.yml:10:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/ad_reporting_models.yml:45:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/ad_reporting_models.yml:88:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/ad_reporting_models.yml:136:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/ad_reporting_models.yml:174:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/ad_reporting_models.yml:225:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/ad_reporting_models.yml:279:13",
-                    "error_code": 102,
+                    "body": "Failed to parse macro SQL syntax error: unexpected 'endmacro' end of block identifier\n(in macros/fivetran_date_macros/fivetran_n_days_ago.sql:10:5)\n  --> macros/fivetran_date_macros/fivetran_n_days_ago.sql:10:5",
+                    "error_code": 1502,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

@@ -27,11 +27,11 @@
     "fusion_compatibility": {
         "version": "0.3.0",
         "require_dbt_version_defined": true,
-        "require_dbt_version_compatible": false,
+        "require_dbt_version_compatible": true,
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 18,
+            "total_errors": 14,
             "total_warnings": 1,
             "errors": [
                 {
@@ -131,38 +131,10 @@
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_salesforce__account.sql:20:31)\n(in macros/generate_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/generate_columns.sql:5:55",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_salesforce__opportunity.sql:19:33)\n(in macros/generate_columns.sql:49:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/generate_columns.sql:49:55",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_salesforce__user.sql:21:33)\n(in macros/generate_columns.sql:92:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/generate_columns.sql:92:55",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_salesforce__user_role.sql:19:33)\n(in macros/generate_columns.sql:131:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/generate_columns.sql:131:55",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

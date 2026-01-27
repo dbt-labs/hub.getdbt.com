@@ -45,6 +45,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "Invalid model definition `snowplow_web.base.scratch.databricks.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 84 column 20\n  --> dbt_project.yml:84:20",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "Invalid model definition `snowplow_web.base.scratch.default.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> ",
                     "error_code": 1013,
                     "severity_text": "ERROR",
@@ -52,14 +59,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.base.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 86 column 20\n  --> dbt_project.yml:86:20",
+                    "body": "Invalid model definition `snowplow_web.base.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 88 column 20\n  --> dbt_project.yml:88:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.page_views.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 94 column 20\n  --> dbt_project.yml:94:20",
+                    "body": "Invalid model definition `snowplow_web.page_views.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 96 column 20\n  --> dbt_project.yml:96:20",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `snowplow_web.page_views.scratch.databricks.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 98 column 20\n  --> dbt_project.yml:98:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -73,7 +87,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.page_views.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 98 column 20\n  --> dbt_project.yml:98:20",
+                    "body": "Invalid model definition `snowplow_web.page_views.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 102 column 20\n  --> dbt_project.yml:102:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -81,7 +95,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

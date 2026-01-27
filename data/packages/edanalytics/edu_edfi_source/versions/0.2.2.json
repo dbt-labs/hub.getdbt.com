@@ -33,9 +33,9 @@
         "require_dbt_version_compatible": false,
         "parse_compatible": false,
         "parse_compatibility_result": {
-            "parse_exit_code": 2,
-            "total_errors": 0,
-            "total_warnings": 0,
+            "parse_exit_code": 1,
+            "total_errors": 158,
+            "total_warnings": 4,
             "errors": [
                 {
                     "body": "Ignored unexpected key `\"referential_integrity_tests\"`. YAML path: `referential_integrity_tests`.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:3:1",
@@ -472,36 +472,680 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:120:16",
-                    "error_code": 102,
+                    "body": "Source 'raw_edfi_3.assessments' not found in project. Searched for 'assessments'\n  --> models/staging/edfi_3/base/base_ef3__assessments.sql:8:14",
+                    "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:125:16",
-                    "error_code": 102,
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__assessments.sql:10:23",
+                    "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
-                    "error_code": 102,
+                    "body": "Source 'raw_edfi_3.bell_schedules' not found in project. Searched for 'bell_schedules'\n  --> models/staging/edfi_3/base/base_ef3__bell_schedules.sql:8:14",
+                    "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
-                    "error_code": 102,
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__bell_schedules.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.calendar_dates' not found in project. Searched for 'calendar_dates'\n  --> models/staging/edfi_3/base/base_ef3__calendar_dates.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__calendar_dates.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.calendars' not found in project. Searched for 'calendars'\n  --> models/staging/edfi_3/base/base_ef3__calendars.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__calendars.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.class_periods' not found in project. Searched for 'class_periods'\n  --> models/staging/edfi_3/base/base_ef3__class_periods.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__class_periods.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.cohorts' not found in project. Searched for 'cohorts'\n  --> models/staging/edfi_3/base/base_ef3__cohorts.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__cohorts.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.course_offerings' not found in project. Searched for 'course_offerings'\n  --> models/staging/edfi_3/base/base_ef3__course_offerings.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__course_offerings.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.course_transcripts' not found in project. Searched for 'course_transcripts'\n  --> models/staging/edfi_3/base/base_ef3__course_transcripts.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__course_transcripts.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.courses' not found in project. Searched for 'courses'\n  --> models/staging/edfi_3/base/base_ef3__courses.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__courses.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._descriptors' not found in project. Searched for '_descriptors'\n  --> models/staging/edfi_3/base/base_ef3__descriptors.sql:19:44",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.discipline_actions' not found in project. Searched for 'discipline_actions'\n  --> models/staging/edfi_3/base/base_ef3__discipline_actions.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__discipline_actions.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.discipline_incidents' not found in project. Searched for 'discipline_incidents'\n  --> models/staging/edfi_3/base/base_ef3__discipline_incidents.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__discipline_incidents.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.education_organization_network_associations' not found in project. Searched for 'education_organization_network_associations'\n  --> models/staging/edfi_3/base/base_ef3__education_organization_network_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__education_organization_network_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.education_organization_networks' not found in project. Searched for 'education_organization_networks'\n  --> models/staging/edfi_3/base/base_ef3__education_organization_networks.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__education_organization_networks.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.education_service_centers' not found in project. Searched for 'education_service_centers'\n  --> models/staging/edfi_3/base/base_ef3__education_service_centers.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__education_service_centers.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.grades' not found in project. Searched for 'grades'\n  --> models/staging/edfi_3/base/base_ef3__grades.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__grades.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.grading_periods' not found in project. Searched for 'grading_periods'\n  --> models/staging/edfi_3/base/base_ef3__grading_periods.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__grading_periods.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.graduation_plans' not found in project. Searched for 'graduation_plans'\n  --> models/staging/edfi_3/base/base_ef3__graduation_plans.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__graduation_plans.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.local_education_agencies' not found in project. Searched for 'local_education_agencies'\n  --> models/staging/edfi_3/base/base_ef3__local_education_agencies.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__local_education_agencies.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.locations' not found in project. Searched for 'locations'\n  --> models/staging/edfi_3/base/base_ef3__locations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__locations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.objective_assessments' not found in project. Searched for 'objective_assessments'\n  --> models/staging/edfi_3/base/base_ef3__objective_assessments.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__objective_assessments.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.parents' not found in project. Searched for 'parents'\n  --> models/staging/edfi_3/base/base_ef3__parents.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__parents.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.programs' not found in project. Searched for 'programs'\n  --> models/staging/edfi_3/base/base_ef3__programs.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__programs.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.schools' not found in project. Searched for 'schools'\n  --> models/staging/edfi_3/base/base_ef3__schools.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__schools.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.sections' not found in project. Searched for 'sections'\n  --> models/staging/edfi_3/base/base_ef3__sections.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__sections.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.sessions' not found in project. Searched for 'sessions'\n  --> models/staging/edfi_3/base/base_ef3__sessions.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__sessions.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.staff_education_organization_assignment_associations' not found in project. Searched for 'staff_education_organization_assignment_associations'\n  --> models/staging/edfi_3/base/base_ef3__staff_education_organization_assignment_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__staff_education_organization_assignment_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.staff_school_associations' not found in project. Searched for 'staff_school_associations'\n  --> models/staging/edfi_3/base/base_ef3__staff_school_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__staff_school_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.staff_section_associations' not found in project. Searched for 'staff_section_associations'\n  --> models/staging/edfi_3/base/base_ef3__staff_section_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__staff_section_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.staffs' not found in project. Searched for 'staffs'\n  --> models/staging/edfi_3/base/base_ef3__staffs.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__staffs.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_academic_records' not found in project. Searched for 'student_academic_records'\n  --> models/staging/edfi_3/base/base_ef3__student_academic_records.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_academic_records.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_assessments' not found in project. Searched for 'student_assessments'\n  --> models/staging/edfi_3/base/base_ef3__student_assessments.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_assessments.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_cohort_associations' not found in project. Searched for 'student_cohort_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_cohort_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_cohort_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_discipline_incident_associations' not found in project. Searched for 'student_discipline_incident_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_discipline_incident_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_discipline_incident_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_discipline_incident_behavior_associations' not found in project. Searched for 'student_discipline_incident_behavior_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_discipline_incident_behavior_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_discipline_incident_behavior_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_discipline_incident_non_offender_associations' not found in project. Searched for 'student_discipline_incident_non_offender_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_discipline_incident_non_offender_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_discipline_incident_non_offender_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_education_organization_associations' not found in project. Searched for 'student_education_organization_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_education_organization_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_education_organization_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_homeless_program_associations' not found in project. Searched for 'student_homeless_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_homeless_program_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_homeless_program_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_language_instruction_program_associations' not found in project. Searched for 'student_language_instruction_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_language_instruction_program_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_language_instruction_program_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_parent_associations' not found in project. Searched for 'student_parent_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_parent_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_parent_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_program_associations' not found in project. Searched for 'student_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_program_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_program_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_school_associations' not found in project. Searched for 'student_school_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_school_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_school_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_school_attendance_events' not found in project. Searched for 'student_school_attendance_events'\n  --> models/staging/edfi_3/base/base_ef3__student_school_attendance_events.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_school_attendance_events.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_section_associations' not found in project. Searched for 'student_section_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_section_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_section_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_section_attendance_events' not found in project. Searched for 'student_section_attendance_events'\n  --> models/staging/edfi_3/base/base_ef3__student_section_attendance_events.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_section_attendance_events.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_special_education_program_associations' not found in project. Searched for 'student_special_education_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_special_education_program_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_special_education_program_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_title_i_part_a_program_associations' not found in project. Searched for 'student_title_i_part_a_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_title_i_part_a_program_associations.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_title_i_part_a_program_associations.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.students' not found in project. Searched for 'students'\n  --> models/staging/edfi_3/base/base_ef3__students.sql:8:14",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__students.sql:10:23",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_student_assessment_subject' not found in project. Searched for 'edu_edfi_source.xwalk_student_assessment_subject, xwalk_student_assessment_subject'\n  --> models/staging/edfi_3/intermediate/int_ef3__student_assessments__identify_subject.sql:16:19",
+                    "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

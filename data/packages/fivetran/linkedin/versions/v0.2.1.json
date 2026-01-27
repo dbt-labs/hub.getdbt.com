@@ -34,26 +34,82 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 1,
-            "total_warnings": 5,
+            "total_errors": 10,
+            "total_warnings": 2,
             "errors": [
                 {
-                    "body": "Packages 'hub:fivetran/fivetran_utils' and 'git:https://github.com/fivetran/dbt_fivetran_utils.git' occupy the same namespace 'fivetran_utils'. Consider unifying on a single source. This can be caused by other packages depending on 'fivetran_utils', but using an outdated or different full name.",
-                    "error_code": 1005,
+                    "body": "Invalid model definition `linkedin.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 17 column 23\n  --> dbt_project.yml:17:23",
+                    "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Packages 'git:https://github.com/fivetran/dbt_fivetran_utils.git' and 'hub:fivetran/fivetran_utils' occupy the same namespace 'fivetran_utils'. Consider unifying on a single source. This can be caused by other packages depending on 'fivetran_utils', but using an outdated or different full name.",
-                    "error_code": 1005,
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin_source/models/stg_linkedin__account_history.sql:12:33)\n(in dbt_packages/linkedin_source/macros/get_account_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/linkedin_source/models/stg_linkedin__account_history.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin_source/models/stg_linkedin__ad_analytics_by_creative.sql:12:33)\n(in dbt_packages/linkedin_source/macros/get_ad_analytics_by_creative_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/linkedin_source/models/stg_linkedin__ad_analytics_by_creative.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin_source/models/stg_linkedin__campaign_group_history.sql:12:33)\n(in dbt_packages/linkedin_source/macros/get_campaign_group_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/linkedin_source/models/stg_linkedin__campaign_group_history.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin_source/models/stg_linkedin__campaign_history.sql:12:33)\n(in dbt_packages/linkedin_source/macros/get_campaign_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/linkedin_source/models/stg_linkedin__campaign_history.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/linkedin_source/models/stg_linkedin__creative_history.sql:12:33)\n(in dbt_packages/linkedin_source/macros/get_creative_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/linkedin_source/models/stg_linkedin__creative_history.sql:12:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/linkedin__account_ad_report.sql:16:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> models/linkedin__account_ad_report.sql:16:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/linkedin__ad_adapter.sql:52:13)\n(in dbt_packages/fivetran_utils/macros/timestamp_add.sql:3:11)\n  --> models/linkedin__ad_adapter.sql:52:13",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/linkedin__campaign_ad_report.sql:20:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> models/linkedin__campaign_ad_report.sql:20:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/linkedin__campaign_group_ad_report.sql:18:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> models/linkedin__campaign_group_ad_report.sql:18:5",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

@@ -20,22 +20,14 @@
         "version": "0.1.0",
         "require_dbt_version_defined": false,
         "require_dbt_version_compatible": null,
-        "parse_compatible": false,
+        "parse_compatible": true,
         "parse_compatibility_result": {
-            "parse_exit_code": 1,
-            "total_errors": 1,
+            "parse_exit_code": 0,
+            "total_errors": 0,
             "total_warnings": 0,
-            "errors": [
-                {
-                    "body": "Failed to render the Jinja str invalid operation: Missing context variable 'this'. Var should be initialized for package: ga4\n(in :2:14)\n  --> models/staging/src_ga4.yml:5:15",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                }
-            ],
+            "errors": [],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

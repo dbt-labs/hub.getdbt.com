@@ -34,7 +34,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 20,
+            "total_errors": 18,
             "total_warnings": 1,
             "errors": [
                 {
@@ -101,13 +101,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/marketo_source/models/stg_marketo__campaigns.sql:12:33)\n(in dbt_packages/marketo_source/macros/get_campaign_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/marketo_source/models/stg_marketo__campaigns.sql:12:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/marketo_source/models/stg_marketo__email_template_history.sql:12:33)\n(in dbt_packages/marketo_source/macros/get_email_template_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/marketo_source/models/stg_marketo__email_template_history.sql:12:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
@@ -123,13 +116,6 @@
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/marketo_source/models/stg_marketo__lead_describe.sql:12:33)\n(in dbt_packages/marketo_source/macros/get_lead_describe_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/marketo_source/models/stg_marketo__lead_describe.sql:12:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/marketo_source/models/stg_marketo__program.sql:12:33)\n(in dbt_packages/marketo_source/macros/get_program_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/marketo_source/models/stg_marketo__program.sql:12:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -179,7 +165,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

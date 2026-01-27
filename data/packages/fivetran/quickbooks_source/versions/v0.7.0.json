@@ -34,19 +34,824 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 1,
+            "total_errors": 116,
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Duplicate key `credit_card_payment_txn`. This key overwrites a previous definition of the same key at line 22 column 5. YAML path: `vars.quickbooks_source.credit_card_payment_txn`.\n  --> dbt_project.yml:25:5",
-                    "error_code": 1059,
+                    "body": "Invalid model definition `quickbooks_source.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 10 column 19\n  --> dbt_project.yml:10:19",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `quickbooks_source.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 12 column 21\n  --> dbt_project.yml:12:21",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_quickbooks.yml:8:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_quickbooks.yml:9:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"test\"`. YAML path: `columns[0].test`.\n  --> models/stg_quickbooks.yml:1177:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:9:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"values\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:34:23",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:55:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:195:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:78:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:160:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:130:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:244:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:323:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:289:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:356:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:435:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:409:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:464:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:497:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:630:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:549:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:593:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:673:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:710:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"values\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:738:23",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:799:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:773:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:868:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"values\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:899:23",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:830:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:1038:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:1002:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:1111:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:1075:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:1148:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:1245:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_quickbooks.yml:1171:13",
+                    "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

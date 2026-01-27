@@ -38,7 +38,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 47,
+            "total_errors": 44,
             "total_warnings": 1,
             "errors": [
                 {
@@ -252,27 +252,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_jira.yml:11:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/src_jira.yml:13:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_jira__board.sql:15:33)\n(in macros/get_board_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_board_columns.sql:4:55",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_jira__comment.sql:15:33)\n(in macros/get_comment_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_comment_columns.sql:4:55",
                     "error_code": 1501,
                     "severity_text": "ERROR",
@@ -350,7 +329,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_jira__sprint.sql:14:33)\n(in macros/get_sprint_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_sprint_columns.sql:4:55",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_jira__sprint.sql:16:33)\n(in macros/get_sprint_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_sprint_columns.sql:4:55",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -372,7 +351,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

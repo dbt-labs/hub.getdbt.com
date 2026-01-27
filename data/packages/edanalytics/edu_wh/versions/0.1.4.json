@@ -28,8 +28,8 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 152,
-            "total_warnings": 7,
+            "total_errors": 145,
+            "total_warnings": 8,
             "errors": [
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_course_transcripts.yml:19:13",
@@ -767,13 +767,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'xwalk_course_level_characteristics' not found in project. Searched for 'edu_wh.xwalk_course_level_characteristics, xwalk_course_level_characteristics'\n  --> models/build/edfi_3/courses/bld_ef3__course_char__combined_wide.sql:19:10",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Ref 'xwalk_course_level_characteristics' not found in project. Searched for 'edu_wh.xwalk_course_level_characteristics, xwalk_course_level_characteristics'\n  --> models/build/edfi_3/courses/bld_ef3__course_char__course.sql:5:19",
                     "error_code": 1005,
                     "severity_text": "ERROR",
@@ -809,13 +802,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'xwalk_parent_email_types' not found in project. Searched for 'edu_wh.xwalk_parent_email_types, xwalk_parent_email_types'\n  --> models/build/edfi_3/parents/bld_ef3__parent_wide_emails.sql:15:35",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Ref 'xwalk_parent_phone_number_types' not found in project. Searched for 'edu_wh.xwalk_parent_phone_number_types, xwalk_parent_phone_number_types'\n  --> models/build/edfi_3/parents/bld_ef3__parent_wide_phone_numbers.sql:5:19",
                     "error_code": 1005,
                     "severity_text": "ERROR",
@@ -824,13 +810,6 @@
                 },
                 {
                     "body": "Ref 'xwalk_parent_phone_number_types' not found in project. Searched for 'edu_wh.xwalk_parent_phone_number_types, xwalk_parent_phone_number_types'\n  --> models/build/edfi_3/parents/bld_ef3__parent_wide_phone_numbers.sql:4:26",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ref 'xwalk_parent_phone_number_types' not found in project. Searched for 'edu_wh.xwalk_parent_phone_number_types, xwalk_parent_phone_number_types'\n  --> models/build/edfi_3/parents/bld_ef3__parent_wide_phone_numbers.sql:15:35",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -858,13 +837,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'xwalk_student_characteristics' not found in project. Searched for 'edu_wh.xwalk_student_characteristics, xwalk_student_characteristics'\n  --> models/build/edfi_3/students/bld_ef3__student_characteristics.sql:19:10",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Ref 'xwalk_student_indicators' not found in project. Searched for 'edu_wh.xwalk_student_indicators, xwalk_student_indicators'\n  --> models/build/edfi_3/students/bld_ef3__student_indicators.sql:5:10",
                     "error_code": 1005,
                     "severity_text": "ERROR",
@@ -880,13 +852,6 @@
                 },
                 {
                     "body": "Ref 'xwalk_student_indicators' not found in project. Searched for 'edu_wh.xwalk_student_indicators, xwalk_student_indicators'\n  --> models/build/edfi_3/students/bld_ef3__student_indicators.sql:4:26",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ref 'xwalk_student_indicators' not found in project. Searched for 'edu_wh.xwalk_student_indicators, xwalk_student_indicators'\n  --> models/build/edfi_3/students/bld_ef3__student_indicators.sql:19:10",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1026,13 +991,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'xwalk_assessment_scores' not found in project. Searched for 'edu_wh.xwalk_assessment_scores, xwalk_assessment_scores'\n  --> models/core_warehouse/fct_student_assessment.sql:48:41",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Ref 'absentee_categories' not found in project. Searched for 'edu_wh.absentee_categories, absentee_categories'\n  --> models/core_warehouse/fct_student_daily_attendance.sql:22:19",
                     "error_code": 1005,
                     "severity_text": "ERROR",
@@ -1048,13 +1006,6 @@
                 },
                 {
                     "body": "Ref 'xwalk_objective_assessment_scores' not found in project. Searched for 'edu_wh.xwalk_objective_assessment_scores, xwalk_objective_assessment_scores'\n  --> models/core_warehouse/fct_student_objective_assessment.sql:4:26",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ref 'xwalk_objective_assessment_scores' not found in project. Searched for 'edu_wh.xwalk_objective_assessment_scores, xwalk_objective_assessment_scores'\n  --> models/core_warehouse/fct_student_objective_assessment.sql:49:41",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1097,7 +1048,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

@@ -38,21 +38,21 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Invalid model definition `airbyte_github.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 20 column 19\n  --> dbt_project.yml:20:19",
+                    "body": "Invalid model definition `github.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 22 column 21\n  --> dbt_project.yml:22:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `airbyte_github.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 22 column 21\n  --> dbt_project.yml:22:21",
+                    "body": "Invalid model definition `github.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 20 column 19\n  --> dbt_project.yml:20:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "YAML error: unknown variant `average`, expected one of `simple`, `ratio`, `cumulative`, `derived`, `conversion`\n  --> models/schema.yml:273:11",
+                    "body": "YAML error: unknown variant `average`, expected one of `simple`, `ratio`, `cumulative`, `derived`, `conversion`\n  --> models/schema.yml:277:11",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -60,7 +60,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

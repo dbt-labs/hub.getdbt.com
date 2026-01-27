@@ -27,8 +27,8 @@
     },
     "fusion_compatibility": {
         "version": "1.0.0",
-        "require_dbt_version_defined": true,
-        "require_dbt_version_compatible": true,
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
@@ -36,14 +36,14 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "YAML error: mapping values are not allowed in this context at line 29 column 21\n  --> profiles.yml:29:21",
+                    "body": "YAML error: mapping values are not allowed in this context at line 15 column 21\n  --> profiles.yml:15:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "YAML error: mapping values are not allowed in this context at line 29 column 21\n  --> profiles.yml:29:21",
+                    "body": "YAML error: mapping values are not allowed in this context at line 15 column 21\n  --> profiles.yml:15:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -51,7 +51,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

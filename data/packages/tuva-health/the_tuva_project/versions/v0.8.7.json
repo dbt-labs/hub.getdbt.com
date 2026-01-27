@@ -30,7 +30,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 285,
+            "total_errors": 265,
             "total_warnings": 0,
             "errors": [
                 {
@@ -174,13 +174,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/hcc_suspecting/hcc_suspecting_models.yml:90:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:31:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
@@ -230,22 +223,15 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[19].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:73:9",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/hcc_suspecting/hcc_suspecting_models.yml:90:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to create template: syntax error: unexpected `+`\n(in models/quality_measures/intermediate/nqf0034_colorectal_cancer_screening/quality_measures__int_nqf0034__performance_period.sql:30:26)",
-                    "error_code": 1000,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in models/quality_measures/intermediate/nqf0034_colorectal_cancer_screening/quality_measures__int_nqf0034__performance_period.sql:30:26)\n  --> models/quality_measures/intermediate/nqf0034_colorectal_cancer_screening/quality_measures__int_nqf0034__performance_period.sql:30:26",
-                    "error_code": 1502,
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[19].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:73:9",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
@@ -307,34 +293,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to create template: syntax error: unexpected `+`\n(in models/quality_measures/intermediate/nqf0053_osteoporosis_management_in_women_who_had_a_fracture/quality_measures__int_nqf0053__performance_period.sql:50:26)",
-                    "error_code": 1000,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in models/quality_measures/intermediate/nqf0053_osteoporosis_management_in_women_who_had_a_fracture/quality_measures__int_nqf0053__performance_period.sql:50:26)\n  --> models/quality_measures/intermediate/nqf0053_osteoporosis_management_in_women_who_had_a_fracture/quality_measures__int_nqf0053__performance_period.sql:50:26",
-                    "error_code": 1502,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/ccsr/ccsr_models.yml:201:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"desciption\"`. YAML path: `columns[4].desciption`.\n  --> models/quality_measures/quality_measures_models.yml:1007:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[4].meta`.\n  --> models/readmissions/readmissions_models.yml:25:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
@@ -370,42 +328,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/ed_classification/ed_classification_models.yml:22:9",
+                    "body": "While parsing config: Ignored unexpected key `\"desciption\"`. YAML path: `columns[4].desciption`.\n  --> models/quality_measures/quality_measures_models.yml:1007:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/ed_classification/ed_classification_models.yml:26:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/ed_classification/ed_classification_models.yml:38:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/ed_classification/ed_classification_models.yml:51:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[16].meta`.\n  --> models/ed_classification/ed_classification_models.yml:68:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[21].meta`.\n  --> models/ed_classification/ed_classification_models.yml:80:9",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/ccsr/ccsr_models.yml:201:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -433,13 +363,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[0].meta`.\n  --> models/quality_measures/quality_measures_models.yml:16:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/readmissions/readmissions_models.yml:145:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
@@ -447,21 +370,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/quality_measures/quality_measures_models.yml:20:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[13].meta`.\n  --> models/readmissions/readmissions_models.yml:152:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/quality_measures/quality_measures_models.yml:24:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -497,6 +406,27 @@
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[29].meta`.\n  --> models/readmissions/readmissions_models.yml:203:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[0].meta`.\n  --> models/quality_measures/quality_measures_models.yml:16:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/quality_measures/quality_measures_models.yml:20:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/quality_measures/quality_measures_models.yml:24:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -573,15 +503,50 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/quality_measures/quality_measures_models.yml:102:9",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/ed_classification/ed_classification_models.yml:22:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to create template: syntax error: unexpected `+`\n(in models/quality_measures/intermediate/nqf0053_osteoporosis_management_in_women_who_had_a_fracture/quality_measures__int_nqf0053_numerator.sql:89:34)",
-                    "error_code": 1000,
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/ed_classification/ed_classification_models.yml:26:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/ed_classification/ed_classification_models.yml:38:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/ed_classification/ed_classification_models.yml:51:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[16].meta`.\n  --> models/ed_classification/ed_classification_models.yml:68:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[21].meta`.\n  --> models/ed_classification/ed_classification_models.yml:80:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/quality_measures/quality_measures_models.yml:102:9",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
@@ -601,22 +566,22 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in models/quality_measures/intermediate/nqf0053_osteoporosis_management_in_women_who_had_a_fracture/quality_measures__int_nqf0053_numerator.sql:89:34)\n  --> models/quality_measures/intermediate/nqf0053_osteoporosis_management_in_women_who_had_a_fracture/quality_measures__int_nqf0053_numerator.sql:89:34",
-                    "error_code": 1502,
+                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:14:7",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to create template: syntax error: unexpected `+`\n(in models/quality_measures/intermediate/nqf0059_diabetes_hemoglobin_a1c/quality_measures__int_nqf0059__performance_period.sql:49:26)",
-                    "error_code": 1000,
+                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:31:7",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in models/quality_measures/intermediate/nqf0059_diabetes_hemoglobin_a1c/quality_measures__int_nqf0059__performance_period.sql:49:26)\n  --> models/quality_measures/intermediate/nqf0059_diabetes_hemoglobin_a1c/quality_measures__int_nqf0059__performance_period.sql:49:26",
-                    "error_code": 1502,
+                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:61:7",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
@@ -643,14 +608,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:14:7",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:31:7",
+                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:79:7",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -692,28 +650,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to create template: syntax error: unexpected `+`\n(in models/quality_measures/intermediate/cbe0055_diabetes_eye_exam/quality_measures__int_cbe0055__performance_period.sql:51:26)",
-                    "error_code": 1000,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in models/quality_measures/intermediate/cbe0055_diabetes_eye_exam/quality_measures__int_cbe0055__performance_period.sql:51:26)\n  --> models/quality_measures/intermediate/cbe0055_diabetes_eye_exam/quality_measures__int_cbe0055__performance_period.sql:51:26",
-                    "error_code": 1502,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:61:7",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:79:7",
+                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:96:7",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -748,14 +685,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/chronic_conditions/tuva_chronic_conditions_models.yml:36:11",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:96:7",
+                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:116:7",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -790,6 +720,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:138:7",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[12].meta`.\n  --> models/core/core_models.yml:204:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
@@ -799,13 +736,6 @@
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[13].meta`.\n  --> models/core/core_models.yml:211:9",
                     "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to create template: syntax error: unexpected `+`\n(in models/quality_measures/intermediate/nqf2372_breast_cancer_screening/quality_measures__int_nqf2372__performance_period.sql:48:26)",
-                    "error_code": 1000,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
@@ -839,35 +769,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in models/quality_measures/intermediate/nqf2372_breast_cancer_screening/quality_measures__int_nqf2372__performance_period.sql:48:26)\n  --> models/quality_measures/intermediate/nqf2372_breast_cancer_screening/quality_measures__int_nqf2372__performance_period.sql:48:26",
-                    "error_code": 1502,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:116:7",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/chronic_conditions/tuva_chronic_conditions_models.yml:36:11",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to create template: syntax error: unexpected `+`\n(in models/quality_measures/intermediate/cqm236_controlling_blood_pressure/quality_measures__int_cqm236__performance_period.sql:56:26)",
-                    "error_code": 1000,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in models/quality_measures/intermediate/cqm236_controlling_blood_pressure/quality_measures__int_cqm236__performance_period.sql:56:26)\n  --> models/quality_measures/intermediate/cqm236_controlling_blood_pressure/quality_measures__int_cqm236__performance_period.sql:56:26",
-                    "error_code": 1502,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:138:7",
+                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:160:7",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -902,13 +811,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to create template: syntax error: unexpected `+`\n(in models/quality_measures/intermediate/cqm236_controlling_blood_pressure/quality_measures__int_cqm236_denominator.sql:187:26)",
-                    "error_code": 1000,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[9].meta`.\n  --> models/core/core_models.yml:305:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
@@ -930,14 +832,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in models/quality_measures/intermediate/cqm236_controlling_blood_pressure/quality_measures__int_cqm236_denominator.sql:187:26)\n  --> models/quality_measures/intermediate/cqm236_controlling_blood_pressure/quality_measures__int_cqm236_denominator.sql:187:26",
-                    "error_code": 1502,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:160:7",
+                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:183:7",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -951,56 +846,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:183:7",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/insights/insights_models.yml:218:7",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[3].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:932:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[4].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:936:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:952:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[13].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:958:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[14].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:964:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[15].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:968:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1063,7 +909,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[3].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:932:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[20].meta`.\n  --> models/core/core_models.yml:490:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[4].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:936:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1077,7 +937,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:952:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[23].meta`.\n  --> models/core/core_models.yml:501:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[13].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:958:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1091,14 +965,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to create template: syntax error: unexpected `+`\n(in models/quality_measures/intermediate/nqf_0097_medication_reconciliation_post_discharge/quality_measures__int_nqf0097__performance_period.sql:51:26)",
-                    "error_code": 1000,
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[14].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:964:9",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[25].meta`.\n  --> models/core/core_models.yml:509:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[15].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:968:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1114,13 +995,6 @@
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[27].meta`.\n  --> models/core/core_models.yml:517:9",
                     "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in models/quality_measures/intermediate/nqf_0097_medication_reconciliation_post_discharge/quality_measures__int_nqf0097__performance_period.sql:51:26)\n  --> models/quality_measures/intermediate/nqf_0097_medication_reconciliation_post_discharge/quality_measures__int_nqf0097__performance_period.sql:51:26",
-                    "error_code": 1502,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
@@ -1156,20 +1030,6 @@
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[42].meta`.\n  --> models/core/core_models.yml:568:9",
                     "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to create template: syntax error: unexpected `+`\n(in models/quality_measures/intermediate/cqm438_statin_therapy_for_patients_with_cardiovascular_disease/quality_measures__int_cqm438__performance_period.sql:51:26)",
-                    "error_code": 1000,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL syntax error: unexpected `+`\n(in models/quality_measures/intermediate/cqm438_statin_therapy_for_patients_with_cardiovascular_disease/quality_measures__int_cqm438__performance_period.sql:51:26)\n  --> models/quality_measures/intermediate/cqm438_statin_therapy_for_patients_with_cardiovascular_disease/quality_measures__int_cqm438__performance_period.sql:51:26",
-                    "error_code": 1502,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
@@ -1217,6 +1077,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/core/core_models.yml:687:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1026:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
@@ -1232,13 +1099,6 @@
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[14].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1059:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/core/core_models.yml:687:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1329,7 +1189,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/core/core_models.yml:739:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[28].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1120:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/core/core_models.yml:743:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1392,21 +1266,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/core/core_models.yml:739:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[45].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1185:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/core/core_models.yml:743:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1525,21 +1385,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/core/core_models.yml:816:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[62].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1270:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[7].meta`.\n  --> models/core/core_models.yml:822:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1554,13 +1400,6 @@
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[64].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1280:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[9].meta`.\n  --> models/core/core_models.yml:829:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1595,6 +1434,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/core/core_models.yml:816:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[69].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1307:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
@@ -1602,7 +1448,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[7].meta`.\n  --> models/core/core_models.yml:822:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[70].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1312:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[9].meta`.\n  --> models/core/core_models.yml:829:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1631,13 +1491,6 @@
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[74].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1332:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/core/core_models.yml:879:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1680,6 +1533,13 @@
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[80].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1362:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/core/core_models.yml:879:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1763,21 +1623,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/core/core_models.yml:930:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[92].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1420:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/core/core_models.yml:934:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1791,21 +1637,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[8].meta`.\n  --> models/core/core_models.yml:941:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[94].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1430:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[9].meta`.\n  --> models/core/core_models.yml:945:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1819,21 +1651,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[10].meta`.\n  --> models/core/core_models.yml:950:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[96].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1440:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[12].meta`.\n  --> models/core/core_models.yml:956:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1847,21 +1665,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[13].meta`.\n  --> models/core/core_models.yml:960:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[98].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1450:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[14].meta`.\n  --> models/core/core_models.yml:964:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1875,13 +1679,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[15].meta`.\n  --> models/core/core_models.yml:968:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[100].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1460:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
@@ -1889,7 +1686,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[16].meta`.\n  --> models/core/core_models.yml:972:9",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/core/core_models.yml:930:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1903,14 +1700,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[17].meta`.\n  --> models/core/core_models.yml:976:9",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[102].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1470:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[102].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1470:9",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/core/core_models.yml:934:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1924,7 +1721,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[8].meta`.\n  --> models/core/core_models.yml:941:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[104].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1480:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[9].meta`.\n  --> models/core/core_models.yml:945:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1938,7 +1749,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[10].meta`.\n  --> models/core/core_models.yml:950:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[106].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1490:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[12].meta`.\n  --> models/core/core_models.yml:956:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1952,6 +1777,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[13].meta`.\n  --> models/core/core_models.yml:960:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[108].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1500:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
@@ -1959,7 +1791,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[14].meta`.\n  --> models/core/core_models.yml:964:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[109].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1505:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[15].meta`.\n  --> models/core/core_models.yml:968:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1980,7 +1826,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[16].meta`.\n  --> models/core/core_models.yml:972:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[112].meta`.\n  --> models/claims_preprocessing/claims_preprocessing_models.yml:1520:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[17].meta`.\n  --> models/core/core_models.yml:976:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -2030,7 +1890,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

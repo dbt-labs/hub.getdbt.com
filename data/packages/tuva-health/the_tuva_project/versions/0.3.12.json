@@ -30,11 +30,18 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 216,
+            "total_errors": 218,
             "total_warnings": 0,
             "errors": [
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[4].meta`.\n  --> models/core/core_models.yml:326:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/core/core_models.yml:330:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -48,14 +55,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[7].meta`.\n  --> models/acute_inpatient/acute_inpatient_models.yml:36:9",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[7].meta`.\n  --> models/core/core_models.yml:336:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/core/core_models.yml:330:9",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[7].meta`.\n  --> models/acute_inpatient/acute_inpatient_models.yml:36:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -83,13 +90,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[7].meta`.\n  --> models/core/core_models.yml:336:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[0].meta`.\n  --> models/core/core_models.yml:469:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
@@ -97,35 +97,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[3].meta`.\n  --> models/chronic_conditions/cms_chronic_conditions_models.yml:359:11",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[3].meta`.\n  --> models/chronic_conditions/cms_chronic_conditions_models.yml:283:11",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[4].meta`.\n  --> models/chronic_conditions/cms_chronic_conditions_models.yml:366:11",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[4].meta`.\n  --> models/chronic_conditions/cms_chronic_conditions_models.yml:288:11",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/chronic_conditions/cms_chronic_conditions_models.yml:373:11",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/chronic_conditions/tuva_chronic_conditions_models.yml:28:11",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/chronic_conditions/tuva_chronic_conditions_models.yml:32:11",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/chronic_conditions/cms_chronic_conditions_models.yml:294:11",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -154,6 +140,20 @@
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/readmissions/readmissions_models.yml:48:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/chronic_conditions/tuva_chronic_conditions_models.yml:31:11",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/chronic_conditions/tuva_chronic_conditions_models.yml:36:11",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -195,13 +195,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/core/core_models.yml:285:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[23].meta`.\n  --> models/readmissions/readmissions_models.yml:172:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
@@ -216,14 +209,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/core/core_models.yml:289:9",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[28].meta`.\n  --> models/readmissions/readmissions_models.yml:189:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[28].meta`.\n  --> models/readmissions/readmissions_models.yml:189:9",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/core/core_models.yml:285:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/core/core_models.yml:289:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -503,14 +503,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"values\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/chronic_conditions/cms_chronic_conditions_models.yml:475:25",
+                    "body": "Deprecated test arguments: [\"values\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/chronic_conditions/cms_chronic_conditions_models.yml:383:25",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"values\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/chronic_conditions/cms_chronic_conditions_models.yml:521:25",
+                    "body": "Deprecated test arguments: [\"values\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/chronic_conditions/cms_chronic_conditions_models.yml:426:25",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -644,6 +644,20 @@
                 },
                 {
                     "body": "Ref 'pharmacy_claim' not found in project. Searched for 'the_tuva_project.pharmacy_claim, pharmacy_claim'\n  --> models/data_profiling/date_profiling/intermediate/claims_date_profiling__pharmacy_claim_dates.sql:11:6",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/chronic_conditions/staging/cms_chronic_conditions__stg_medical_claim.sql:12:6",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'pharmacy_claim' not found in project. Searched for 'the_tuva_project.pharmacy_claim, pharmacy_claim'\n  --> models/chronic_conditions/staging/cms_chronic_conditions__stg_pharmacy_claim.sql:12:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1547,7 +1561,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

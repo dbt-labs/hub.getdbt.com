@@ -157,7 +157,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/lever_source/models/stg_lever__posting_tag.sql:15:33)\n(in dbt_packages/lever_source/macros/get_posting_tag_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/lever_source/models/stg_lever__posting_tag.sql:15:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/lever_source/models/stg_lever__posting_tag.sql:16:33)\n(in dbt_packages/lever_source/macros/get_posting_tag_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/lever_source/models/stg_lever__posting_tag.sql:16:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -227,7 +227,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_lever__posting_tags.sql:11:9)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intermediate/int_lever__posting_tags.sql:11:9",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_lever__posting_tags.sql:13:9)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intermediate/int_lever__posting_tags.sql:13:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -262,7 +262,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__a5073bac10d30f420d18de2ba91d531e.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__a5073bac10d30f420d18de2ba91d531e.sql:1:1",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/dbt_utils_unique_combination_o_a5073bac10d30f420d18de2ba91d531e.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/dbt_utils_unique_combination_o_a5073bac10d30f420d18de2ba91d531e.sql:1:1",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -270,7 +270,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

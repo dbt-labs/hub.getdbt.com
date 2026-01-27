@@ -34,9 +34,16 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 38,
+            "total_errors": 45,
             "total_warnings": 1,
             "errors": [
+                {
+                    "body": "Duplicate key `description`. This key overwrites a previous definition of the same key at line 160 column 9. YAML path: `models[0].columns[67].description`.\n  --> models/sessions/sessions.yml:161:9",
+                    "error_code": 1059,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/base/manifest/base_manifest.yml:41:9",
                     "error_code": 1060,
@@ -220,21 +227,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:142:9",
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:143:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:152:9",
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:153:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:162:9",
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:163:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -302,10 +309,52 @@
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"enabled\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/sessions/sessions.yml:45:24",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"enabled\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/sessions/scratch/sessions_scratch.yml:45:24",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"enabled\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/users/users.yml:44:24",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"enabled\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/users/scratch/users_scratch.yml:42:24",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"enabled\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/views/views.yml:71:24",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"enabled\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/views/scratch/views_scratch.yml:71:24",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

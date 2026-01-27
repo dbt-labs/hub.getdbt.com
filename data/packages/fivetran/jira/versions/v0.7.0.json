@@ -30,12 +30,12 @@
     "fusion_compatibility": {
         "version": "0.7.0",
         "require_dbt_version_defined": true,
-        "require_dbt_version_compatible": true,
+        "require_dbt_version_compatible": false,
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
             "total_errors": 4,
-            "total_warnings": 2,
+            "total_warnings": 1,
             "errors": [
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/intermediate/int_jira.yml:228:13",
@@ -67,7 +67,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

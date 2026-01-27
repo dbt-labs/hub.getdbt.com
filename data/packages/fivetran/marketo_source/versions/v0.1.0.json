@@ -24,15 +24,65 @@
     "fusion_compatibility": {
         "version": "0.1.0",
         "require_dbt_version_defined": true,
-        "require_dbt_version_compatible": false,
-        "parse_compatible": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
         "parse_compatibility_result": {
-            "parse_exit_code": 0,
-            "total_errors": 0,
+            "parse_exit_code": 1,
+            "total_errors": 7,
             "total_warnings": 0,
-            "errors": [],
+            "errors": [
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/stg_marketo__activity_click_email.sql:31:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:28:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/stg_marketo__activity_click_email.sql:31:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/stg_marketo__activity_email_bounced.sql:30:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:28:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/stg_marketo__activity_email_bounced.sql:30:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/stg_marketo__activity_email_delivered.sql:26:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:28:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/stg_marketo__activity_email_delivered.sql:26:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/stg_marketo__activity_open_email.sql:30:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:28:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/stg_marketo__activity_open_email.sql:30:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/stg_marketo__activity_send_email.sql:26:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:28:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/stg_marketo__activity_send_email.sql:26:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/stg_marketo__activity_unsubscribe_email.sql:31:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:28:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/stg_marketo__activity_unsubscribe_email.sql:31:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/stg_marketo__email_template_history.sql:58:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:28:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/stg_marketo__email_template_history.sql:58:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

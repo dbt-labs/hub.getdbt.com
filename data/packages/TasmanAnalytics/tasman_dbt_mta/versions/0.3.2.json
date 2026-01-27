@@ -30,7 +30,7 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'generate_uuid' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__generate_uuid', 'tasman_dbt_mta.default__generate_uuid', 'tasman_dbt_mta.postgres__generate_uuid', 'tasman_dbt_mta.default__generate_uuid'\n(in models/prs_tasman_mta__attribution_performance_history.sql:14:9)\n(in macros/generate_uuid.sql:2:29)\n  --> macros/generate_uuid.sql:2:29",
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'generate_uuid' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__generate_uuid', 'tasman_dbt_mta.default__generate_uuid', 'tasman_dbt_mta.postgres__generate_uuid', 'tasman_dbt_mta.default__generate_uuid'\n(in models/prs_tasman_mta__attribution_performance_history.sql:128:9)\n(in macros/generate_uuid.sql:2:29)\n  --> macros/generate_uuid.sql:2:29",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -80,7 +80,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

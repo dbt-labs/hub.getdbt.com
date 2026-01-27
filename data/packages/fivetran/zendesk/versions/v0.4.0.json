@@ -34,7 +34,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 40,
+            "total_errors": 45,
             "total_warnings": 2,
             "errors": [
                 {
@@ -227,42 +227,70 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/agent_work_time_breach/int_zendesk__agent_work_time_business_hours_breached.sql:37:11)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/sla_policy/agent_work_time_breach/int_zendesk__agent_work_time_business_hours_breached.sql:37:11",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/agent_work_time/int_zendesk__agent_work_time_business_hours.sql:37:11)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/sla_policy/agent_work_time/int_zendesk__agent_work_time_business_hours.sql:37:11",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/agent_work_time_breach/int_zendesk__agent_work_time_calendar_hours_breached.sql:14:5)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/sla_policy/agent_work_time_breach/int_zendesk__agent_work_time_calendar_hours_breached.sql:14:5",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/agent_work_time/int_zendesk__agent_work_time_calendar_hours.sql:12:5)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/sla_policy/agent_work_time/int_zendesk__agent_work_time_calendar_hours.sql:12:5",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/agent_work_time_breach/int_zendesk__agent_work_time_filtered_statuses.sql:21:64)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/sla_policy/agent_work_time_breach/int_zendesk__agent_work_time_filtered_statuses.sql:21:64",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/agent_work_time/int_zendesk__agent_work_time_filtered_statuses.sql:20:64)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/sla_policy/agent_work_time/int_zendesk__agent_work_time_filtered_statuses.sql:20:64",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/int_zendesk__sla_policy_applied.sql:28:10)\n(in dbt_packages/fivetran_utils/macros/json_extract.sql:3:11)\n  --> models/sla_policy/int_zendesk__sla_policy_applied.sql:28:10",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/int_zendesk__sla_policy_applied.sql:31:10)\n(in dbt_packages/fivetran_utils/macros/json_extract.sql:3:11)\n  --> models/sla_policy/int_zendesk__sla_policy_applied.sql:31:10",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/reply_time_breach/int_zendesk__reply_time_business_hours_breached.sql:37:23)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/sla_policy/reply_time_breach/int_zendesk__reply_time_business_hours_breached.sql:37:23",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/reply_time/int_zendesk__reply_time_business_hours.sql:36:23)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/sla_policy/reply_time/int_zendesk__reply_time_business_hours.sql:36:23",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/reply_time_breach/int_zendesk__reply_time_calendar_hours_breached.sql:17:38)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/sla_policy/reply_time_breach/int_zendesk__reply_time_calendar_hours_breached.sql:17:38",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/reply_time/int_zendesk__reply_time_calendar_hours.sql:14:38)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/sla_policy/reply_time/int_zendesk__reply_time_calendar_hours.sql:14:38",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/reply_time/int_zendesk__reply_time_combined.sql:112:5)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datediff.sql:2:20)\n  --> models/sla_policy/reply_time/int_zendesk__reply_time_combined.sql:112:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/requester_wait_time/int_zendesk__requester_wait_time_business_hours.sql:37:11)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/sla_policy/requester_wait_time/int_zendesk__requester_wait_time_business_hours.sql:37:11",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/requester_wait_time/int_zendesk__requester_wait_time_calendar_hours.sql:12:5)\n(in dbt_packages/fivetran_utils/macros/timestamp_diff.sql:2:13)\n  --> models/sla_policy/requester_wait_time/int_zendesk__requester_wait_time_calendar_hours.sql:12:5",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sla_policy/requester_wait_time/int_zendesk__requester_wait_time_filtered_statuses.sql:20:64)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/sla_policy/requester_wait_time/int_zendesk__requester_wait_time_filtered_statuses.sql:20:64",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -284,6 +312,13 @@
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/utils/int_zendesk__calendar_spine.sql:18:29)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/dateadd.sql:2:20)\n  --> models/utils/int_zendesk__calendar_spine.sql:18:29",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/zendesk__sla_policies.sql:55:5)\n(in dbt_packages/fivetran_utils/macros/max_bool.sql:3:11)\n  --> models/zendesk__sla_policies.sql:55:5",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -319,7 +354,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

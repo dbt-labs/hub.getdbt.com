@@ -34,123 +34,46 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 17,
+            "total_errors": 6,
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Ignored unexpected key `\"session_cols\"`. YAML path: `session_cols`.\n  --> models/sessions.yml:3:1",
+                    "body": "Ignored unexpected key `\"session_cols\"`. YAML path: `session_cols`.\n  --> models/_session_models.yml:3:1",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"user_cols\"`. YAML path: `user_cols`.\n  --> models/users.yml:3:1",
+                    "body": "Ignored unexpected key `\"user_cols\"`. YAML path: `user_cols`.\n  --> models/_user_models.yml:3:1",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/schema.yml:3:5",
+                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/_session_models.yml:424:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/schema.yml:7:9",
+                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/_session_models.yml:428:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/schema.yml:50:5",
+                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/_user_models.yml:377:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/schema.yml:54:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/schema.yml:119:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/schema.yml:123:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/schema.yml:258:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/schema.yml:262:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/schema.yml:331:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/schema.yml:335:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/sessions.yml:433:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/sessions.yml:437:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/staging/src_fullstory.yml:13:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/users.yml:377:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/users.yml:381:9",
+                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/_user_models.yml:381:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -158,7 +81,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

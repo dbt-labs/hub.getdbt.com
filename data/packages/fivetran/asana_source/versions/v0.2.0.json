@@ -30,11 +30,11 @@
     "fusion_compatibility": {
         "version": "0.2.0",
         "require_dbt_version_defined": true,
-        "require_dbt_version_compatible": true,
+        "require_dbt_version_compatible": false,
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 36,
+            "total_errors": 40,
             "total_warnings": 0,
             "errors": [
                 {
@@ -288,10 +288,38 @@
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/dbt_utils_source_unique_combin_3d3b475d4ba99e17ee1b563763e2ea5f.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/dbt_utils_source_unique_combin_3d3b475d4ba99e17ee1b563763e2ea5f.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/dbt_utils_source_unique_combin_0453a2910a8a0dc41e5330ffbe6c3b90.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/dbt_utils_source_unique_combin_0453a2910a8a0dc41e5330ffbe6c3b90.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/dbt_utils_source_unique_combin_e9a4bb91175935ae1fa3e560fbe90c64.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/dbt_utils_source_unique_combin_e9a4bb91175935ae1fa3e560fbe90c64.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/dbt_utils_source_unique_combin_d61d81ecceae981b21cf72baf088ad37.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/dbt_utils_source_unique_combin_d61d81ecceae981b21cf72baf088ad37.sql:1:1",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

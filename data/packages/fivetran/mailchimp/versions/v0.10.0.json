@@ -34,75 +34,33 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 9,
-            "total_warnings": 0,
+            "total_errors": 3,
+            "total_warnings": 1,
             "errors": [
                 {
-                    "body": "Invalid model definition `mailchimp.base.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 10 column 27\n  --> dbt_project.yml:10:27",
+                    "body": "Invalid model definition `mailchimp.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 10 column 21\n  --> dbt_project.yml:10:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `mailchimp.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 12 column 27\n  --> dbt_project.yml:12:27",
-                    "error_code": 1013,
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/mailchimp.yml:133:13",
+                    "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `mailchimp.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 8 column 23\n  --> dbt_project.yml:8:23",
-                    "error_code": 1013,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/base/stg_mailchimp_automation_activities.sql:25:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:28:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/base/stg_mailchimp_automation_activities.sql:25:9",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/base/stg_mailchimp_automation_recipients.sql:20:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:28:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/base/stg_mailchimp_automation_recipients.sql:20:9",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/base/stg_mailchimp_campaign_activities.sql:24:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:28:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/base/stg_mailchimp_campaign_activities.sql:24:9",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/base/stg_mailchimp_campaign_recipients.sql:19:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:28:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/base/stg_mailchimp_campaign_recipients.sql:19:9",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/base/stg_mailchimp_unsubscribes.sql:20:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:28:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/base/stg_mailchimp_unsubscribes.sql:20:9",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/mailchimp_campaign_activities.sql:16:9)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datediff.sql:2:3)\n  --> models/mailchimp_campaign_activities.sql:16:9",
-                    "error_code": 1501,
+                    "body": "Ref 'stg_mailchimp_campaign_activities' not found in project. Searched for 'mailchimp_source.stg_mailchimp_campaign_activities, mailchimp.stg_mailchimp_campaign_activities, stg_mailchimp_campaign_activities'\n  --> models/tmp/stg_mailchimp__campaign_activities_tmp.sql:1:1",
+                    "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

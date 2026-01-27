@@ -23,29 +23,14 @@
         "version": "1.2.0",
         "require_dbt_version_defined": true,
         "require_dbt_version_compatible": false,
-        "parse_compatible": false,
+        "parse_compatible": true,
         "parse_compatibility_result": {
-            "parse_exit_code": 1,
-            "total_errors": 2,
+            "parse_exit_code": 0,
+            "total_errors": 0,
             "total_warnings": 0,
-            "errors": [
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"assertions\"`. YAML path: `columns[3].assertions`.\n  --> models/examples/basic_example/basic_example_d_site.yml:10:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"assertions\"`. YAML path: `columns[3].assertions`.\n  --> models/examples/basic_test_example/basic_test_example_d_site.yml:19:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                }
-            ],
+            "errors": [],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

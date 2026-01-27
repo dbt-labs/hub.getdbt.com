@@ -19,23 +19,15 @@
     "fusion_compatibility": {
         "version": "0.16.1",
         "require_dbt_version_defined": true,
-        "require_dbt_version_compatible": false,
-        "parse_compatible": false,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": true,
         "parse_compatibility_result": {
-            "parse_exit_code": 1,
-            "total_errors": 1,
+            "parse_exit_code": 0,
+            "total_errors": 0,
             "total_warnings": 0,
-            "errors": [
-                {
-                    "body": "Duplicate key `require-dbt-version`. This key overwrites a previous definition of the same key at line 6 column 1. YAML path: `require-dbt-version`.\n  --> dbt_project.yml:10:1",
-                    "error_code": 1059,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                }
-            ],
+            "errors": [],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false
