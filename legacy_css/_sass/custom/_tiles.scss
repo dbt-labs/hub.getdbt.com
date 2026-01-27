@@ -7,7 +7,7 @@
 		@include flex(0,0,percentage(1/3));
 		@include flex-column;
 		@include flex-justify(stretch);
-		@include max-tablet { @include flex(0,0,percentage(1/2)); }
+		@include max-phablet { @include flex(0,0,percentage(1/2)); }
 		@include max-phablet { @include flex(0,0,percentage(1)); }
 	}
 }
@@ -18,7 +18,7 @@
 }
 
 .tile-content {
-	padding: 20px;
+	padding: 12px;
 	@include flex-column;
 	@include flex-justify(stretch);
 	@include flex(1,0,auto);
@@ -28,7 +28,7 @@
 	@include transitions;
 	background: white;
 	border-radius: 6px;
-	padding: 30px;
+	padding: 20px;
 	overflow: hidden;
 	@include shadow;
 	@include flex-row;
@@ -36,11 +36,11 @@
 }
 
 .tile-graphic {
-	@include flex(0,0,72px);
+	@include flex(0,0,40px);
 	
 	img {
-		width: 90px;
-		height: 90px;
+		width: 48px;
+		height: 48px;
 		// border-radius: 16px;
 		max-width: none;
 		// @include shadow;
