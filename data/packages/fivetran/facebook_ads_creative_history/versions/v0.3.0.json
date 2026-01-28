@@ -40,231 +40,198 @@
                     "body": "Invalid model definition `facebook_ads_creative_history.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 10 column 16\n  --> dbt_project.yml:10:16",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `facebook_ads_creative_history.postgres.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 18 column 16\n  --> dbt_project.yml:18:16",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `facebook_ads_creative_history.redshift.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 12 column 16\n  --> dbt_project.yml:12:16",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `facebook_ads_creative_history.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 14 column 16\n  --> dbt_project.yml:14:16",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `facebook_ads_creative_history.spark.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 16 column 16\n  --> dbt_project.yml:16:16",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/facebook_backwards_compatibility.yml:8:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/facebook_backwards_compatibility.yml:16:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/facebook_backwards_compatibility.yml:22:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/facebook_backwards_compatibility.yml:29:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/facebook_backwards_compatibility.yml:35:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__url_tag'\n  --> models/spark/stg_facebook_ads__url_tag.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__url_tag'\n  --> models/snowflake/stg_facebook_ads__url_tag.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__url_tag'\n  --> models/redshift/stg_facebook_ads__url_tag.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__url_tag'\n  --> models/postgres/stg_facebook_ads__url_tag.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__creative_history_asset_feed_spec_link_url'\n  --> models/spark/stg_facebook_ads__creative_history_asset_feed_spec_link_url.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__creative_history_asset_feed_spec_link_url'\n  --> models/snowflake/stg_facebook_ads__creative_history_asset_feed_spec_link_url.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__creative_history_asset_feed_spec_link_url'\n  --> models/redshift/stg_facebook_ads__creative_history_asset_feed_spec_link_url.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__carousel_media_url_tags'\n  --> models/spark/stg_facebook_ads__carousel_media_url_tags.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__carousel_media_url_tags'\n  --> models/snowflake/stg_facebook_ads__carousel_media_url_tags.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__carousel_media_url_tags'\n  --> models/redshift/stg_facebook_ads__carousel_media_url_tags.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__carousel_media_url_tags'\n  --> models/postgres/stg_facebook_ads__carousel_media_url_tags.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__carousel_media'\n  --> models/spark/stg_facebook_ads__carousel_media.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__carousel_media'\n  --> models/snowflake/stg_facebook_ads__carousel_media.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__carousel_media'\n  --> models/redshift/stg_facebook_ads__carousel_media.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__carousel_media'\n  --> models/postgres/stg_facebook_ads__carousel_media.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__app_link'\n  --> models/spark/stg_facebook_ads__app_link.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__app_link'\n  --> models/snowflake/stg_facebook_ads__app_link.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__app_link'\n  --> models/redshift/stg_facebook_ads__app_link.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'stg_facebook_ads__app_link'\n  --> models/postgres/stg_facebook_ads__app_link.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'int__facebook_ads__carousel_media_prep'\n  --> models/spark/int__facebook_ads__carousel_media_prep.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'int__facebook_ads__carousel_media_prep'\n  --> models/snowflake/int__facebook_ads__carousel_media_prep.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'int__facebook_ads__carousel_media_prep'\n  --> models/redshift/int__facebook_ads__carousel_media_prep.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Found duplicate model 'int__facebook_ads__carousel_media_prep'\n  --> models/postgres/int__facebook_ads__carousel_media_prep.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -272,6 +239,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

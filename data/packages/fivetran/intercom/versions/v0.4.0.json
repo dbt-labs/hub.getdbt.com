@@ -41,14 +41,12 @@
                     "body": "Invalid model definition `intercom.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 10 column 21\n  --> dbt_project.yml:10:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `intercom.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 8 column 19\n  --> dbt_project.yml:8:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -56,6 +54,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

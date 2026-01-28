@@ -33,21 +33,18 @@
                     "body": "Invalid model definition `tap_google_analytics.base.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 20 column 21\n  --> dbt_project.yml:20:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `tap_google_analytics.transform.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 22 column 21\n  --> dbt_project.yml:22:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to eval the compiled Jinja expression invalid operation: 'env_var': environment variable 'DBT_SOURCE_SCHEMA' not found\n(in :1:2)\n  --> models/google_analytics_source.yml:6:13",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -55,6 +52,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

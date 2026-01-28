@@ -33,49 +33,42 @@
                     "body": "Failed to render SQL unknown function: In dispatch: No macro named 'generate_uuid' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__generate_uuid', 'tasman_dbt_mta.default__generate_uuid', 'tasman_dbt_mta.postgres__generate_uuid', 'tasman_dbt_mta.default__generate_uuid'\n(in models/tasman_mta__performance_history.sql:128:9)\n(in macros/generate_uuid.sql:2:29)\n  --> macros/generate_uuid.sql:2:29",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in target/generic_tests/in_past_tasman_mta__attributed_conversions_conversion_timestamp.sql:1:1)\n(in macros/test_in_past.sql:5:52)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in target/generic_tests/in_past_tasman_mta__attributed_conversions_touch_timestamp.sql:1:1)\n(in macros/test_in_past.sql:5:52)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in target/generic_tests/in_past_tasman_mta__attributed_touches_conversion_timestamp.sql:1:1)\n(in macros/test_in_past.sql:5:52)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in target/generic_tests/in_past_tasman_mta__attributed_touches_touch_timestamp.sql:1:1)\n(in macros/test_in_past.sql:5:52)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in target/generic_tests/in_past_tasman_mta__filtered_c_058b573257dc3e1df2f09a3cd91e8b9e.sql:1:1)\n(in macros/test_in_past.sql:5:52)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL unknown function: In dispatch: No macro named 'current_utc_time' found within namespace: 'tasman_dbt_mta'\n    Searched for: 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time', 'tasman_dbt_mta.postgres__current_utc_time', 'tasman_dbt_mta.default__current_utc_time'\n(in target/generic_tests/in_past_tasman_mta__filtered_touch_events_touch_timestamp.sql:1:1)\n(in macros/test_in_past.sql:5:52)\n(in macros/current_utc_time.sql:2:29)\n  --> macros/current_utc_time.sql:2:29",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -83,6 +76,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

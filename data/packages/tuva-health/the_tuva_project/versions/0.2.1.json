@@ -60,20 +60,18 @@
         "parse_compatibility_result": {
             "parse_exit_code": 1,
             "total_errors": 1,
-            "total_warnings": 1,
+            "total_warnings": 0,
             "errors": [
                 {
                     "body": "Failed to open tar file: No such file or directory (os error 2)",
                     "error_code": 1001,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to open tar file: No such file or directory (os error 2)",
                     "error_code": 1001,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -81,6 +79,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

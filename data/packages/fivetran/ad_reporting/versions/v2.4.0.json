@@ -96,5 +96,22 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_ad_reporting/tar.gz/v2.4.0",
         "format": "tgz",
         "sha1": "31e9c54d0b8ebbbb700c7e4b0b1b065850bdca1b"
+    },
+    "fusion_compatibility": {
+        "version": "2.4.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": true,
+        "parse_compatibility_result": {
+            "parse_exit_code": 0,
+            "total_errors": 0,
+            "total_warnings": 1,
+            "errors": [],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.101"
+        },
+        "manually_verified_compatible": true,
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

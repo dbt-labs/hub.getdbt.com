@@ -37,21 +37,18 @@
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/incremental/fct_dbt__run_results.sql:3:28)\n(in dbt_packages/dbt_utils/macros/sql/get_column_values.sql:14:22)\n  --> models/incremental/fct_dbt__run_results.sql:3:28",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/staging/stg_dbt__model_executions.sql:43:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/staging/stg_dbt__model_executions.sql:43:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/staging/stg_dbt__models.sql:38:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/staging/stg_dbt__models.sql:38:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -59,6 +56,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": true
+        "manually_verified_incompatible": true,
+        "download_failed": false
     }
 }
