@@ -34,16 +34,9 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 45,
+            "total_errors": 44,
             "total_warnings": 1,
             "errors": [
-                {
-                    "body": "Duplicate key `description`. This key overwrites a previous definition of the same key at line 160 column 9. YAML path: `models[0].columns[67].description`.\n  --> models/sessions/sessions.yml:161:9",
-                    "error_code": 1059,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/base/manifest/base_manifest.yml:41:9",
                     "error_code": 1060,
@@ -354,7 +347,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

@@ -29,66 +29,17 @@
     },
     "fusion_compatibility": {
         "version": "0.4.0",
-        "require_dbt_version_defined": false,
-        "require_dbt_version_compatible": null,
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
         "parse_compatible": false,
         "parse_compatibility_result": {
-            "parse_exit_code": 1,
-            "total_errors": 19,
+            "parse_exit_code": 2,
+            "total_errors": 0,
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/base/jobs_by_project_with_cost.yml:7:5",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/global/datamart/daily_spend.yml:7:5",
                     "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/jobs_by_project_with_cost.sql:6:1)\n(in macros/jobs_with_cost_base.sql:5:21)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/base/jobs_with_cost.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/jobs_with_cost.sql:6:1)\n(in macros/jobs_with_cost_base.sql:5:21)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/base/storage_with_cost.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/storage_with_cost.sql:8:21)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/table_and_storage_with_cost.sql:7:21)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL invalid operation: 'env_var': environment variable 'DBT_BQ_MONITORING_GCP_PROJECTS' not found\n(in models/base/tables.sql:8:21)\n(in macros/project_list.sql:2:1)\n  --> macros/project_list.sql:2:1",
-                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
@@ -99,80 +50,10 @@
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_expensive_jobs.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_expensive_models.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_expensive_users.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_repeated_jobs.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_repeated_models.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/slowest_jobs.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/global/datamart/daily_spend.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/storage/datamart/most_expensive_tables.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/storage/datamart/read_heavy_tables.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/storage/datamart/unused_tables.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

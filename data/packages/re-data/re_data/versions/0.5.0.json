@@ -38,22 +38,15 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "'data-paths' cannot be specified in dbt_project.yml",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "'data-paths' cannot be specified in dbt_project.yml",
-                    "error_code": 1005,
+                    "body": "Invalid model definition `re_data.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 53 column 14\n  --> dbt_project.yml:53:14",
+                    "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

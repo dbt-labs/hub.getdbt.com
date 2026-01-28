@@ -31,16 +31,9 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 4,
-            "total_warnings": 0,
+            "total_errors": 3,
+            "total_warnings": 1,
             "errors": [
-                {
-                    "body": "Invalid model definition `salesforce.base.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 10 column 27\n  --> dbt_project.yml:10:27",
-                    "error_code": 1013,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
                 {
                     "body": "Invalid model definition `salesforce.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 12 column 27\n  --> dbt_project.yml:12:27",
                     "error_code": 1013,
@@ -49,14 +42,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `salesforce.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 8 column 23\n  --> dbt_project.yml:8:23",
+                    "body": "Invalid model definition `salesforce.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 10 column 23\n  --> dbt_project.yml:10:23",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/base/stg_salesforce_opportunity.sql:22:67)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:3)\n  --> models/base/stg_salesforce_opportunity.sql:22:67",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/salesforce_source/models/stg_salesforce_opportunity.sql:22:67)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> dbt_packages/salesforce_source/models/stg_salesforce_opportunity.sql:22:67",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -64,7 +57,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

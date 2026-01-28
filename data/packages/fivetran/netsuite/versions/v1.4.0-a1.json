@@ -33,5 +33,21 @@
         "tarball": "https://codeload.github.com/fivetran/dbt_netsuite/tar.gz/v1.4.0-a1",
         "format": "tgz",
         "sha1": "1d656d3b141d9efa105043e68b6d5f75660707d5"
+    },
+    "fusion_compatibility": {
+        "version": "1.4.0-a1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": true,
+        "parse_compatibility_result": {
+            "parse_exit_code": 0,
+            "total_errors": 0,
+            "total_warnings": 0,
+            "errors": [],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.101"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false
     }
 }

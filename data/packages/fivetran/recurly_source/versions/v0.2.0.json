@@ -45,14 +45,14 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Invalid model definition `recurly_source.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 34 column 19\n  --> dbt_project.yml:34:19",
+                    "body": "Invalid model definition `recurly_source.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 31 column 19\n  --> dbt_project.yml:31:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `recurly_source.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 36 column 21\n  --> dbt_project.yml:36:21",
+                    "body": "Invalid model definition `recurly_source.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 33 column 21\n  --> dbt_project.yml:33:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -445,7 +445,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

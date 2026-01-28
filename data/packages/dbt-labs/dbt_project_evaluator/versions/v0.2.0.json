@@ -34,19 +34,68 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 1,
+            "total_errors": 8,
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Failed to add template invalid operation: return() is called in a non-block context\n(in dbt_project_evaluator.default__calculate_number_lines:11:12)\n  --> dbt_project_evaluator.default__calculate_number_lines:11:12",
+                    "body": "Failed to render SQL invalid operation: Compilation Error: \nWarning: `dbt_utils.surrogate_key` has been replaced by \n`dbt_utils.generate_surrogate_key`. The new macro treats null values \ndifferently to empty strings. To restore the behaviour of the original \nmacro, add a global variable in dbt_project.yml called \n`surrogate_key_treat_nulls_as_empty_strings` to your \ndbt_project.yml file with a value of True. \nThe dbt_project_evaluator.int_direct_relationships model triggered this warning. \n\n(in models/marts/core/int_direct_relationships.sql:68:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:3:31)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:18:18)\n  --> models/marts/core/int_direct_relationships.sql:68:9",
                     "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: \nWarning: `dbt_utils.surrogate_key` has been replaced by \n`dbt_utils.generate_surrogate_key`. The new macro treats null values \ndifferently to empty strings. To restore the behaviour of the original \nmacro, add a global variable in dbt_project.yml called \n`surrogate_key_treat_nulls_as_empty_strings` to your \ndbt_project.yml file with a value of True. \nThe dbt_project_evaluator.stg_exposure_relationships model triggered this warning. \n\n(in models/staging/graph/stg_exposure_relationships.sql:12:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:3:31)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:18:18)\n  --> models/staging/graph/stg_exposure_relationships.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: \nWarning: `dbt_utils.surrogate_key` has been replaced by \n`dbt_utils.generate_surrogate_key`. The new macro treats null values \ndifferently to empty strings. To restore the behaviour of the original \nmacro, add a global variable in dbt_project.yml called \n`surrogate_key_treat_nulls_as_empty_strings` to your \ndbt_project.yml file with a value of True. \nThe dbt_project_evaluator.stg_metric_relationships model triggered this warning. \n\n(in models/staging/graph/stg_metric_relationships.sql:12:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:3:31)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:18:18)\n  --> models/staging/graph/stg_metric_relationships.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: \nWarning: `dbt_utils.surrogate_key` has been replaced by \n`dbt_utils.generate_surrogate_key`. The new macro treats null values \ndifferently to empty strings. To restore the behaviour of the original \nmacro, add a global variable in dbt_project.yml called \n`surrogate_key_treat_nulls_as_empty_strings` to your \ndbt_project.yml file with a value of True. \nThe dbt_project_evaluator.stg_node_relationships model triggered this warning. \n\n(in models/staging/graph/stg_node_relationships.sql:12:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:3:31)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:18:18)\n  --> models/staging/graph/stg_node_relationships.sql:12:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: \nWarning: `dbt_utils.surrogate_key` has been replaced by \n`dbt_utils.generate_surrogate_key`. The new macro treats null values \ndifferently to empty strings. To restore the behaviour of the original \nmacro, add a global variable in dbt_project.yml called \n`surrogate_key_treat_nulls_as_empty_strings` to your \ndbt_project.yml file with a value of True. \nThe dbt_project_evaluator.stg_naming_convention_prefixes model triggered this warning. \n\n(in models/staging/variables/stg_naming_convention_prefixes.sql:27:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:3:31)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:18:18)\n  --> models/staging/variables/stg_naming_convention_prefixes.sql:27:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"severity\"] and arguments: [\"inclusive\", \"max_value\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/marts/performance/performance.yml:14:26",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"severity\"] and arguments: [\"min_value\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/marts/documentation/documentation.yml:13:26",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"severity\"] and arguments: [\"min_value\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/marts/tests/testing.yml:17:26",
+                    "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

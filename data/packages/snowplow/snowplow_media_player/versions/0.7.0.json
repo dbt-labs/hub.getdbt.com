@@ -34,33 +34,26 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 36,
-            "total_warnings": 4,
+            "total_errors": 29,
+            "total_warnings": 2,
             "errors": [
                 {
-                    "body": "Invalid model definition `snowplow_media_player.base.manifest.databricks`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:110:21",
+                    "body": "Invalid model definition `snowplow_media_player.base.scratch.databricks`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:124:21",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_media_player.base.manifest.default`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:112:21",
+                    "body": "Invalid model definition `snowplow_media_player.base.scratch.default`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:126:21",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_media_player.base.scratch.databricks`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:121:21",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Invalid model definition `snowplow_media_player.base.scratch.default`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:123:21",
-                    "error_code": 1501,
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/base/manifest/base_manifest.yml:41:9",
+                    "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
@@ -73,63 +66,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/base/manifest/bigquery/snowplow_media_player_base_sessions_lifecycle_manifest.sql:1:1",
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/base/manifest/snowplow_media_player_base_sessions_lifecycle_manifest.sql:1:1",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/base/manifest/bigquery/snowplow_media_player_base_sessions_lifecycle_manifest.sql:1:1",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/base/manifest/databricks/snowplow_media_player_base_sessions_lifecycle_manifest.sql:1:1",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/base/manifest/databricks/snowplow_media_player_base_sessions_lifecycle_manifest.sql:1:1",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/base/manifest/default/snowplow_media_player_base_sessions_lifecycle_manifest.sql:1:1",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/base/manifest/default/snowplow_media_player_base_sessions_lifecycle_manifest.sql:1:1",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/base/manifest/snowflake/snowplow_media_player_base_sessions_lifecycle_manifest.sql:1:1",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/base/manifest/snowflake/snowplow_media_player_base_sessions_lifecycle_manifest.sql:1:1",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/base/manifest/base_manifest.yml:41:9",
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/base/manifest/snowplow_media_player_base_sessions_lifecycle_manifest.sql:1:1",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -157,7 +101,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/base/scratch/base_scratch.yml:152:9",
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/base/scratch/base_scratch.yml:156:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -178,14 +122,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"+tags\"`. YAML path: `+tags`.\n  --> models/custom/snowplow_media_player_custom.yml:48:5",
+                    "body": "While parsing config: Ignored unexpected key `\"+tags\"`. YAML path: `+tags`.\n  --> models/custom/snowplow_media_player_custom.yml:49:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/custom/snowplow_media_player_custom.yml:53:9",
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/custom/snowplow_media_player_custom.yml:54:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/media_ad_views/scratch/base_scratch.yml:9:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -193,6 +144,13 @@
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"+tags\"`. YAML path: `+tags`.\n  --> models/media_ad_views/media_ad_views.yml:5:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/media_ad_views/media_ad_views.yml:10:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -276,22 +234,15 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Found duplicate model 'snowplow_media_player_base_sessions_lifecycle_manifest'\n  --> models/base/manifest/default/snowplow_media_player_base_sessions_lifecycle_manifest.sql",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Found duplicate model 'snowplow_media_player_base_events_this_run'\n  --> models/base/scratch/default/snowplow_media_player_base_events_this_run.sql",
-                    "error_code": 1005,
+                    "body": "Deprecated test arguments: [\"expression\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/base/scratch/base_scratch.yml:59:27",
+                    "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

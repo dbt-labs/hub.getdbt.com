@@ -27,11 +27,11 @@
     "fusion_compatibility": {
         "version": "0.4.0",
         "require_dbt_version_defined": true,
-        "require_dbt_version_compatible": false,
+        "require_dbt_version_compatible": true,
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 47,
+            "total_errors": 39,
             "total_warnings": 1,
             "errors": [
                 {
@@ -203,56 +203,49 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/fivetran_log__audit_table.sql:5:9)\n(in dbt_packages/fivetran_utils/macros/json_extract.sql:3:11)\n  --> models/fivetran_log__audit_table.sql:5:9",
-                    "error_code": 1501,
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/fivetran_log.yml:251:13",
+                    "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/fivetran_log__connector_daily_events.sql:14:15)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/fivetran_log__connector_daily_events.sql:14:15",
-                    "error_code": 1501,
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/fivetran_log.yml:209:13",
+                    "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/fivetran_log__connector_status.sql:22:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/fivetran_log__connector_status.sql:22:54",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/fivetran_log__mar_table_history.sql:5:9)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/fivetran_log__mar_table_history.sql:5:9",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/fivetran_log__schema_changelog.sql:38:49)\n(in dbt_packages/fivetran_utils/macros/json_extract.sql:3:11)\n  --> models/fivetran_log__schema_changelog.sql:38:49",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/fivetran_log__transformation_status.sql:20:9)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/fivetran_log__transformation_status.sql:20:9",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/staging/stg_fivetran_log__connector.sql:13:33)\n(in macros/get_brand_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_brand_columns.sql:5:55",
-                    "error_code": 1501,
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/fivetran_log.yml:13:13",
+                    "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/fivetran_log.yml:118:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/fivetran_log.yml:71:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/fivetran_log.yml:289:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/fivetran_log.yml:153:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -267,6 +260,13 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/stg_fivetran_log.yml:11:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/stg_fivetran_log.yml:38:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -306,66 +306,10 @@
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__18f81c7e4d5eeb5f589274654a317572.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__18f81c7e4d5eeb5f589274654a317572.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__e91e0c0426c9d0ced8b896698bafb4ba.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__e91e0c0426c9d0ced8b896698bafb4ba.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__f4f2983afa66eb708b2ea118b5c2e3bd.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__f4f2983afa66eb708b2ea118b5c2e3bd.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__425256f0433e13f6bdbe85603f9d2b20.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__425256f0433e13f6bdbe85603f9d2b20.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__7e69d0b4ca5bab4be82764ed4339fd2a.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__7e69d0b4ca5bab4be82764ed4339fd2a.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__124db0b56a6fac04fff9f44f342dcecf.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__124db0b56a6fac04fff9f44f342dcecf.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__14182e86a24ba3099462265b4c54a3d1.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__14182e86a24ba3099462265b4c54a3d1.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__2d5ab8b7de528e29615ca829f3b78e6e.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__2d5ab8b7de528e29615ca829f3b78e6e.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

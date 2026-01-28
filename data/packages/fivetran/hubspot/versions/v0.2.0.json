@@ -34,33 +34,47 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 3,
-            "total_warnings": 1,
+            "total_errors": 5,
+            "total_warnings": 4,
             "errors": [
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/sales/history/history.yml:10:13",
-                    "error_code": 102,
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__owner.sql:20:15)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/concat.sql:4:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__owner.sql:20:15",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/marketing/history/history.yml:10:13",
-                    "error_code": 102,
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/marketing/history/hubspot__contact_history.sql:22:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/marketing/history/hubspot__contact_history.sql:22:9",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/sales/history/history.yml:49:13",
-                    "error_code": 102,
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sales/history/hubspot__company_history.sql:24:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/sales/history/hubspot__company_history.sql:24:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sales/history/hubspot__deal_history.sql:24:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/sales/history/hubspot__deal_history.sql:24:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/sales/hubspot__engagements.sql:19:9)\n(in dbt_packages/fivetran_utils/macros/array_agg.sql:3:11)\n  --> models/sales/hubspot__engagements.sql:19:9",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

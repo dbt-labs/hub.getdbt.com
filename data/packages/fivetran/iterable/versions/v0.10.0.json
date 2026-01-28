@@ -34,166 +34,40 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 22,
-            "total_warnings": 2,
+            "total_errors": 4,
+            "total_warnings": 1,
             "errors": [
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__campaign_history.sql:21:33)\n(in dbt_packages/iterable_source/macros/get_campaign_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__campaign_history.sql:21:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__campaign_label_history.sql:22:33)\n(in dbt_packages/iterable_source/macros/get_campaign_label_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__campaign_label_history.sql:22:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__campaign_list_history.sql:21:33)\n(in dbt_packages/iterable_source/macros/get_campaign_list_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__campaign_list_history.sql:21:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__campaign_suppression_list_history.sql:21:33)\n(in dbt_packages/iterable_source/macros/get_campaign_suppression_list_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__campaign_suppression_list_history.sql:21:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__channel.sql:22:33)\n(in dbt_packages/iterable_source/macros/get_channel_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__channel.sql:22:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__event.sql:22:33)\n(in dbt_packages/iterable_source/macros/get_event_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__event.sql:22:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__event_extension.sql:24:33)\n(in dbt_packages/iterable_source/macros/get_event_extension_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__event_extension.sql:24:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__list.sql:16:33)\n(in dbt_packages/iterable_source/macros/get_list_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__list.sql:16:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__message_type.sql:22:33)\n(in dbt_packages/iterable_source/macros/get_message_type_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__message_type.sql:22:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__template_history.sql:15:33)\n(in dbt_packages/iterable_source/macros/get_template_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__template_history.sql:15:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__user_history.sql:21:33)\n(in dbt_packages/iterable_source/macros/get_user_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__user_history.sql:21:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__user_unsub_message_type_history.sql:22:33)\n(in dbt_packages/iterable_source/macros/get_user_unsubscribed_message_type_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__user_unsub_message_type_history.sql:22:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/iterable_source/models/stg_iterable__user_unsubscribed_channel_history.sql:19:33)\n(in dbt_packages/iterable_source/macros/get_user_unsubscribed_channel_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/iterable_source/models/stg_iterable__user_unsubscribed_channel_history.sql:19:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_iterable__campaign_labels.sql:26:9)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intermediate/int_iterable__campaign_labels.sql:26:9",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_iterable__list_user_unnest.sql:77:31)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/intermediate/int_iterable__list_user_unnest.sql:77:31",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/iterable__campaigns.sql:43:9)\n(in dbt_packages/dbt_utils/macros/sql/star.sql:2:22)\n  --> models/iterable__campaigns.sql:43:9",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/iterable__events.sql:68:9)\n(in dbt_packages/dbt_utils/macros/sql/star.sql:2:22)\n  --> models/iterable__events.sql:68:9",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/iterable__user_campaign.sql:36:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> models/iterable__user_campaign.sql:36:5",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/iterable__user_unsubscriptions.sql:30:22)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/iterable__user_unsubscriptions.sql:30:22",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/iterable__users.sql:39:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> models/iterable__users.sql:39:5",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/iterable.yml:296:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/iterable.yml:10:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__ab92bcc4ef27f7d64d2de97fdef39bbd.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__ab92bcc4ef27f7d64d2de97fdef39bbd.sql:1:1",
-                    "error_code": 1501,
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/iterable.yml:297:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/iterable.yml:331:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/iterable.yml:405:13",
+                    "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

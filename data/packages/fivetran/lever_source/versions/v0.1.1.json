@@ -42,14 +42,14 @@
             "total_warnings": 1,
             "errors": [
                 {
-                    "body": "Invalid model definition `lever_source.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 43 column 19\n  --> dbt_project.yml:43:19",
+                    "body": "Invalid model definition `lever_source.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 46 column 19\n  --> dbt_project.yml:46:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `lever_source.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 42 column 21\n  --> dbt_project.yml:42:21",
+                    "body": "Invalid model definition `lever_source.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 45 column 21\n  --> dbt_project.yml:45:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -511,7 +511,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_lever__posting_tag.sql:15:33)\n(in macros/get_posting_tag_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_posting_tag_columns.sql:5:55",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_lever__posting_tag.sql:16:33)\n(in macros/get_posting_tag_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_posting_tag_columns.sql:5:55",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -561,7 +561,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

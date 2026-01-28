@@ -83,109 +83,123 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 38,
-            "total_warnings": 6,
+            "total_errors": 40,
+            "total_warnings": 8,
             "errors": [
                 {
-                    "body": "Invalid model definition `facebook_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 41 column 14\n  --> dbt_project.yml:41:14",
+                    "body": "Invalid model definition `facebook_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 42 column 14\n  --> dbt_project.yml:42:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `facebook_ads_creative_history.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 45 column 14\n  --> dbt_project.yml:45:14",
+                    "body": "Invalid model definition `facebook_ads_creative_history.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 46 column 14\n  --> dbt_project.yml:46:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `facebook_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 43 column 14\n  --> dbt_project.yml:43:14",
+                    "body": "Invalid model definition `facebook_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 44 column 14\n  --> dbt_project.yml:44:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `google_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 48 column 14\n  --> dbt_project.yml:48:14",
+                    "body": "Invalid model definition `google_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 49 column 14\n  --> dbt_project.yml:49:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `google_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 50 column 14\n  --> dbt_project.yml:50:14",
+                    "body": "Invalid model definition `google_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 51 column 14\n  --> dbt_project.yml:51:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `linkedin.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 31 column 14\n  --> dbt_project.yml:31:14",
+                    "body": "Invalid model definition `linkedin.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 32 column 14\n  --> dbt_project.yml:32:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `linkedin_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 33 column 14\n  --> dbt_project.yml:33:14",
+                    "body": "Invalid model definition `linkedin_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 34 column 14\n  --> dbt_project.yml:34:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `microsoft_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 26 column 14\n  --> dbt_project.yml:26:14",
+                    "body": "Invalid model definition `microsoft_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 27 column 14\n  --> dbt_project.yml:27:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `microsoft_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 28 column 14\n  --> dbt_project.yml:28:14",
+                    "body": "Invalid model definition `microsoft_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 29 column 14\n  --> dbt_project.yml:29:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `pinterest.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 21 column 14\n  --> dbt_project.yml:21:14",
+                    "body": "Invalid model definition `pinterest.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 22 column 14\n  --> dbt_project.yml:22:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `pinterest_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 23 column 14\n  --> dbt_project.yml:23:14",
+                    "body": "Invalid model definition `pinterest_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 24 column 14\n  --> dbt_project.yml:24:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snapchat_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 53 column 14\n  --> dbt_project.yml:53:14",
+                    "body": "Invalid model definition `snapchat_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 54 column 14\n  --> dbt_project.yml:54:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snapchat_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 55 column 14\n  --> dbt_project.yml:55:14",
+                    "body": "Invalid model definition `snapchat_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 56 column 14\n  --> dbt_project.yml:56:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `twitter_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 36 column 14\n  --> dbt_project.yml:36:14",
+                    "body": "Invalid model definition `tiktok_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 59 column 14\n  --> dbt_project.yml:59:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `twitter_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 38 column 14\n  --> dbt_project.yml:38:14",
+                    "body": "Invalid model definition `tiktok_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 61 column 14\n  --> dbt_project.yml:61:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `twitter_ads.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 37 column 14\n  --> dbt_project.yml:37:14",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `twitter_ads_source.enabled`: invalid type: boolean `true`, expected struct ProjectModelConfig at line 39 column 14\n  --> dbt_project.yml:39:14",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -354,7 +368,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

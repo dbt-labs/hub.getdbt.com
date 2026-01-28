@@ -35,10 +35,10 @@
         "parse_compatibility_result": {
             "parse_exit_code": 1,
             "total_errors": 1,
-            "total_warnings": 4,
+            "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Failed to render SQL invalid operation: recursion limit exceeded\n(in models/stg_dbt_audit_log.sql:3:19)\n(in macros/audit.sql:25:33)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n  --> macros/audit.sql:5:40",
+                    "body": "Failed to render SQL invalid operation: recursion limit exceeded\n(in models/stg_dbt_audit_log.sql:3:19)\n(in macros/audit.sql:25:33)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n(in macros/audit.sql:5:40)\n  --> macros/audit.sql:5:40",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -46,7 +46,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": true

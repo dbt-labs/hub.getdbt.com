@@ -34,40 +34,47 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 32,
-            "total_warnings": 4,
+            "total_errors": 41,
+            "total_warnings": 6,
             "errors": [
                 {
-                    "body": "Invalid model definition `snowplow_ecommerce.base.scratch.databricks`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:93:21",
+                    "body": "Invalid model definition `snowplow_ecommerce.base.manifest.databricks`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:95:21",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_ecommerce.base.scratch.default`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:95:21",
+                    "body": "Invalid model definition `snowplow_ecommerce.base.manifest.default`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:97:21",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_ecommerce.products.scratch.databricks`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:119:21",
+                    "body": "Invalid model definition `snowplow_ecommerce.base.scratch.databricks`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:106:21",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_ecommerce.products.scratch.default`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:121:21",
+                    "body": "Invalid model definition `snowplow_ecommerce.base.scratch.default`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:108:21",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/base/manifest/base_manifest.yml:41:9",
-                    "error_code": 1060,
+                    "body": "Invalid model definition `snowplow_ecommerce.products.scratch.databricks`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:132:21",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Invalid model definition `snowplow_ecommerce.products.scratch.default`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:134:21",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
@@ -80,14 +87,63 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/base/manifest/snowplow_ecommerce_base_sessions_lifecycle_manifest.sql:1:1",
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/base/manifest/bigquery/snowplow_ecommerce_base_sessions_lifecycle_manifest.sql:1:1",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/base/manifest/snowplow_ecommerce_base_sessions_lifecycle_manifest.sql:1:1",
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/base/manifest/bigquery/snowplow_ecommerce_base_sessions_lifecycle_manifest.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/base/manifest/databricks/snowplow_ecommerce_base_sessions_lifecycle_manifest.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/base/manifest/databricks/snowplow_ecommerce_base_sessions_lifecycle_manifest.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/base/manifest/default/snowplow_ecommerce_base_sessions_lifecycle_manifest.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/base/manifest/default/snowplow_ecommerce_base_sessions_lifecycle_manifest.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/base/manifest/snowflake/snowplow_ecommerce_base_sessions_lifecycle_manifest.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/base/manifest/snowflake/snowplow_ecommerce_base_sessions_lifecycle_manifest.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/base/manifest/base_manifest.yml:41:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -255,6 +311,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "Found duplicate model 'snowplow_ecommerce_base_sessions_lifecycle_manifest'\n  --> models/base/manifest/default/snowplow_ecommerce_base_sessions_lifecycle_manifest.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "Found duplicate model 'snowplow_ecommerce_base_events_this_run'\n  --> models/base/scratch/default/snowplow_ecommerce_base_events_this_run.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
@@ -263,7 +326,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

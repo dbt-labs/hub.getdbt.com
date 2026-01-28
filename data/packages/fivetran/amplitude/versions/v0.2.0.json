@@ -34,8 +34,8 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 2,
-            "total_warnings": 1,
+            "total_errors": 1,
+            "total_warnings": 2,
             "errors": [
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/amplitude_models.yml:203:13",
@@ -43,17 +43,10 @@
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "YAML error: unknown variant `average`, expected one of `simple`, `ratio`, `cumulative`, `derived`, `conversion`\n  --> models/amplitude_metrics.yml:39:11",
-                    "error_code": 1013,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

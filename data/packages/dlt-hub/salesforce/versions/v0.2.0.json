@@ -30,14 +30,14 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Invalid model definition `salesforce_tst.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 23 column 19\n  --> dbt_project.yml:23:19",
+                    "body": "Invalid model definition `salesforce.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 23 column 19\n  --> dbt_project.yml:23:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `salesforce_tst.staging.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 25 column 21\n  --> dbt_project.yml:25:21",
+                    "body": "Invalid model definition `salesforce.staging.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 25 column 21\n  --> dbt_project.yml:25:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -52,7 +52,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

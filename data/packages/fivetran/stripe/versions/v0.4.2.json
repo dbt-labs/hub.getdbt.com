@@ -34,7 +34,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 19,
+            "total_errors": 20,
             "total_warnings": 2,
             "errors": [
                 {
@@ -143,7 +143,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stripe__customer_overview.sql:39:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/stripe__customer_overview.sql:39:55",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stripe__customer_overview.sql:39:88)\n(in macros/date_timezone.sql:3:11)\n  --> macros/date_timezone.sql:3:11",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stripe__daily_overview.sql:16:18)\n(in macros/date_timezone.sql:3:11)\n  --> macros/date_timezone.sql:3:11",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -172,7 +179,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

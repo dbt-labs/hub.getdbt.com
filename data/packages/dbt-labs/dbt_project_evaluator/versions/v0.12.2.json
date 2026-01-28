@@ -34,19 +34,33 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 1,
+            "total_errors": 3,
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Failed to add template invalid operation: return() is called in a non-block context\n(in dbt_project_evaluator.default__calculate_number_lines:11:12)\n  --> dbt_project_evaluator.default__calculate_number_lines:11:12",
-                    "error_code": 1501,
+                    "body": "Deprecated test configs: [\"severity\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/marts/performance/performance.yml:11:21",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"severity\"] and arguments: [\"min_value\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/marts/documentation/documentation.yml:14:26",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"severity\"] and arguments: [\"min_value\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/marts/tests/testing.yml:18:26",
+                    "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

@@ -56,7 +56,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/intercom_source/models/stg_intercom__company_history.sql:21:33)\n(in dbt_packages/intercom_source/macros/get_company_history_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/intercom_source/models/stg_intercom__company_history.sql:21:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/intercom_source/models/stg_intercom__company_history.sql:24:33)\n(in dbt_packages/intercom_source/macros/get_company_history_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/intercom_source/models/stg_intercom__company_history.sql:24:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -161,7 +161,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intercom__contact_enhanced.sql:35:5)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intercom__contact_enhanced.sql:35:5",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intercom__contact_enhanced.sql:36:5)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intercom__contact_enhanced.sql:36:5",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -182,7 +182,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_intercom__conversation_part_events.sql:36:67)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/intermediate/int_intercom__conversation_part_events.sql:36:67",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_intercom__conversation_part_events.sql:36:67)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> models/intermediate/int_intercom__conversation_part_events.sql:36:67",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -197,7 +197,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

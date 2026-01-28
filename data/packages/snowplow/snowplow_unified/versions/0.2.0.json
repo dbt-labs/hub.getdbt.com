@@ -34,7 +34,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 34,
+            "total_errors": 38,
             "total_warnings": 1,
             "errors": [
                 {
@@ -87,7 +87,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[7].tags`.\n  --> models/base/scratch/base_scratch.yml:455:9",
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[7].tags`.\n  --> models/base/scratch/base_scratch.yml:465:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -143,6 +143,34 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/optional_modules/conversions/conversions.yml:9:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/optional_modules/conversions/conversions.yml:49:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/optional_modules/conversions/snowplow_unified_conversions.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/optional_modules/conversions/snowplow_unified_conversions.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/optional_modules/core_web_vitals/snowplow_unified_web_vitals.sql:1:1",
                     "error_code": 1060,
                     "severity_text": "ERROR",
@@ -192,21 +220,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:140:9",
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:142:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:150:9",
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:152:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:160:9",
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:162:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -277,7 +305,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

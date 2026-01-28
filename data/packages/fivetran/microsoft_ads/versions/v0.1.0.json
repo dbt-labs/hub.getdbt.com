@@ -23,16 +23,52 @@
     },
     "fusion_compatibility": {
         "version": "0.1.0",
-        "require_dbt_version_defined": true,
-        "require_dbt_version_compatible": true,
-        "parse_compatible": true,
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
+        "parse_compatible": false,
         "parse_compatibility_result": {
-            "parse_exit_code": 0,
-            "total_errors": 0,
-            "total_warnings": 0,
-            "errors": [],
+            "parse_exit_code": 1,
+            "total_errors": 5,
+            "total_warnings": 1,
+            "errors": [
+                {
+                    "body": "Invalid model definition `microsoft_ads.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 9 column 19\n  --> dbt_project.yml:9:19",
+                    "error_code": 1013,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__account_history.sql:18:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:33:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__account_history.sql:18:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__ad_group_history.sql:19:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:33:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__ad_group_history.sql:19:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__ad_history.sql:19:9)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/split_part.sql:2:3)\n  --> dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__ad_history.sql:19:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__campaign_history.sql:19:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:33:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> dbt_packages/microsoft_ads_source/models/stg_microsoft_ads__campaign_history.sql:19:9",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                }
+            ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

@@ -28,8 +28,8 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 135,
-            "total_warnings": 7,
+            "total_errors": 132,
+            "total_warnings": 8,
             "errors": [
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_course_transcripts.yml:19:13",
@@ -54,13 +54,6 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_grades.yml:21:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/core_warehouse/fct_student_program_service.yml:20:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -704,13 +697,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'stg_ef3__stu_spec_ed__program_services' not found in project. Searched for 'edu_wh.stg_ef3__stu_spec_ed__program_services, stg_ef3__stu_spec_ed__program_services'\n  --> models/build/edfi_3/students/bld_ef3__stu_spec_ed__program_services.sql:2:19",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Ref 'xwalk_assessment_scores' not found in project. Searched for 'edu_wh.xwalk_assessment_scores, xwalk_assessment_scores'\n  --> models/build/edfi_3/assessments/bld_ef3__student_assessments_long_results.sql:5:19",
                     "error_code": 1005,
                     "severity_text": "ERROR",
@@ -935,13 +921,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'stg_ef3__stu_spec_ed__program_services' not found in project. Searched for 'edu_wh.stg_ef3__stu_spec_ed__program_services, stg_ef3__stu_spec_ed__program_services'\n  --> models/core_warehouse/fct_student_program_service.sql:12:19",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Ref 'xwalk_attendance_events' not found in project. Searched for 'edu_wh.xwalk_attendance_events, xwalk_attendance_events'\n  --> models/core_warehouse/fct_student_school_attendance_event.sql:51:19",
                     "error_code": 1005,
                     "severity_text": "ERROR",
@@ -978,7 +957,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

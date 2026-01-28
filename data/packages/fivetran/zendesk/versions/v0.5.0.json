@@ -34,7 +34,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 45,
+            "total_errors": 46,
             "total_warnings": 2,
             "errors": [
                 {
@@ -157,7 +157,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_zendesk__ticket_historical_assignee.sql:26:25)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datediff.sql:2:20)\n  --> models/intermediate/int_zendesk__ticket_historical_assignee.sql:26:25",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_zendesk__ticket_historical_assignee.sql:26:18)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datediff.sql:2:20)\n  --> models/intermediate/int_zendesk__ticket_historical_assignee.sql:26:18",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -311,7 +311,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/utils/int_zendesk__calendar_spine.sql:18:29)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/dateadd.sql:2:20)\n  --> models/utils/int_zendesk__calendar_spine.sql:18:29",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/ticket_history/int_zendesk__field_history_scd.sql:17:14)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/ticket_history/int_zendesk__field_history_scd.sql:17:14",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/utils/int_zendesk__calendar_spine.sql:27:29)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/dateadd.sql:2:20)\n  --> models/utils/int_zendesk__calendar_spine.sql:27:29",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -332,14 +339,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/zendesk__ticket_field_history.sql:102:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/zendesk__ticket_field_history.sql:102:9",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/zendesk__ticket_field_history.sql:90:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/zendesk__ticket_field_history.sql:90:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/zendesk__ticket_metrics.sql:92:91)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/zendesk__ticket_metrics.sql:92:91",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/zendesk__ticket_metrics.sql:92:86)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/zendesk__ticket_metrics.sql:92:86",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -354,7 +361,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

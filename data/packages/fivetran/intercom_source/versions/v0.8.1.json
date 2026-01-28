@@ -34,23 +34,9 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 43,
+            "total_errors": 41,
             "total_warnings": 0,
             "errors": [
-                {
-                    "body": "Invalid model definition `intercom_source.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 8 column 19\n  --> dbt_project.yml:8:19",
-                    "error_code": 1013,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Invalid model definition `intercom_source.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 10 column 21\n  --> dbt_project.yml:10:21",
-                    "error_code": 1013,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
                 {
                     "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/src_intercom.yml:8:5",
                     "error_code": 1060,
@@ -340,7 +326,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

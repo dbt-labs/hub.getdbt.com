@@ -46,7 +46,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "dbt found two resources with the database relation \"postgres\".\"public\".\"snowpipe__copy_history\". Nodes: model.dbt_snow_utils.pt_snowpipe__copy_history, model.dbt_snow_utils.mart_snowpipe__copy_history",
+                    "body": "dbt found two resources with the database relation \"postgres\".\"public\".\"snowflake__query_history\". Nodes: model.dbt_snow_utils.pt_snowflake__query_history, model.dbt_snow_utils.mart_snowflake__query_history",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -54,7 +54,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

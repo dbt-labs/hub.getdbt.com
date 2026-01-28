@@ -34,7 +34,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 7,
+            "total_errors": 6,
             "total_warnings": 1,
             "errors": [
                 {
@@ -78,17 +78,10 @@
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Attempted to use disabled source 'apple_search_ads_source.apple_search_ads.search_term_report'\n  --> models/tmp/stg_apple_search_ads__search_term_report_tmp.sql:1:1",
-                    "error_code": 1062,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

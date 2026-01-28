@@ -29,170 +29,16 @@
     "fusion_compatibility": {
         "version": "0.5.0",
         "require_dbt_version_defined": true,
-        "require_dbt_version_compatible": false,
+        "require_dbt_version_compatible": true,
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 31,
-            "total_warnings": 1,
+            "total_errors": 7,
+            "total_warnings": 2,
             "errors": [
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/stg_shopify__customer.sql:14:33)\n(in dbt_packages/shopify_source/macros/staging_columns.sql:80:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/shopify_source/models/stg_shopify__customer.sql:14:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/stg_shopify__order.sql:14:33)\n(in dbt_packages/shopify_source/macros/staging_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/shopify_source/models/stg_shopify__order.sql:14:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/stg_shopify__order_adjustment.sql:15:33)\n(in dbt_packages/shopify_source/macros/staging_columns.sql:275:42)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:57:20)\n  --> dbt_packages/shopify_source/models/stg_shopify__order_adjustment.sql:15:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/stg_shopify__order_line.sql:14:33)\n(in dbt_packages/shopify_source/macros/staging_columns.sql:122:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/shopify_source/models/stg_shopify__order_line.sql:14:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/stg_shopify__order_line_refund.sql:14:33)\n(in dbt_packages/shopify_source/macros/staging_columns.sql:104:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/shopify_source/models/stg_shopify__order_line_refund.sql:14:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/stg_shopify__product.sql:14:33)\n(in dbt_packages/shopify_source/macros/staging_columns.sql:158:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/shopify_source/models/stg_shopify__product.sql:14:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/stg_shopify__product_variant.sql:14:33)\n(in dbt_packages/shopify_source/macros/staging_columns.sql:177:41)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:57:20)\n  --> dbt_packages/shopify_source/models/stg_shopify__product_variant.sql:14:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/stg_shopify__refund.sql:15:33)\n(in dbt_packages/shopify_source/macros/staging_columns.sql:258:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/shopify_source/models/stg_shopify__refund.sql:15:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/stg_shopify__transaction.sql:14:33)\n(in dbt_packages/shopify_source/macros/staging_columns.sql:213:41)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:57:20)\n  --> dbt_packages/shopify_source/models/stg_shopify__transaction.sql:14:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/tmp/stg_shopify__customer_tmp.sql:1:1)\n(in dbt_packages/fivetran_utils/macros/union_data.sql:3:11)\n  --> dbt_packages/shopify_source/models/tmp/stg_shopify__customer_tmp.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/tmp/stg_shopify__order_adjustment_tmp.sql:1:1)\n(in dbt_packages/fivetran_utils/macros/union_data.sql:3:11)\n  --> dbt_packages/shopify_source/models/tmp/stg_shopify__order_adjustment_tmp.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/tmp/stg_shopify__order_line_refund_tmp.sql:1:1)\n(in dbt_packages/fivetran_utils/macros/union_data.sql:3:11)\n  --> dbt_packages/shopify_source/models/tmp/stg_shopify__order_line_refund_tmp.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/tmp/stg_shopify__order_line_tmp.sql:1:1)\n(in dbt_packages/fivetran_utils/macros/union_data.sql:3:11)\n  --> dbt_packages/shopify_source/models/tmp/stg_shopify__order_line_tmp.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/tmp/stg_shopify__order_tmp.sql:1:1)\n(in dbt_packages/fivetran_utils/macros/union_data.sql:3:11)\n  --> dbt_packages/shopify_source/models/tmp/stg_shopify__order_tmp.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/tmp/stg_shopify__product_tmp.sql:1:1)\n(in dbt_packages/fivetran_utils/macros/union_data.sql:3:11)\n  --> dbt_packages/shopify_source/models/tmp/stg_shopify__product_tmp.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/tmp/stg_shopify__product_variant_tmp.sql:1:1)\n(in dbt_packages/fivetran_utils/macros/union_data.sql:3:11)\n  --> dbt_packages/shopify_source/models/tmp/stg_shopify__product_variant_tmp.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/tmp/stg_shopify__refund_tmp.sql:1:1)\n(in dbt_packages/fivetran_utils/macros/union_data.sql:3:11)\n  --> dbt_packages/shopify_source/models/tmp/stg_shopify__refund_tmp.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/shopify_source/models/tmp/stg_shopify__transaction_tmp.sql:1:1)\n(in dbt_packages/fivetran_utils/macros/union_data.sql:3:11)\n  --> dbt_packages/shopify_source/models/tmp/stg_shopify__transaction_tmp.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/shopify__customer_cohorts.sql:5:16)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/shopify__customer_cohorts.sql:5:16",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/shopify__customers.sql:4:9)\n(in dbt_packages/dbt_utils/macros/sql/star.sql:2:22)\n  --> models/shopify__customers.sql:4:9",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/shopify__orders.sql:43:23)\n(in dbt_packages/fivetran_utils/macros/json_parse.sql:3:11)\n  --> models/shopify__orders.sql:43:23",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/shopify__transactions.sql:9:30)\n(in dbt_packages/fivetran_utils/macros/json_parse.sql:3:11)\n  --> models/shopify__transactions.sql:9:30",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/utils/shopify__calendar.sql:1:1)\n(in dbt_packages/dbt_utils/macros/sql/date_spine.sql:27:22)\n  --> models/utils/shopify__calendar.sql:1:1",
-                    "error_code": 1501,
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/shopify.yml:210:13",
+                    "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
@@ -206,6 +52,13 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/shopify.yml:302:13",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/shopify.yml:40:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -226,36 +79,15 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__4d1af0d9338b2b5b246e23c580e294e3.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__4d1af0d9338b2b5b246e23c580e294e3.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__0bd7a3e6d2ce7dc1c5c09d9f9d5f6b40.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__0bd7a3e6d2ce7dc1c5c09d9f9d5f6b40.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__3ae1e43ee344b59ccef000bf524f1f04.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__3ae1e43ee344b59ccef000bf524f1f04.sql:1:1",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__64adf669e5f645d81dbdf6d5d3a930fa.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__64adf669e5f645d81dbdf6d5d3a930fa.sql:1:1",
-                    "error_code": 1501,
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/shopify.yml:403:13",
+                    "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

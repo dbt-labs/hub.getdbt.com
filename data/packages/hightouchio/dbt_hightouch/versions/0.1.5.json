@@ -30,22 +30,14 @@
         "version": "0.1.5",
         "require_dbt_version_defined": true,
         "require_dbt_version_compatible": false,
-        "parse_compatible": false,
+        "parse_compatible": true,
         "parse_compatibility_result": {
-            "parse_exit_code": 1,
-            "total_errors": 1,
+            "parse_exit_code": 0,
+            "total_errors": 0,
             "total_warnings": 0,
-            "errors": [
-                {
-                    "body": "Failed to render SQL unknown function: Jinja macro or function `datediff` is unknown\n(in models/staging/stg_hightouch_audit__sync_runs.sql:17:5)\n  --> models/staging/stg_hightouch_audit__sync_runs.sql:17:5",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                }
-            ],
+            "errors": [],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

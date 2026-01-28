@@ -29,8 +29,8 @@
     },
     "fusion_compatibility": {
         "version": "0.2.0",
-        "require_dbt_version_defined": false,
-        "require_dbt_version_compatible": null,
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 2,
@@ -38,7 +38,7 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Invalid model definition `snowplow_normalize.base.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 66 column 20\n  --> dbt_project.yml:66:20",
+                    "body": "Invalid model definition `snowplow_normalize.base.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 68 column 20\n  --> dbt_project.yml:68:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -52,7 +52,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_normalize.base.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 70 column 20\n  --> dbt_project.yml:70:20",
+                    "body": "Invalid model definition `snowplow_normalize.base.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 72 column 20\n  --> dbt_project.yml:72:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -60,7 +60,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

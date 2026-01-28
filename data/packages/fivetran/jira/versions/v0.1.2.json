@@ -35,22 +35,15 @@
             "total_warnings": 2,
             "errors": [
                 {
-                    "body": "Invalid model definition `jira.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 30 column 21\n  --> dbt_project.yml:30:21",
+                    "body": "Invalid model definition `jira.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 31 column 21\n  --> dbt_project.yml:31:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `jira.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 28 column 19\n  --> dbt_project.yml:28:19",
+                    "body": "Invalid model definition `jira.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 29 column 19\n  --> dbt_project.yml:29:19",
                     "error_code": 1013,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/jira_source/models/stg_jira__board.sql:15:33)\n(in dbt_packages/jira_source/macros/get_board_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/jira_source/models/stg_jira__board.sql:15:33",
-                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
@@ -133,7 +126,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/jira_source/models/stg_jira__sprint.sql:14:33)\n(in dbt_packages/jira_source/macros/get_sprint_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/jira_source/models/stg_jira__sprint.sql:14:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/jira_source/models/stg_jira__sprint.sql:16:33)\n(in dbt_packages/jira_source/macros/get_sprint_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/jira_source/models/stg_jira__sprint.sql:16:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -189,7 +182,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_jira__issue_comments.sql:21:5)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intermediate/int_jira__issue_comments.sql:21:5",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_jira__issue_comments.sql:23:5)\n(in dbt_packages/fivetran_utils/macros/string_agg.sql:4:11)\n  --> models/intermediate/int_jira__issue_comments.sql:23:5",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -203,7 +196,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_jira__issue_sprint.sql:64:71)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> models/intermediate/int_jira__issue_sprint.sql:64:71",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_jira__issue_join.sql:75:52)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/intermediate/int_jira__issue_join.sql:75:52",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_jira__issue_sprint.sql:66:71)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> models/intermediate/int_jira__issue_sprint.sql:66:71",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -259,28 +259,28 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/intermediate/int_jira.yml:540:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/intermediate/int_jira.yml:548:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/intermediate/int_jira.yml:562:13",
+                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/intermediate/int_jira.yml:570:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__6a26d6675a6f68d7ad230e5b0d114426.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__6a26d6675a6f68d7ad230e5b0d114426.sql:1:1",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/dbt_utils_unique_combination_o_6a26d6675a6f68d7ad230e5b0d114426.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/dbt_utils_unique_combination_o_6a26d6675a6f68d7ad230e5b0d114426.sql:1:1",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/unique_combination_of_columns__3302141fdcb5257bdeed7d73028a6b10.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/unique_combination_of_columns__3302141fdcb5257bdeed7d73028a6b10.sql:1:1",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/dbt_utils_unique_combination_o_3302141fdcb5257bdeed7d73028a6b10.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/dbt_utils_unique_combination_o_3302141fdcb5257bdeed7d73028a6b10.sql:1:1",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -288,7 +288,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false

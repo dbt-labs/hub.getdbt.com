@@ -30,11 +30,60 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 220,
+            "total_errors": 216,
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/encounter_grouper/encounter_grouper_models.yml:24:9",
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/acute_inpatient/acute_inpatient_models.yml:24:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[4].meta`.\n  --> models/core/core_models.yml:326:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[7].meta`.\n  --> models/acute_inpatient/acute_inpatient_models.yml:36:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/acute_inpatient/acute_inpatient_models.yml:46:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/core/core_models.yml:330:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[12].meta`.\n  --> models/acute_inpatient/acute_inpatient_models.yml:50:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[7].meta`.\n  --> models/core/core_models.yml:336:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[13].meta`.\n  --> models/acute_inpatient/acute_inpatient_models.yml:54:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -42,55 +91,6 @@
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[0].meta`.\n  --> models/core/core_models.yml:469:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[7].meta`.\n  --> models/encounter_grouper/encounter_grouper_models.yml:36:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/encounter_grouper/encounter_grouper_models.yml:46:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[12].meta`.\n  --> models/encounter_grouper/encounter_grouper_models.yml:50:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[13].meta`.\n  --> models/encounter_grouper/encounter_grouper_models.yml:54:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/core/core_models.yml:285:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/core/core_models.yml:289:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[9].meta`.\n  --> models/core/core_models.yml:298:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -112,6 +112,125 @@
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/chronic_conditions/cms_chronic_conditions_models.yml:373:11",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[4].meta`.\n  --> models/readmissions/readmissions_models.yml:25:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/readmissions/readmissions_models.yml:29:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/readmissions/readmissions_models.yml:33:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/readmissions/readmissions_models.yml:48:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/chronic_conditions/tuva_chronic_conditions_models.yml:28:11",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/chronic_conditions/tuva_chronic_conditions_models.yml:32:11",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[4].meta`.\n  --> models/readmissions/readmissions_models.yml:116:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/readmissions/readmissions_models.yml:120:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/readmissions/readmissions_models.yml:124:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/readmissions/readmissions_models.yml:139:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[22].meta`.\n  --> models/readmissions/readmissions_models.yml:168:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[23].meta`.\n  --> models/readmissions/readmissions_models.yml:172:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[24].meta`.\n  --> models/readmissions/readmissions_models.yml:176:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[28].meta`.\n  --> models/readmissions/readmissions_models.yml:189:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/core/core_models.yml:285:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/core/core_models.yml:289:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[9].meta`.\n  --> models/core/core_models.yml:298:9",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -230,21 +349,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[1].meta`.\n  --> models/chronic_conditions/tuva_chronic_conditions_models.yml:28:11",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[12].meta`.\n  --> models/core/core_models.yml:49:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[2].meta`.\n  --> models/chronic_conditions/tuva_chronic_conditions_models.yml:32:11",
                     "error_code": 1060,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -398,111 +503,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[4].meta`.\n  --> models/core/core_models.yml:326:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/core/core_models.yml:330:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[7].meta`.\n  --> models/core/core_models.yml:336:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[4].meta`.\n  --> models/readmissions/readmissions_models.yml:25:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/readmissions/readmissions_models.yml:29:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/readmissions/readmissions_models.yml:33:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/readmissions/readmissions_models.yml:48:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[4].meta`.\n  --> models/readmissions/readmissions_models.yml:116:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[5].meta`.\n  --> models/readmissions/readmissions_models.yml:120:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[6].meta`.\n  --> models/readmissions/readmissions_models.yml:124:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[11].meta`.\n  --> models/readmissions/readmissions_models.yml:139:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[22].meta`.\n  --> models/readmissions/readmissions_models.yml:168:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[23].meta`.\n  --> models/readmissions/readmissions_models.yml:172:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[24].meta`.\n  --> models/readmissions/readmissions_models.yml:176:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `columns[28].meta`.\n  --> models/readmissions/readmissions_models.yml:189:9",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Deprecated test arguments: [\"values\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/chronic_conditions/cms_chronic_conditions_models.yml:475:25",
                     "error_code": 102,
                     "severity_text": "ERROR",
@@ -517,112 +517,133 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/claims_date_profiling/final/claims_date_profiling__claims_without_enrollment.sql:9:6",
+                    "body": "Ref 'eligibility' not found in project. Searched for 'the_tuva_project.eligibility, eligibility'\n  --> models/acute_inpatient/staging/acute_inpatient__stg_eligibility.sql:11:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'eligibility' not found in project. Searched for 'the_tuva_project.eligibility, eligibility'\n  --> models/claims_date_profiling/final/claims_date_profiling__claims_without_enrollment.sql:10:11",
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/acute_inpatient/staging/acute_inpatient__stg_medical_claim.sql:25:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'pharmacy_claim' not found in project. Searched for 'the_tuva_project.pharmacy_claim, pharmacy_claim'\n  --> models/claims_date_profiling/final/claims_date_profiling__claims_without_enrollment.sql:19:6",
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/acute_inpatient/final/acute_inpatient__summary.sql:30:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'eligibility' not found in project. Searched for 'the_tuva_project.eligibility, eligibility'\n  --> models/claims_date_profiling/final/claims_date_profiling__claims_without_enrollment.sql:20:11",
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/data_profiling/date_profiling/final/claims_date_profiling__claims_without_enrollment.sql:9:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/claims_date_profiling/final/claims_date_profiling__date_issues.sql:9:6",
+                    "body": "Ref 'eligibility' not found in project. Searched for 'the_tuva_project.eligibility, eligibility'\n  --> models/data_profiling/date_profiling/final/claims_date_profiling__claims_without_enrollment.sql:10:11",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/claims_date_profiling/final/claims_date_profiling__date_issues.sql:17:6",
+                    "body": "Ref 'pharmacy_claim' not found in project. Searched for 'the_tuva_project.pharmacy_claim, pharmacy_claim'\n  --> models/data_profiling/date_profiling/final/claims_date_profiling__claims_without_enrollment.sql:19:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'eligibility' not found in project. Searched for 'the_tuva_project.eligibility, eligibility'\n  --> models/claims_date_profiling/final/claims_date_profiling__date_issues.sql:25:6",
+                    "body": "Ref 'eligibility' not found in project. Searched for 'the_tuva_project.eligibility, eligibility'\n  --> models/data_profiling/date_profiling/final/claims_date_profiling__claims_without_enrollment.sql:20:11",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/claims_date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:8:6",
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/data_profiling/date_profiling/final/claims_date_profiling__date_issues.sql:9:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/claims_date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:15:6",
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/data_profiling/date_profiling/final/claims_date_profiling__date_issues.sql:17:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/claims_date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:22:6",
+                    "body": "Ref 'eligibility' not found in project. Searched for 'the_tuva_project.eligibility, eligibility'\n  --> models/data_profiling/date_profiling/final/claims_date_profiling__date_issues.sql:25:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/claims_date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:29:6",
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/data_profiling/date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:8:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/claims_date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:36:6",
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/data_profiling/date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:15:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'pharmacy_claim' not found in project. Searched for 'the_tuva_project.pharmacy_claim, pharmacy_claim'\n  --> models/claims_date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:43:6",
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/data_profiling/date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:22:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/claims_date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:50:6",
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/data_profiling/date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:29:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/claims_date_profiling/intermediate/claims_date_profiling__medical_claim_dates.sql:14:6",
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/data_profiling/date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:36:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'pharmacy_claim' not found in project. Searched for 'the_tuva_project.pharmacy_claim, pharmacy_claim'\n  --> models/claims_date_profiling/intermediate/claims_date_profiling__pharmacy_claim_dates.sql:11:6",
+                    "body": "Ref 'pharmacy_claim' not found in project. Searched for 'the_tuva_project.pharmacy_claim, pharmacy_claim'\n  --> models/data_profiling/date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:43:6",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/data_profiling/date_profiling/intermediate/claims_date_profiling__duplicate_dates.sql:50:6",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/data_profiling/date_profiling/intermediate/claims_date_profiling__medical_claim_dates.sql:14:6",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'pharmacy_claim' not found in project. Searched for 'the_tuva_project.pharmacy_claim, pharmacy_claim'\n  --> models/data_profiling/date_profiling/intermediate/claims_date_profiling__pharmacy_claim_dates.sql:11:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -825,7 +846,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/core/final/core__medical_claim.sql:60:6",
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/core/final/core__medical_claim.sql:53:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1497,55 +1518,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/encounter_grouper/intermediate/encounter_grouper__acute_inpatient_institutional_claims.sql:20:6",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/encounter_grouper/intermediate/encounter_grouper__acute_inpatient_institutional_claims.sql:39:6",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/encounter_grouper/intermediate/encounter_grouper__acute_inpatient_institutional_claims.sql:51:6",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/encounter_grouper/intermediate/encounter_grouper__acute_inpatient_institutional_claims.sql:71:6",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/encounter_grouper/intermediate/encounter_grouper__acute_inpatient_professional_encounter_id.sql:35:6",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/encounter_grouper/intermediate/encounter_grouper__acute_inpatient_professional_encounter_id.sql:55:6",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/encounter_grouper/final/encounter_grouper__encounter_grouper.sql:41:6",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Ref 'eligibility' not found in project. Searched for 'the_tuva_project.eligibility, eligibility'\n  --> models/member_months/staging/member_months__stg_eligibility.sql:11:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
@@ -1567,7 +1539,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/service_category_grouper/staging/service_category__stg_medical_claim.sql:16:6",
+                    "body": "Ref 'medical_claim' not found in project. Searched for 'the_tuva_project.medical_claim, medical_claim'\n  --> models/service_category/staging/service_category__stg_medical_claim.sql:16:6",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -1575,7 +1547,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

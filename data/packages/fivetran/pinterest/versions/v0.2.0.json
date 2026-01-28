@@ -34,68 +34,61 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 8,
+            "total_errors": 7,
             "total_warnings": 1,
             "errors": [
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/pinterest.yml:95:13",
-                    "error_code": 102,
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/pinterest_source/models/stg_pinterest_ads__ad_group_history.sql:12:33)\n(in dbt_packages/pinterest_source/macros/get_ad_group_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/pinterest_source/models/stg_pinterest_ads__ad_group_history.sql:12:33",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/pinterest.yml:190:13",
-                    "error_code": 102,
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/pinterest_source/models/stg_pinterest_ads__campaign_history.sql:12:33)\n(in dbt_packages/pinterest_source/macros/get_campaign_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/pinterest_source/models/stg_pinterest_ads__campaign_history.sql:12:33",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/pinterest.yml:345:13",
-                    "error_code": 102,
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/pinterest_source/models/stg_pinterest_ads__pin_promotion_history.sql:13:33)\n(in dbt_packages/pinterest_source/macros/get_pin_promotion_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/pinterest_source/models/stg_pinterest_ads__pin_promotion_history.sql:13:33",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/pinterest.yml:409:13",
-                    "error_code": 102,
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/pinterest_source/models/stg_pinterest_ads__pin_promotion_report.sql:12:33)\n(in dbt_packages/pinterest_source/macros/get_pin_promotion_report_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/pinterest_source/models/stg_pinterest_ads__pin_promotion_report.sql:12:33",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/pinterest.yml:149:13",
-                    "error_code": 102,
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/pinterest_ads__ad_adapter.sql:52:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/pinterest_ads__ad_adapter.sql:52:9",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/pinterest.yml:228:13",
-                    "error_code": 102,
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/pinterest_ads__ad_group_ad_report.sql:18:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> models/pinterest_ads__ad_group_ad_report.sql:18:5",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/pinterest.yml:281:13",
-                    "error_code": 102,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/pinterest.yml:9:13",
-                    "error_code": 102,
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/pinterest_ads__campaign_ad_report.sql:16:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> models/pinterest_ads__campaign_ad_report.sql:16:5",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false

@@ -34,25 +34,11 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 47,
+            "total_errors": 55,
             "total_warnings": 2,
             "errors": [
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__bundle.sql:23:33)\n(in dbt_packages/quickbooks_source/macros/get_bundle_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__bundle.sql:23:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__item.sql:21:33)\n(in dbt_packages/quickbooks_source/macros/get_item_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__item.sql:21:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__account.sql:19:33)\n(in dbt_packages/quickbooks_source/macros/get_account_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__account.sql:19:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -73,7 +59,35 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__item.sql:21:33)\n(in dbt_packages/quickbooks_source/macros/get_item_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__item.sql:21:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__account.sql:19:33)\n(in dbt_packages/quickbooks_source/macros/get_account_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__account.sql:19:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__bundle_item.sql:23:33)\n(in dbt_packages/quickbooks_source/macros/get_bundle_item_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__bundle_item.sql:23:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__estimate.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_estimate_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__estimate.sql:24:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__refund_receipt.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_refund_receipt_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__refund_receipt.sql:24:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -101,7 +115,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__estimate.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_estimate_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__estimate.sql:24:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__estimate_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_estimate_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__estimate_line.sql:24:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -115,28 +129,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__refund_receipt_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_refund_receipt_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__refund_receipt_line.sql:24:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__vendor_credit.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_vendor_credit_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__vendor_credit.sql:24:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__credit_memo.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_credit_memo_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__credit_memo.sql:24:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__estimate_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_estimate_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__estimate_line.sql:24:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__refund_receipt.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_refund_receipt_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__refund_receipt.sql:24:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -150,35 +150,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__bill_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_bill_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__bill_line.sql:24:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__vendor_credit_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_vendor_credit_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__vendor_credit_line.sql:24:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__credit_memo_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_credit_memo_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__credit_memo_line.sql:24:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__refund_receipt_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_refund_receipt_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__refund_receipt_line.sql:24:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__payment.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_payment_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__payment.sql:24:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__credit_memo.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_credit_memo_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__credit_memo.sql:24:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -192,28 +164,35 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__bill_linked_txn.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_bill_linked_txn_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__bill_linked_txn.sql:24:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__customer.sql:21:33)\n(in dbt_packages/quickbooks_source/macros/get_customer_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__customer.sql:21:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__payment_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_payment_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__payment_line.sql:24:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__sales_receipt.sql:23:33)\n(in dbt_packages/quickbooks_source/macros/get_sales_receipt_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__sales_receipt.sql:23:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__payment.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_payment_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__payment.sql:24:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__vendor_credit_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_vendor_credit_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__vendor_credit_line.sql:24:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__bill_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_bill_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__bill_line.sql:24:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__credit_memo_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_credit_memo_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__credit_memo_line.sql:24:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -227,42 +206,21 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__department.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_department_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__department.sql:24:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__bill_linked_txn.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_bill_linked_txn_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__bill_linked_txn.sql:24:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__bill_payment.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_bill_payment_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__bill_payment.sql:24:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__payment_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_payment_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__payment_line.sql:24:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__purchase.sql:21:33)\n(in dbt_packages/quickbooks_source/macros/get_purchase_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__purchase.sql:21:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__sales_receipt_line.sql:23:33)\n(in dbt_packages/quickbooks_source/macros/get_sales_receipt_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__sales_receipt_line.sql:23:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__purchase_line.sql:21:33)\n(in dbt_packages/quickbooks_source/macros/get_purchase_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__purchase_line.sql:21:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__deposit.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_deposit_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__deposit.sql:24:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__customer.sql:21:33)\n(in dbt_packages/quickbooks_source/macros/get_customer_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__customer.sql:21:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -276,7 +234,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__bill_payment_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_bill_payment_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__bill_payment_line.sql:24:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__sales_receipt_line.sql:23:33)\n(in dbt_packages/quickbooks_source/macros/get_sales_receipt_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__sales_receipt_line.sql:23:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__bill_payment.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_bill_payment_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__bill_payment.sql:24:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -284,6 +249,97 @@
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__invoice_linked_txn.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_invoice_linked_txn_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__invoice_linked_txn.sql:24:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__department.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_department_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__department.sql:24:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__purchase.sql:21:33)\n(in dbt_packages/quickbooks_source/macros/get_purchase_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__purchase.sql:21:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__bill_payment_line.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_bill_payment_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__bill_payment_line.sql:24:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__deposit.sql:24:33)\n(in dbt_packages/quickbooks_source/macros/get_deposit_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__deposit.sql:24:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/quickbooks_source/models/stg_quickbooks__purchase_line.sql:21:33)\n(in dbt_packages/quickbooks_source/macros/get_purchase_line_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/quickbooks_source/models/stg_quickbooks__purchase_line.sql:21:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/double_entry_transactions/int_quickbooks__bill_payment_double_entry.sql:50:22)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/double_entry_transactions/int_quickbooks__bill_payment_double_entry.sql:50:22",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/double_entry_transactions/int_quickbooks__credit_memo_double_entry.sql:60:22)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/double_entry_transactions/int_quickbooks__credit_memo_double_entry.sql:60:22",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/double_entry_transactions/int_quickbooks__deposit_double_entry.sql:55:22)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/double_entry_transactions/int_quickbooks__deposit_double_entry.sql:55:22",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/double_entry_transactions/int_quickbooks__invoice_double_entry.sql:126:22)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/double_entry_transactions/int_quickbooks__invoice_double_entry.sql:126:22",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/double_entry_transactions/int_quickbooks__payment_double_entry.sql:49:22)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/double_entry_transactions/int_quickbooks__payment_double_entry.sql:49:22",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/double_entry_transactions/int_quickbooks__refund_receipt_double_entry.sql:52:22)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/double_entry_transactions/int_quickbooks__refund_receipt_double_entry.sql:52:22",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/double_entry_transactions/int_quickbooks__sales_receipt_double_entry.sql:52:22)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/double_entry_transactions/int_quickbooks__sales_receipt_double_entry.sql:52:22",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/double_entry_transactions/int_quickbooks__transfer_double_entry.sql:27:22)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:86:20)\n  --> models/double_entry_transactions/int_quickbooks__transfer_double_entry.sql:27:22",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "dbt_core_event_code": "",
@@ -368,7 +424,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.92"
+            "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false
