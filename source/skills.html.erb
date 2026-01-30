@@ -29,19 +29,47 @@
           </div>
       </div>
       <div class="tiles">
-        <% if defined?(data.skills) && data.skills.featured %>
-          <% data.skills.featured.each do |skill| %>
+        <% featured_skills_data = data['featured-skills'] || data.featured_skills rescue nil %>
+        <% if featured_skills_data && featured_skills_data.any? %>
+          <% skills_loaded = 0 %>
+          <% featured_skills_data.each do |feat| %>
+            <% org = feat['org'] %>
+            <% skill_name = feat['skill'] %>
+            <% 
+              # Access skill data - Middleman loads data/skills/org/name/index.json
+              skill_data = nil
+              begin
+                if data.skills && data.skills[org]
+                  skill_data = data.skills[org][skill_name]
+                end
+              rescue
+                skill_data = nil
+              end
+            %>
+            <% if skill_data && skill_data.index %>
+              <% skill = skill_data.index %>
+              <% skills_loaded += 1 %>
+              <div class="tile">
+                <div class="tile-content">
+                  <div class="tile-body" style="padding: 30px 30px 30px 30px; position: relative;">
+                    <div class="tile-text">
+                      <h4 style="color: #3b3f43;font-size:1.2rem"><%= skill.name || skill['name'] || skill_name %></h4>
+                      <% if skill.description || skill['description'] %>
+                        <p style="color: #666; margin-top: 8px;"><%= skill.description || skill['description'] %></p>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+          <% if skills_loaded == 0 %>
             <div class="tile">
               <div class="tile-content">
-                <div class="tile-body" style="padding: 30px 30px 30px 60px; position: relative;">
-                  <div class="tile-graphic">
-                    <span style="font-size: 48px;">🤖</span>
-                  </div>
-                  <div class="tile-text" style="padding-top: 25px">
-                    <h4 style="color: #3b3f43;font-size:1.2rem"><%= skill['name'] || 'Agent Skill' %></h4>
-                    <% if skill['description'] %>
-                      <p style="color: #666; margin-top: 8px;"><%= skill['description'] %></p>
-                    <% end %>
+                <div class="tile-body" style="padding: 30px 30px 30px 30px; position: relative;">
+                  <div class="tile-text">
+                    <h4 style="color: #3b3f43;font-size:1.2rem">Coming Soon</h4>
+                    <p style="color: #666; margin-top: 8px;">Agent Skills will be available here soon.</p>
                   </div>
                 </div>
               </div>
