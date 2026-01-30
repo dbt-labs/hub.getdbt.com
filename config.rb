@@ -163,6 +163,25 @@ after_configuration do
               }
       end
   end
+  
+  # Set up skill pages
+  if @app.data.skills
+    @app.data.skills.each do |org, org_skills|
+      org_skills.each do |skill_name, skill_data|
+        if skill_data && skill_data.index
+          skill = skill_data.index
+          skill_path = "/#{org}/#{skill_name}/"
+          proxy "#{skill_path}index.html",
+                '/skill.template.html',
+                :content_type => 'text/html',
+                :layout => 'layout',
+                :locals => {
+                  :skill => skill
+                }
+        end
+      end
+    end
+  end
 end
 
 set :protocol, 'https://'
@@ -174,6 +193,7 @@ helpers SiteHelpers
 
 ignore '/package.template.html.erb'
 ignore '/author.template.html.erb'
+ignore '/skill.template.html.erb'
 ignore '/api/v1/package.template.json.erb'
 ignore '/api/v1/raw.json.erb'
 

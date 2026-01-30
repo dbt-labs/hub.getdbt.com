@@ -23,9 +23,12 @@
 
   <section class="section offset white">
 	<div class="section-content">
-	  <div class="row">
+      <div class="row">
           <div class="col-md-12 center">
               <h4 class="h4">Featured Agent Skills</h4>
+              <p style="margin-top: 16px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                A curated collection of Agent Skills for working with dbt. These skills help AI agents understand and execute dbt workflows more effectively. <a href="https://github.com/dbt-labs/dbt-agent-skills/" target="_blank">Learn more</a>
+              </p>
           </div>
       </div>
       <div class="tiles">
@@ -49,7 +52,7 @@
             <% if skill_data && skill_data.index %>
               <% skill = skill_data.index %>
               <% skills_loaded += 1 %>
-              <div class="tile">
+              <a href="/<%= org %>/<%= skill_name %>/" class="tile">
                 <div class="tile-content">
                   <div class="tile-body" style="padding: 30px 30px 30px 30px; position: relative;">
                     <div class="tile-text">
@@ -60,7 +63,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             <% end %>
           <% end %>
           <% if skills_loaded == 0 %>
@@ -90,6 +93,11 @@
             </div>
           </div>
         <% end %>
+      </div>
+      <div class="row" style="margin-top: 40px;">
+        <div class="col-md-12 center">
+          <p>Want to contribute? Join the discussion in the community slack at <strong>#dbt-agent-skills</strong></p>
+        </div>
       </div>
     </div>
   </section>
