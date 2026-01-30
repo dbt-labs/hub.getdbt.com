@@ -1,0 +1,69 @@
+<header class="header">
+  <%= partial "nav" %>
+  <section class="section ensemble center">
+	<div class="section-content section-content-small">
+      <h1 class="h0">Extend dbt with Packages and Agent Skills</h1>
+	  <p class="text-large">
+        Use one of our community packages or Agent Skills to develop more effectively with dbt.
+	  </p>
+	  <div class="hero-buttons">
+	    <a href="/" class="btn btn-white btn-shadow btn-lg hero-btn">
+	      Packages
+	    </a>
+	    <a href="/skills/" class="btn btn-white btn-shadow btn-lg hero-btn active">
+	      <span class="new-badge">New!</span>
+	      Agent Skills
+	    </a>
+	  </div>
+	</div>
+  </section>
+</header>
+
+<main class="main">
+
+  <section class="section offset white">
+	<div class="section-content">
+	  <div class="row">
+          <div class="col-md-12 center">
+              <h4 class="h4">Featured Agent Skills</h4>
+          </div>
+      </div>
+      <div class="tiles">
+        <% if defined?(data.skills) && data.skills.featured %>
+          <% data.skills.featured.each do |skill| %>
+            <div class="tile">
+              <div class="tile-content">
+                <div class="tile-body" style="padding: 30px 30px 30px 60px; position: relative;">
+                  <div class="tile-graphic">
+                    <span style="font-size: 48px;">🤖</span>
+                  </div>
+                  <div class="tile-text" style="padding-top: 25px">
+                    <h4 style="color: #3b3f43;font-size:1.2rem"><%= skill['name'] || 'Agent Skill' %></h4>
+                    <% if skill['description'] %>
+                      <p style="color: #666; margin-top: 8px;"><%= skill['description'] %></p>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="tile">
+            <div class="tile-content">
+              <div class="tile-body" style="padding: 30px 30px 30px 60px; position: relative;">
+                <div class="tile-graphic">
+                  <span style="font-size: 48px;">🤖</span>
+                </div>
+                <div class="tile-text" style="padding-top: 25px">
+                  <h4 style="color: #3b3f43;font-size:1.2rem">Coming Soon</h4>
+                  <p style="color: #666; margin-top: 8px;">Agent Skills will be available here soon.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</main>
+
