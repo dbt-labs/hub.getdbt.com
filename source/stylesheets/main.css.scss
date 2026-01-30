@@ -93,6 +93,17 @@ img { display: inline; }
 // Hero Section
 // ======================
 
+.section.ensemble {
+    .h0 {
+        font-size: 2.5rem !important;
+        font-weight: 500 !important; // semi-bold
+        
+        @media (max-width: 768px) {
+            font-size: 2rem !important;
+        }
+    }
+}
+
 .hero-buttons {
     display: flex;
     gap: 16px;
