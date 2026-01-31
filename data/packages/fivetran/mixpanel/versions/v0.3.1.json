@@ -41,49 +41,42 @@
                     "body": "Ignored unexpected key `\"loaded_at_field\"`. YAML path: `loaded_at_field`.\n  --> models/staging/src_mixpanel.yml:9:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Ignored unexpected key `\"freshness\"`. YAML path: `freshness`.\n  --> models/staging/src_mixpanel.yml:11:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/mixpanel__event.sql:37:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/mixpanel__event.sql:37:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/mixpanel__monthly_events.sql:19:15)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/mixpanel__monthly_events.sql:19:15",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/mixpanel__sessions.sql:71:19)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datediff.sql:2:20)\n  --> models/mixpanel__sessions.sql:71:19",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/staging/stg_mixpanel__event.sql:13:15)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/date_trunc.sql:2:20)\n  --> models/staging/stg_mixpanel__event.sql:13:15",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/staging/stg_mixpanel__user_event_date_spine.sql:26:90)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/current_timestamp.sql:2:20)\n  --> models/staging/stg_mixpanel__user_event_date_spine.sql:26:90",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -91,6 +84,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

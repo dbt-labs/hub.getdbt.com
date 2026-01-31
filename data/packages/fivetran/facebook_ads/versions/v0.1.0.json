@@ -41,98 +41,84 @@
                     "body": "Invalid model definition `facebook_ads.intermediate.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 12 column 21\n  --> dbt_project.yml:12:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `facebook_ads.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 10 column 19\n  --> dbt_project.yml:10:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__account_history.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_account_history_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__account_history.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__ad_history.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_ad_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__ad_history.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__ad_set_history.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_ad_set_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__ad_set_history.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__basic_ad.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_basic_ad_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__basic_ad.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__campaign_history.sql:15:33)\n(in dbt_packages/facebook_ads_source/macros/get_campaign_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__campaign_history.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_source/models/stg_facebook_ads__creative_history.sql:14:33)\n(in dbt_packages/facebook_ads_source/macros/get_creative_history_columns.sql:4:51)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:20)\n  --> dbt_packages/facebook_ads_source/models/stg_facebook_ads__creative_history.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/facebook_ads_creative_history/models/redshift/utils__facebook_ads__numbers.sql:1:1)\n(in dbt_packages/dbt_utils/macros/sql/generate_series.sql:19:22)\n  --> dbt_packages/facebook_ads_creative_history/models/redshift/utils__facebook_ads__numbers.sql:1:1",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/facebook_ads__account_report.sql:16:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> models/facebook_ads__account_report.sql:16:5",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/facebook_ads__ad_adapter.sql:62:33)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:72:20)\n  --> models/facebook_ads__ad_adapter.sql:62:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/facebook_ads__ad_set_report.sql:20:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> models/facebook_ads__ad_set_report.sql:20:5",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/facebook_ads__campaign_report.sql:18:5)\n(in dbt_packages/dbt_utils/macros/sql/groupby.sql:2:22)\n  --> models/facebook_ads__campaign_report.sql:18:5",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/facebook_ads__creative_history_prep.sql:35:9)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/split_part.sql:2:20)\n  --> models/intermediate/facebook_ads__creative_history_prep.sql:35:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -140,6 +126,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

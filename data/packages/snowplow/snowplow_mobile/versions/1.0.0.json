@@ -41,56 +41,48 @@
                     "body": "Invalid model definition `snowplow_mobile.base.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 109 column 20\n  --> dbt_project.yml:109:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `snowplow_mobile.base.scratch.databricks.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> ",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `snowplow_mobile.base.scratch.redshift_postgres.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> ",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `snowplow_mobile.base.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 115 column 20\n  --> dbt_project.yml:115:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 124 column 22\n  --> dbt_project.yml:124:22",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.databricks.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> ",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.redshift_postgres.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> ",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 130 column 22\n  --> dbt_project.yml:130:22",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -98,6 +90,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

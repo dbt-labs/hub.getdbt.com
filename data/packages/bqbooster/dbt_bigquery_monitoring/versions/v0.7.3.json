@@ -41,462 +41,378 @@
                     "body": "Invalid model definition `+start`: invalid type: string \"Jan 1 2017\", expected struct ProjectModelConfig at line 15 column 11\n  --> dbt_project.yml:15:11",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:8:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:11:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:14:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:8:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:17:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:12:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:20:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:15:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:23:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:18:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[6].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:27:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:21:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[7].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:31:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:24:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[6].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:27:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_repeated_models.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/access_control/information_schema_object_privileges.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[7].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:30:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:8:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[8].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:34:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/access_control/information_schema_object_privileges.yml:12:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:11:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:11:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:9:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/storage/datamart/read_heavy_tables.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/access_control/information_schema_object_privileges.yml:15:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:12:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/access_control/information_schema_object_privileges.yml:18:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:15:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/access_control/information_schema_object_privileges.yml:21:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:18:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/tables/information_schema_table_options.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:9:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/access_control/information_schema_object_privileges.yml:15:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:14:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:14:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:13:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/access_control/information_schema_object_privileges.yml:18:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/google/access_control/information_schema_object_privileges.yml:24:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:9:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:16:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/tables/information_schema_table_options.yml:12:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:17:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:19:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:9:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[9].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:43:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:17:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:22:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/access_control/information_schema_object_privileges.yml:21:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/base/jobs_with_cost.yml:7:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:12:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:21:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/tables/information_schema_table_options.yml:15:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[10].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:47:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:20:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:13:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/google/access_control/information_schema_object_privileges.yml:24:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/tables/information_schema_table_options.yml:18:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:21:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:15:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:24:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:16:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_repeated_models.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/tables/information_schema_table_options.yml:21:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:26:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:18:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/google/tables/information_schema_table_options.yml:24:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[11].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:52:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:19:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[6].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:29:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:11:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[6].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:27:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:21:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:23:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:25:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[7].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:33:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:8:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[8].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:37:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:14:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:22:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[6].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:27:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[6].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:28:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[9].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:40:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:12:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:17:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[7].type`.\n  --> models/base/google/datasets/information_schema_schemata.yml:31:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[7].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:31:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[12].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:64:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:15:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:21:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:26:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[3].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:18:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:24:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[4].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:21:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[8].type`.\n  --> models/base/google/streaming/information_schema_streaming_timeline_by_folder.yml:34:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[0].type`.\n  --> models/base/google/jobs/information_schema_jobs_by_project.yml:9:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[6].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:29:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[1].type`.\n  --> models/base/google/jobs/information_schema_jobs_by_project.yml:14:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[6].type`.\n  --> models/base/google/vector_indexes/information_schema_vector_index_options.yml:27:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[2].type`.\n  --> models/base/google/jobs/information_schema_jobs_by_project.yml:18:5",
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[5].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:24:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/base/jobs_with_cost.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[6].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:27:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[7].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:33:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[7].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:30:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[8].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:34:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[8].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:37:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[9].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:43:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[10].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:47:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[9].type`.\n  --> models/base/google/routines/information_schema_parameters.yml:40:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[11].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:52:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/storage/datamart/read_heavy_tables.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"type\"`. YAML path: `columns[12].type`.\n  --> models/base/google/recommendations_and_insights/information_schema_recommendations_by_organization.yml:64:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -504,6 +420,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

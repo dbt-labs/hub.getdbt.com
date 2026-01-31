@@ -33,63 +33,54 @@
                     "body": "Invalid model definition `leaner_query.marts.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 27 column 21\n  --> dbt_project.yml:27:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `leaner_query.reports.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 30 column 21\n  --> dbt_project.yml:30:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `leaner_query.staging.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 33 column 21\n  --> dbt_project.yml:33:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `leaner_query.utils.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 39 column 21\n  --> dbt_project.yml:39:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Ignored unexpected key `\"enable\"`. YAML path: `enable`.\n  --> models/reports/rpt_bigquery_dbt_metrics_daily.sql:1:1",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Ignored unexpected key `\"enable\"`. YAML path: `enable`.\n  --> models/reports/rpt_bigquery_query_alerting.sql:1:1",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Ignored unexpected key `\"enable\"`. YAML path: `enable`.\n  --> models/reports/rpt_bigquery_table_usage_daily.sql:1:1",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Ignored unexpected key `\"enable\"`. YAML path: `enable`.\n  --> models/reports/rpt_bigquery_usage_cost_daily.sql:1:1",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Ignored unexpected key `\"enable\"`. YAML path: `enable`.\n  --> models/reports/rpt_bigquery_user_metrics_daily.sql:1:1",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -97,6 +88,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

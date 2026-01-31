@@ -35,35 +35,30 @@
                     "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in dbt_packages/pinterest_source/models/stg_pinterest_ads__ad_group_history.sql:23:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:33:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> dbt_packages/pinterest_source/models/stg_pinterest_ads__ad_group_history.sql:23:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in dbt_packages/pinterest_source/models/stg_pinterest_ads__campaign_history.sql:20:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:33:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> dbt_packages/pinterest_source/models/stg_pinterest_ads__campaign_history.sql:20:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in dbt_packages/pinterest_source/models/stg_pinterest_ads__pin_promotion_history.sql:13:9)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/split_part.sql:2:3)\n  --> dbt_packages/pinterest_source/models/stg_pinterest_ads__pin_promotion_history.sql:13:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in dbt_packages/pinterest_source/models/stg_pinterest_ads__pin_promotion_report.sql:24:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:33:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> dbt_packages/pinterest_source/models/stg_pinterest_ads__pin_promotion_report.sql:24:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL unknown function: Jinja macro or function `adapter_macro` is unknown\n(in models/pinterest_ads__ad_adapter.sql:52:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:33:54)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:4:3)\n  --> models/pinterest_ads__ad_adapter.sql:52:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -71,6 +66,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

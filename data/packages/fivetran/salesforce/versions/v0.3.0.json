@@ -38,42 +38,36 @@
                     "body": "Invalid model definition `salesforce.intermediate.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 12 column 21\n  --> dbt_project.yml:12:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `salesforce.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 10 column 19\n  --> dbt_project.yml:10:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/salesforce_source/models/stg_salesforce__account.sql:20:31)\n(in dbt_packages/salesforce_source/macros/generate_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/salesforce_source/models/stg_salesforce__account.sql:20:31",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/salesforce_source/models/stg_salesforce__opportunity.sql:19:33)\n(in dbt_packages/salesforce_source/macros/generate_columns.sql:49:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/salesforce_source/models/stg_salesforce__opportunity.sql:19:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/salesforce_source/models/stg_salesforce__user.sql:21:33)\n(in dbt_packages/salesforce_source/macros/generate_columns.sql:92:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/salesforce_source/models/stg_salesforce__user.sql:21:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/salesforce_source/models/stg_salesforce__user_role.sql:19:33)\n(in dbt_packages/salesforce_source/macros/generate_columns.sql:131:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/salesforce_source/models/stg_salesforce__user_role.sql:19:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -81,6 +75,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

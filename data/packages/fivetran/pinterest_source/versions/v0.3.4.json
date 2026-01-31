@@ -48,28 +48,24 @@
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_pinterest_ads__ad_group_history.sql:12:33)\n(in macros/get_ad_group_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_ad_group_history_columns.sql:4:55",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_pinterest_ads__campaign_history.sql:12:33)\n(in macros/get_campaign_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_campaign_history_columns.sql:4:55",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_pinterest_ads__pin_promotion_history.sql:13:33)\n(in macros/get_pin_promotion_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_pin_promotion_history_columns.sql:4:55",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_pinterest_ads__pin_promotion_report.sql:12:33)\n(in macros/get_pin_promotion_report_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/get_pin_promotion_report_columns.sql:4:55",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -77,6 +73,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

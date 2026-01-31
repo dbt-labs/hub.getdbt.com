@@ -48,21 +48,18 @@
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/dbt_date/models/example_models/dates.sql:2:5)\n(in dbt_packages/dbt_date/macros/get_date_dimension.sql:2:15)\n  --> dbt_packages/dbt_date/models/example_models/dates.sql:2:5",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/dbt_date/models/example_models/dim_date.sql:5:5)\n(in dbt_packages/dbt_date/macros/fiscal_date/get_fiscal_periods.sql:7:5)\n(in dbt_packages/dbt_date/macros/fiscal_date/get_fiscal_year_dates.sql:2:11)\n  --> dbt_packages/dbt_date/models/example_models/dim_date.sql:5:5",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/dbt_date/models/example_models/dim_date_fiscal.sql:2:5)\n(in dbt_packages/dbt_date/macros/fiscal_date/get_fiscal_periods.sql:7:5)\n(in dbt_packages/dbt_date/macros/fiscal_date/get_fiscal_year_dates.sql:2:11)\n  --> dbt_packages/dbt_date/models/example_models/dim_date_fiscal.sql:2:5",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -70,6 +67,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": true,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

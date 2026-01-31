@@ -41,21 +41,18 @@
                     "body": "Invalid model definition `+start`: invalid type: string \"Jan 1 2017\", expected struct ProjectModelConfig at line 15 column 11\n  --> dbt_project.yml:15:11",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_expensive_jobs.yml:7:5",
-                    "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/storage/datamart/most_expensive_tables.yml:7:5",
                     "error_code": 1060,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/compute/datamart/most_expensive_jobs.yml:7:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -63,6 +60,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

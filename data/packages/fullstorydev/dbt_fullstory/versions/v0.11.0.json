@@ -26,5 +26,125 @@
         "tarball": "https://codeload.github.com/fullstorydev/dbt_fullstory/tar.gz/v0.11.0",
         "format": "tgz",
         "sha1": "28000d8859925a4856c156e7034f1fd3d8676ec8"
+    },
+    "fusion_compatibility": {
+        "version": "0.11.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 17,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Ignored unexpected key `\"session_cols\"`. YAML path: `session_cols`.\n  --> models/sessions.yml:3:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"user_cols\"`. YAML path: `user_cols`.\n  --> models/users.yml:3:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/schema.yml:4:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/schema.yml:8:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/schema.yml:52:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/schema.yml:56:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/schema.yml:122:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/schema.yml:126:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/schema.yml:262:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/schema.yml:266:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/schema.yml:336:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/schema.yml:340:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/sessions.yml:436:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/sessions.yml:440:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"meta\"`. YAML path: `meta`.\n  --> models/staging/src_fullstory.yml:16:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"access\"`. YAML path: `access`.\n  --> models/users.yml:380:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"enforce\"`. YAML path: `config.contract.enforce`.\n  --> models/users.yml:384:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.101"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

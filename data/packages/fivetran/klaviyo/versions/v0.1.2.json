@@ -41,91 +41,78 @@
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/klaviyo_source/models/stg_klaviyo__campaign.sql:15:33)\n(in dbt_packages/klaviyo_source/macros/get_campaign_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/klaviyo_source/models/stg_klaviyo__campaign.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/klaviyo_source/models/stg_klaviyo__event.sql:15:33)\n(in dbt_packages/klaviyo_source/macros/get_event_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/klaviyo_source/models/stg_klaviyo__event.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/klaviyo_source/models/stg_klaviyo__flow.sql:15:33)\n(in dbt_packages/klaviyo_source/macros/get_flow_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/klaviyo_source/models/stg_klaviyo__flow.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/klaviyo_source/models/stg_klaviyo__integration.sql:15:33)\n(in dbt_packages/klaviyo_source/macros/get_integration_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/klaviyo_source/models/stg_klaviyo__integration.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/klaviyo_source/models/stg_klaviyo__metric.sql:15:33)\n(in dbt_packages/klaviyo_source/macros/get_metric_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/klaviyo_source/models/stg_klaviyo__metric.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/klaviyo_source/models/stg_klaviyo__person.sql:15:33)\n(in dbt_packages/klaviyo_source/macros/get_person_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/klaviyo_source/models/stg_klaviyo__person.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/int_klaviyo__event_attribution.sql:95:18)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datediff.sql:2:20)\n  --> models/intermediate/int_klaviyo__event_attribution.sql:95:18",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/klaviyo__campaigns.sql:20:9)\n(in dbt_packages/dbt_utils/macros/sql/star.sql:2:22)\n  --> models/klaviyo__campaigns.sql:20:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/klaviyo__events.sql:43:9)\n(in dbt_packages/dbt_utils/macros/sql/star.sql:2:22)\n  --> models/klaviyo__events.sql:43:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/klaviyo__flows.sql:20:9)\n(in dbt_packages/dbt_utils/macros/sql/star.sql:2:22)\n  --> models/klaviyo__flows.sql:20:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/klaviyo__persons.sql:17:9)\n(in dbt_packages/dbt_utils/macros/sql/star.sql:2:22)\n  --> models/klaviyo__persons.sql:17:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/klaviyo.yml:103:13",
                     "error_code": 102,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in target/generic_tests/dbt_utils_unique_combination_o_4b6b40f740d0b9d2797e87d938a98e4f.sql:1:1)\n(in dbt_packages/dbt_utils/macros/schema_tests/unique_combination_of_columns.sql:2:20)\n  --> target/generic_tests/dbt_utils_unique_combination_o_4b6b40f740d0b9d2797e87d938a98e4f.sql:1:1",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -133,6 +120,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }

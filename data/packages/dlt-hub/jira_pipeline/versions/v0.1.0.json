@@ -33,21 +33,18 @@
                     "body": "Invalid model definition `jira_pipeline.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 23 column 19\n  --> dbt_project.yml:23:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Invalid model definition `jira_pipeline.staging.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 25 column 21\n  --> dbt_project.yml:25:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to eval the compiled Jinja expression invalid operation: Missing context variable 'this'. Var should be initialized for package: jira_pipeline\n(in :1:2)\n  --> models/sources.yml:4:13",
                     "error_code": 1501,
                     "severity_text": "ERROR",
-                    "dbt_core_event_code": "",
                     "original_severity_text": "ERROR"
                 }
             ],
@@ -55,6 +52,7 @@
             "fusion_version": "2.0.0-preview.101"
         },
         "manually_verified_compatible": false,
-        "manually_verified_incompatible": false
+        "manually_verified_incompatible": false,
+        "download_failed": false
     }
 }
