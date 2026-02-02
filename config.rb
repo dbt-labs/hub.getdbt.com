@@ -120,13 +120,6 @@ after_configuration do
           :json_data => @package_index
         }
 
-  proxy "/api/v1/blocklist.json",
-        '/api/v1/raw.json',
-        :content_type => 'application/json',
-        :locals => {
-          :json_data => @app.data.blocklist
-        }
-
   packages = combine_packages(@app.data.packages)
   packages.each do |package_name, package|
       proxy "/#{package_name}/latest/index.html",
