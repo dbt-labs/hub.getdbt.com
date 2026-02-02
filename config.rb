@@ -38,7 +38,7 @@ module SiteHelpers
     versions.each do |version_num, version_data|
       version_num = strip_leading_v(version_num)
       version_data['version'] = strip_leading_v(version_data['version'])
-      version_data['blocklisted'] = is_hidden(PackageStub.new(org, name), version_data['version'])
+      version_data['blocklisted'] = is_hidden(PackageStub.new(org, name), version_num)
       new_versions[version_num] = version_data
     end
     entry['versions'] = new_versions
