@@ -46,10 +46,18 @@
                   <%= version._source.url.split("/")[3] %>/<%= version._source.url.split("/")[4] %>
                 </a>
                 <% end %>
+                <%
+                  # Determine badge state and popover text
+                  fusion_compat = defined?(version.fusion_compatibility) && version.fusion_compatibility ? version.fusion_compatibility : nil
+                  is_manually_verified_compatible = fusion_compat && fusion_compat['manually_verified_compatible'] == true
+                  is_manually_verified_incompatible = fusion_compat && fusion_compat['manually_verified_incompatible'] == true
+                  has_parse_conformance = fusion_compat && !fusion_compat.parse_compatible.nil?
+                  is_based_on_require_only = !is_manually_verified_compatible && !has_parse_conformance
+                %>
                 <% if is_fusion_compatible(package, version) %>
-                  <span class="fusion-badge<% if defined?(version.fusion_compatibility) && version.fusion_compatibility && version.fusion_compatibility['manually_verified_compatible'] == true %> has-popover<% end %>" <% if defined?(version.fusion_compatibility) && version.fusion_compatibility && version.fusion_compatibility['manually_verified_compatible'] == true %>data-popover="dbt has manually verified that this package version is compatible with Fusion"<% end %>>Fusion compatible</span>
+                  <span class="fusion-badge<% if is_manually_verified_compatible || is_based_on_require_only %> has-popover<% end %>" <% if is_manually_verified_compatible %>data-popover="dbt has manually verified that this package version is compatible with Fusion"<% elsif is_based_on_require_only %>data-popover="Compatibility based on require-dbt-version. Parse conformance has not yet been run on this version."<% end %>>Fusion compatible</span>
                 <% else %>
-                  <span class="fusion-badge-incompatible<% if defined?(version.fusion_compatibility) && version.fusion_compatibility && version.fusion_compatibility['manually_verified_incompatible'] == true %> has-popover<% end %>" <% if defined?(version.fusion_compatibility) && version.fusion_compatibility && version.fusion_compatibility['manually_verified_incompatible'] == true %>data-popover="dbt has manually verified that this package version is not compatible with Fusion"<% end %>>Not Fusion compatible</span>
+                  <span class="fusion-badge-incompatible<% if is_manually_verified_incompatible %> has-popover<% end %>" <% if is_manually_verified_incompatible %>data-popover="dbt has manually verified that this package version is not compatible with Fusion"<% end %>>Not Fusion compatible</span>
                 <% end %>
               </div>
               <em><%= package.versions[package.latest].description %></em>
@@ -95,7 +103,6 @@
 
       <div class="package-content-layout">
         <!-- Right column: Fusion Compatibility (HTML placed first to avoid <base> tag issues, CSS order:2) -->
-        <% if defined?(version.fusion_compatibility) && version.fusion_compatibility %>
         <div class="package-sidebar">
           <div class="fusion-compatibility-section">
             <div class="fc-header">
@@ -141,19 +148,26 @@
               <div class="fc-block">
                 <div class="fc-row">
                   <span class="fc-label">Parse compatibility</span>
-                  <% if version.fusion_compatibility.parse_compatible %>
-                    <span class="fc-status fc-status--success">
-                      <%= image_tag('status_success.svg', {alt: 'Passed', class: 'fc-status-icon'}) %>
-                      Passed
-                    </span>
+                  <% if defined?(version.fusion_compatibility) && version.fusion_compatibility && !version.fusion_compatibility.parse_compatible.nil? %>
+                    <% if version.fusion_compatibility.parse_compatible %>
+                      <span class="fc-status fc-status--success">
+                        <%= image_tag('status_success.svg', {alt: 'Passed', class: 'fc-status-icon'}) %>
+                        Passed
+                      </span>
+                    <% else %>
+                      <span class="fc-status fc-status--error">
+                        <%= image_tag('status_error.svg', {alt: 'Failed', class: 'fc-status-icon'}) %>
+                        Failed
+                      </span>
+                    <% end %>
                   <% else %>
-                    <span class="fc-status fc-status--error">
-                      <%= image_tag('status_error.svg', {alt: 'Failed', class: 'fc-status-icon'}) %>
-                      Failed
+                    <span class="fc-status fc-status--warning">
+                      <%= image_tag('status_error.svg', {alt: 'Not yet tested', class: 'fc-status-icon'}) %>
+                      Not yet tested
                     </span>
                   <% end %>
                 </div>
-                <% if version.fusion_compatibility.parse_compatibility_result %>
+                <% if defined?(version.fusion_compatibility) && version.fusion_compatibility && version.fusion_compatibility.parse_compatibility_result %>
                 <div class="fc-row">
                   <span class="fc-label">Tested with Fusion</span>
                   <code class="fc-code"><%= version.fusion_compatibility.parse_compatibility_result.fusion_version %></code>
@@ -163,6 +177,11 @@
                 </div>
                 <% end %>
               </div>
+              <% unless defined?(version.fusion_compatibility) && version.fusion_compatibility && !version.fusion_compatibility.parse_compatible.nil? %>
+              <p class="fc-note">
+                dbt has not yet run parse conformance tests on this package version. Compatibility is based on the <code>require-dbt-version</code> setting.
+              </p>
+              <% end %>
             </div>
 
             <!-- Footer help text -->
@@ -174,7 +193,6 @@
             </p>
           </div>
         </div>
-        <% end %>
 
         <!-- Left column: Installation and README (CSS order:1) -->
         <div class="package-main-content">
