@@ -26,9 +26,6 @@
             <div class="tile-text">
               <div class="package-title-row">
                 <h1><%= package.name %></h1>
-                <% if is_fusion_compatible(package, version) %>
-                  <span class="fusion-badge">Fusion compatible</span>
-                <% end %>
               </div>
               <em>
                 Created by
@@ -37,8 +34,8 @@
                   <%= package.namespace %>
                 </a>
               </em><br/>
-              <% if is_valid_github_url(version._source.url) %>
-              <div class="github-link" style="height: 30px; margin-bottom: 0">
+              <div class="github-fusion-row">
+                <% if is_valid_github_url(version._source.url) %>
                 <a class="github-button"
                    href="<%=version._source.url.split("/tree/")[0]%>"
                    data-size="large"
@@ -48,8 +45,32 @@
                   <i data-icon="star"></i>
                   <%= version._source.url.split("/")[3] %>/<%= version._source.url.split("/")[4] %>
                 </a>
+                <% end %>
+                <%
+                  # Determine badge state and popover text
+                  fusion_compat = fusion_compat_data(version)
+                  is_manually_verified_compatible = fusion_compat && fusion_compat.manually_verified_compatible == true
+                  is_manually_verified_incompatible = fusion_compat && fusion_compat.manually_verified_incompatible == true
+                  has_parse_conformance = fusion_compat && !fusion_compat.parse_compatible.nil?
+                  is_based_on_require_only = !is_manually_verified_compatible && !is_manually_verified_incompatible && !has_parse_conformance
+                %>
+                <% if is_fusion_compatible(package, version) %>
+                  <span class="fusion-badge<% if is_manually_verified_compatible || is_based_on_require_only %> has-popover<% end %>"
+                    <% if is_manually_verified_compatible %>
+                      tabindex="0"
+                      data-popover="dbt has manually verified that this package version is compatible with Fusion"
+                    <% elsif is_based_on_require_only %>
+                      tabindex="0"
+                      data-popover="Compatibility based on require-dbt-version. Parse compatibility has not yet been run on this version."
+                    <% end %>>Fusion compatible</span>
+                <% else %>
+                  <span class="fusion-badge-incompatible<% if is_manually_verified_incompatible %> has-popover<% end %>"
+                    <% if is_manually_verified_incompatible %>
+                      tabindex="0"
+                      data-popover="dbt has manually verified that this package version is not compatible with Fusion"
+                    <% end %>>Not Fusion compatible</span>
+                <% end %>
               </div>
-              <% end %>
               <em><%= package.versions[package.latest].description %></em>
             </div>
           </div>
@@ -91,51 +112,227 @@
 
       <hr/>
 
-      <div class="row">
-        <div class="col-md-12">
+      <div class="package-content-layout">
+        <!-- Right column: Fusion Compatibility (HTML placed first to avoid <base> tag issues, CSS order:2) -->
+        <div class="package-sidebar">
+          <div class="fusion-compatibility-section">
+            <%
+              fc = fusion_compat_data(version)
+              is_manually_compatible = fc && fc.manually_verified_compatible == true
+              is_manually_incompatible = fc && fc.manually_verified_incompatible == true
+              is_manually_verified = is_manually_compatible || is_manually_incompatible
+            %>
 
-        <h3>Installation</h3>
-        
-        dbt version required: <%=
-        if version.require_dbt_version != nil && version.require_dbt_version.length() > 0
-          then 
-            if version.require_dbt_version.kind_of?(Array)
-              "<code>" + version.require_dbt_version.join(', ') + "</code>"
-            else
-              "<code>" + version.require_dbt_version + "</code>"
-            end
-          else
-            "Not defined" 
-          end
-      %>
+            <div class="fc-header">
+              <div class="fc-header-icon">
+                <%= image_tag('fusion_atom.svg', {alt: 'Fusion', class: 'fc-atom-icon'}) %>
+              </div>
+              <h3>Fusion compatibility</h3>
+            </div>
 
-          <p>Include the following in your <code>packages.yml</code> file:
-          <pre id='install'>
+            <% if is_manually_verified %>
+            <!-- Manually verified by dbt -->
+            <div class="fc-group">
+              <div class="fc-group-label">Manually verified by dbt</div>
+              <div class="fc-block">
+                <div class="fc-row">
+                  <span class="fc-label">Status</span>
+                  <% if is_manually_compatible %>
+                    <span class="fc-status fc-status--success">
+                      <%= image_tag('status_success.svg', {alt: 'Compatible', class: 'fc-status-icon'}) %>
+                      Compatible
+                    </span>
+                  <% else %>
+                    <span class="fc-status fc-status--error">
+                      <%= image_tag('status_error.svg', {alt: 'Not compatible', class: 'fc-status-icon'}) %>
+                      Not compatible
+                    </span>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+
+            <!-- Collapsible details -->
+            <details class="fc-details">
+              <summary class="fc-details-summary">View compatibility details</summary>
+              <div class="fc-details-content">
+                <div class="fc-row">
+                  <span class="fc-label">require-dbt-version</span>
+                  <% if !require_dbt_version_defined?(version) %>
+                    <span class="fc-status fc-status--warning">
+                      <%= image_tag('status_error.svg', {alt: 'Not defined', class: 'fc-status-icon'}) %>
+                      Not defined
+                    </span>
+                  <% elsif is_require_dbt_version_fusion_compatible(version.require_dbt_version) %>
+                    <span class="fc-status fc-status--success">
+                      <%= image_tag('status_success.svg', {alt: 'Compatible', class: 'fc-status-icon'}) %>
+                      Compatible
+                    </span>
+                  <% else %>
+                    <span class="fc-status fc-status--error">
+                      <%= image_tag('status_error.svg', {alt: 'Not compatible', class: 'fc-status-icon'}) %>
+                      Not compatible
+                    </span>
+                  <% end %>
+                </div>
+                <div class="fc-row">
+                  <span class="fc-label">Parse compatibility</span>
+                  <% if fc && !fc.parse_compatible.nil? %>
+                    <% if fc.parse_compatible %>
+                      <span class="fc-status fc-status--success">
+                        <%= image_tag('status_success.svg', {alt: 'Passed', class: 'fc-status-icon'}) %>
+                        Passed
+                      </span>
+                    <% else %>
+                      <span class="fc-status fc-status--error">
+                        <%= image_tag('status_error.svg', {alt: 'Failed', class: 'fc-status-icon'}) %>
+                        Failed
+                      </span>
+                    <% end %>
+                  <% else %>
+                    <span class="fc-status fc-status--warning">
+                      <%= image_tag('status_error.svg', {alt: 'Not yet tested', class: 'fc-status-icon'}) %>
+                      Not yet tested
+                    </span>
+                  <% end %>
+                </div>
+                <% if fc && fc.parse_compatibility_result && fc.parse_compatibility_result.fusion_version %>
+                <div class="fc-row">
+                  <span class="fc-label">Tested with Fusion</span>
+                  <code class="fc-code"><%= fc.parse_compatibility_result.fusion_version %></code>
+                </div>
+                <% end %>
+              </div>
+            </details>
+            <% else %>
+            <!-- Set by package maintainer -->
+            <div class="fc-group">
+              <div class="fc-group-label">Set by package maintainer</div>
+              <div class="fc-block">
+                <div class="fc-row">
+                  <span class="fc-label">Package version</span>
+                  <code class="fc-code"><%= version.version %><% if version.version == package.latest %> (latest)<% end %></code>
+                </div>
+                <div class="fc-row">
+                  <span class="fc-label">require-dbt-version</span>
+                  <% if !require_dbt_version_defined?(version) %>
+                    <span class="fc-status fc-status--warning">
+                      <%= image_tag('status_error.svg', {alt: 'Not defined', class: 'fc-status-icon'}) %>
+                      Not defined
+                    </span>
+                  <% elsif is_require_dbt_version_fusion_compatible(version.require_dbt_version) %>
+                    <span class="fc-status fc-status--success">
+                      <%= image_tag('status_success.svg', {alt: 'Compatible', class: 'fc-status-icon'}) %>
+                      Compatible
+                    </span>
+                  <% else %>
+                    <span class="fc-status fc-status--error">
+                      <%= image_tag('status_error.svg', {alt: 'Not compatible', class: 'fc-status-icon'}) %>
+                      Not compatible
+                    </span>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+
+            <!-- Automated tests -->
+            <div class="fc-group">
+              <div class="fc-group-label">Automated tests</div>
+              <div class="fc-block">
+                <div class="fc-row">
+                  <span class="fc-label">Parse compatibility</span>
+                  <% if fc && !fc.parse_compatible.nil? %>
+                    <% if fc.parse_compatible %>
+                      <span class="fc-status fc-status--success">
+                        <%= image_tag('status_success.svg', {alt: 'Passed', class: 'fc-status-icon'}) %>
+                        Passed
+                      </span>
+                    <% else %>
+                      <span class="fc-status fc-status--error">
+                        <%= image_tag('status_error.svg', {alt: 'Failed', class: 'fc-status-icon'}) %>
+                        Failed
+                      </span>
+                    <% end %>
+                  <% else %>
+                    <span class="fc-status fc-status--warning">
+                      <%= image_tag('status_error.svg', {alt: 'Not yet tested', class: 'fc-status-icon'}) %>
+                      Not yet tested
+                    </span>
+                  <% end %>
+                </div>
+                <% if fc && fc.parse_compatibility_result && fc.parse_compatibility_result.fusion_version %>
+                <div class="fc-row">
+                  <span class="fc-label">Tested with Fusion</span>
+                  <code class="fc-code"><%= fc.parse_compatibility_result.fusion_version %></code>
+                </div>
+                <div class="fc-row fc-row--link">
+                  <a href="https://github.com/dbt-labs/hub.getdbt.com/blob/master/data/packages/<%= package.namespace %>/<%= package.name %>/versions/<%= version.id.split('/').last %>.json" class="fc-link" target="_blank">View full parse test results</a>
+                </div>
+                <% end %>
+              </div>
+              <% unless fc && !fc.parse_compatible.nil? %>
+              <p class="fc-note">
+                dbt has not yet run parse compatibility tests on this package version. Compatibility is based on the <code>require-dbt-version</code> setting.
+              </p>
+              <% end %>
+            </div>
+            <% end %>
+
+            <!-- Footer help text -->
+            <p class="fc-footer">
+              If you are the package maintainer and see unexpected compatibility errors, check 
+              <a href="https://docs.getdbt.com/guides/fusion-package-compat" class="fc-link">compatibility documentation</a> 
+              and raise a PR 
+              <a href="https://github.com/dbt-labs/hub.getdbt.com/edit/master/data/packages/<%= package.namespace %>/<%= package.name %>/versions/<%= version.id.split('/').last %>.json" class="fc-link" target="_blank">here</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Left column: Installation and README (CSS order:1) -->
+        <div class="package-main-content">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Installation</h3>
+              
+              dbt version required: <%=
+              if version.require_dbt_version != nil && version.require_dbt_version.length() > 0
+                then 
+                  if version.require_dbt_version.kind_of?(Array)
+                    "<code>" + version.require_dbt_version.join(', ') + "</code>"
+                  else
+                    "<code>" + version.require_dbt_version + "</code>"
+                  end
+                else
+                  "Not defined" 
+                end
+            %>
+
+              <p>Include the following in your <code>packages.yml</code> file:
+              <pre id='install'>
 packages:
   - package: <%= package.namespace %>/<%= package.name %>
     version: <%= version.version %></pre>
-          <p> Run <code>dbt deps</code> to install the package.
-          <p> For more information on using packages in your dbt project, check out the <a href="https://docs.getdbt.com/docs/package-management">dbt Documentation</a>.
-          <p><strong>Important Notice:</strong> dbt Labs does not certify or confirm the integrity, operability, effectiveness, or security of any Packages. Please read the <a href="<%= site_url %>/disclaimer">dbt Labs Package Disclaimer</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section section-slim white offset" style="padding-top: 0">
-    <div class="section-content">
-      <div class="row">
-        <div class="col-md-12">
-          <h3>README</h3>
-          (<a href="<%= version._source.url %>">View on GitHub</a>)
-        </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-md-12">
-          <base href="<%= package.versions[package.latest]._source.url %>"
-                target="_blank">
-          <article id="readme" class='markdown-body'>
-            <div class="loading">
+              <p> Run <code>dbt deps</code> to install the package.
+              <p> For more information on using packages in your dbt project, check out the <a href="https://docs.getdbt.com/docs/package-management">dbt Documentation</a>.
+              <p><strong>Important Notice:</strong> dbt Labs does not certify or confirm the integrity, operability, effectiveness, or security of any Packages. Please read the <a href="<%= site_url %>/disclaimer">dbt Labs Package Disclaimer</a></p>
+            </div>
+          </div>
+
+          <div class="row readme-row">
+            <div class="col-md-12">
+              <h3>README</h3>
+              (<a href="<%= version._source.url %>">View on GitHub</a>)
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-12">
+              <base href="<%= package.versions[package.latest]._source.url %>"
+                    target="_blank">
+              <article id="readme" class='markdown-body'>
+                <div class="loading">
+              </div>
+            </div>
           </div>
         </div>
       </div>
