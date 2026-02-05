@@ -17,6 +17,22 @@ $readme: false;
 @import "../../legacy_css/_sass/layout/layout";
 @import "../../legacy_css/_sass/custom/custom";
 
+// ======================
+// Fusion Color Palette
+// ======================
+$fc-color-text:         #3b3f43;
+$fc-color-muted:        #767d85;
+$fc-color-border:       #d1d5db;
+$fc-color-border-light: #e5e7eb;
+$fc-color-bg-block:     #f6f6f6;
+$fc-color-success:      #188435;
+$fc-color-warning:      #ab5100;
+$fc-color-purple:       #653cff;
+$fc-color-purple-bg:    #f7f5ff;
+$fc-color-purple-light: #f3e8ff;
+$fc-color-link:         #f56249;
+$fc-color-incompat-bg:  #ffe2d7;
+
 pre {
     background-color: #f6f8fa;
     color: #24292e;
@@ -62,8 +78,8 @@ img { display: inline; }
 
 // Full badge with text (cards, detail page)
 .fusion-badge {
-    background: #f7f5ff;
-    color: #653cff;
+    background: $fc-color-purple-bg;
+    color: $fc-color-purple;
     padding: 3px 4px;
     border-radius: 4px;
     font-size: 13px;
@@ -72,7 +88,7 @@ img { display: inline; }
     align-items: center;
     gap: 6px;
     line-height: 18px;
-    
+
     &::before {
         content: '';
         width: 14px;
@@ -80,18 +96,18 @@ img { display: inline; }
         background: url('/img/fusion_atom.svg') center/contain no-repeat;
         flex-shrink: 0;
     }
-    
+
     .tile & {
         position: absolute;
         top: 10px;
         right: 10px;
         z-index: 10;
     }
-    
+
     .github-fusion-row & {
         height: 27px;
         padding: 4px 10px;
-        border: 1px solid #d1d5db;
+        border: 1px solid $fc-color-border;
         border-radius: 3px;
         font-size: 14px;
         box-sizing: border-box;
@@ -99,11 +115,11 @@ img { display: inline; }
 }
 
 .fusion-badge-incompatible {
-    background: #ffe2d7;
+    background: $fc-color-incompat-bg;
     color: #1c1a19;
     padding: 3px 4px;
     border-radius: 3px;
-    border: 1px solid #d1d5db;
+    border: 1px solid $fc-color-border;
     font-size: 14px;
     font-weight: 500;
     display: inline-flex;
@@ -111,7 +127,7 @@ img { display: inline; }
     gap: 6px;
     height: 27px;
     box-sizing: border-box;
-    
+
     &::before {
         content: '';
         width: 14px;
@@ -139,7 +155,9 @@ img { display: inline; }
     border-radius: 4px;
     font-size: 13px;
     font-weight: 400;
-    white-space: nowrap;
+    max-width: 280px;
+    white-space: normal;
+    line-height: 1.4;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.15s ease-in-out;
@@ -147,7 +165,8 @@ img { display: inline; }
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.has-popover:hover::after {
+.has-popover:hover::after,
+.has-popover:focus::after {
     opacity: 1;
     pointer-events: auto;
 }
@@ -364,6 +383,10 @@ img { display: inline; }
     flex: 1 1 0;
     min-width: 0;
     order: 1;
+
+    .readme-row {
+        margin-top: 20px;
+    }
 }
 
 .package-sidebar {
@@ -395,12 +418,12 @@ img { display: inline; }
     align-items: center;
     gap: 14px;
     margin-bottom: 14px;
-    
+
     h3 {
         margin: 0;
         font-size: 20px;
         font-weight: 600;
-        color: #3b3f43;
+        color: $fc-color-text;
         line-height: 1;
     }
 }
@@ -408,7 +431,7 @@ img { display: inline; }
 .fc-header-icon {
     width: 42px;
     height: 42px;
-    background: #f3e8ff;
+    background: $fc-color-purple-light;
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -427,12 +450,12 @@ img { display: inline; }
 
 .fc-group-label {
     font-size: 14px;
-    color: #767d85;
+    color: $fc-color-muted;
     margin-bottom: 6px;
 }
 
 .fc-block {
-    background: #f6f6f6;
+    background: $fc-color-bg-block;
     border-radius: 16px;
     padding: 12px;
 }
@@ -454,17 +477,17 @@ img { display: inline; }
 
 .fc-label {
     font-size: 16px;
-    color: #767d85;
+    color: $fc-color-muted;
 }
 
 .fc-code {
     background: #fff;
-    border: 1px solid #e5e7eb;
+    border: 1px solid $fc-color-border-light;
     border-radius: 4px;
     padding: 8px 13px;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
-    color: #3b3f43;
+    color: $fc-color-text;
     white-space: nowrap;
 }
 
@@ -481,21 +504,21 @@ img { display: inline; }
 }
 
 .fc-status--success {
-    color: #188435;
+    color: $fc-color-success;
 }
 
 .fc-status--error {
-    color: #ab5100;
+    color: $fc-color-warning;
 }
 
 .fc-status--warning {
-    color: #ab5100;
+    color: $fc-color-warning;
 }
 
 .fc-link {
-    color: #f56249;
+    color: $fc-color-link;
     text-decoration: none;
-    
+
     &:hover {
         text-decoration: underline;
     }
@@ -503,7 +526,7 @@ img { display: inline; }
 
 .fc-footer {
     font-size: 16px;
-    color: #767d85;
+    color: $fc-color-muted;
     line-height: 1.7;
     margin: 0;
 }
@@ -519,33 +542,33 @@ img { display: inline; }
 .fc-details-summary {
     cursor: pointer;
     font-size: 14px;
-    color: #767d85;
+    color: $fc-color-muted;
     list-style: none;
     display: flex;
     align-items: center;
     gap: 6px;
-    
+
     &::-webkit-details-marker {
         display: none;
     }
-    
+
     &::after {
         content: '▼';
         font-size: 10px;
         transition: transform 0.2s ease;
     }
-    
+
     &:hover {
-        color: #3b3f43;
+        color: $fc-color-text;
     }
 }
 
 .fc-details-content {
-    background: #f6f6f6;
+    background: $fc-color-bg-block;
     border-radius: 12px;
     padding: 12px;
     margin-top: 10px;
-    
+
     .fc-row {
         &:not(:last-child) {
             margin-bottom: 10px;
@@ -555,32 +578,20 @@ img { display: inline; }
 
 .fc-note {
     font-size: 13px;
-    color: #767d85;
+    color: $fc-color-muted;
     background: #fff8e6;
     border: 1px solid #f5e6c8;
     border-radius: 8px;
     padding: 10px 12px;
     margin-top: 10px;
     line-height: 1.5;
-    
+
     code {
         background: #fff;
-        border: 1px solid #e5e7eb;
+        border: 1px solid $fc-color-border-light;
         border-radius: 3px;
         padding: 1px 4px;
         font-family: 'IBM Plex Mono', monospace;
         font-size: 12px;
-    }
-    
-    &--compatible {
-        background: #f7f5ff;
-        border-color: #e0dbff;
-        color: #653cff;
-    }
-    
-    &--incompatible {
-        background: #ffe2d7;
-        border-color: #f5c8b8;
-        color: #1c1a19;
     }
 }

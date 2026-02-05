@@ -67,6 +67,18 @@ module SiteHelpers
     url.split("/tree/").length == 2 && url.split("/").length >= 5
   end
 
+  def fusion_compat_data(version)
+    defined?(version.fusion_compatibility) && version.fusion_compatibility ? version.fusion_compatibility : nil
+  end
+
+  def require_dbt_version_defined?(version)
+    rdv = version.require_dbt_version
+    return false if rdv.nil?
+    return false if rdv.is_a?(Array) && rdv.empty?
+    return false if rdv.is_a?(String) && rdv.strip.empty?
+    true
+  end
+
   def is_require_dbt_version_fusion_compatible(requirements)
     return false if requirements.nil?
     return false if requirements.is_a?(Array) && requirements.empty?
