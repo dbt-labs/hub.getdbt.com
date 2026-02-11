@@ -38,13 +38,13 @@
             "total_warnings": 2,
             "errors": [
                 {
-                    "body": "Invalid model definition `snowplow_media_player.base.scratch.databricks`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:124:21",
+                    "body": "Invalid model definition `snowplow_media_player.base.scratch.databricks`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:124:1)\n  --> dbt_project.yml:124:21",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_media_player.base.scratch.default`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:126:21",
+                    "body": "Invalid model definition `snowplow_media_player.base.scratch.default`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:126:1)\n  --> dbt_project.yml:126:21",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -213,10 +213,11 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.101"
+            "fusion_version": "2.0.0-preview.110"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,
-        "download_failed": false
+        "download_failed": false,
+        "fusion_compatible_download": {}
     }
 }

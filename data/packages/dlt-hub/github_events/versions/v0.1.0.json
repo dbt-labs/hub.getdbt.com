@@ -42,17 +42,18 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to eval the compiled Jinja expression invalid operation: Missing context variable 'this'. Var should be initialized for package: github_events\n(in :1:2)\n  --> models/sources.yml:4:13",
+                    "body": "Failed to eval the compiled Jinja expression invalid operation: Required var 'source_dataset_name' not found in config:\nVars supplied to github_events = {}\n(in :4:2)\n  --> models/sources.yml:4:13",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.101"
+            "fusion_version": "2.0.0-preview.110"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,
-        "download_failed": false
+        "download_failed": false,
+        "fusion_compatible_download": {}
     }
 }

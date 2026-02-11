@@ -23,9 +23,15 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 6,
+            "total_errors": 8,
             "total_warnings": 1,
             "errors": [
+                {
+                    "body": "Ignored unexpected key `\"return_value\"`. YAML path: `return_value`.\n  --> macros/artifacts/test/utilities/general/_general.yml:132:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
                 {
                     "body": "Deprecated test arguments: [\"values\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/03_mart/data-quality-score/bi_column_analysis.yml:50:17",
                     "error_code": 102,
@@ -61,13 +67,20 @@
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"return_value\"`. YAML path: `return_value`.\n  --> macros/artifacts/test/utilities/general/_general.yml:132:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.101"
+            "fusion_version": "2.0.0-preview.110"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,
-        "download_failed": false
+        "download_failed": false,
+        "fusion_compatible_download": {}
     }
 }
