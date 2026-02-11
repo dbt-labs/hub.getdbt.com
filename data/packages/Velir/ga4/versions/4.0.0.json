@@ -32,17 +32,18 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Failed to eval the compiled Jinja expression invalid operation: Missing context variable 'this'. Var should be initialized for package: ga4\n(in :1:1)\n  --> models/staging/src_ga4.yml:5:15",
+                    "body": "Failed to eval the compiled Jinja expression invalid operation: Required var 'project' not found in config:\nVars supplied to ga4 = {}\n(in :5:1)\n  --> models/staging/src_ga4.yml:5:15",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.101"
+            "fusion_version": "2.0.0-preview.110"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,
-        "download_failed": false
+        "download_failed": false,
+        "fusion_compatible_download": {}
     }
 }

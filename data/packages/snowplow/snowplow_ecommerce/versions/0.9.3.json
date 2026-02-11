@@ -38,19 +38,19 @@
             "total_warnings": 3,
             "errors": [
                 {
-                    "body": "Invalid model definition `snowplow_ecommerce.products.scratch.databricks`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:142:21",
+                    "body": "Invalid model definition `snowplow_ecommerce.products.scratch.databricks`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:142:1)\n  --> dbt_project.yml:142:21",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_ecommerce.products.scratch.default`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:146:21",
+                    "body": "Invalid model definition `snowplow_ecommerce.products.scratch.default`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:146:1)\n  --> dbt_project.yml:146:21",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_ecommerce.products.scratch.spark`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in :1:1)\n  --> dbt_project.yml:144:21",
+                    "body": "Invalid model definition `snowplow_ecommerce.products.scratch.spark`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:144:1)\n  --> dbt_project.yml:144:21",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -225,10 +225,11 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.101"
+            "fusion_version": "2.0.0-preview.110"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,
-        "download_failed": false
+        "download_failed": false,
+        "fusion_compatible_download": {}
     }
 }

@@ -23,5 +23,30 @@
         "tarball": "https://codeload.github.com/Velir/dbt-ga4/tar.gz/6.2.0",
         "format": "tgz",
         "sha1": "0fea3051c9f9f30c821d1ea0b30732cae6b8b196"
+    },
+    "fusion_compatibility": {
+        "version": "6.2.0",
+        "require_dbt_version_defined": false,
+        "require_dbt_version_compatible": null,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to render the Jinja str invalid operation: Required var 'source_project' not found in config:\nVars supplied to ga4 = {}\n(in :6:14)\n  --> models/staging/src_ga4.yml:5:15",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.110"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
     }
 }

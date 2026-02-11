@@ -26,5 +26,30 @@
         "tarball": "https://codeload.github.com/paradime-io/dbt-llm-evals/tar.gz/1.0.0",
         "format": "tgz",
         "sha1": "8e67b3960d7a71cd263ffb5dddea6bda13d07e9f"
+    },
+    "fusion_compatibility": {
+        "version": "1.0.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'llm_evals__ai_complete' found within namespace: 'dbt_llm_evals'\n    Searched for: 'dbt_llm_evals.postgres__llm_evals__ai_complete', 'dbt_llm_evals.default__llm_evals__ai_complete'\n(in models/evaluation/llm_evals__judge_evaluations.sql:117:9)\n(in macros/adapters/dispatch.sql:2:31)\n  --> macros/adapters/dispatch.sql:2:31",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.110"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
     }
 }

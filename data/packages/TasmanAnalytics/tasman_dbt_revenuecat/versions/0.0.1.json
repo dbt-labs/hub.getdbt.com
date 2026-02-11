@@ -35,17 +35,18 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Failed to eval the compiled Jinja expression invalid operation: Missing context variable 'this'. Var should be initialized for package: tasman_dbt_revenuecat\n(in :1:2)\n  --> models/sources.yml:9:21",
+                    "body": "Failed to eval the compiled Jinja expression invalid operation: Required var 'revenuecat_table' not found in config:\nVars supplied to tasman_dbt_revenuecat = {}\n(in :9:2)\n  --> models/sources.yml:9:21",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.101"
+            "fusion_version": "2.0.0-preview.110"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,
-        "download_failed": false
+        "download_failed": false,
+        "fusion_compatible_download": {}
     }
 }
