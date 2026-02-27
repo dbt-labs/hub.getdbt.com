@@ -94,6 +94,23 @@ module SiteHelpers
     end
   end
 
+  def is_fusion_parse_compatible(package, version_to_check = nil)
+    # Returns true when parse_compatible == true but the package is NOT fully fusion compatible
+    # (i.e., require_dbt_version doesn't satisfy >=2.0.0 and no manual verification)
+    version = version_to_check ? version_to_check['version'] : package.latest
+    return false unless package.versions && package.versions[version]
+
+    version_data = package.versions[version]
+    fusion_compat = version_data['fusion_compatibility']
+
+    return false unless fusion_compat
+    return false if fusion_compat['manually_verified_compatible']
+    return false if fusion_compat['manually_verified_incompatible']
+    return false unless fusion_compat['parse_compatible'] == true
+
+    !is_require_dbt_version_fusion_compatible(version_data['require_dbt_version'])
+  end
+
   def is_fusion_compatible(package, version_to_check = nil)
     # If no version specified, check the latest
     version = version_to_check ? version_to_check['version'] : package.latest
