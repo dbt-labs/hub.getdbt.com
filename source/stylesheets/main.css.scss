@@ -137,6 +137,11 @@ img { display: inline; }
     }
 }
 
+// Parse-compatible badge (same style as .fusion-badge, different text)
+.fusion-badge-parse {
+    @extend .fusion-badge;
+}
+
 // Popover for manually verified badges
 .has-popover {
     position: relative;

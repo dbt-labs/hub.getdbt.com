@@ -63,6 +63,10 @@
                       tabindex="0"
                       data-popover="Compatibility based on require-dbt-version. Parse compatibility has not yet been run on this version."
                     <% end %>>Fusion compatible</span>
+                <% elsif is_fusion_parse_compatible(package, version) %>
+                  <span class="fusion-badge-parse has-popover"
+                    tabindex="0"
+                    data-popover="This package version passes Fusion parse compatibility tests but the maintainer has not yet updated require-dbt-version to include Fusion.">Fusion parse compatible</span>
                 <% else %>
                   <span class="fusion-badge-incompatible<% if is_manually_verified_incompatible %> has-popover<% end %>"
                     <% if is_manually_verified_incompatible %>
@@ -84,7 +88,7 @@
               <button type="button" class="custom-dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">
                 <span class="dropdown-selected-text">
                   <%= version.version %><% if version.version == package.latest %> (latest)<% end %>
-                  <% if is_fusion_compatible(package, version) %>
+                  <% if is_fusion_compatible(package, version) || is_fusion_parse_compatible(package, version) %>
                     <%= image_tag('fusion_atom.svg', {alt: 'Fusion compatible', class: 'fusion-icon'}) %>
                   <% end %>
                 </span>
@@ -98,7 +102,7 @@
                   <span class="option-text">
                     <%= local_version %><% if local_version == package.latest %> (latest)<% end %>
                   </span>
-                  <% if is_fusion_compatible(package, local_package_version) %>
+                  <% if is_fusion_compatible(package, local_package_version) || is_fusion_parse_compatible(package, local_package_version) %>
                     <%= image_tag('fusion_atom.svg', {alt: 'Fusion compatible', class: 'fusion-icon'}) %>
                   <% end %>
                 </li>
@@ -327,9 +331,7 @@ packages:
           <hr>
           <div class="row">
             <div class="col-md-12">
-              <base href="<%= package.versions[package.latest]._source.url %>"
-                    target="_blank">
-              <article id="readme" class='markdown-body'>
+              <article id="readme" class='markdown-body' data-base-url="<%= package.versions[package.latest]._source.url %>/">
                 <div class="loading">
               </div>
             </div>
@@ -343,8 +345,24 @@ packages:
 
 <script>
   $.get('<%= version._source.readme %>').done(function(data) {
-      document.getElementById('readme').innerHTML = marked.parse(data)
+      var readme = document.getElementById('readme');
+      var baseUrl = readme.getAttribute('data-base-url');
+      readme.innerHTML = marked.parse(data);
 
+      // Rewrite relative URLs to point to GitHub (replaces the old <base> tag)
+      readme.querySelectorAll('a[href]').forEach(function(a) {
+        var href = a.getAttribute('href');
+        if (href && !href.match(/^https?:\/\//) && !href.match(/^#/)) {
+          a.href = baseUrl + href;
+        }
+        a.setAttribute('target', '_blank');
+      });
+      readme.querySelectorAll('img[src]').forEach(function(img) {
+        var src = img.getAttribute('src');
+        if (src && !src.match(/^https?:\/\//)) {
+          img.src = baseUrl + src;
+        }
+      });
   });
   $('#install').each(function(i, block) {
     hljs.highlightBlock(block);

@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         element: li,
         packageName: li.getAttribute('data-package-name'),
         fullName: li.getAttribute('data-full-name'),
-        isFusion: li.getAttribute('data-fusion-compatible') === 'true'
+        isFusion: li.getAttribute('data-fusion-compatible') === 'true',
+        isFusionParse: li.getAttribute('data-fusion-parse-compatible') === 'true'
       };
     });
     return { element: orgDiv, packages: packages };
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                pkg.fullName.includes(searchTerm);
           
           // Check if package matches fusion filter
-          const matchesFusion = !showOnlyFusion || pkg.isFusion;
+          const matchesFusion = !showOnlyFusion || pkg.isFusion || pkg.isFusionParse;
           
           // Show or hide package using CSS class (more performant than inline styles)
           if (matchesSearch && matchesFusion) {

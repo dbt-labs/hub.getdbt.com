@@ -68,12 +68,14 @@
                       <% if not data.blocklist['packages'].include?(org + "/" + name) %>
                           <% full_package = build_package(package, org, name) %>
                           <% is_compatible = is_fusion_compatible(full_package) %>
-                          <li class="package-item" 
-                              data-package-name="<%= name.downcase %>" 
+                          <% is_parse_compatible = is_fusion_parse_compatible(full_package) %>
+                          <li class="package-item"
+                              data-package-name="<%= name.downcase %>"
                               data-full-name="<%= (org + '/' + name).downcase %>"
-                              data-fusion-compatible="<%= is_compatible %>">
+                              data-fusion-compatible="<%= is_compatible %>"
+                              data-fusion-parse-compatible="<%= is_parse_compatible %>">
                               <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
-                              <% if is_compatible %>
+                              <% if is_compatible || is_parse_compatible %>
                                 <span class="fusion-icon-inline">
                                   <%= image_tag('fusion_atom.svg', {alt: 'Fusion', class: 'fusion-icon'}) %>
                                 </span>

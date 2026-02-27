@@ -3,6 +3,8 @@
     <div class="tile-body" style="padding: 30px 30px 30px 60px; position: relative;">
       <% if is_fusion_compatible(package) %>
         <div class="fusion-badge">Fusion compatible</div>
+      <% elsif is_fusion_parse_compatible(package) %>
+        <div class="fusion-badge-parse">Fusion parse compatible</div>
       <% end %>
       <div class="tile-graphic">
          <%= image_tag(package.assets.logo, {alt: package.name, style: "width:75px;height:75px"}) %>
