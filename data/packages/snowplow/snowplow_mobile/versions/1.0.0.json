@@ -33,9 +33,9 @@
         "require_dbt_version_compatible": false,
         "parse_compatible": false,
         "parse_compatibility_result": {
-            "parse_exit_code": 2,
-            "total_errors": 0,
-            "total_warnings": 0,
+            "parse_exit_code": 1,
+            "total_errors": 41,
+            "total_warnings": 6,
             "errors": [
                 {
                     "body": "Invalid model definition `snowplow_mobile.base.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 109 column 20\n  --> dbt_project.yml:109:20",
@@ -44,14 +44,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.base.scratch.databricks.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:111:1)\n  --> ",
-                    "error_code": 1013,
+                    "body": "Invalid model definition `snowplow_mobile.base.scratch.databricks.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:111:1)\n  --> dbt_project.yml:111:20",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.base.scratch.redshift_postgres.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:113:1)\n  --> ",
-                    "error_code": 1013,
+                    "body": "Invalid model definition `snowplow_mobile.base.scratch.redshift_postgres.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:113:1)\n  --> dbt_project.yml:113:20",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
@@ -68,14 +68,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.databricks.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:126:1)\n  --> ",
-                    "error_code": 1013,
+                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.databricks.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:126:1)\n  --> dbt_project.yml:126:22",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.redshift_postgres.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:128:1)\n  --> ",
-                    "error_code": 1013,
+                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.redshift_postgres.enabled`: Failed to eval the compiled Jinja expression invalid operation: cannot perform a containment check on this value\n(in dbt_project.yml:128:1)\n  --> dbt_project.yml:128:22",
+                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
@@ -84,14 +84,212 @@
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/base/manifest/base_manifest.yml:9:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/base/manifest/snowplow_mobile_base_sessions_lifecycle_manifest.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/base/manifest/snowplow_mobile_base_sessions_lifecycle_manifest.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/base/manifest/base_manifest.yml:31:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[38].tags`.\n  --> models/base/scratch/base_scratch.yml:128:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: Compilation Error: Need to specify the schema name of your Entity or SDE using the {'schema'} attribute in a key-value map.\n(in models/base/scratch/redshift_postgres/snowplow_mobile_base_events_this_run.sql:43:42)\n(in dbt_packages/snowplow_utils/macros/base/base_create_snowplow_events_this_run.sql:10:31)\n(in dbt_packages/snowplow_utils/macros/base/base_create_snowplow_events_this_run.sql:137:38)\n  --> models/base/scratch/redshift_postgres/snowplow_mobile_base_events_this_run.sql:43:42",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/base/scratch/base_scratch.yml:16:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/optional_modules/app_errors/scratch/app_errors_scratch.yml:9:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/optional_modules/app_errors/app_errors.yml:9:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/optional_modules/app_errors/snowplow_mobile_app_errors.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/optional_modules/app_errors/snowplow_mobile_app_errors.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/screen_views/scratch/screen_views_scratch.yml:8:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/screen_views/screen_views.yml:8:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/screen_views/snowplow_mobile_screen_views.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/screen_views/snowplow_mobile_screen_views.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/sessions/scratch/sessions_scratch.yml:170:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/sessions/scratch/sessions_scratch.yml:212:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[1].tags`.\n  --> models/sessions/scratch/sessions_scratch.yml:10:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[1].tags`.\n  --> models/sessions/sessions.yml:10:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/sessions/snowplow_mobile_sessions.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/sessions/snowplow_mobile_sessions.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/user_mapping/user_mapping.yml:9:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:112:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[0].tags`.\n  --> models/users/scratch/users_scratch.yml:158:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[1].tags`.\n  --> models/users/scratch/users_scratch.yml:180:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[1].tags`.\n  --> models/users/scratch/users_scratch.yml:10:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[1].tags`.\n  --> models/users/users.yml:10:9",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"disable_upsert_lookback\"`. YAML path: `disable_upsert_lookback`.\n  --> models/users/snowplow_mobile_users.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/users/snowplow_mobile_users.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/users/snowplow_mobile_users.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'snowplow_mobile_base_events_this_run'\n  --> models/base/scratch/snowflake/snowplow_mobile_base_events_this_run.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'snowplow_mobile_base_events_this_run'\n  --> models/base/scratch/redshift_postgres/snowplow_mobile_base_events_this_run.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'snowplow_mobile_base_events_this_run'\n  --> models/base/scratch/databricks/snowplow_mobile_base_events_this_run.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.110"
+            "fusion_version": "2.0.0-preview.143"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,
         "download_failed": false,
-        "fusion_compatible_download": {}
+        "fusion_compatible_download": null
     }
 }
