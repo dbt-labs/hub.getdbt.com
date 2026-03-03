@@ -76,10 +76,8 @@ img { display: inline; }
     line-height: 0;
 }
 
-// Full badge with text (cards, detail page)
-.fusion-badge {
-    background: $fc-color-purple-bg;
-    color: $fc-color-purple;
+// Shared base for fusion compatibility badges
+%fusion-badge-base {
     padding: 3px 4px;
     border-radius: 4px;
     font-size: 13px;
@@ -93,8 +91,9 @@ img { display: inline; }
         content: '';
         width: 14px;
         height: 14px;
-        background: url('/img/fusion_atom.svg') center/contain no-repeat;
         flex-shrink: 0;
+        display: inline-block;
+        vertical-align: middle;
     }
 
     .tile & {
@@ -111,6 +110,36 @@ img { display: inline; }
         border-radius: 3px;
         font-size: 14px;
         box-sizing: border-box;
+    }
+}
+
+// Full badge – fully Fusion compatible (purple)
+.fusion-badge {
+    @extend %fusion-badge-base;
+    background: $fc-color-purple-bg;
+    color: $fc-color-purple;
+    &::before { background: url('/img/fusion_atom.svg') center/contain no-repeat; }
+}
+
+// Parse-compatible badge (same purple as fully compatible, with info indicator)
+.fusion-badge-parse-compat {
+    @extend %fusion-badge-base;
+    background: $fc-color-purple-bg;
+    color: $fc-color-purple;
+
+    &::before {
+        background: url('/img/fusion_atom.svg') center/contain no-repeat;
+        opacity: 0.7;
+    }
+
+    &::after {
+        content: 'ⓘ';
+        font-size: 14px;
+        font-weight: 700;
+        opacity: 0.7;
+        margin-left: 3px;
+        position: relative;
+        top: 1px;
     }
 }
 
@@ -143,8 +172,7 @@ img { display: inline; }
     cursor: pointer;
 }
 
-.has-popover::after {
-    content: attr(data-popover);
+.popover-text {
     position: absolute;
     bottom: 100%;
     left: 0;
@@ -156,18 +184,28 @@ img { display: inline; }
     font-size: 14px;
     font-weight: 400;
     width: max-content;
-    max-width: 450px;
+    max-width: 400px;
     white-space: normal;
     line-height: 1.4;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.15s ease-in-out;
-    z-index: 100;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    user-select: text;
+    cursor: text;
 }
 
-.has-popover:hover::after,
-.has-popover:focus::after {
+// Override to fixed positioning inside multi-column package list
+.package-item .popover-text {
+    position: fixed;
+    bottom: auto;
+    left: auto;
+    margin-bottom: 0;
+}
+
+.has-popover:hover > .popover-text,
+.has-popover:focus > .popover-text {
     opacity: 1;
     pointer-events: auto;
 }
@@ -249,6 +287,47 @@ img { display: inline; }
     list-style-type: disc;
     column-width: 250px;
     list-style-position: inside;
+}
+
+.package-item {
+    break-inside: avoid;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.fusion-atom-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    line-height: 0;
+}
+
+.fusion-atom-pill--purple {
+    background: $fc-color-purple-bg;
+}
+
+.fusion-atom-pill--parse {
+    background: $fc-color-purple-bg;
+
+    .fusion-icon {
+        opacity: 0.8;
+    }
+}
+
+.fusion-info-icon {
+    font-size: 12px;
+    font-weight: 700;
+    color: $fc-color-purple;
+    opacity: 0.7;
+    line-height: 1;
+    margin-left: 4px;
+    position: relative;
+    top: 1px;
 }
 
 // ======================
