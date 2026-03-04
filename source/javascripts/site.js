@@ -104,4 +104,19 @@ document.addEventListener('DOMContentLoaded', function() {
       filterPackages();
     }
   }, 100);
+
+  // Position fixed popovers above their parent element
+  document.querySelectorAll('.has-popover').forEach(function(el) {
+    var popover = el.querySelector('.popover-text');
+    if (!popover) return;
+
+    function positionPopover() {
+      var rect = el.getBoundingClientRect();
+      popover.style.left = rect.left + 'px';
+      popover.style.top = (rect.top - popover.offsetHeight - 6) + 'px';
+    }
+
+    el.addEventListener('mouseenter', positionPopover);
+    el.addEventListener('focus', positionPopover);
+  });
 });

@@ -53,22 +53,29 @@
                   is_manually_verified_incompatible = fusion_compat && fusion_compat.manually_verified_incompatible == true
                   has_parse_conformance = fusion_compat && !fusion_compat.parse_compatible.nil?
                   is_based_on_require_only = !is_manually_verified_compatible && !is_manually_verified_incompatible && !has_parse_conformance
+                  is_fully_compatible = is_fusion_compatible(package, version)
+                  is_parse_compat = is_fusion_parse_compatible(package, version)
                 %>
-                <% if is_fusion_compatible(package, version) %>
+                <% if is_fully_compatible %>
                   <span class="fusion-badge<% if is_manually_verified_compatible || is_based_on_require_only %> has-popover<% end %>"
+                    <% if is_manually_verified_compatible || is_based_on_require_only %>tabindex="0"<% end %>>Fusion compatible
                     <% if is_manually_verified_compatible %>
-                      tabindex="0"
-                      data-popover="dbt has manually verified that this package version is compatible with Fusion"
+                      <span class="popover-text">dbt has manually verified that this package version is compatible with Fusion</span>
                     <% elsif is_based_on_require_only %>
-                      tabindex="0"
-                      data-popover="Compatibility based on require-dbt-version. Parse compatibility has not yet been run on this version."
-                    <% end %>>Fusion compatible</span>
+                      <span class="popover-text">Compatibility based on require-dbt-version. Parse compatibility has not yet been run on this version.</span>
+                    <% end %>
+                  </span>
+                <% elsif is_parse_compat %>
+                  <span class="fusion-badge-parse-compat has-popover" tabindex="0">Fusion parse compatible
+                    <span class="popover-text">This version of the package has not been classified as Fusion-compatible by its maintainer or by manual verification from dbt Labs, but it has been automatically verified as compatible with dbt parse. Installing this package will not prevent dbt invocations from starting, but runtime behavior on Fusion may vary versus dbt Core.</span>
+                  </span>
                 <% else %>
                   <span class="fusion-badge-incompatible<% if is_manually_verified_incompatible %> has-popover<% end %>"
+                    <% if is_manually_verified_incompatible %>tabindex="0"<% end %>>Not Fusion compatible
                     <% if is_manually_verified_incompatible %>
-                      tabindex="0"
-                      data-popover="dbt has manually verified that this package version is not compatible with Fusion"
-                    <% end %>>Not Fusion compatible</span>
+                      <span class="popover-text">dbt has manually verified that this package version is not compatible with Fusion</span>
+                    <% end %>
+                  </span>
                 <% end %>
               </div>
               <em><%= package.versions[package.latest].description %></em>
@@ -84,8 +91,10 @@
               <button type="button" class="custom-dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">
                 <span class="dropdown-selected-text">
                   <%= version.version %><% if version.version == package.latest %> (latest)<% end %>
-                  <% if is_fusion_compatible(package, version) %>
+                  <% if is_fully_compatible %>
                     <%= image_tag('fusion_atom.svg', {alt: 'Fusion compatible', class: 'fusion-icon'}) %>
+                  <% elsif is_parse_compat %>
+                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion parse compatible', class: 'fusion-icon'}) %>
                   <% end %>
                 </span>
                 <span class="dropdown-arrow">▼</span>
@@ -100,6 +109,8 @@
                   </span>
                   <% if is_fusion_compatible(package, local_package_version) %>
                     <%= image_tag('fusion_atom.svg', {alt: 'Fusion compatible', class: 'fusion-icon'}) %>
+                  <% elsif is_fusion_parse_compatible(package, local_package_version) %>
+                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion parse compatible', class: 'fusion-icon'}) %>
                   <% end %>
                 </li>
                 <% end %>
