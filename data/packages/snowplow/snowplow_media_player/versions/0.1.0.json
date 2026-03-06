@@ -37,16 +37,47 @@
         "require_dbt_version_compatible": true,
         "parse_compatible": false,
         "parse_compatibility_result": {
-            "parse_exit_code": 2,
-            "total_errors": 0,
-            "total_warnings": 0,
-            "errors": [],
+            "parse_exit_code": 1,
+            "total_errors": 5,
+            "total_warnings": 3,
+            "errors": [
+                {
+                    "body": "Failed to render SQL invalid operation: relation must be an object\n(in dbt_packages/snowplow_web/models/base/scratch/snowflake/snowplow_web_base_events_this_run.sql:12:26)\n  --> dbt_packages/snowplow_web/models/base/scratch/snowflake/snowplow_web_base_events_this_run.sql:12:26",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'snowplow_web_page_views_this_run'\n  --> models/page_views/scratch/snowflake/snowplow_web_page_views_this_run.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'snowplow_web_page_views_this_run'\n  --> models/page_views/scratch/default/snowplow_web_page_views_this_run.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'snowplow_web_base_events_this_run'\n  --> models/base/scratch/snowflake/snowplow_web_base_events_this_run.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'snowplow_web_base_events_this_run'\n  --> models/base/scratch/default/snowplow_web_base_events_this_run.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.110"
+            "fusion_version": "2.0.0-preview.143"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,
         "download_failed": false,
-        "fusion_compatible_download": {}
+        "fusion_compatible_download": null
     }
 }

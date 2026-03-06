@@ -19,5 +19,29 @@
         "format": "tgz",
         "sha1": "132ada7a1f5d6a27072d88f5c90d09543a989ad7"
     },
-    "fusion_compatibility": {}
+    "fusion_compatibility": {
+        "version": "1.1.2",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to parse macro SQL syntax error: unexpected `=`, expected end of block\n(in macros/hooks/post-hook.sql:6:23)\n  --> macros/hooks/post-hook.sql:6:23",
+                    "error_code": 1502,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.143"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": null
+    }
 }
