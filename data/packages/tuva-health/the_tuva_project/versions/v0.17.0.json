@@ -34,5 +34,41 @@
         "format": "tgz",
         "sha1": "e3c39b6b661392d1b10224e0636cc1657e40b3d6"
     },
-    "fusion_compatibility": {}
+    "fusion_compatibility": {
+        "version": "0.17.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Ignored unexpected key `\"install_prerelease\"`. YAML path: `packages[1].install_prerelease`.\n  --> packages.yml:6:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"install_prerelease\"`. YAML path: `packages[1].install_prerelease`.\n  --> packages.yml:6:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"install_prerelease\"`. YAML path: `packages[1].install_prerelease`.\n  --> packages.yml:6:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.153"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
 }
