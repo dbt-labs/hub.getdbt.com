@@ -1,0 +1,97 @@
+{
+    "id": "snowplow/snowplow_attribution/0.6.0",
+    "name": "snowplow_attribution",
+    "version": "0.6.0",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "snowplow/snowplow_utils",
+            "version": [
+                ">=0.17.3",
+                "<0.18.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.6.0",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/snowplow/dbt-snowplow-attribution/tree/0.6.0/",
+        "readme": "https://raw.githubusercontent.com/snowplow/dbt-snowplow-attribution/0.6.0/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/snowplow/dbt-snowplow-attribution/tar.gz/0.6.0",
+        "format": "tgz",
+        "sha1": "eda4e186b6bd9c5e50da3fb2d74531aecd9be93e"
+    },
+    "fusion_compatibility": {
+        "version": "0.6.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 8,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/manifest/snowplow_attribution_incremental_manifest.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/manifest/snowplow_attribution_incremental_manifest.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/snowplow_attribution_campaign_attributions.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/snowplow_attribution_campaign_attributions.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/snowplow_attribution_channel_attributions.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/snowplow_attribution_channel_attributions.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"snowplow_optimize\"`. YAML path: `snowplow_optimize`.\n  --> models/snowplow_attribution_paths_to_conversion.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"upsert_date_key\"`. YAML path: `upsert_date_key`.\n  --> models/snowplow_attribution_paths_to_conversion.sql:1:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.154"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
