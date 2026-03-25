@@ -1,10 +1,7 @@
----
-# The main stylesheet
----
-
-$readme: false;
-
 @charset "utf-8";
+
+// Main hub stylesheet; $readme gates legacy readme styles (see legacy _queries.scss).
+$readme: false;
 @import "../../legacy_css/_sass/effects/effects";
 @import "../../legacy_css/_sass/bootstrap/variables";
 @import "../../legacy_css/_sass/bootstrap/bootstrap-sass/bootstrap";
@@ -18,24 +15,24 @@ $readme: false;
 @import "../../legacy_css/_sass/custom/custom";
 
 // ======================
-// Fusion Color Palette
+// Fusion / hub UI — Biga design tokens (@dbt-labs/biga/tokens/tokens.css, loaded before Sourdough)
 // ======================
-$fc-color-text:         #3b3f43;
-$fc-color-muted:        #767d85;
-$fc-color-border:       #d1d5db;
-$fc-color-border-light: #e5e7eb;
-$fc-color-bg-block:     #f6f6f6;
-$fc-color-success:      #188435;
-$fc-color-warning:      #ab5100;
-$fc-color-purple:       #653cff;
-$fc-color-purple-bg:    #f7f5ff;
-$fc-color-purple-light: #f3e8ff;
-$fc-color-link:         #f56249;
-$fc-color-incompat-bg:  #ffe2d7;
+$fc-color-text:         var(--fgMain);
+$fc-color-muted:        var(--fgDecorative);
+$fc-color-border:       var(--borderDisabled);
+$fc-color-border-light: var(--borderMuted);
+$fc-color-bg-block:     var(--bgMainHover);
+$fc-color-success:      var(--fgSuccess);
+$fc-color-warning:      var(--fgWarning);
+$fc-color-purple:       var(--fgBrand);
+$fc-color-purple-bg:    var(--bgBrandMuted);
+$fc-color-purple-light: var(--bgBadgeBrandMuted);
+$fc-color-link:         var(--fgBrandAlt);
+$fc-color-incompat-bg:  var(--bgBadgeRedMuted);
 
 pre {
-    background-color: #f6f8fa;
-    color: #24292e;
+    background-color: var(--bgMainHover);
+    color: var(--fgMain);
 }
 
 // Utility class for hiding elements (more performant than inline style.display)
@@ -143,9 +140,261 @@ img { display: inline; }
     }
 }
 
+// Featured package tiles — Figma Package hub card (node 470:5042)
+.tiles.tiles--featured {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    margin: 3em 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    > .tile {
+        min-width: 0;
+        max-width: none;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 539px) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.tiles--featured .tile-content {
+    padding: 10px 20px;
+}
+
+.tile-body.tile-body--package-card {
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 0;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--borderMuted);
+    box-shadow: 0 2px 3px 0 var(--elevationBase);
+}
+
+.tile-body.tile-body--package-card:not(.tile-body--package-card-featured) {
+    gap: 0;
+}
+
+.tile-body.tile-body--package-card-featured {
+    min-height: 196px;
+    gap: 20px;
+}
+
+.tile-body.tile-body--package-card .tile-body__main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    width: 100%;
+}
+
+.tile-body.tile-body--package-card-featured .tile-body__main {
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.tile-body__intro {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding-right: 30px;
+}
+
+.tile-body__lower {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.tile-body__meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    min-height: 19.5px;
+    width: 100%;
+}
+
+.tile-meta__rest {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.tile-meta__group {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tile-meta__stars-count {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    color: var(--fgMain);
+    letter-spacing: -0.0762px;
+}
+
+.tile-meta__muted {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--fgDecorative);
+}
+
+.tile-meta__dot {
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--fgDecorative);
+    flex-shrink: 0;
+}
+
+.tile-meta-icon {
+    flex-shrink: 0;
+    display: block;
+}
+
+.tile-meta-icon--star {
+    color: var(--fgAnsiYellowBright);
+}
+
+.tile-meta-icon--calendar {
+    color: var(--fgDecorative);
+}
+
+.tile-graphic.tile-graphic--package-card {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50.5px;
+    height: 50.5px;
+    border-radius: 6.4px;
+    background: $fc-color-bg-block;
+
+    .tile-package-logo,
+    img {
+        display: block;
+        max-width: 32px;
+        max-height: 32px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        margin-left: 0;
+        top: 0;
+    }
+}
+
+.tile-graphic.tile-graphic--featured-card {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    // Figma 470:5042 — multi-stop diagonal (matches design file)
+    background: linear-gradient(
+        135deg,
+        rgb(101, 60, 255) 0%,
+        rgb(104, 64, 255) 9.09%,
+        rgb(108, 67, 255) 18.18%,
+        rgb(111, 70, 255) 27.27%,
+        rgb(114, 73, 255) 36.36%,
+        rgb(118, 76, 255) 45.45%,
+        rgb(121, 79, 255) 54.55%,
+        rgb(125, 82, 255) 63.64%,
+        rgb(128, 84, 255) 72.73%,
+        rgb(132, 87, 255) 81.82%,
+        rgb(135, 90, 255) 90.91%,
+        rgb(139, 92, 255) 100%
+    );
+
+    .tile-package-logo,
+    img {
+        max-width: 16px;
+        max-height: 16px;
+    }
+}
+
+// Featured tile Fusion badge — reusable component (see _package_card_fusion_badge.erb)
+.package-card-badge {
+    flex-shrink: 0;
+}
+
+// Figma: Label/Base — 13px medium, 18px line-height; badge bg brand-muted, 4px radius, no border
+.package-card-badge .package-card-badge__surface.fusion-badge.fusion-badge--featured-tile,
+.package-card-badge .package-card-badge__surface.fusion-badge-parse-compat.fusion-badge--featured-tile {
+    position: static;
+    height: auto;
+    min-height: 0;
+    padding: 3px 4px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    box-sizing: border-box;
+    align-self: flex-start;
+    color: var(--fgBrand);
+}
+
+.tile-package-name {
+    margin: 0;
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: $fc-color-text;
+}
+
+.tile-package-name--featured {
+    flex: 0 0 auto;
+    line-height: 24px;
+    color: var(--fgMain);
+}
+
+.tile-package-desc {
+    margin: 0;
+    width: 100%;
+    max-width: 172px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--fgDecorative);
+    letter-spacing: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.tile-body--package-card-featured .tile-package-desc {
+    min-height: 54px;
+}
+
 .fusion-badge-incompatible {
     background: $fc-color-incompat-bg;
-    color: #1c1a19;
+    color: var(--fgMain);
     padding: 3px 4px;
     border-radius: 3px;
     border: 1px solid $fc-color-border;
@@ -178,8 +427,8 @@ img { display: inline; }
     left: 0;
     padding: 10px 14px;
     margin-bottom: 6px;
-    background: #fafafa;
-    color: #666;
+    background: var(--bgRaised);
+    color: var(--fgDecorative);
     border-radius: 8px;
     font-size: 14px;
     font-weight: 400;
@@ -191,7 +440,7 @@ img { display: inline; }
     pointer-events: none;
     transition: opacity 0.15s ease-in-out;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 8px 0 var(--elevationNode);
     user-select: text;
     cursor: text;
 }
@@ -228,7 +477,7 @@ img { display: inline; }
     width: 100%;
     padding: 12px 40px 12px 16px;
     font-size: 1rem;
-    border: 2px solid #e0e0e0;
+    border: 2px solid var(--borderMuted);
     border-radius: 8px;
     margin-bottom: 12px;
     box-shadow: none;
@@ -236,8 +485,7 @@ img { display: inline; }
     transition: box-shadow 0.8s ease-out;
     
     &:focus {
-        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.12), 
-                    0 2px 6px rgba(74, 144, 226, 0.08);
+        box-shadow: 0 0 0 3px var(--focusHalo), 0 0 0 5px var(--focusBrand);
         transition: box-shadow 0.3s ease-in;
     }
 }
@@ -249,7 +497,7 @@ img { display: inline; }
     background: none;
     border: none;
     font-size: 1.2rem;
-    color: #999;
+    color: var(--fgDisabled);
     cursor: pointer;
     padding: 0;
     width: 21px;
@@ -277,7 +525,7 @@ img { display: inline; }
     display: none;
     text-align: center;
     padding: 40px;
-    color: #999;
+    color: var(--fgDisabled);
     p { font-size: 1.1rem; }
 }
 
@@ -388,17 +636,17 @@ img { display: inline; }
     width: 100%;
     padding: 8px 12px;
     font-size: 14px;
-    background: #fff;
-    border: 1px solid #ccc;
+    background: var(--bgMain);
+    border: 1px solid var(--borderDisabled);
     border-radius: 4px;
     cursor: pointer;
     text-align: left;
     
-    &:hover { border-color: #999; }
+    &:hover { border-color: var(--borderMainHover); }
     &:focus {
         outline: none;
-        border-color: #66afe9;
-        box-shadow: 0 0 0 2px rgba(102, 175, 233, 0.25);
+        border-color: var(--focusBrand);
+        box-shadow: 0 0 0 2px var(--focusHalo), 0 0 0 4px var(--focusBrand);
     }
 }
 
@@ -410,7 +658,7 @@ img { display: inline; }
 
 .dropdown-arrow {
     font-size: 10px;
-    color: #666;
+    color: var(--fgDecorative);
     margin-left: 8px;
 }
 
@@ -425,10 +673,10 @@ img { display: inline; }
     margin-top: 2px;
     padding: 0;
     list-style: none;
-    background: #fff;
-    border: 1px solid #ccc;
+    background: var(--bgMain);
+    border: 1px solid var(--borderDisabled);
     border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px 0 var(--elevationNode);
     z-index: 1000;
     
     &.open { display: block; }
@@ -440,7 +688,7 @@ img { display: inline; }
         padding: 8px 12px;
         cursor: pointer;
         
-        &:hover, &.focused { background: #f5f5f5; }
+        &:hover, &.focused { background: var(--bgMainHover); }
         &.selected { font-weight: 600; }
     }
 }
@@ -487,8 +735,8 @@ img { display: inline; }
 // ======================
 
 .fusion-compatibility-section {
-    background: #fff;
-    border: 2px solid #ebe9e9;
+    background: var(--bgMain);
+    border: 2px solid var(--borderMuted);
     border-radius: 10px;
     padding: 20px;
 }
@@ -561,7 +809,7 @@ img { display: inline; }
 }
 
 .fc-code {
-    background: #fff;
+    background: var(--bgMain);
     border: 1px solid $fc-color-border-light;
     border-radius: 4px;
     padding: 8px 13px;
@@ -659,15 +907,15 @@ img { display: inline; }
 .fc-note {
     font-size: 13px;
     color: $fc-color-muted;
-    background: #fff8e6;
-    border: 1px solid #f5e6c8;
+    background: var(--bgWarningMuted);
+    border: 1px solid var(--borderWarningMuted);
     border-radius: 8px;
     padding: 10px 12px;
     margin-top: 10px;
     line-height: 1.5;
 
     code {
-        background: #fff;
+        background: var(--bgMain);
         border: 1px solid $fc-color-border-light;
         border-radius: 3px;
         padding: 1px 4px;

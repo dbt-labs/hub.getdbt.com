@@ -220,6 +220,12 @@ ignore '/author.template.html.erb'
 ignore '/api/v1/package.template.json.erb'
 ignore '/api/v1/raw.json.erb'
 
+# Vendor CSS from npm (Biga tokens must load before Sourdough). Requires `npm install`.
+import_file File.expand_path('node_modules/@dbt-labs/biga/tokens/tokens.css', root),
+              '/stylesheets/vendor/biga-tokens.css'
+import_file File.expand_path('node_modules/@dbt-labs/sourdough/dist/sourdough.css', root),
+              '/stylesheets/vendor/sourdough.css'
+
 activate :livereload
 
 configure :development do

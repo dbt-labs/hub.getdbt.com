@@ -1,0 +1,22 @@
+<%#
+  Featured package tile — Fusion status badge (homepage / author grids).
+  locals:
+    - variant: :full (Fusion compatible) | :parse (Fusion parse compatible)
+%>
+<% variant = (defined?(variant) && variant) ? variant : :full %>
+<div
+  class="package-card-badge"
+  data-component="package-card-badge"
+  data-variant="<%= variant == :parse ? 'parse' : 'full' %>"
+  role="status"
+>
+  <% if variant == :parse %>
+    <div class="package-card-badge__surface fusion-badge-parse-compat fusion-badge--featured-tile">
+      Fusion parse compatible
+    </div>
+  <% else %>
+    <div class="package-card-badge__surface fusion-badge fusion-badge--featured-tile">
+      Fusion compatible
+    </div>
+  <% end %>
+</div>
