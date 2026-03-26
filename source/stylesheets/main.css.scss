@@ -232,12 +232,16 @@ img { display: inline; }
     width: 100%;
 }
 
-.tile-meta__rest {
+.tile-body__bottom {
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 4px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tile-meta__version {
+    margin-left: auto;
 }
 
 .tile-meta__group {
@@ -259,15 +263,6 @@ img { display: inline; }
     font-weight: 400;
     line-height: 18px;
     color: var(--fgDecorative);
-}
-
-.tile-meta__dot {
-    display: block;
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    background: var(--fgDecorative);
-    flex-shrink: 0;
 }
 
 .tile-meta-icon {
@@ -310,22 +305,8 @@ img { display: inline; }
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    // Figma 470:5042 — multi-stop diagonal (matches design file)
-    background: linear-gradient(
-        135deg,
-        rgb(101, 60, 255) 0%,
-        rgb(104, 64, 255) 9.09%,
-        rgb(108, 67, 255) 18.18%,
-        rgb(111, 70, 255) 27.27%,
-        rgb(114, 73, 255) 36.36%,
-        rgb(118, 76, 255) 45.45%,
-        rgb(121, 79, 255) 54.55%,
-        rgb(125, 82, 255) 63.64%,
-        rgb(128, 84, 255) 72.73%,
-        rgb(132, 87, 255) 81.82%,
-        rgb(135, 90, 255) 90.91%,
-        rgb(139, 92, 255) 100%
-    );
+    // Figma 470:5042 — diagonal brand gradient
+    background: linear-gradient(135deg, rgb(101, 60, 255) 0%, rgb(139, 92, 255) 100%);
 
     .tile-package-logo,
     img {

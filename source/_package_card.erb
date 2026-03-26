@@ -18,8 +18,6 @@
           <% if featured %>
             <%# Figma 470:5042 — description slot is always 3 lines (54px) for grid alignment %>
             <p class="tile-package-desc"><%= tile_desc if tile_desc.present? %></p>
-          <% elsif tile_desc.present? %>
-            <p class="tile-package-desc"><%= tile_desc %></p>
           <% end %>
         </div>
       </div>
@@ -32,25 +30,24 @@
                 <span class="tile-meta__stars-count"><%= tile_stars %></span>
               </span>
             <% end %>
-            <span class="tile-meta__rest">
-              <% if tile_updated.present? %>
-                <span class="tile-meta__group">
-                  <svg class="tile-meta-icon tile-meta-icon--calendar" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3.75 1v1h-.5A1.25 1.25 0 0 0 2 3.25v6.5C2 10.44 2.56 11 3.25 11h5.5c.69 0 1.25-.56 1.25-1.25v-6.5C10 2.56 9.44 2 8.75 2h-.5V1h-1v1h-3V1h-1Zm-1 3h7v5.75a.25.25 0 0 1-.25.25h-6.5a.25.25 0 0 1-.25-.25V4Z" fill="currentColor"/></svg>
-                  <span class="tile-meta__muted"><%= tile_updated %></span>
-                </span>
-              <% end %>
+            <% if tile_updated.present? %>
               <span class="tile-meta__group">
-                <span class="tile-meta__dot" aria-hidden="true"></span>
-                <span class="tile-meta__muted tile-meta__version"><%= version_label %></span>
+                <svg class="tile-meta-icon tile-meta-icon--calendar" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3.75 1v1h-.5A1.25 1.25 0 0 0 2 3.25v6.5C2 10.44 2.56 11 3.25 11h5.5c.69 0 1.25-.56 1.25-1.25v-6.5C10 2.56 9.44 2 8.75 2h-.5V1h-1v1h-3V1h-1Zm-1 3h7v5.75a.25.25 0 0 1-.25.25h-6.5a.25.25 0 0 1-.25-.25V4Z" fill="currentColor"/></svg>
+                <span class="tile-meta__muted"><%= tile_updated %></span>
               </span>
-            </span>
+            <% end %>
           </div>
         <% end %>
-        <% if is_fusion_compatible(package) %>
-          <%= partial "package_card_fusion_badge", locals: { variant: :full } %>
-        <% elsif is_fusion_parse_compatible(package) %>
-          <%= partial "package_card_fusion_badge", locals: { variant: :parse } %>
-        <% end %>
+        <div class="tile-body__bottom">
+          <% if is_fusion_compatible(package) %>
+            <%= partial "package_card_fusion_badge", locals: { variant: :full } %>
+          <% elsif is_fusion_parse_compatible(package) %>
+            <%= partial "package_card_fusion_badge", locals: { variant: :parse } %>
+          <% end %>
+          <% if featured %>
+            <span class="tile-meta__muted tile-meta__version"><%= version_label %></span>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
