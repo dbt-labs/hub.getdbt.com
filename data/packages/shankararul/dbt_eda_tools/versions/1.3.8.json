@@ -1,0 +1,52 @@
+{
+    "id": "shankararul/dbt_eda_tools/1.3.8",
+    "name": "dbt_eda_tools",
+    "version": "1.3.8",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "dbt-labs/dbt_utils",
+            "version": ">=1.0.0"
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.0.0",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/shankararul/dbt_eda_tools/tree/1.3.8/",
+        "readme": "https://raw.githubusercontent.com/shankararul/dbt_eda_tools/1.3.8/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/shankararul/dbt_eda_tools/tar.gz/1.3.8",
+        "format": "tgz",
+        "sha1": "b62628cdf8e7f24b95f58d200dc3307f05ac625a"
+    },
+    "fusion_compatibility": {
+        "version": "1.3.8",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to render the Jinja str unknown function: In dispatch: No macro named 'estimate_build_cost' found within namespace: 'dbt_eda_tools'\n    Searched for: 'dbt_eda_tools.postgres__estimate_build_cost', 'dbt_eda_tools.default__estimate_build_cost', 'dbt_eda_tools.postgres__estimate_build_cost', 'dbt_eda_tools.default__estimate_build_cost'\n(in :65:8)\n(in macros/estimate_build_cost.sql:2:31)\n  --> macros/schema.yml:62:18",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.163"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
