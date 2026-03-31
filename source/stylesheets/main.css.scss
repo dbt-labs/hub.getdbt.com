@@ -144,7 +144,8 @@ img { display: inline; }
 // (avoids long package names like dbt_project_evaluator being squeezed in three skinny columns)
 .tiles.tiles--featured {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    // Literal CSS for browsers: SassC cannot evaluate min() with mixed % and rem units
+    grid-template-columns: unquote("repeat(auto-fit, minmax(min(100%, 22rem), 1fr))");
     align-items: stretch;
     gap: 16px;
     margin: 3em 0;
