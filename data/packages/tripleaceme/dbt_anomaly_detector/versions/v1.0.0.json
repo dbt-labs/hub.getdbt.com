@@ -1,0 +1,47 @@
+{
+    "id": "tripleaceme/dbt_anomaly_detector/v1.0.0",
+    "name": "dbt_anomaly_detector",
+    "version": "v1.0.0",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [],
+    "require_dbt_version": [
+        ">=1.6.0",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/tripleaceme/dbt-anomaly-detector/tree/v1.0.0/",
+        "readme": "https://raw.githubusercontent.com/tripleaceme/dbt-anomaly-detector/v1.0.0/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/tripleaceme/dbt-anomaly-detector/tar.gz/v1.0.0",
+        "format": "tgz",
+        "sha1": "79baee6146b65249532ee25be2c5442d7047b3ed"
+    },
+    "fusion_compatibility": {
+        "version": "v1.0.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to render SQL invalid operation: argument 'database' to get_relation() has incompatible type MutableMap; value is not a string\n(in models/detect_anomalies.sql:22:45)\n(in macros/get_metrics_relation.sql:19:30)\n  --> macros/get_metrics_relation.sql:19:30",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.164"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
