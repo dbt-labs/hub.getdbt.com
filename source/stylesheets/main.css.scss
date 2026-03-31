@@ -140,11 +140,13 @@ img { display: inline; }
     }
 }
 
-// Featured package tiles — Figma Package hub card (node 470:5042)
+// Featured package tiles — reflow to fewer columns when a row would be narrower than ~22rem
+// (avoids long package names like dbt_project_evaluator being squeezed in three skinny columns)
 .tiles.tiles--featured {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
     align-items: stretch;
+    gap: 16px;
     margin: 3em 0;
     width: 100%;
     box-sizing: border-box;
@@ -153,18 +155,10 @@ img { display: inline; }
         min-width: 0;
         max-width: none;
     }
-
-    @media (max-width: 768px) {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    @media (max-width: 539px) {
-        grid-template-columns: minmax(0, 1fr);
-    }
 }
 
 .tiles--featured .tile-content {
-    padding: 10px 20px;
+    padding: 0;
 }
 
 .tile-body.tile-body--package-card {
@@ -175,9 +169,10 @@ img { display: inline; }
     width: 100%;
     min-height: 0;
     padding: 20px;
-    border-radius: 6px;
+    border-radius: 12px;
     border: 1px solid var(--borderMuted);
     box-shadow: 0 2px 3px 0 var(--elevationBase);
+    transition: box-shadow 0.2s ease;
 }
 
 .tile-body.tile-body--package-card:not(.tile-body--package-card-featured) {
@@ -185,8 +180,18 @@ img { display: inline; }
 }
 
 .tile-body.tile-body--package-card-featured {
-    min-height: 196px;
     gap: 20px;
+}
+
+.tile--featured:hover .tile-body--package-card {
+    box-shadow: 0 0 1px 0 var(--elevationBase),
+                0 1px 2px 0 var(--elevationBase),
+                0 2px 4px 0 var(--elevationBase),
+                0 4px 8px 0 var(--elevationBase);
+}
+
+.tile--featured:focus-visible .tile-body--package-card {
+    box-shadow: 0 0 0 2px var(--focusHalo), 0 0 0 4px var(--focusBrand);
 }
 
 .tile-body.tile-body--package-card .tile-body__main {
@@ -209,9 +214,9 @@ img { display: inline; }
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
-    padding-right: 30px;
+    gap: 8px;
 }
+
 
 .tile-body__lower {
     margin-top: auto;
@@ -222,26 +227,62 @@ img { display: inline; }
     gap: 10px;
 }
 
-.tile-body__meta {
+.tile-body__byline {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    gap: 16px;
-    min-height: 19.5px;
+    column-gap: 6px;
+    row-gap: 4px;
     width: 100%;
+    min-width: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--fgDecorative);
+}
+
+.tile-byline__sep {
+    color: var(--fgDecorative);
+    font-size: 12px;
+    line-height: 18px;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.tile-byline__version,
+.tile-byline__updated {
+    min-width: 0;
+}
+
+.tile-maintainer__avatar {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: block;
+    object-fit: cover;
+}
+
+.tile-maintainer__name {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--fgDecorative);
 }
 
 .tile-body__bottom {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
 }
 
-.tile-meta__version {
-    margin-left: auto;
+.tile-byline__version {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--fgDecorative);
 }
 
 .tile-meta__group {
@@ -250,13 +291,6 @@ img { display: inline; }
     gap: 4px;
 }
 
-.tile-meta__stars-count {
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 13px;
-    color: var(--fgMain);
-    letter-spacing: -0.0762px;
-}
 
 .tile-meta__muted {
     font-size: 12px;
@@ -270,50 +304,11 @@ img { display: inline; }
     display: block;
 }
 
-.tile-meta-icon--star {
-    color: var(--fgAnsiYellowBright);
-}
 
 .tile-meta-icon--calendar {
     color: var(--fgDecorative);
 }
 
-.tile-graphic.tile-graphic--package-card {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50.5px;
-    height: 50.5px;
-    border-radius: 6.4px;
-    background: $fc-color-bg-block;
-
-    .tile-package-logo,
-    img {
-        display: block;
-        max-width: 32px;
-        max-height: 32px;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-        margin-left: 0;
-        top: 0;
-    }
-}
-
-.tile-graphic.tile-graphic--featured-card {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    // Figma 470:5042 — diagonal brand gradient
-    background: linear-gradient(135deg, rgb(101, 60, 255) 0%, rgb(139, 92, 255) 100%);
-
-    .tile-package-logo,
-    img {
-        max-width: 16px;
-        max-height: 16px;
-    }
-}
 
 // Featured tile Fusion badge — reusable component (see _package_card_fusion_badge.erb)
 .package-card-badge {
@@ -328,12 +323,13 @@ img { display: inline; }
     min-height: 0;
     padding: 3px 4px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 13px;
     font-weight: 500;
     line-height: 18px;
     box-sizing: border-box;
     align-self: flex-start;
+    background: var(--bgBadgeBrandMuted);
     color: var(--fgBrand);
 }
 
@@ -349,17 +345,20 @@ img { display: inline; }
 
 .tile-package-name--featured {
     flex: 0 0 auto;
-    line-height: 24px;
+    font-size: 24px;
+    line-height: 28px;
     color: var(--fgMain);
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
 }
 
 .tile-package-desc {
     margin: 0;
     width: 100%;
-    max-width: 172px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 20px;
     color: var(--fgDecorative);
     letter-spacing: 0;
     display: -webkit-box;
@@ -369,9 +368,6 @@ img { display: inline; }
     min-height: 0;
 }
 
-.tile-body--package-card-featured .tile-package-desc {
-    min-height: 54px;
-}
 
 .fusion-badge-incompatible {
     background: $fc-color-incompat-bg;

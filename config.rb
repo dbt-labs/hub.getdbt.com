@@ -170,11 +170,10 @@ rescue => e
 end
 
 # Converts a GitHub ISO-8601 timestamp (e.g. "2025-12-11T14:23:45Z") to
-# a human-readable label like "Updated 11 Dec 2025".
+# a human-readable label like "Updated Dec 2025".
 def format_pushed_at(iso_string)
   return nil if iso_string.nil? || iso_string.empty?
-  t = Time.parse(iso_string)
-  "Updated #{t.day} #{t.strftime('%b %Y')}"
+  Time.parse(iso_string).strftime('Updated %b %Y')
 rescue ArgumentError
   nil
 end
@@ -188,7 +187,6 @@ featured_live = {}
   live = {
     'description' => repo['description'],
     'updated'     => format_pushed_at(repo['pushed_at']),
-    'stars'       => repo['stargazers_count']
   }.compact
   featured_live["#{feat['org']}/#{feat['package']}"] = live
 end
