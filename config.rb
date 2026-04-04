@@ -1,4 +1,6 @@
 require 'open-uri'
+require 'json'
+require 'time'
 
 class Middleman::Util::EnhancedHash
     # Mila: Looked into Hashie::Mash's source code where this class is
@@ -151,6 +153,45 @@ end
 
 set :package_index, combine_packages(@app.data.packages)
 
+# Fetches repository metadata from the GitHub API.
+# Returns an empty hash on any error so callers can treat missing fields as absent.
+def fetch_github_repo(org, repo, token = nil)
+  url = "https://api.github.com/repos/#{org}/#{repo}"
+  options = {
+    'Accept'               => 'application/vnd.github+json',
+    'X-GitHub-Api-Version' => '2022-11-28',
+    'User-Agent'           => 'hub.getdbt.com-middleman-build'
+  }
+  options['Authorization'] = "Bearer #{token}" if token
+  JSON.parse(URI.open(url, options).read)
+rescue => e
+  warn "[hub] GitHub API fetch failed for #{org}/#{repo}: #{e.message}"
+  {}
+end
+
+# Converts a GitHub ISO-8601 timestamp (e.g. "2025-12-11T14:23:45Z") to
+# a human-readable label like "Updated Dec 2025".
+def format_pushed_at(iso_string)
+  return nil if iso_string.nil? || iso_string.empty?
+  Time.parse(iso_string).strftime('Updated %b %Y')
+rescue ArgumentError
+  nil
+end
+
+# Fetch live description + last-push date for each featured package at build time.
+# Falls back gracefully to the values in data/featured.json if the API is unavailable.
+github_token = ENV['GITHUB_TOKEN']
+featured_live = {}
+@app.data.featured.each do |feat|
+  repo = fetch_github_repo(feat['org'], feat['package'], github_token)
+  live = {
+    'description' => repo['description'],
+    'updated'     => format_pushed_at(repo['pushed_at']),
+  }.compact
+  featured_live["#{feat['org']}/#{feat['package']}"] = live
+end
+set :featured_live, featured_live
+
 after_configuration do
 
   proxy "/api/v1/packages.json",
@@ -219,6 +260,12 @@ ignore '/package.template.html.erb'
 ignore '/author.template.html.erb'
 ignore '/api/v1/package.template.json.erb'
 ignore '/api/v1/raw.json.erb'
+
+# Vendor CSS from npm (Biga tokens must load before Sourdough). Requires `npm install`.
+import_file File.expand_path('node_modules/@dbt-labs/biga/tokens/tokens.css', root),
+              '/stylesheets/vendor/biga-tokens.css'
+import_file File.expand_path('node_modules/@dbt-labs/sourdough/dist/sourdough.css', root),
+              '/stylesheets/vendor/sourdough.css'
 
 activate :livereload
 
