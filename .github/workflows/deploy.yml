@@ -30,26 +30,5 @@ jobs:
 
       - name: Smoke test
         run: |
-          set -euo pipefail
-
-          # Wait for CloudFront invalidation to propagate
           sleep 30
-
-          RESPONSE=$(curl -sf --retry 3 --retry-delay 10 "https://hub.getdbt.com/api/v1/packages.json")
-
-          PACKAGE_COUNT=$(echo "$RESPONSE" | python3 -c "
-          import json, sys
-          data = json.load(sys.stdin)
-          if not isinstance(data, dict):
-              print('ERROR: response is not a JSON object', file=sys.stderr)
-              sys.exit(1)
-          print(len(data))
-          ")
-
-          echo "Smoke test: $PACKAGE_COUNT packages returned"
-          if [ "$PACKAGE_COUNT" -lt 100 ]; then
-            echo "FAIL: expected at least 100 packages, got $PACKAGE_COUNT"
-            exit 1
-          fi
-
-          echo "Smoke test passed"
+          python3 scripts/validate-build.py https://hub.getdbt.com
