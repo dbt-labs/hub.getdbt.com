@@ -135,18 +135,48 @@ def validate_from_directory(build_dir):
 
 
 def validate_from_url(base_url):
-    """Validate a live deployment."""
+    """Validate a live deployment via index.json and individual package endpoints."""
+    import random
+
     base_url = base_url.rstrip("/")
     errors = []
 
-    url = f"{base_url}/api/v1/packages.json"
+    # 1. Fetch and validate index.json (array of "org/name" strings)
+    index_url = f"{base_url}/api/v1/index.json"
     try:
-        data = load_json_url(url)
+        index_data = load_json_url(index_url)
     except Exception as e:
-        errors.append(f"Failed to fetch {url}: {e}")
+        errors.append(f"Failed to fetch {index_url}: {e}")
         return errors
 
-    errors.extend(validate_packages_index(data, url))
+    if not isinstance(index_data, list):
+        errors.append(f"index.json: expected JSON array, got {type(index_data).__name__}")
+        return errors
+
+    if len(index_data) < MIN_PACKAGE_COUNT:
+        errors.append(
+            f"index.json: expected at least {MIN_PACKAGE_COUNT} packages, got {len(index_data)}"
+        )
+        return errors
+
+    print(f"  index.json: {len(index_data)} packages")
+
+    # Validate entries are "org/name" strings
+    for entry in index_data:
+        if not isinstance(entry, str) or "/" not in entry:
+            errors.append(f"index.json: entry {entry!r} is not in 'org/name' format")
+
+    # 2. Spot-check individual package endpoints
+    sample = random.sample(index_data, min(10, len(index_data)))
+    for pkg_name in sample:
+        pkg_url = f"{base_url}/api/v1/{pkg_name}.json"
+        try:
+            pkg_data = load_json_url(pkg_url)
+        except Exception as e:
+            errors.append(f"Failed to fetch {pkg_url}: {e}")
+            continue
+        errors.extend(validate_package_file(pkg_data, pkg_url))
+
     return errors
 
 
