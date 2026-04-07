@@ -40,8 +40,8 @@ jobs:
           PACKAGE_COUNT=$(echo "$RESPONSE" | python3 -c "
           import json, sys
           data = json.load(sys.stdin)
-          if not isinstance(data, list):
-              print('ERROR: response is not a JSON array', file=sys.stderr)
+          if not isinstance(data, dict):
+              print('ERROR: response is not a JSON object', file=sys.stderr)
               sys.exit(1)
           print(len(data))
           ")
