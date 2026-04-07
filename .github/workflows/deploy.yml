@@ -16,12 +16,40 @@ jobs:
           ruby-version: '2.7'
           bundler-cache: true
 
+      - name: Build
+        run: bundle exec middleman build
+
       - name: Deploy
         env:
           AWS_REGION: us-east-1
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          bundle exec middleman build
           aws s3 cp --recursive build/ s3://com.getdbt.hub/
           aws cloudfront create-invalidation --distribution-id E39VJ0QVYMOHEU --paths '/*'
+
+      - name: Smoke test
+        run: |
+          set -euo pipefail
+
+          # Wait for CloudFront invalidation to propagate
+          sleep 30
+
+          RESPONSE=$(curl -sf --retry 3 --retry-delay 10 "https://hub.getdbt.com/api/v1/packages.json")
+
+          PACKAGE_COUNT=$(echo "$RESPONSE" | python3 -c "
+          import json, sys
+          data = json.load(sys.stdin)
+          if not isinstance(data, list):
+              print('ERROR: response is not a JSON array', file=sys.stderr)
+              sys.exit(1)
+          print(len(data))
+          ")
+
+          echo "Smoke test: $PACKAGE_COUNT packages returned"
+          if [ "$PACKAGE_COUNT" -lt 100 ]; then
+            echo "FAIL: expected at least 100 packages, got $PACKAGE_COUNT"
+            exit 1
+          fi
+
+          echo "Smoke test passed"

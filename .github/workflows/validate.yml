@@ -1,0 +1,74 @@
+# Validates that the site builds successfully and the API output is well-formed.
+# This should be configured as a required status check via branch protection on master.
+
+name: Validate build
+on:
+  pull_request:
+  push:
+    branches:
+      - 'master'
+
+permissions: read-all
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # actions/checkout@v4
+
+      - uses: ruby/setup-ruby@d5126b9b3579e429dd52e51e68624dda2e05be25 # ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec middleman build
+
+      - name: Validate API output
+        run: |
+          set -euo pipefail
+
+          # Validate packages index exists and is valid JSON
+          if [ ! -f build/api/v1/packages.json ]; then
+            echo "FAIL: build/api/v1/packages.json not found"
+            exit 1
+          fi
+
+          # Validate it's valid JSON and has a reasonable number of packages
+          PACKAGE_COUNT=$(python3 -c "
+          import json, sys
+          with open('build/api/v1/packages.json') as f:
+              data = json.load(f)
+          if not isinstance(data, list):
+              print('ERROR: packages.json is not a JSON array', file=sys.stderr)
+              sys.exit(1)
+          print(len(data))
+          ")
+
+          echo "Package count: $PACKAGE_COUNT"
+          if [ "$PACKAGE_COUNT" -lt 100 ]; then
+            echo "FAIL: expected at least 100 packages, got $PACKAGE_COUNT"
+            exit 1
+          fi
+
+          # Validate a sample of individual package JSON files
+          ERRORS=0
+          for f in $(find build/api/v1 -name "*.json" -not -name "packages.json" -not -path "*/versions/*" | head -20); do
+            python3 -c "
+          import json, sys
+          with open('$f') as fh:
+              data = json.load(fh)
+          for field in ['name', 'namespace', 'versions']:
+              if field not in data:
+                  print(f'FAIL: $f missing required field: {field}', file=sys.stderr)
+                  sys.exit(1)
+          " || ERRORS=$((ERRORS + 1))
+          done
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo "FAIL: $ERRORS package files failed validation"
+            exit 1
+          fi
+
+          echo "OK: all validations passed"
