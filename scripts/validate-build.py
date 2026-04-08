@@ -115,13 +115,12 @@ def validate_from_directory(build_dir):
     errors.extend(validate_packages_index(data, str(packages_path)))
 
     # 2. Validate individual package files
+    # Build layout: build/api/v1/{org}/{name}.json (package)
+    #               build/api/v1/{org}/{name}/{version}.json (version)
+    # Package files are direct children of org dirs (depth 1 under v1/{org}/)
     api_dir = build_path / "api" / "v1"
-    package_files = sorted(api_dir.rglob("*.json"))
-    package_files = [
-        f
-        for f in package_files
-        if f.name != "packages.json" and "versions" not in f.parts
-    ]
+    package_files = sorted(api_dir.glob("*/*.json"))
+    package_files = [f for f in package_files if f.name != "packages.json"]
 
     for pkg_file in package_files[:20]:
         try:
