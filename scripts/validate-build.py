@@ -100,19 +100,33 @@ def validate_from_directory(build_dir):
     build_path = Path(build_dir)
     errors = []
 
-    # 1. Validate packages.json
-    packages_path = build_path / "api" / "v1" / "packages.json"
-    if not packages_path.exists():
-        errors.append(f"{packages_path} not found")
+    # 1. Validate index.json (array of "org/name" strings, used by dbt deps)
+    index_path = build_path / "api" / "v1" / "index.json"
+    if not index_path.exists():
+        errors.append(f"{index_path} not found")
         return errors
 
     try:
-        data = load_json_file(packages_path)
+        index_data = load_json_file(index_path)
     except json.JSONDecodeError as e:
-        errors.append(f"{packages_path}: invalid JSON: {e}")
+        errors.append(f"{index_path}: invalid JSON: {e}")
         return errors
 
-    errors.extend(validate_packages_index(data, str(packages_path)))
+    if not isinstance(index_data, list):
+        errors.append(f"index.json: expected JSON array, got {type(index_data).__name__}")
+        return errors
+
+    if len(index_data) < MIN_PACKAGE_COUNT:
+        errors.append(
+            f"index.json: expected at least {MIN_PACKAGE_COUNT} packages, got {len(index_data)}"
+        )
+        return errors
+
+    print(f"  index.json: {len(index_data)} packages")
+
+    for entry in index_data:
+        if not isinstance(entry, str) or "/" not in entry:
+            errors.append(f"index.json: entry {entry!r} is not in 'org/name' format")
 
     # 2. Validate individual package files
     # Build layout: build/api/v1/{org}/{name}.json (package)
@@ -120,7 +134,6 @@ def validate_from_directory(build_dir):
     # Package files are direct children of org dirs (depth 1 under v1/{org}/)
     api_dir = build_path / "api" / "v1"
     package_files = sorted(api_dir.glob("*/*.json"))
-    package_files = [f for f in package_files if f.name != "packages.json"]
 
     for pkg_file in package_files[:20]:
         try:
