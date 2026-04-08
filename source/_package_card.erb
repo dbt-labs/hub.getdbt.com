@@ -1,7 +1,6 @@
 <% featured = (defined?(featured_context) && featured_context) ? true : false %>
 <% tile_cfg = (defined?(featured_config) && featured_config) ? featured_config : nil %>
 <% tile_desc = featured && tile_cfg && tile_cfg['description'].to_s.strip %>
-<% tile_updated = featured && tile_cfg && tile_cfg['updated'].to_s.strip %>
 <% version_label = package.latest.to_s.start_with?('v') ? package.latest.to_s : "v#{package.latest}" %>
 
 <a href="/<%= package.namespace %>/<%= package.name %>/latest/" class="tile<%= ' tile--featured' if featured %>">
@@ -18,15 +17,11 @@
       </div>
       <div class="tile-body__lower">
         <% if featured %>
-          <div class="tile-body__byline" aria-label="<%= package.namespace %> · Latest <%= version_label %><%= tile_updated.present? ? " · #{tile_updated}" : '' %>">
+          <div class="tile-body__byline" aria-label="<%= package.namespace %> · Latest <%= version_label %>">
             <img src="https://github.com/<%= package.namespace %>.png?size=32" alt="" class="tile-maintainer__avatar" aria-hidden="true" width="16" height="16" />
             <span class="tile-maintainer__name"><%= package.namespace %></span>
             <span class="tile-byline__sep" aria-hidden="true">·</span>
             <span class="tile-byline__version">Latest <%= version_label %></span>
-            <% if tile_updated.present? %>
-              <span class="tile-byline__sep" aria-hidden="true">·</span>
-              <span class="tile-meta__muted tile-byline__updated"><%= tile_updated %></span>
-            <% end %>
           </div>
         <% end %>
         <% if is_fusion_compatible(package) || is_fusion_parse_compatible(package) %>

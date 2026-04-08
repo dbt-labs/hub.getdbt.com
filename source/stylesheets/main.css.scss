@@ -251,11 +251,6 @@ img { display: inline; }
     user-select: none;
 }
 
-.tile-byline__version,
-.tile-byline__updated {
-    min-width: 0;
-}
-
 .tile-maintainer__avatar {
     width: 16px;
     height: 16px;
@@ -280,6 +275,7 @@ img { display: inline; }
 }
 
 .tile-byline__version {
+    min-width: 0;
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
@@ -290,14 +286,6 @@ img { display: inline; }
     display: inline-flex;
     align-items: center;
     gap: 4px;
-}
-
-
-.tile-meta__muted {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    color: var(--fgDecorative);
 }
 
 .tile-meta-icon {

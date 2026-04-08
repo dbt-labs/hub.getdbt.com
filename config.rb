@@ -169,16 +169,7 @@ rescue => e
   {}
 end
 
-# Converts a GitHub ISO-8601 timestamp (e.g. "2025-12-11T14:23:45Z") to
-# a human-readable label like "Updated Dec 2025".
-def format_pushed_at(iso_string)
-  return nil if iso_string.nil? || iso_string.empty?
-  Time.parse(iso_string).strftime('Updated %b %Y')
-rescue ArgumentError
-  nil
-end
-
-# Fetch live description + last-push date for each featured package at build time.
+# Fetch live description for each featured package at build time.
 # Falls back gracefully to the values in data/featured.json if the API is unavailable.
 github_token = ENV['GITHUB_TOKEN']
 featured_live = {}
@@ -186,7 +177,6 @@ featured_live = {}
   repo = fetch_github_repo(feat['org'], feat['package'], github_token)
   live = {
     'description' => repo['description'],
-    'updated'     => format_pushed_at(repo['pushed_at']),
   }.compact
   featured_live["#{feat['org']}/#{feat['package']}"] = live
 end
