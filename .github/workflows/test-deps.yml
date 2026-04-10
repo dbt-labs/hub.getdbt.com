@@ -10,13 +10,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # actions/checkout@v4
       - name: Build Hub, Fusion CLI, and Core CLI
-        run: docker-compose up -d --build
+        run: docker compose up -d --build
       - name: Wait for service start
         run: sleep 30s
         shell: bash
       - name: Test Fusion CLI
-        run: docker-compose run dbt-fusion deps
+        run: docker compose run dbt-fusion deps
       - name: Test Core CLI
-        run: docker-compose run dbt-core deps
+        run: docker compose run dbt-core deps
       - name: Cleanup
-        run: docker-compose down
+        run: docker compose down
