@@ -14,7 +14,7 @@ services:
     environment:
       DBT_PACKAGE_HUB_URL: http://web:4567/
   dbt-core:
-    build: tests/core/.
+    build: https://github.com/dbt-labs/dbt-core.git#main:docker
     volumes:
       - './tests/sample_project/.:/usr/app'
     environment:
