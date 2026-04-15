@@ -1,0 +1,48 @@
+{
+    "id": "fivetran/workday/v0.9.1",
+    "name": "workday",
+    "version": "v0.9.1",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/fivetran_utils",
+            "version": [
+                ">=0.4.0",
+                "<0.5.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.3.0",
+        "<3.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_workday/tree/v0.9.1/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_workday/v0.9.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_workday/tar.gz/v0.9.1",
+        "format": "tgz",
+        "sha1": "89f7a3361692b5aa79b174e7b2705643b7b49d0d"
+    },
+    "fusion_compatibility": {
+        "version": "v0.9.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": true,
+        "parse_compatibility_result": {
+            "parse_exit_code": 0,
+            "total_errors": 0,
+            "total_warnings": 0,
+            "errors": [],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.172"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
