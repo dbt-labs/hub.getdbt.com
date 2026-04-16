@@ -1,0 +1,55 @@
+{
+    "id": "fivetran/shopify_holistic_reporting/v1.2.0",
+    "name": "shopify_holistic_reporting",
+    "version": "v1.2.0",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/shopify",
+            "version": [
+                ">=1.7.0",
+                "<1.8.0"
+            ]
+        },
+        {
+            "package": "fivetran/klaviyo",
+            "version": [
+                ">=1.3.0",
+                "<1.4.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.3.0",
+        "<3.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_shopify_holistic_reporting/tree/v1.2.0/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_shopify_holistic_reporting/v1.2.0/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_shopify_holistic_reporting/tar.gz/v1.2.0",
+        "format": "tgz",
+        "sha1": "b8abfb41e6204f1268516eb546bc73f00daf5011"
+    },
+    "fusion_compatibility": {
+        "version": "v1.2.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": true,
+        "parse_compatibility_result": {
+            "parse_exit_code": 0,
+            "total_errors": 0,
+            "total_warnings": 0,
+            "errors": [],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.172"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
