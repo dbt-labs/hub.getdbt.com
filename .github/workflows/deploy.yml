@@ -16,11 +16,20 @@ jobs:
           ruby-version: '2.7'
           bundler-cache: true
 
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install npm dependencies (Biga + Sourdough for import_file)
+        run: npm ci
+
       - name: Deploy
         env:
           AWS_REGION: us-east-1
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           bundle exec middleman build
           aws s3 cp --recursive build/ s3://com.getdbt.hub/
