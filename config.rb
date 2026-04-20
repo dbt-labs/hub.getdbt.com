@@ -154,27 +154,22 @@ end
 set :package_index, combine_packages(@app.data.packages)
 
 # Fetches repository metadata from the GitHub API.
-# Returns an empty hash on any error so callers can treat missing fields as absent.
-def fetch_github_repo(org, repo, token = nil)
+def fetch_github_repo(org, repo)
   url = "https://api.github.com/repos/#{org}/#{repo}"
   options = {
     'Accept'               => 'application/vnd.github+json',
     'X-GitHub-Api-Version' => '2022-11-28',
-    'User-Agent'           => 'hub.getdbt.com-middleman-build'
+    'User-Agent'           => 'hub.getdbt.com-middleman-build',
+    open_timeout:            5,
+    read_timeout:            5
   }
-  options['Authorization'] = "Bearer #{token}" if token
   JSON.parse(URI.open(url, options).read)
-rescue => e
-  warn "[hub] GitHub API fetch failed for #{org}/#{repo}: #{e.message}"
-  {}
 end
 
 # Fetch live description for each featured package at build time.
-# Falls back gracefully to the values in data/featured.json if the API is unavailable.
-github_token = ENV['GITHUB_TOKEN']
 featured_live = {}
 @app.data.featured.each do |feat|
-  repo = fetch_github_repo(feat['org'], feat['package'], github_token)
+  repo = fetch_github_repo(feat['org'], feat['package'])
   live = {
     'description' => repo['description'],
   }.compact
