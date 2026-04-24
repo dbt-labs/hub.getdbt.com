@@ -1,0 +1,80 @@
+{
+    "id": "tuva-health/the_tuva_project/v0.18.0-rc",
+    "name": "the_tuva_project",
+    "version": "v0.18.0-rc",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "dbt-labs/dbt_utils",
+            "version": [
+                ">=0.9.2"
+            ]
+        },
+        {
+            "package": "metaplane/dbt_expectations",
+            "version": [
+                ">0.10.0"
+            ],
+            "install_prerelease": false
+        },
+        {
+            "git": "https://github.com/tuva-health/dbt-data-reliability.git",
+            "revision": "v0.18.4"
+        }
+    ],
+    "require_dbt_version": ">=1.10.0",
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/tuva-health/the_tuva_project/tree/v0.18.0-rc/",
+        "readme": "https://raw.githubusercontent.com/tuva-health/the_tuva_project/v0.18.0-rc/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/tuva-health/the_tuva_project/tar.gz/v0.18.0-rc",
+        "format": "tgz",
+        "sha1": "608e39eb71ae8685530a6f44e6770124cd51ca3c"
+    },
+    "fusion_compatibility": {
+        "version": "v0.18.0-rc",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 2,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Ignored unexpected key `\"install_prerelease\"`. YAML path: `packages[1].install_prerelease`.\n  --> packages.yml:6:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"install_prerelease\"`. YAML path: `packages[1].install_prerelease`.\n  --> packages.yml:6:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"install_prerelease\"`. YAML path: `packages[1].install_prerelease`.\n  --> packages.yml:6:5",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to eval the compiled Jinja expression undefined value\n(in :1:2)\n  --> dbt_packages/.tmpbEbj5t/dbt-data-reliability.git/dbt_project.yml:21:13",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.173"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
