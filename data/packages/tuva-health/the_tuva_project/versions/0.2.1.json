@@ -60,17 +60,17 @@
         "parse_compatibility_result": {
             "parse_exit_code": 1,
             "total_errors": 1,
-            "total_warnings": 0,
+            "total_warnings": 1,
             "errors": [
                 {
-                    "body": "Failed to open tar file: No such file or directory (os error 2)",
-                    "error_code": 1001,
+                    "body": "Failed to download tarball from https://codeload.github.com/tuva-health/data_profiling/tar.gz/0.1.7; status: 404 Not Found",
+                    "error_code": 8999,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to open tar file: No such file or directory (os error 2)",
-                    "error_code": 1001,
+                    "body": "Failed to download tarball from https://codeload.github.com/tuva-health/claims_preprocessing/tar.gz/0.1.8; status: 404 Not Found",
+                    "error_code": 8999,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
