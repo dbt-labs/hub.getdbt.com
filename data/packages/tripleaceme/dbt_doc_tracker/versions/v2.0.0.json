@@ -23,19 +23,12 @@
         "version": "2.0.0",
         "require_dbt_version_defined": true,
         "require_dbt_version_compatible": false,
-        "parse_compatible": false,
+        "parse_compatible": true,
         "parse_compatibility_result": {
-            "parse_exit_code": 1,
-            "total_errors": 1,
+            "parse_exit_code": 0,
+            "total_errors": 0,
             "total_warnings": 0,
-            "errors": [
-                {
-                    "body": "Failed to render SQL invalid operation: argument 'database' to get_relation() has incompatible type MutableMap; value is not a string\n(in models/doc_current_state.sql:13:39)\n(in macros/get_changelog_relation.sql:19:30)\n  --> macros/get_changelog_relation.sql:19:30",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                }
-            ],
+            "errors": [],
             "warnings": [],
             "fusion_version": "2.0.0-preview.153"
         },
