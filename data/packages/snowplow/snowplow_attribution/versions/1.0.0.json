@@ -1,0 +1,48 @@
+{
+    "id": "snowplow/snowplow_attribution/1.0.0",
+    "name": "snowplow_attribution",
+    "version": "1.0.0",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "snowplow/snowplow_utils",
+            "version": [
+                ">=1.0.0",
+                "<2.0.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.10.6",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/snowplow/dbt-snowplow-attribution/tree/1.0.0/",
+        "readme": "https://raw.githubusercontent.com/snowplow/dbt-snowplow-attribution/1.0.0/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/snowplow/dbt-snowplow-attribution/tar.gz/1.0.0",
+        "format": "tgz",
+        "sha1": "5f6e510829a9176a23628e50b6e17ce80e5c78f1"
+    },
+    "fusion_compatibility": {
+        "version": "1.0.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": true,
+        "parse_compatibility_result": {
+            "parse_exit_code": 0,
+            "total_errors": 0,
+            "total_warnings": 1,
+            "errors": [],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.175"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
