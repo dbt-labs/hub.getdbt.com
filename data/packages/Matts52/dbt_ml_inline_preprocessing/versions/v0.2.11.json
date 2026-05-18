@@ -1,0 +1,47 @@
+{
+    "id": "Matts52/dbt_ml_inline_preprocessing/v0.2.11",
+    "name": "dbt_ml_inline_preprocessing",
+    "version": "v0.2.11",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [],
+    "require_dbt_version": [
+        ">=1.1.0",
+        "<3.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/Matts52/dbt-ml-inline-preprocessing/tree/v0.2.11/",
+        "readme": "https://raw.githubusercontent.com/Matts52/dbt-ml-inline-preprocessing/v0.2.11/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/Matts52/dbt-ml-inline-preprocessing/tar.gz/v0.2.11",
+        "format": "tgz",
+        "sha1": "b3fb6fb7506a9b177e016df549a23fee8747ccd3"
+    },
+    "fusion_compatibility": {
+        "version": "v0.2.11",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "The 'postgres' adapter is not yet supported by dbt Fusion. Supported adapters: snowflake, bigquery, databricks, redshift",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.176"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
