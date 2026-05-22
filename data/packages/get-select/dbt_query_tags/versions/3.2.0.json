@@ -1,0 +1,44 @@
+{
+    "id": "get-select/dbt_query_tags/3.2.0",
+    "name": "dbt_query_tags",
+    "version": "3.2.0",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [],
+    "require_dbt_version": "<3.0.0",
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/get-select/dbt-query-tags/tree/3.2.0/",
+        "readme": "https://raw.githubusercontent.com/get-select/dbt-query-tags/3.2.0/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/get-select/dbt-query-tags/tar.gz/3.2.0",
+        "format": "tgz",
+        "sha1": "c0cea973f09f71b9d421d83cb0d7d71cd4f3549b"
+    },
+    "fusion_compatibility": {
+        "version": "3.2.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "The 'postgres' adapter is not yet supported by dbt Fusion. Supported adapters: snowflake, bigquery, databricks, redshift",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.177"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
