@@ -44,7 +44,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 7,
+            "total_errors": 8,
             "total_warnings": 0,
             "errors": [
                 {
@@ -85,6 +85,12 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/schema.yml:265:22",
+                    "error_code": 102,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Resource name 'stg_shopify_orders_lines_tmp ' contains spaces. Resource names cannot contain spaces. Rename 'models/tmp/stg_shopify_orders_lines_tmp .sql' to remove any spaces.\n  --> models/tmp/stg_shopify_orders_lines_tmp .sql",
                     "error_code": 102,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
