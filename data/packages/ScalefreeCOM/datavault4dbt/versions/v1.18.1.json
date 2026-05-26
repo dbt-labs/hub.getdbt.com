@@ -1,0 +1,47 @@
+{
+    "id": "ScalefreeCOM/datavault4dbt/v1.18.1",
+    "name": "datavault4dbt",
+    "version": "v1.18.1",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [],
+    "require_dbt_version": [
+        ">=1.0.0",
+        "<3.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/ScalefreeCOM/datavault4dbt/tree/v1.18.1/",
+        "readme": "https://raw.githubusercontent.com/ScalefreeCOM/datavault4dbt/v1.18.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/ScalefreeCOM/datavault4dbt/tar.gz/v1.18.1",
+        "format": "tgz",
+        "sha1": "d396a529f7fe921d8e384d1bfecfc827cce04329"
+    },
+    "fusion_compatibility": {
+        "version": "v1.18.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "The 'postgres' adapter is not yet supported by dbt Fusion. Supported adapters: snowflake, bigquery, databricks, redshift",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.177"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
