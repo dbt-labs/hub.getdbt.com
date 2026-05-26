@@ -47,7 +47,7 @@ RUN python -m pip install --upgrade "pip==24.0" "setuptools==69.2.0" "wheel==0.4
 
 FROM base AS dbt-core
 
-ARG commit_ref=main
+ARG commit_ref=1.latest
 
 HEALTHCHECK CMD dbt --version || exit 1
 
@@ -59,7 +59,7 @@ RUN python -m pip install --no-cache-dir "dbt-core @ git+https://github.com/dbt-
 
 FROM base AS dbt-postgres
 
-ARG commit_ref=main
+ARG commit_ref=1.latest
 
 HEALTHCHECK CMD dbt --version || exit 1
 
