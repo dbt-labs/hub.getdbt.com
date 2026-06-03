@@ -42,13 +42,13 @@
             "total_warnings": 1,
             "errors": [
                 {
-                    "body": "Invalid model definition `stripe_source.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 9 column 23\n  --> dbt_project.yml:9:23",
+                    "body": "Invalid model definition `stripe_source.materialized`: models.stripe_source.materialized: invalid type: string \"table\", expected struct ProjectModelConfig at line 9 column 23\n  --> dbt_project.yml:9:23",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `stripe_source.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 12 column 25\n  --> dbt_project.yml:12:25",
+                    "body": "Invalid model definition `stripe_source.tmp.materialized`: models.stripe_source.tmp.materialized: invalid type: string \"view\", expected struct ProjectModelConfig at line 12 column 25\n  --> dbt_project.yml:12:25",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -355,7 +355,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

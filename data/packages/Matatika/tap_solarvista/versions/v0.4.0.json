@@ -35,7 +35,7 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Invalid model definition `tap_solarvista.base.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 20 column 21\n  --> dbt_project.yml:20:21",
+                    "body": "Invalid model definition `tap_solarvista.base.materialized`: models.tap_solarvista.base.materialized: invalid type: string \"table\", expected struct ProjectModelConfig at line 20 column 21\n  --> dbt_project.yml:20:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -48,7 +48,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

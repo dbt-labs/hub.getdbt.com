@@ -38,7 +38,7 @@
             "total_warnings": 6,
             "errors": [
                 {
-                    "body": "Invalid model definition `snowplow_web.base.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 129 column 20\n  --> dbt_project.yml:129:20",
+                    "body": "Invalid model definition `snowplow_web.base.scratch.bigquery.enabled`: models.snowplow_web.base.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 129 column 20\n  --> dbt_project.yml:129:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -56,13 +56,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.base.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 135 column 20\n  --> dbt_project.yml:135:20",
+                    "body": "Invalid model definition `snowplow_web.base.scratch.snowflake.enabled`: models.snowplow_web.base.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 135 column 20\n  --> dbt_project.yml:135:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.page_views.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 157 column 20\n  --> dbt_project.yml:157:20",
+                    "body": "Invalid model definition `snowplow_web.page_views.scratch.bigquery.enabled`: models.snowplow_web.page_views.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 157 column 20\n  --> dbt_project.yml:157:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -80,13 +80,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.page_views.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 163 column 20\n  --> dbt_project.yml:163:20",
+                    "body": "Invalid model definition `snowplow_web.page_views.scratch.snowflake.enabled`: models.snowplow_web.page_views.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 163 column 20\n  --> dbt_project.yml:163:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.sessions.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 171 column 20\n  --> dbt_project.yml:171:20",
+                    "body": "Invalid model definition `snowplow_web.sessions.scratch.bigquery.enabled`: models.snowplow_web.sessions.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 171 column 20\n  --> dbt_project.yml:171:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -104,7 +104,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.sessions.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 177 column 20\n  --> dbt_project.yml:177:20",
+                    "body": "Invalid model definition `snowplow_web.sessions.scratch.snowflake.enabled`: models.snowplow_web.sessions.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 177 column 20\n  --> dbt_project.yml:177:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -339,7 +339,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

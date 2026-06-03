@@ -38,20 +38,20 @@
             "total_warnings": 1,
             "errors": [
                 {
-                    "body": "Invalid model definition `ab2ft_stripe.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 14 column 19\n  --> dbt_project.yml:14:19",
+                    "body": "Invalid model definition `ab2ft_stripe.materialized`: models.ab2ft_stripe.materialized: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 14 column 19\n  --> dbt_project.yml:14:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `stripe_source.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 12 column 19\n  --> dbt_project.yml:12:19",
+                    "body": "Invalid model definition `stripe_source.materialized`: models.stripe_source.materialized: invalid type: string \"view\", expected struct ProjectModelConfig at line 12 column 19\n  --> dbt_project.yml:12:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

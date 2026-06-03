@@ -35,10 +35,10 @@
         "parse_compatibility_result": {
             "parse_exit_code": 1,
             "total_errors": 11,
-            "total_warnings": 0,
+            "total_warnings": 1,
             "errors": [
                 {
-                    "body": "Invalid model definition `linkedin_source.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 18 column 23\n  --> dbt_project.yml:18:23",
+                    "body": "Invalid model definition `linkedin_source.materialized`: models.linkedin_source.materialized: invalid type: string \"view\", expected struct ProjectModelConfig at line 18 column 23\n  --> dbt_project.yml:18:23",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -105,7 +105,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

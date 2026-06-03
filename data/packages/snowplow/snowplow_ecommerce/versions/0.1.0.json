@@ -38,7 +38,7 @@
             "total_warnings": 19,
             "errors": [
                 {
-                    "body": "Invalid model definition `snowplow_ecommerce.base.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 76 column 20\n  --> dbt_project.yml:76:20",
+                    "body": "Invalid model definition `snowplow_ecommerce.base.scratch.bigquery.enabled`: models.snowplow_ecommerce.base.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 76 column 20\n  --> dbt_project.yml:76:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -165,7 +165,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

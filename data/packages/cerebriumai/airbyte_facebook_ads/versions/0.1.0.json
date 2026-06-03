@@ -51,13 +51,13 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Invalid model definition `airbyte_facebook_ads.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 20 column 19\n  --> dbt_project.yml:20:19",
+                    "body": "Invalid model definition `airbyte_facebook_ads.materialized`: models.airbyte_facebook_ads.materialized: invalid type: string \"table\", expected struct ProjectModelConfig at line 20 column 19\n  --> dbt_project.yml:20:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `airbyte_facebook_ads.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 22 column 21\n  --> dbt_project.yml:22:21",
+                    "body": "Invalid model definition `airbyte_facebook_ads.tmp.materialized`: models.airbyte_facebook_ads.tmp.materialized: invalid type: string \"view\", expected struct ProjectModelConfig at line 22 column 21\n  --> dbt_project.yml:22:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -70,37 +70,37 @@
                 },
                 {
                     "body": "Source 'airbyte_facebook_ads.ads' not found in project. Searched for 'ads'\n  --> models/tmp/stg_facebook_ads_ads.sql:1:1",
-                    "error_code": 1005,
+                    "error_code": 1048,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Source 'airbyte_facebook_ads.ads_creative' not found in project. Searched for 'ads_creative'\n  --> models/tmp/stg_facebook_ads_ads.sql:1:1",
-                    "error_code": 1005,
+                    "error_code": 1048,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Source 'airbyte_facebook_ads.ad_creatives' not found in project. Searched for 'ad_creatives'\n  --> models/tmp/stg_facebook_ads_ads.sql:1:1",
-                    "error_code": 1005,
+                    "error_code": 1048,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Source 'airbyte_facebook_ads.campaigns' not found in project. Searched for 'campaigns'\n  --> models/tmp/stg_facebook_ads_campaigns.sql:1:1",
-                    "error_code": 1005,
+                    "error_code": 1048,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Source 'airbyte_facebook_ads.ads_insights' not found in project. Searched for 'ads_insights'\n  --> models/tmp/stg_facebook_ads_insights.sql:1:1",
-                    "error_code": 1005,
+                    "error_code": 1048,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

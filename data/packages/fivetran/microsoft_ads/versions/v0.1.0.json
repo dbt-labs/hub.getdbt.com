@@ -32,7 +32,7 @@
             "total_warnings": 1,
             "errors": [
                 {
-                    "body": "Invalid model definition `microsoft_ads.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 9 column 19\n  --> dbt_project.yml:9:19",
+                    "body": "Invalid model definition `microsoft_ads.materialized`: models.microsoft_ads.materialized: invalid type: string \"table\", expected struct ProjectModelConfig at line 9 column 19\n  --> dbt_project.yml:9:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -63,7 +63,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false,

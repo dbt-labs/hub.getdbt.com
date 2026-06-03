@@ -27,13 +27,13 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Invalid model definition `airbyte_shopify.marts.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 24 column 21\n  --> dbt_project.yml:24:21",
+                    "body": "Invalid model definition `airbyte_shopify.marts.materialized`: models.airbyte_shopify.marts.materialized: invalid type: string \"table\", expected struct ProjectModelConfig at line 24 column 21\n  --> dbt_project.yml:24:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `airbyte_shopify.staging.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 22 column 21\n  --> dbt_project.yml:22:21",
+                    "body": "Invalid model definition `airbyte_shopify.staging.materialized`: models.airbyte_shopify.staging.materialized: invalid type: string \"view\", expected struct ProjectModelConfig at line 22 column 21\n  --> dbt_project.yml:22:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -52,7 +52,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

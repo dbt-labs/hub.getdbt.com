@@ -50,13 +50,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.base.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 90 column 20\n  --> dbt_project.yml:90:20",
+                    "body": "Invalid model definition `snowplow_mobile.base.scratch.bigquery.enabled`: models.snowplow_mobile.base.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 90 column 20\n  --> dbt_project.yml:90:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.base.scratch.databricks.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 92 column 20\n  --> dbt_project.yml:92:20",
+                    "body": "Invalid model definition `snowplow_mobile.base.scratch.databricks.enabled`: models.snowplow_mobile.base.scratch.databricks.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 92 column 20\n  --> dbt_project.yml:92:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -68,19 +68,19 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.base.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 96 column 20\n  --> dbt_project.yml:96:20",
+                    "body": "Invalid model definition `snowplow_mobile.base.scratch.snowflake.enabled`: models.snowplow_mobile.base.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 96 column 20\n  --> dbt_project.yml:96:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 105 column 22\n  --> dbt_project.yml:105:22",
+                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.bigquery.enabled`: models.snowplow_mobile.optional_modules.app_errors.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 105 column 22\n  --> dbt_project.yml:105:22",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.databricks.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 107 column 22\n  --> dbt_project.yml:107:22",
+                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.databricks.enabled`: models.snowplow_mobile.optional_modules.app_errors.scratch.databricks.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 107 column 22\n  --> dbt_project.yml:107:22",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -92,7 +92,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 111 column 22\n  --> dbt_project.yml:111:22",
+                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.snowflake.enabled`: models.snowplow_mobile.optional_modules.app_errors.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 111 column 22\n  --> dbt_project.yml:111:22",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -110,14 +110,14 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "YAML error: data did not match any variant of untagged enum DataTests\n  --> models/base/scratch/base_scratch.yml:284:13",
+                    "body": "YAML error: columns[0].tests: data did not match any variant of untagged enum DataTests\n  --> models/base/scratch/base_scratch.yml:284:13",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

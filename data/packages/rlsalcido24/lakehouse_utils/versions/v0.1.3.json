@@ -27,14 +27,14 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Found duplicate model 'customer'\n  --> models/snow/customer.sql",
+                    "body": "dbt found two seeds with the name \"functionlist\".\n  Since these resources have the same name, dbt will be unable to find the correct resource when ref(\"functionlist\") is used.\n  To fix this, change the name of one of these resources:\n  - seed.lakehouse_utils.functionlist (seeds/redshift/functionlist.csv)\n  - seed.lakehouse_utils.functionlist (seeds/snowflake/functionlist.csv)\n  --> seeds/snowflake/functionlist.csv",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

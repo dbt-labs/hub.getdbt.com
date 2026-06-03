@@ -34,7 +34,7 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 36,
+            "total_errors": 38,
             "total_warnings": 4,
             "errors": [
                 {
@@ -242,7 +242,19 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "Found duplicate model 'snowplow_media_player_base_sessions_lifecycle_manifest'\n  --> models/base/manifest/snowflake/snowplow_media_player_base_sessions_lifecycle_manifest.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "Found duplicate model 'snowplow_media_player_base_sessions_lifecycle_manifest'\n  --> models/base/manifest/default/snowplow_media_player_base_sessions_lifecycle_manifest.sql",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Found duplicate model 'snowplow_media_player_base_events_this_run'\n  --> models/base/scratch/snowflake/snowplow_media_player_base_events_this_run.sql",
                     "error_code": 1005,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -255,7 +267,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

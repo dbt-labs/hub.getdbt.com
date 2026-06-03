@@ -35,10 +35,10 @@
         "parse_compatibility_result": {
             "parse_exit_code": 1,
             "total_errors": 4,
-            "total_warnings": 0,
+            "total_warnings": 1,
             "errors": [
                 {
-                    "body": "Invalid model definition `dbt_date.example_models.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 24 column 22\n  --> dbt_project.yml:24:22",
+                    "body": "Invalid model definition `dbt_date.example_models.enabled`: models.dbt_date.example_models.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 24 column 22\n  --> dbt_project.yml:24:22",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -63,7 +63,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false,

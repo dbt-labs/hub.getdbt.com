@@ -38,25 +38,25 @@
             "total_warnings": 2,
             "errors": [
                 {
-                    "body": "Invalid model definition `facebook_ads_creative_history.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 13 column 16\n  --> dbt_project.yml:13:16",
+                    "body": "Invalid model definition `facebook_ads_creative_history.bigquery.enabled`: models.facebook_ads_creative_history.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 13 column 16\n  --> dbt_project.yml:13:16",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `facebook_ads_creative_history.redshift.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 15 column 16\n  --> dbt_project.yml:15:16",
+                    "body": "Invalid model definition `facebook_ads_creative_history.redshift.enabled`: models.facebook_ads_creative_history.redshift.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 15 column 16\n  --> dbt_project.yml:15:16",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `facebook_ads_creative_history.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 17 column 16\n  --> dbt_project.yml:17:16",
+                    "body": "Invalid model definition `facebook_ads_creative_history.snowflake.enabled`: models.facebook_ads_creative_history.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 17 column 16\n  --> dbt_project.yml:17:16",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `facebook_ads_creative_history.spark.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 19 column 16\n  --> dbt_project.yml:19:16",
+                    "body": "Invalid model definition `facebook_ads_creative_history.spark.enabled`: models.facebook_ads_creative_history.spark.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 19 column 16\n  --> dbt_project.yml:19:16",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -105,31 +105,31 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/facebook_backwards_compatibility.yml:8:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/facebook_backwards_compatibility.yml:16:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/facebook_backwards_compatibility.yml:22:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/facebook_backwards_compatibility.yml:29:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/facebook_backwards_compatibility.yml:35:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
@@ -243,7 +243,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,
