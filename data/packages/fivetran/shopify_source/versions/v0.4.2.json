@@ -42,7 +42,7 @@
         "parse_compatibility_result": {
             "parse_exit_code": 1,
             "total_errors": 18,
-            "total_warnings": 1,
+            "total_warnings": 2,
             "errors": [
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_shopify__customer.sql:14:33)\n(in macros/staging_columns.sql:80:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> macros/staging_columns.sql:80:55",
@@ -154,7 +154,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

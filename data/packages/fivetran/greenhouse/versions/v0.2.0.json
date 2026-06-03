@@ -50,6 +50,12 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__user_email.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_user_email_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__user_email.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__department.sql:16:33)\n(in dbt_packages/greenhouse_source/macros/get_department_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__department.sql:16:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
@@ -62,13 +68,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__user_email.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_user_email_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__user_email.sql:15:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__office.sql:16:33)\n(in dbt_packages/greenhouse_source/macros/get_office_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__office.sql:16:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__office.sql:16:33)\n(in dbt_packages/greenhouse_source/macros/get_office_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__office.sql:16:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__application.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_application_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__application.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -80,7 +86,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__application.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_application_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__application.sql:15:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__scorecard_attribute.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_scorecard_attribute_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__scorecard_attribute.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -104,13 +110,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__scorecard_attribute.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_scorecard_attribute_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__scorecard_attribute.sql:15:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__email_address.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_email_address_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__email_address.sql:15:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__social_media_address.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_social_media_address_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__social_media_address.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -122,13 +122,19 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__job_opening.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_job_opening_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__job_opening.sql:15:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__email_address.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_email_address_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__email_address.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__social_media_address.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_social_media_address_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__social_media_address.sql:15:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__source.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_source_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__source.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__job_opening.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_job_opening_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__job_opening.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -152,7 +158,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__source.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_source_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__source.sql:15:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__tag.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_tag_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__tag.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -170,18 +176,6 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__tag.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_tag_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__tag.sql:15:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__job_stage.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_job_stage_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__job_stage.sql:15:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__interview.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_interview_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__interview.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
@@ -194,25 +188,31 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__scheduled_interview.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_scheduled_interview_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__scheduled_interview.sql:15:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__user.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_user_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__user.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__job.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_job_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__job.sql:15:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__job_stage.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_job_stage_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__job_stage.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__scheduled_interview.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_scheduled_interview_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__scheduled_interview.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__candidate_tag.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_candidate_tag_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__candidate_tag.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/greenhouse_source/models/stg_greenhouse__job.sql:15:33)\n(in dbt_packages/greenhouse_source/macros/get_job_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/greenhouse_source/models/stg_greenhouse__job.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -236,7 +236,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/application/int_greenhouse__application_info.sql:87:9)\n(in dbt_packages/dbt_utils/macros/sql/star.sql:2:22)\n  --> models/intermediate/application/int_greenhouse__application_info.sql:87:9",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/intermediate/application/int_greenhouse__application_info.sql:82:9)\n(in dbt_packages/dbt_utils/macros/sql/star.sql:2:22)\n  --> models/intermediate/application/int_greenhouse__application_info.sql:82:9",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -285,7 +285,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

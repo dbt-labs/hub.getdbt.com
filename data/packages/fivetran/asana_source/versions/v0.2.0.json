@@ -38,7 +38,7 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Invalid model definition `asana_source.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 10 column 23\n  --> dbt_project.yml:10:23",
+                    "body": "Invalid model definition `asana_source.materialized`: models.asana_source.materialized: invalid type: string \"table\", expected struct ProjectModelConfig at line 10 column 23\n  --> dbt_project.yml:10:23",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -81,7 +81,7 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/src_asana.yml:191:17",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
@@ -165,7 +165,7 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/src_asana.yml:206:17",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
@@ -189,7 +189,7 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/src_asana.yml:236:17",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
@@ -213,7 +213,7 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/src_asana.yml:221:17",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
@@ -279,7 +279,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

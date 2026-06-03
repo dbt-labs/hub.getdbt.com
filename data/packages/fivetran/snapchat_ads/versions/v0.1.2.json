@@ -35,7 +35,7 @@
         "parse_compatibility_result": {
             "parse_exit_code": 1,
             "total_errors": 12,
-            "total_warnings": 2,
+            "total_warnings": 3,
             "errors": [
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/snapchat_ads_source/models/stg_snapchat__ad_account_history.sql:15:33)\n(in dbt_packages/snapchat_ads_source/macros/get_ad_account_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/snapchat_ads_source/models/stg_snapchat__ad_account_history.sql:15:33",
@@ -111,7 +111,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

@@ -98,26 +98,19 @@
         "sha1": "3d11f70600558e2432567bfc639423b995d165d8"
     },
     "fusion_compatibility": {
-        "version": "v2.6.0",
+        "version": "2.6.0",
         "require_dbt_version_defined": true,
         "require_dbt_version_compatible": true,
-        "parse_compatible": false,
+        "parse_compatible": true,
         "parse_compatibility_result": {
-            "parse_exit_code": 1,
-            "total_errors": 1,
-            "total_warnings": 0,
-            "errors": [
-                {
-                    "body": "The 'postgres' adapter is not yet supported by dbt Fusion. Supported adapters: snowflake, bigquery, databricks, redshift",
-                    "error_code": 1005,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                }
-            ],
+            "parse_exit_code": 0,
+            "total_errors": 0,
+            "total_warnings": 1,
+            "errors": [],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.176"
+            "fusion_version": "2.0.0-preview.183"
         },
-        "manually_verified_compatible": false,
+        "manually_verified_compatible": true,
         "manually_verified_incompatible": false,
         "download_failed": false,
         "fusion_compatible_download": {}

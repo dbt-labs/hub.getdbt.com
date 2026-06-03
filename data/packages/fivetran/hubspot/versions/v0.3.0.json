@@ -38,18 +38,6 @@
             "total_warnings": 4,
             "errors": [
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_deferred.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_deferred_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_deferred.sql:14:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_delivered.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_delivered_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_delivered.sql:14:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                },
-                {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__engagement_note.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_engagement_note_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__engagement_note.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
@@ -74,7 +62,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_dropped.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_dropped_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_dropped.sql:14:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_deferred.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_deferred_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_deferred.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -86,7 +74,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__deal_pipeline_stage.sql:15:33)\n(in dbt_packages/hubspot_source/macros/get_deal_pipeline_stage_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__deal_pipeline_stage.sql:15:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__company_property_history.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_company_property_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__company_property_history.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -98,13 +86,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__company_property_history.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_company_property_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__company_property_history.sql:14:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__deal_pipeline_stage.sql:15:33)\n(in dbt_packages/hubspot_source/macros/get_deal_pipeline_stage_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__deal_pipeline_stage.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_forward.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_forward_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_forward.sql:14:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_delivered.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_delivered_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_delivered.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -122,25 +110,19 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__contact.sql:15:33)\n(in dbt_packages/hubspot_source/macros/get_contact_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__contact.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__deal_property_history.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_deal_property_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__deal_property_history.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_open.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_open_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_open.sql:14:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__deal_stage.sql:16:33)\n(in dbt_packages/hubspot_source/macros/get_deal_stage_columns.sql:5:52)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__deal_stage.sql:16:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__contact.sql:15:33)\n(in dbt_packages/hubspot_source/macros/get_contact_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__contact.sql:15:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_dropped.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_dropped_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_dropped.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -152,13 +134,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_campaign.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_campaign_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_campaign.sql:14:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_print.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_print_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_print.sql:14:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__deal_stage.sql:16:33)\n(in dbt_packages/hubspot_source/macros/get_deal_stage_columns.sql:5:52)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__deal_stage.sql:16:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -170,13 +146,19 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_forward.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_forward_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_forward.sql:14:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__contact_list.sql:15:33)\n(in dbt_packages/hubspot_source/macros/get_contact_list_columns.sql:5:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__contact_list.sql:15:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_sent.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_sent_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_sent.sql:14:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_campaign.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_campaign_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_campaign.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -188,7 +170,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event.sql:14:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_open.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_open_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_open.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -200,13 +182,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_spam_report.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_spam_report_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_spam_report.sql:14:33",
-                    "error_code": 1501,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_bounce.sql:15:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_bounce_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_bounce.sql:15:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -218,7 +194,31 @@
                     "original_severity_text": "ERROR"
                 },
                 {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_print.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_print_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_print.sql:14:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__contact_property_history.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_contact_property_history_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__contact_property_history.sql:14:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_bounce.sql:15:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_bounce_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_bounce.sql:15:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__engagement_meeting.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_engagement_meeting_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__engagement_meeting.sql:14:33",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_sent.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_sent_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_sent.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -236,13 +236,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__engagement_meeting.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_engagement_meeting_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__engagement_meeting.sql:14:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__deal_company.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_deal_company_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__deal_company.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__deal_company.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_deal_company_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__deal_company.sql:14:33",
+                    "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in dbt_packages/hubspot_source/models/stg_hubspot__email_event_spam_report.sql:14:33)\n(in dbt_packages/hubspot_source/macros/get_email_event_spam_report_columns.sql:4:55)\n(in dbt_packages/dbt_utils/macros/cross_db_utils/datatypes.sql:28:20)\n  --> dbt_packages/hubspot_source/models/stg_hubspot__email_event_spam_report.sql:14:33",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -273,7 +273,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": true,
         "manually_verified_incompatible": false,

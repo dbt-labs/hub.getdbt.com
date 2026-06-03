@@ -34,11 +34,11 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 41,
-            "total_warnings": 6,
+            "total_errors": 40,
+            "total_warnings": 5,
             "errors": [
                 {
-                    "body": "Invalid model definition `snowplow_mobile.base.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 109 column 20\n  --> dbt_project.yml:109:20",
+                    "body": "Invalid model definition `snowplow_mobile.base.scratch.bigquery.enabled`: models.snowplow_mobile.base.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 109 column 20\n  --> dbt_project.yml:109:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -56,13 +56,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.base.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 115 column 20\n  --> dbt_project.yml:115:20",
+                    "body": "Invalid model definition `snowplow_mobile.base.scratch.snowflake.enabled`: models.snowplow_mobile.base.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 115 column 20\n  --> dbt_project.yml:115:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 124 column 22\n  --> dbt_project.yml:124:22",
+                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.bigquery.enabled`: models.snowplow_mobile.optional_modules.app_errors.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 124 column 22\n  --> dbt_project.yml:124:22",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -80,7 +80,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 130 column 22\n  --> dbt_project.yml:130:22",
+                    "body": "Invalid model definition `snowplow_mobile.optional_modules.app_errors.scratch.snowflake.enabled`: models.snowplow_mobile.optional_modules.app_errors.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 130 column 22\n  --> dbt_project.yml:130:22",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -112,12 +112,6 @@
                 {
                     "body": "While parsing config: Ignored unexpected key `\"tags\"`. YAML path: `columns[38].tags`.\n  --> models/base/scratch/base_scratch.yml:128:9",
                     "error_code": 1060,
-                    "severity_text": "ERROR",
-                    "original_severity_text": "ERROR"
-                },
-                {
-                    "body": "Failed to render SQL invalid operation: Compilation Error: Need to specify the schema name of your Entity or SDE using the {'schema'} attribute in a key-value map.\n(in models/base/scratch/redshift_postgres/snowplow_mobile_base_events_this_run.sql:43:42)\n(in dbt_packages/snowplow_utils/macros/base/base_create_snowplow_events_this_run.sql:10:31)\n(in dbt_packages/snowplow_utils/macros/base/base_create_snowplow_events_this_run.sql:137:38)\n  --> models/base/scratch/redshift_postgres/snowplow_mobile_base_events_this_run.sql:43:42",
-                    "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
@@ -285,7 +279,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

@@ -30,25 +30,25 @@
             "total_warnings": 2,
             "errors": [
                 {
-                    "body": "Invalid model definition `leaner_query.marts.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 19 column 21\n  --> dbt_project.yml:19:21",
+                    "body": "Invalid model definition `leaner_query.marts.materialized`: models.leaner_query.marts.materialized: invalid type: string \"table\", expected struct ProjectModelConfig at line 19 column 21\n  --> dbt_project.yml:19:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `leaner_query.reports.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 22 column 21\n  --> dbt_project.yml:22:21",
+                    "body": "Invalid model definition `leaner_query.reports.materialized`: models.leaner_query.reports.materialized: invalid type: string \"table\", expected struct ProjectModelConfig at line 22 column 21\n  --> dbt_project.yml:22:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `leaner_query.staging.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 25 column 21\n  --> dbt_project.yml:25:21",
+                    "body": "Invalid model definition `leaner_query.staging.materialized`: models.leaner_query.staging.materialized: invalid type: string \"view\", expected struct ProjectModelConfig at line 25 column 21\n  --> dbt_project.yml:25:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `leaner_query.utils.materialized`: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 31 column 21\n  --> dbt_project.yml:31:21",
+                    "body": "Invalid model definition `leaner_query.utils.materialized`: models.leaner_query.utils.materialized: invalid type: string \"ephemeral\", expected struct ProjectModelConfig at line 31 column 21\n  --> dbt_project.yml:31:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -85,13 +85,13 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/marts/bigquery_audit_log.yml:77:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

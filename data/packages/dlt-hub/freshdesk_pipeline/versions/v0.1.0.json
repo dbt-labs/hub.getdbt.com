@@ -30,13 +30,13 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Invalid model definition `freshdesk_pipeline.materialized`: invalid type: string \"table\", expected struct ProjectModelConfig at line 23 column 19\n  --> dbt_project.yml:23:19",
+                    "body": "Invalid model definition `freshdesk_pipeline.materialized`: models.freshdesk_pipeline.materialized: invalid type: string \"table\", expected struct ProjectModelConfig at line 23 column 19\n  --> dbt_project.yml:23:19",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `freshdesk_pipeline.staging.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 25 column 21\n  --> dbt_project.yml:25:21",
+                    "body": "Invalid model definition `freshdesk_pipeline.staging.materialized`: models.freshdesk_pipeline.staging.materialized: invalid type: string \"view\", expected struct ProjectModelConfig at line 25 column 21\n  --> dbt_project.yml:25:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -49,7 +49,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

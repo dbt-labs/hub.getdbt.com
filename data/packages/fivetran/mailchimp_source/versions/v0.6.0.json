@@ -38,7 +38,7 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Invalid model definition `mailchimp_source.tmp.+materalized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 9 column 21\n  --> dbt_project.yml:9:21",
+                    "body": "Invalid model definition `mailchimp_source.tmp.+materalized`: models.mailchimp_source.tmp.+materalized: invalid type: string \"view\", expected struct ProjectModelConfig at line 9 column 21\n  --> dbt_project.yml:9:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -189,13 +189,13 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_mailchimp.yml:481:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

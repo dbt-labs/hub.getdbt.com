@@ -45,7 +45,7 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Invalid model definition `recharge_source.tmp.materialized`: invalid type: string \"view\", expected struct ProjectModelConfig at line 36 column 21\n  --> dbt_project.yml:36:21",
+                    "body": "Invalid model definition `recharge_source.tmp.materialized`: models.recharge_source.tmp.materialized: invalid type: string \"view\", expected struct ProjectModelConfig at line 36 column 21\n  --> dbt_project.yml:36:21",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -148,61 +148,61 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_recharge.yml:45:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_recharge.yml:62:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_recharge.yml:156:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_recharge.yml:179:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_recharge.yml:226:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_recharge.yml:244:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_recharge.yml:266:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_recharge.yml:439:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test arguments: [\"combination_of_columns\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/stg_recharge.yml:537:13",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

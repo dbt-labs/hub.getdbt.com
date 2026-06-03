@@ -35,14 +35,14 @@
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Failed to render the Jinja str unknown function: In dispatch: No macro named 'estimate_build_cost' found within namespace: 'dbt_eda_tools'\n    Searched for: 'dbt_eda_tools.postgres__estimate_build_cost', 'dbt_eda_tools.default__estimate_build_cost', 'dbt_eda_tools.postgres__estimate_build_cost', 'dbt_eda_tools.default__estimate_build_cost'\n(in :65:8)\n(in macros/estimate_build_cost.sql:2:31)\n  --> macros/schema.yml:62:18",
+                    "body": "Failed to render the Jinja str unknown function: In dispatch: No macro named 'estimate_build_cost' found within namespace: 'dbt_eda_tools'\n    Searched for: 'dbt_eda_tools.snowflake__estimate_build_cost', 'dbt_eda_tools.default__estimate_build_cost', 'dbt_eda_tools.snowflake__estimate_build_cost', 'dbt_eda_tools.default__estimate_build_cost'\n(in :65:8)\n(in macros/estimate_build_cost.sql:2:31)\n  --> macros/schema.yml:62:18",
                     "error_code": 1501,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.163"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

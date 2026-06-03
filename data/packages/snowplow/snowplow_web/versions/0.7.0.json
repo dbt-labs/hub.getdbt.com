@@ -38,13 +38,13 @@
             "total_warnings": 2,
             "errors": [
                 {
-                    "body": "Invalid model definition `snowplow_web.base.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 82 column 20\n  --> dbt_project.yml:82:20",
+                    "body": "Invalid model definition `snowplow_web.base.scratch.bigquery.enabled`: models.snowplow_web.base.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 82 column 20\n  --> dbt_project.yml:82:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.base.scratch.databricks.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 84 column 20\n  --> dbt_project.yml:84:20",
+                    "body": "Invalid model definition `snowplow_web.base.scratch.databricks.enabled`: models.snowplow_web.base.scratch.databricks.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 84 column 20\n  --> dbt_project.yml:84:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -56,19 +56,19 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.base.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 88 column 20\n  --> dbt_project.yml:88:20",
+                    "body": "Invalid model definition `snowplow_web.base.scratch.snowflake.enabled`: models.snowplow_web.base.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 88 column 20\n  --> dbt_project.yml:88:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.page_views.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 96 column 20\n  --> dbt_project.yml:96:20",
+                    "body": "Invalid model definition `snowplow_web.page_views.scratch.bigquery.enabled`: models.snowplow_web.page_views.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 96 column 20\n  --> dbt_project.yml:96:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.page_views.scratch.databricks.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 98 column 20\n  --> dbt_project.yml:98:20",
+                    "body": "Invalid model definition `snowplow_web.page_views.scratch.databricks.enabled`: models.snowplow_web.page_views.scratch.databricks.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 98 column 20\n  --> dbt_project.yml:98:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -80,7 +80,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.page_views.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 102 column 20\n  --> dbt_project.yml:102:20",
+                    "body": "Invalid model definition `snowplow_web.page_views.scratch.snowflake.enabled`: models.snowplow_web.page_views.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 102 column 20\n  --> dbt_project.yml:102:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -261,13 +261,13 @@
                 },
                 {
                     "body": "Deprecated test configs: [\"enabled\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/page_views/scratch/page_views_scratch.yml:250:24",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test configs: [\"enabled\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/page_views/scratch/page_views_scratch.yml:252:24",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
@@ -309,7 +309,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

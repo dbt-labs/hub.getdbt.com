@@ -35,7 +35,7 @@
         "parse_compatibility_result": {
             "parse_exit_code": 1,
             "total_errors": 4,
-            "total_warnings": 0,
+            "total_warnings": 1,
             "errors": [
                 {
                     "body": "Failed to render SQL too many arguments: unknown keyword argument 'packages'\n(in models/stg_pinterest_ads__ad_group_history.sql:23:9)\n(in dbt_packages/dbt_utils/macros/sql/surrogate_key.sql:5:22)\n  --> models/stg_pinterest_ads__ad_group_history.sql:23:9",
@@ -63,7 +63,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

@@ -26,13 +26,33 @@
     },
     "fusion_compatibility": {
         "version": "0.1.7",
-        "require_dbt_version_defined": null,
+        "require_dbt_version_defined": false,
         "require_dbt_version_compatible": null,
-        "parse_compatible": null,
-        "parse_compatibility_result": null,
-        "manually_verified_compatible": null,
-        "manually_verified_incompatible": null,
-        "download_failed": true,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "Failed to download tarball from https://codeload.github.com/tuva-health/terminology/tar.gz/0.1.17; status: 404 Not Found",
+                    "error_code": 8999,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to download tarball from https://codeload.github.com/tuva-health/terminology/tar.gz/0.1.17; status: 404 Not Found",
+                    "error_code": 8999,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.183"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
         "fusion_compatible_download": {}
     }
 }

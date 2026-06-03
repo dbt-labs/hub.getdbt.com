@@ -34,18 +34,24 @@
         "parse_compatible": false,
         "parse_compatibility_result": {
             "parse_exit_code": 1,
-            "total_errors": 1,
+            "total_errors": 2,
             "total_warnings": 0,
             "errors": [
                 {
-                    "body": "Failed to render SQL unknown function: In dispatch: No macro named 'llm_evals__ai_complete' found within namespace: 'dbt_llm_evals'\n    Searched for: 'dbt_llm_evals.postgres__llm_evals__ai_complete', 'dbt_llm_evals.default__llm_evals__ai_complete'\n(in models/evaluation/llm_evals__judge_evaluations.sql:117:9)\n(in macros/adapters/dispatch.sql:2:31)\n  --> macros/adapters/dispatch.sql:2:31",
-                    "error_code": 1501,
+                    "body": "Deprecated test configs: [\"where\"] and arguments: [\"inclusive\", \"max_value\", \"min_value\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/evaluation/_llm_evals__models.yml:40:26",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"where\"] and arguments: [\"inclusive\", \"max_value\", \"min_value\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/evaluation/_llm_evals__models.yml:30:26",
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

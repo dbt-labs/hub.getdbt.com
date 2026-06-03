@@ -35,7 +35,7 @@
             "total_warnings": 1,
             "errors": [
                 {
-                    "body": "Invalid model definition `snowplow_normalize.base.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 66 column 20\n  --> dbt_project.yml:66:20",
+                    "body": "Invalid model definition `snowplow_normalize.base.scratch.bigquery.enabled`: models.snowplow_normalize.base.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 66 column 20\n  --> dbt_project.yml:66:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -47,7 +47,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_normalize.base.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 70 column 20\n  --> dbt_project.yml:70:20",
+                    "body": "Invalid model definition `snowplow_normalize.base.scratch.snowflake.enabled`: models.snowplow_normalize.base.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 70 column 20\n  --> dbt_project.yml:70:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -78,7 +78,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

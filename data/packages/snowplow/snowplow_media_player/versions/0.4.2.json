@@ -38,7 +38,7 @@
             "total_warnings": 9,
             "errors": [
                 {
-                    "body": "Invalid model definition `snowplow_media_player.web.scratch.interactions_this_run.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 55 column 22\n  --> dbt_project.yml:55:22",
+                    "body": "Invalid model definition `snowplow_media_player.web.scratch.interactions_this_run.bigquery.enabled`: models.snowplow_media_player.web.scratch.interactions_this_run.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 55 column 22\n  --> dbt_project.yml:55:22",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -56,7 +56,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_media_player.web.scratch.interactions_this_run.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 61 column 22\n  --> dbt_project.yml:61:22",
+                    "body": "Invalid model definition `snowplow_media_player.web.scratch.interactions_this_run.snowflake.enabled`: models.snowplow_media_player.web.scratch.interactions_this_run.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 61 column 22\n  --> dbt_project.yml:61:22",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -135,7 +135,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,

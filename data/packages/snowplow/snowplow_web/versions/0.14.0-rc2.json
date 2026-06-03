@@ -35,7 +35,7 @@
             "total_warnings": 6,
             "errors": [
                 {
-                    "body": "Invalid model definition `snowplow_web.base.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 93 column 20\n  --> dbt_project.yml:93:20",
+                    "body": "Invalid model definition `snowplow_web.base.scratch.bigquery.enabled`: models.snowplow_web.base.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 93 column 20\n  --> dbt_project.yml:93:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -53,19 +53,19 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.base.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 99 column 20\n  --> dbt_project.yml:99:20",
+                    "body": "Invalid model definition `snowplow_web.base.scratch.snowflake.enabled`: models.snowplow_web.base.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 99 column 20\n  --> dbt_project.yml:99:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.optional_modules.consent.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 102 column 18\n  --> dbt_project.yml:102:18",
+                    "body": "Invalid model definition `snowplow_web.optional_modules.consent.enabled`: models.snowplow_web.optional_modules.consent.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 102 column 18\n  --> dbt_project.yml:102:18",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.page_views.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 111 column 20\n  --> dbt_project.yml:111:20",
+                    "body": "Invalid model definition `snowplow_web.page_views.scratch.bigquery.enabled`: models.snowplow_web.page_views.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 111 column 20\n  --> dbt_project.yml:111:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -83,13 +83,13 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.page_views.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 117 column 20\n  --> dbt_project.yml:117:20",
+                    "body": "Invalid model definition `snowplow_web.page_views.scratch.snowflake.enabled`: models.snowplow_web.page_views.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 117 column 20\n  --> dbt_project.yml:117:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.sessions.scratch.bigquery.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 125 column 20\n  --> dbt_project.yml:125:20",
+                    "body": "Invalid model definition `snowplow_web.sessions.scratch.bigquery.enabled`: models.snowplow_web.sessions.scratch.bigquery.enabled: invalid type: boolean `false`, expected struct ProjectModelConfig at line 125 column 20\n  --> dbt_project.yml:125:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -107,7 +107,7 @@
                     "original_severity_text": "ERROR"
                 },
                 {
-                    "body": "Invalid model definition `snowplow_web.sessions.scratch.snowflake.enabled`: invalid type: boolean `false`, expected struct ProjectModelConfig at line 131 column 20\n  --> dbt_project.yml:131:20",
+                    "body": "Invalid model definition `snowplow_web.sessions.scratch.snowflake.enabled`: models.snowplow_web.sessions.scratch.snowflake.enabled: invalid type: boolean `true`, expected struct ProjectModelConfig at line 131 column 20\n  --> dbt_project.yml:131:20",
                     "error_code": 1013,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
@@ -300,19 +300,19 @@
                 },
                 {
                     "body": "Deprecated test arguments: [\"values\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/optional_modules/consent/consent.yml:42:23",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test configs: [\"enabled\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/page_views/scratch/page_views_scratch.yml:246:24",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
                 {
                     "body": "Deprecated test configs: [\"enabled\"] at top-level detected. Please migrate under the 'config' field.\n  --> models/page_views/scratch/page_views_scratch.yml:248:24",
-                    "error_code": 102,
+                    "error_code": 1159,
                     "severity_text": "ERROR",
                     "original_severity_text": "ERROR"
                 },
@@ -390,7 +390,7 @@
                 }
             ],
             "warnings": [],
-            "fusion_version": "2.0.0-preview.153"
+            "fusion_version": "2.0.0-preview.183"
         },
         "manually_verified_compatible": false,
         "manually_verified_incompatible": false,
