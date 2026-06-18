@@ -1,0 +1,26 @@
+# Before
+
+# columns: &id_column
+#   - name: id
+#     description: This is a unique identifier.
+#     data_tests:
+#       - not_null
+
+
+# After
+
+anchors:
+  - columns: &id_column
+    - name: id
+      description: This is a unique identifier.
+      data_tests:
+        - not_null
+
+models:
+    - name: my_first_model
+      description: This is a description for the first model
+      columns: *id_column
+
+    - name: my_second_model
+      description: This is a description for the second model
+      columns: *id_column

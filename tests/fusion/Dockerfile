@@ -53,7 +53,7 @@ ARG commit_ref=main
 
 HEALTHCHECK CMD dbt --version || exit 1
 
-WORKDIR /usr/app/dbt/
+WORKDIR /usr/app/
 ENTRYPOINT ["dbt"]
 
 RUN curl -fsSL https://public.cdn.getdbt.com/fs/install/install.sh | sh -s -- --update
