@@ -44,37 +44,13 @@ ENV LANG=C.UTF-8
 
 RUN python -m pip install --upgrade "pip==24.0" "setuptools==69.2.0" "wheel==0.43.0" --no-cache-dir
 
-
 FROM base AS dbt-core
 
-ARG commit_ref=main
-
 HEALTHCHECK CMD dbt --version || exit 1
 
-WORKDIR /usr/app/dbt/
+WORKDIR /usr/app/
 ENTRYPOINT ["dbt"]
 
-RUN python -m pip install --no-cache-dir "dbt-core @ git+https://github.com/dbt-labs/dbt-core@${commit_ref}#subdirectory=core"
+RUN python -m pip install --no-cache-dir dbt-core
 
-
-FROM base AS dbt-postgres
-
-ARG commit_ref=main
-
-HEALTHCHECK CMD dbt --version || exit 1
-
-WORKDIR /usr/app/dbt/
-ENTRYPOINT ["dbt"]
-
-RUN python -m pip install --no-cache-dir "dbt-postgres @ git+https://github.com/dbt-labs/dbt-core@${commit_ref}#subdirectory=plugins/postgres"
-
-
-FROM dbt-core AS dbt-third-party
-
-ARG dbt_third_party
-
-RUN if [ "$dbt_third_party" ]; then \
-        python -m pip install --no-cache-dir "${dbt_third_party}"; \
-    else \
-        echo "No third party adapter provided"; \
-    fi \
+RUN python -m pip install --no-cache-dir dbt-snowflake

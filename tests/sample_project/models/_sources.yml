@@ -1,0 +1,27 @@
+# Before
+
+# sources:
+#   - &common_database
+#     name: common_database
+#     database: "{{ target.database }}"
+
+#   - <<: *common_database
+#     name: my_source
+#     schema: "{{ target.schema }}"
+#     tables:
+#       - name: my_seed
+
+
+# After
+
+anchors:
+  - &common_database
+    name: common_database
+    database: "{{ target.database }}"
+
+sources:
+  - <<: *common_database
+    name: my_source
+    schema: "{{ target.schema }}"
+    tables:
+      - name: my_seed
