@@ -380,7 +380,6 @@ packages:
             renderer: function(token) {
               var ch = emojiChar(token.url);
               if (ch) return '<span class="emoji" aria-label=":' + token.name + ':">' + ch + '</span>';
-              // Only inject URLs from the expected GitHub CDN origin.
               if (!/^https:\/\/github\.githubassets\.com\//.test(token.url)) return ':' + token.name + ':';
               return '<img class="emoji" src="' + token.url + '" alt=":' + token.name + ':" width="20" height="20" />';
             }
