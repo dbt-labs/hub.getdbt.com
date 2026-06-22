@@ -2,11 +2,22 @@
 
 See the [installing Ruby for Mac](#installing-ruby-for-mac) and [troubleshooting](#troubleshooting) sections below as-needed.
 
+Clone this repo if you haven't already:
+
+```shell
+git clone https://github.com/dbt-labs/hub.getdbt.com.git
+cd hub.getdbt.com
+```
+
 Install dependencies with `bundler` and run with middleman:
 ```bash
 bundle install
 bundle exec middleman serve --port 4567
 ```
+
+To view package Hub, either of the following should launch the website in your default web browser:
+- http://127.0.0.1:4567
+- http://localhost:4567
 
 ### Installing Ruby for Mac
 
