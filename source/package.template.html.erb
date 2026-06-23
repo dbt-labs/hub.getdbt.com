@@ -353,10 +353,43 @@ packages:
 </main>
 
 <script>
-  $.get('<%= version._source.readme %>').done(function(data) {
-      document.getElementById('readme').innerHTML = marked.parse(data)
+  fetch('https://api.github.com/emojis')
+    .then(function(r) { return r.json(); })
+    .catch(function() { return {}; })
+    .then(function(emojis) {
+      if (Object.keys(emojis).length > 0) {
+        function emojiChar(url) {
+          var m = url.match(/\/unicode\/([0-9a-f-]+)\.png/i);
+          if (!m) return null;
+          try {
+            return String.fromCodePoint.apply(String, m[1].split('-').map(function(h) { return parseInt(h, 16); }));
+          } catch(e) { return null; }
+        }
 
-  });
+        marked.use({
+          extensions: [{
+            name: 'emoji',
+            level: 'inline',
+            start: function(src) { return src.indexOf(':'); },
+            tokenizer: function(src) {
+              var match = src.match(/^:([a-zA-Z0-9_+\-]+):/);
+              if (match && emojis[match[1]]) {
+                return { type: 'emoji', raw: match[0], name: match[1], url: emojis[match[1]] };
+              }
+            },
+            renderer: function(token) {
+              var ch = emojiChar(token.url);
+              if (ch) return '<span class="emoji" aria-label=":' + token.name + ':">' + ch + '</span>';
+              if (!/^https:\/\/github\.githubassets\.com\//.test(token.url)) return ':' + token.name + ':';
+              return '<img class="emoji" src="' + token.url + '" alt=":' + token.name + ':" width="20" height="20" />';
+            }
+          }]
+        });
+      }
+      $.get('<%= version._source.readme %>').done(function(data) {
+        document.getElementById('readme').innerHTML = DOMPurify.sanitize(marked.parse(data));
+      });
+    });
   $('#install').each(function(i, block) {
     hljs.highlightBlock(block);
   });
