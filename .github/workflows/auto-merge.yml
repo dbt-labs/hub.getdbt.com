@@ -12,6 +12,7 @@ permissions: write-all
 
 jobs:
   autolabel:
+    if: github.actor == 'FishtownBuildBot'
     runs-on: ubuntu-latest
     steps:
       - name: Auto-label
@@ -19,6 +20,7 @@ jobs:
         with:
           repo-token: ${{ secrets.AUTOMERGE_PAT }}
   automerge:
+    if: github.actor == 'FishtownBuildBot'
     needs: autolabel
     runs-on: ubuntu-latest
     steps:
