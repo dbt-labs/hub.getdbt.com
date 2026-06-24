@@ -1,16 +1,38 @@
-<a href="/<%= package.namespace %>/<%= package.name %>/latest/" class="tile">
+<% featured = (defined?(featured_context) && featured_context) ? true : false %>
+<% tile_cfg = (defined?(featured_config) && featured_config) ? featured_config : nil %>
+<% tile_desc = featured && tile_cfg && tile_cfg['description'].to_s.strip %>
+<% version_label = package.latest.to_s.start_with?('v') ? package.latest.to_s : "v#{package.latest}" %>
+
+<a href="/<%= package.namespace %>/<%= package.name %>/latest/" class="tile<%= ' tile--featured' if featured %>">
   <div class="tile-content">
-    <div class="tile-body" style="padding: 30px 30px 30px 60px; position: relative;">
-      <% if is_fusion_compatible(package) %>
-        <div class="fusion-badge">Fusion compatible</div>
-      <% elsif is_fusion_parse_compatible(package) %>
-        <div class="fusion-badge-parse-compat">Fusion parse compatible</div>
-      <% end %>
-      <div class="tile-graphic">
-         <%= image_tag(package.assets.logo, {alt: package.name, style: "width:75px;height:75px"}) %>
+    <div class="tile-body tile-body--package-card<%= ' tile-body--package-card-featured' if featured %>">
+      <div class="tile-body__main">
+        <div class="tile-body__intro">
+          <h4 class="tile-package-name<%= ' tile-package-name--featured' if featured %>"><%= package.name %></h4>
+          <% if featured %>
+            <%# Figma 470:5042 — description slot is always 3 lines (54px) for grid alignment %>
+            <p class="tile-package-desc"><%= tile_desc if tile_desc.present? %></p>
+          <% end %>
+        </div>
       </div>
-      <div class="tile-text" style="padding-top: 25px">
-         <h4 style="color: #3b3f43;font-size:1.2rem"><%= package.name %></h4>
+      <div class="tile-body__lower">
+        <% if featured %>
+          <div class="tile-body__byline" aria-label="<%= package.namespace %> · Latest <%= version_label %>">
+            <img src="https://github.com/<%= package.namespace %>.png?size=32" alt="" class="tile-maintainer__avatar" aria-hidden="true" width="16" height="16" />
+            <span class="tile-maintainer__name"><%= package.namespace %></span>
+            <span class="tile-byline__sep" aria-hidden="true">·</span>
+            <span class="tile-byline__version">Latest <%= version_label %></span>
+          </div>
+        <% end %>
+        <% if is_fusion_compatible(package) || is_fusion_parse_compatible(package) %>
+          <div class="tile-body__bottom">
+            <% if is_fusion_compatible(package) %>
+              <%= partial "package_card_fusion_badge", locals: { variant: :full } %>
+            <% elsif is_fusion_parse_compatible(package) %>
+              <%= partial "package_card_fusion_badge", locals: { variant: :parse } %>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
