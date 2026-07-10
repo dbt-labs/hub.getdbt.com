@@ -1,0 +1,1345 @@
+{
+    "id": "edanalytics/edu_edfi_source/0.6.5",
+    "name": "edu_edfi_source",
+    "version": "0.6.5",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "dbt-labs/dbt_utils",
+            "version": [
+                ">=1.0.0",
+                "<=1.3.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.0.0",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/edanalytics/edu_edfi_source/tree/0.6.5/",
+        "readme": "https://raw.githubusercontent.com/edanalytics/edu_edfi_source/0.6.5/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/edanalytics/edu_edfi_source/tar.gz/0.6.5",
+        "format": "tgz",
+        "sha1": "e20d810d8e064ba5d1672b42bc67087d99d2a6da"
+    },
+    "fusion_compatibility": {
+        "version": "0.6.5",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 216,
+            "total_warnings": 4,
+            "errors": [
+                {
+                    "body": "Ignored unexpected key `\"referential_integrity_tests\"`. YAML path: `referential_integrity_tests`.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:3:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"referential_integrity_tests\"`. YAML path: `referential_integrity_tests`.\n  --> models/staging/edfi_3/stage/finance/_finance.yml:3:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ignored unexpected key `\"referential_integrity_tests\"`. YAML path: `referential_integrity_tests`.\n  --> models/staging/tpdm/stage/_tpdm__stage.yml:3:1",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: cannot calculate length of value of type bool\n(in models/staging/edfi_3/stage/stg_ef3__staff_school_associations.sql:13:9)\n(in dbt_packages/dbt_utils/macros/sql/star.sql:2:31)\n(in macros/star.sql:24:20)\n  --> macros/star.sql:24:20",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "While parsing config: Ignored unexpected key `\"columns\"`. YAML path: `config.columns`.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:724:7",
+                    "error_code": 1060,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: cannot calculate length of value of type bool\n(in models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_behavior_associations.sql:21:9)\n(in dbt_packages/dbt_utils/macros/sql/star.sql:2:31)\n(in macros/star.sql:24:20)\n  --> macros/star.sql:24:20",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Failed to render SQL invalid operation: cannot calculate length of value of type bool\n(in models/staging/edfi_3/stage/stg_ef3__student_discipline_incident_non_offender_associations.sql:20:9)\n(in dbt_packages/dbt_utils/macros/sql/star.sql:2:31)\n(in macros/star.sql:24:20)\n  --> macros/star.sql:24:20",
+                    "error_code": 1501,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:97:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:91:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:91:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:25:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:91:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:103:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:25:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:121:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:109:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:91:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:37:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:49:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:91:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:91:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:91:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:55:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:31:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:91:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:91:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:109:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:37:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:109:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:7:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:13:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:79:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:79:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:67:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:73:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:79:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:85:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:109:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:91:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:91:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:103:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:37:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:37:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:79:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:79:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:79:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:115:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:133:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:139:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:127:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:139:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:127:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:139:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:145:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Deprecated test configs: [\"tags\"] and arguments: [\"field\", \"to\"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.\n  --> models/staging/edfi_3/stage/_edfi_3__stage.yml:127:16",
+                    "error_code": 1159,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.assessments' not found in project. Searched for 'assessments'\n  --> models/staging/edfi_3/base/base_ef3__assessments.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__assessments.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.bell_schedules' not found in project. Searched for 'bell_schedules'\n  --> models/staging/edfi_3/base/base_ef3__bell_schedules.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__bell_schedules.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.calendar_dates' not found in project. Searched for 'calendar_dates'\n  --> models/staging/edfi_3/base/base_ef3__calendar_dates.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__calendar_dates.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.calendars' not found in project. Searched for 'calendars'\n  --> models/staging/edfi_3/base/base_ef3__calendars.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__calendars.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.class_periods' not found in project. Searched for 'class_periods'\n  --> models/staging/edfi_3/base/base_ef3__class_periods.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__class_periods.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.cohorts' not found in project. Searched for 'cohorts'\n  --> models/staging/edfi_3/base/base_ef3__cohorts.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__cohorts.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.contacts' not found in project. Searched for 'contacts'\n  --> models/staging/edfi_3/base/base_ef3__contacts.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__contacts.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.course_offerings' not found in project. Searched for 'course_offerings'\n  --> models/staging/edfi_3/base/base_ef3__course_offerings.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__course_offerings.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.course_transcripts' not found in project. Searched for 'course_transcripts'\n  --> models/staging/edfi_3/base/base_ef3__course_transcripts.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__course_transcripts.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.courses' not found in project. Searched for 'courses'\n  --> models/staging/edfi_3/base/base_ef3__courses.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__courses.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.credentials' not found in project. Searched for 'credentials'\n  --> models/staging/edfi_3/base/base_ef3__credentials.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__credentials.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._descriptors' not found in project. Searched for '_descriptors'\n  --> models/staging/edfi_3/base/base_ef3__descriptors.sql:21:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.discipline_actions' not found in project. Searched for 'discipline_actions'\n  --> models/staging/edfi_3/base/base_ef3__discipline_actions.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__discipline_actions.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.discipline_incidents' not found in project. Searched for 'discipline_incidents'\n  --> models/staging/edfi_3/base/base_ef3__discipline_incidents.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__discipline_incidents.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.education_organization_network_associations' not found in project. Searched for 'education_organization_network_associations'\n  --> models/staging/edfi_3/base/base_ef3__education_organization_network_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__education_organization_network_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.education_organization_networks' not found in project. Searched for 'education_organization_networks'\n  --> models/staging/edfi_3/base/base_ef3__education_organization_networks.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__education_organization_networks.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.education_service_centers' not found in project. Searched for 'education_service_centers'\n  --> models/staging/edfi_3/base/base_ef3__education_service_centers.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__education_service_centers.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.grades' not found in project. Searched for 'grades'\n  --> models/staging/edfi_3/base/base_ef3__grades.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__grades.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.grading_periods' not found in project. Searched for 'grading_periods'\n  --> models/staging/edfi_3/base/base_ef3__grading_periods.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__grading_periods.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.graduation_plans' not found in project. Searched for 'graduation_plans'\n  --> models/staging/edfi_3/base/base_ef3__graduation_plans.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__graduation_plans.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.learning_standards' not found in project. Searched for 'learning_standards'\n  --> models/staging/edfi_3/base/base_ef3__learning_standards.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__learning_standards.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.local_education_agencies' not found in project. Searched for 'local_education_agencies'\n  --> models/staging/edfi_3/base/base_ef3__local_education_agencies.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__local_education_agencies.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.locations' not found in project. Searched for 'locations'\n  --> models/staging/edfi_3/base/base_ef3__locations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__locations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.objective_assessments' not found in project. Searched for 'objective_assessments'\n  --> models/staging/edfi_3/base/base_ef3__objective_assessments.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__objective_assessments.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.parents' not found in project. Searched for 'parents'\n  --> models/staging/edfi_3/base/base_ef3__parents.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__parents.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.people' not found in project. Searched for 'people'\n  --> models/staging/edfi_3/base/base_ef3__people.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__people.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.post_secondary_institutions' not found in project. Searched for 'post_secondary_institutions'\n  --> models/staging/edfi_3/base/base_ef3__post_secondary_institutions.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__post_secondary_institutions.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.program_evaluations' not found in project. Searched for 'program_evaluations'\n  --> models/staging/edfi_3/base/base_ef3__program_evaluations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__program_evaluations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.programs' not found in project. Searched for 'programs'\n  --> models/staging/edfi_3/base/base_ef3__programs.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__programs.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.restraint_events' not found in project. Searched for 'restraint_events'\n  --> models/staging/edfi_3/base/base_ef3__restraint_events.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__restraint_events.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.schools' not found in project. Searched for 'schools'\n  --> models/staging/edfi_3/base/base_ef3__schools.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__schools.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.sections' not found in project. Searched for 'sections'\n  --> models/staging/edfi_3/base/base_ef3__sections.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__sections.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.sessions' not found in project. Searched for 'sessions'\n  --> models/staging/edfi_3/base/base_ef3__sessions.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__sessions.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.staff_education_organization_assignment_associations' not found in project. Searched for 'staff_education_organization_assignment_associations'\n  --> models/staging/edfi_3/base/base_ef3__staff_education_organization_assignment_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__staff_education_organization_assignment_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.staff_education_organization_contact_associations' not found in project. Searched for 'staff_education_organization_contact_associations'\n  --> models/staging/edfi_3/base/base_ef3__staff_education_organization_contact_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__staff_education_organization_contact_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.staff_education_organization_employment_associations' not found in project. Searched for 'staff_education_organization_employment_associations'\n  --> models/staging/edfi_3/base/base_ef3__staff_education_organization_employment_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__staff_education_organization_employment_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.staff_school_associations' not found in project. Searched for 'staff_school_associations'\n  --> models/staging/edfi_3/base/base_ef3__staff_school_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__staff_school_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.staff_section_associations' not found in project. Searched for 'staff_section_associations'\n  --> models/staging/edfi_3/base/base_ef3__staff_section_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__staff_section_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.staffs' not found in project. Searched for 'staffs'\n  --> models/staging/edfi_3/base/base_ef3__staffs.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__staffs.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.state_education_agencies' not found in project. Searched for 'state_education_agencies'\n  --> models/staging/edfi_3/base/base_ef3__state_education_agencies.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__state_education_agencies.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_academic_records' not found in project. Searched for 'student_academic_records'\n  --> models/staging/edfi_3/base/base_ef3__student_academic_records.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_academic_records.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_assessments' not found in project. Searched for 'student_assessments'\n  --> models/staging/edfi_3/base/base_ef3__student_assessments.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_assessments.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_cohort_associations' not found in project. Searched for 'student_cohort_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_cohort_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_cohort_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_contact_associations' not found in project. Searched for 'student_contact_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_contact_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_contact_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_cte_program_associations' not found in project. Searched for 'student_cte_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_cte_program_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_cte_program_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_discipline_incident_associations' not found in project. Searched for 'student_discipline_incident_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_discipline_incident_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_discipline_incident_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_discipline_incident_behavior_associations' not found in project. Searched for 'student_discipline_incident_behavior_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_discipline_incident_behavior_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_discipline_incident_behavior_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_discipline_incident_non_offender_associations' not found in project. Searched for 'student_discipline_incident_non_offender_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_discipline_incident_non_offender_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_discipline_incident_non_offender_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_education_organization_associations' not found in project. Searched for 'student_education_organization_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_education_organization_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_education_organization_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_education_organization_responsibility_associations' not found in project. Searched for 'student_education_organization_responsibility_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_education_organization_responsibility_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_education_organization_responsibility_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_homeless_program_associations' not found in project. Searched for 'student_homeless_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_homeless_program_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_homeless_program_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_language_instruction_program_associations' not found in project. Searched for 'student_language_instruction_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_language_instruction_program_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_language_instruction_program_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_migrant_education_program_associations' not found in project. Searched for 'student_migrant_education_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_migrant_education_program_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_migrant_education_program_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_parent_associations' not found in project. Searched for 'student_parent_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_parent_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_parent_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_program_associations' not found in project. Searched for 'student_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_program_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_program_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_program_evaluations' not found in project. Searched for 'student_program_evaluations'\n  --> models/staging/edfi_3/base/base_ef3__student_program_evaluations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_program_evaluations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_school_associations' not found in project. Searched for 'student_school_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_school_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_school_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_school_attendance_events' not found in project. Searched for 'student_school_attendance_events'\n  --> models/staging/edfi_3/base/base_ef3__student_school_attendance_events.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_school_attendance_events.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_school_food_service_program_associations' not found in project. Searched for 'student_school_food_service_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_school_food_service_program_association.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_school_food_service_program_association.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_section_associations' not found in project. Searched for 'student_section_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_section_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_section_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_section_attendance_events' not found in project. Searched for 'student_section_attendance_events'\n  --> models/staging/edfi_3/base/base_ef3__student_section_attendance_events.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_section_attendance_events.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_special_education_program_associations' not found in project. Searched for 'student_special_education_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_special_education_program_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_special_education_program_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_special_education_program_eligibility_associations' not found in project. Searched for 'student_special_education_program_eligibility_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_special_education_program_eligibility_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_special_education_program_eligibility_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.student_title_i_part_a_program_associations' not found in project. Searched for 'student_title_i_part_a_program_associations'\n  --> models/staging/edfi_3/base/base_ef3__student_title_i_part_a_program_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__student_title_i_part_a_program_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.students' not found in project. Searched for 'students'\n  --> models/staging/edfi_3/base/base_ef3__students.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__students.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.survey_question_responses' not found in project. Searched for 'survey_question_responses'\n  --> models/staging/edfi_3/base/base_ef3__survey_question_responses.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__survey_question_responses.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.survey_questions' not found in project. Searched for 'survey_questions'\n  --> models/staging/edfi_3/base/base_ef3__survey_questions.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__survey_questions.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.survey_response_education_organization_target_associations' not found in project. Searched for 'survey_response_education_organization_target_associations'\n  --> models/staging/edfi_3/base/base_ef3__survey_response_education_organization_target_associations.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__survey_response_education_organization_target_associations.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.survey_responses' not found in project. Searched for 'survey_responses'\n  --> models/staging/edfi_3/base/base_ef3__survey_responses.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__survey_responses.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.survey_section_responses' not found in project. Searched for 'survey_section_responses'\n  --> models/staging/edfi_3/base/base_ef3__survey_section_responses.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__survey_section_responses.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.survey_sections' not found in project. Searched for 'survey_sections'\n  --> models/staging/edfi_3/base/base_ef3__survey_sections.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__survey_sections.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3.surveys' not found in project. Searched for 'surveys'\n  --> models/staging/edfi_3/base/base_ef3__surveys.sql:9:14",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Source 'raw_edfi_3._deletes' not found in project. Searched for '_deletes'\n  --> models/staging/edfi_3/base/base_ef3__surveys.sql:11:23",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "Ref 'xwalk_student_assessment_subject' not found in project. Searched for 'edu_edfi_source.xwalk_student_assessment_subject, xwalk_student_assessment_subject'\n  --> models/staging/edfi_3/intermediate/int_ef3__student_assessments__identify_subject.sql:18:19",
+                    "error_code": 1048,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.196"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
