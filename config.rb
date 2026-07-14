@@ -1,4 +1,6 @@
 require 'open-uri'
+require 'json'
+require 'time'
 
 class Middleman::Util::EnhancedHash
     # Mila: Looked into Hashie::Mash's source code where this class is
@@ -151,6 +153,30 @@ end
 
 set :package_index, combine_packages(@app.data.packages)
 
+# Fetches repository metadata from the GitHub API.
+def fetch_github_repo(org, repo)
+  url = "https://api.github.com/repos/#{org}/#{repo}"
+  options = {
+    'Accept'               => 'application/vnd.github+json',
+    'X-GitHub-Api-Version' => '2022-11-28',
+    'User-Agent'           => 'hub.getdbt.com-middleman-build',
+    open_timeout:            5,
+    read_timeout:            5
+  }
+  JSON.parse(URI.open(url, options).read)
+end
+
+# Fetch live description for each featured package at build time.
+featured_live = {}
+@app.data.featured.each do |feat|
+  repo = fetch_github_repo(feat['org'], feat['package'])
+  live = {
+    'description' => repo['description'],
+  }.compact
+  featured_live["#{feat['org']}/#{feat['package']}"] = live
+end
+set :featured_live, featured_live
+
 after_configuration do
 
   proxy "/api/v1/packages.json",
@@ -219,6 +245,12 @@ ignore '/package.template.html.erb'
 ignore '/author.template.html.erb'
 ignore '/api/v1/package.template.json.erb'
 ignore '/api/v1/raw.json.erb'
+
+# Vendor CSS from npm (Biga tokens must load before Sourdough). Requires `npm install`.
+import_file File.expand_path('node_modules/@dbt-labs/biga/tokens/tokens.css', root),
+              '/stylesheets/vendor/biga-tokens.css'
+import_file File.expand_path('node_modules/@dbt-labs/sourdough/dist/sourdough.css', root),
+              '/stylesheets/vendor/sourdough.css'
 
 activate :livereload
 
