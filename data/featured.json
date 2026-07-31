@@ -1,26 +1,44 @@
 [
     {
         "org": "dbt-labs",
-        "package": "dbt_utils"
+        "package": "dbt_utils",
+        "tile": {
+            "description": "Utility functions for dbt projects"
+        }
     },
     {
         "org": "dbt-labs",
-        "package": "codegen"
+        "package": "codegen",
+        "tile": {
+            "description": "Macros that generate dbt code"
+        }
     },
     {
         "org": "dbt-labs",
-        "package": "dbt_project_evaluator"
+        "package": "dbt_project_evaluator",
+        "tile": {
+            "description": "This package contains macros and models to find DAG issues automatically"
+        }
     },
     {
         "org": "dbt-labs",
-        "package": "audit_helper"
+        "package": "audit_helper",
+        "tile": {
+            "description": "Useful macros when performing data audits"
+        }
     },
     {
         "org": "dbt-labs",
-        "package": "dbt_external_tables"
+        "package": "dbt_external_tables",
+        "tile": {
+            "description": "dbt macros to stage external source"
+        }
     },
     {
         "org": "metaplane",
-        "package": "dbt_expectations"
+        "package": "dbt_expectations",
+        "tile": {
+            "description": "Great Expectations tests for dbt models"
+        }
     }
 ]
