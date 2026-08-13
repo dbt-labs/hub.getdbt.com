@@ -19,13 +19,15 @@
               <h4 class="h4">Featured Packages</h4>
           </div>
       </div>
-      <div class="tiles">
+      <div class="tiles tiles--featured">
         <% data.featured.each do |feat| %>
             <% org = feat['org'] %>
             <% pkg = feat['package'] %>
             <% name = "#{org}/#{pkg}" %>
             <% package = config[:package_index][name] %>
-            <%= partial "package_card", :locals => { :package => package } %>
+            <% live = config[:featured_live][name] || {} %>
+            <% tile_config = (feat['tile'] || {}).merge(live) %>
+            <%= partial "package_card", :locals => { :package => package, :featured_context => true, :featured_config => tile_config } %>
         <% end %>
       </div>
       <hr/>
