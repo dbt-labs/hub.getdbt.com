@@ -1,0 +1,61 @@
+{
+    "id": "edanalytics/edu_wh/0.7.1",
+    "name": "edu_wh",
+    "version": "0.7.1",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "edanalytics/edu_edfi_source",
+            "version": [
+                ">=0.7.1",
+                "<0.8.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.10.5",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/edanalytics/edu_wh/tree/0.7.1/",
+        "readme": "https://raw.githubusercontent.com/edanalytics/edu_wh/0.7.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/edanalytics/edu_wh/tar.gz/0.7.1",
+        "format": "tgz",
+        "sha1": "7ef059788370f1a44cb4abdbbb002e1609b34f10"
+    },
+    "fusion_compatibility": {
+        "version": "0.7.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": false,
+        "parse_compatibility_result": {
+            "parse_exit_code": 1,
+            "total_errors": 1,
+            "total_warnings": 0,
+            "errors": [
+                {
+                    "body": "No compatible versions found for package 'edanalytics/edu_edfi_source'",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                },
+                {
+                    "body": "No compatible versions found for package 'edanalytics/edu_edfi_source'",
+                    "error_code": 1005,
+                    "severity_text": "ERROR",
+                    "original_severity_text": "ERROR"
+                }
+            ],
+            "warnings": [],
+            "fusion_version": "2.0.0-preview.218"
+        },
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
