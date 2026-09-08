@@ -42,9 +42,9 @@
             <input type="text" id="package-search" placeholder="Search packages..." aria-label="Search packages by name" />
             <button id="clear-search" class="hidden" aria-label="Clear search">×</button>
             <div class="filter-container">
-              <label class="fusion-filter-label">
-                <input type="checkbox" id="fusion-filter" />
-                <span>Show only packages compatible with the dbt Fusion engine</span>
+              <label class="v2-filter-label">
+                <input type="checkbox" id="v2-filter" />
+                <span>Show only packages compatible with dbt v2</span>
               </label>
             </div>
           </div>
@@ -67,23 +67,23 @@
                    <% packages.each do |name, package| %>
                       <% if not data.blocklist['packages'].include?(org + "/" + name) %>
                           <% full_package = build_package(package, org, name) %>
-                          <% is_fully_compat = is_fusion_compatible(full_package) %>
-                          <% is_parse_compat = is_fusion_parse_compatible(full_package) %>
+                          <% is_fully_compat = is_v2_compatible(full_package) %>
+                          <% is_parse_compat = is_v2_parse_compatible(full_package) %>
                           <% is_compatible = is_fully_compat || is_parse_compat %>
                           <li class="package-item"
                               data-package-name="<%= name.downcase %>"
                               data-full-name="<%= (org + '/' + name).downcase %>"
-                              data-fusion-compatible="<%= is_compatible %>">
+                              data-v2-compatible="<%= is_compatible %>">
                               <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
                               <% if is_fully_compat %>
-                                <span class="fusion-atom-pill fusion-atom-pill--purple has-popover" tabindex="0">
-                                  <%= image_tag('fusion_atom.svg', {alt: 'Fusion compatible', class: 'fusion-icon'}) %>
-                                  <span class="popover-text">Fusion compatible</span>
+                                <span class="v2-pill v2-pill--purple has-popover" tabindex="0">
+                                  <%= image_tag('fusion_atom.svg', {alt: 'v2 compatible', class: 'v2-icon'}) %>
+                                  <span class="popover-text">v2 compatible</span>
                                 </span>
                               <% elsif is_parse_compat %>
-                                <span class="fusion-atom-pill fusion-atom-pill--parse has-popover" tabindex="0">
-                                  <%= image_tag('fusion_atom.svg', {alt: 'Fusion parse compatible', class: 'fusion-icon'}) %><span class="fusion-info-icon">ⓘ</span>
-                                  <span class="popover-text">This version of the package has not been classified as Fusion-compatible by its maintainer or by manual verification from dbt Labs, but it has been automatically verified as compatible with dbt parse. Installing this package will not prevent dbt invocations from starting, but runtime behavior on Fusion may vary versus dbt Core.</span>
+                                <span class="v2-pill v2-pill--parse has-popover" tabindex="0">
+                                  <%= image_tag('fusion_atom.svg', {alt: 'v2 parse compatible', class: 'v2-icon'}) %><span class="v2-info-icon">ⓘ</span>
+                                  <span class="popover-text">This version of the package has not been classified as v2-compatible by its maintainer or by manual verification from dbt Labs, but it has been automatically verified as compatible with dbt parse. Installing this package will not prevent dbt invocations from starting, but runtime behavior on dbt v2 may vary.</span>
                                 </span>
                               <% end %>
                           </li>
