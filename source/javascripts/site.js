@@ -2,11 +2,11 @@
 // Package search and filter functionality
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('package-search');
-  const fusionFilter = document.getElementById('fusion-filter');
+  const v2Filter = document.getElementById('v2-filter');
   const noResultsMessage = document.getElementById('no-results');
   const clearButton = document.getElementById('clear-search');
   
-  if (!searchInput || !fusionFilter) return;
+  if (!searchInput || !v2Filter) return;
   
   // Cache DOM queries on page load (these don't change without a full refresh)
   const allOrgs = document.querySelectorAll('.package-org');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         element: li,
         packageName: li.getAttribute('data-package-name'),
         fullName: li.getAttribute('data-full-name'),
-        isFusion: li.getAttribute('data-fusion-compatible') === 'true'
+        isV2: li.getAttribute('data-v2-compatible') === 'true'
       };
     });
     return { element: orgDiv, packages: packages };
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Use requestAnimationFrame to batch DOM updates into a single repaint
     requestAnimationFrame(function() {
       const searchTerm = searchInput.value.toLowerCase().trim();
-      const showOnlyFusion = fusionFilter.checked;
+      const showOnlyV2 = v2Filter.checked;
       let visibleCount = 0;
       
       orgData.forEach(function(org) {
@@ -52,11 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                pkg.packageName.includes(searchTerm) || 
                                pkg.fullName.includes(searchTerm);
           
-          // Check if package matches fusion filter
-          const matchesFusion = !showOnlyFusion || pkg.isFusion;
+          // Check if package matches v2 filter
+          const matchesV2 = !showOnlyV2 || pkg.isV2;
           
           // Show or hide package using CSS class (more performant than inline styles)
-          if (matchesSearch && matchesFusion) {
+          if (matchesSearch && matchesV2) {
             pkg.element.classList.remove('hidden');
             orgHasVisiblePackages = true;
             visibleCount++;
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateClearButton();
     debouncedFilter();
   });
-  fusionFilter.addEventListener('change', filterPackages);
+  v2Filter.addEventListener('change', filterPackages);
   
   if (clearButton) {
     clearButton.addEventListener('click', function() {
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   setTimeout(function() {
     updateClearButton();
-    if (fusionFilter.checked || searchInput.value) {
+    if (v2Filter.checked || searchInput.value) {
       filterPackages();
     }
   }, 100);
