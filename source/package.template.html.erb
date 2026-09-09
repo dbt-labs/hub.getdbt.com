@@ -34,7 +34,7 @@
                   <%= package.namespace %>
                 </a>
               </em><br/>
-              <div class="github-fusion-row">
+              <div class="github-v2-row">
                 <% if is_valid_github_url(version._source.url) %>
                 <a class="github-button"
                    href="<%=version._source.url.split("/tree/")[0]%>"
@@ -48,32 +48,32 @@
                 <% end %>
                 <%
                   # Determine badge state and popover text
-                  fusion_compat = fusion_compat_data(version)
-                  is_manually_verified_compatible = fusion_compat && fusion_compat.manually_verified_compatible == true
-                  is_manually_verified_incompatible = fusion_compat && fusion_compat.manually_verified_incompatible == true
-                  has_parse_conformance = fusion_compat && !fusion_compat.parse_compatible.nil?
+                  v2_compat = v2_compat_data(version)
+                  is_manually_verified_compatible = v2_compat && v2_compat.manually_verified_compatible == true
+                  is_manually_verified_incompatible = v2_compat && v2_compat.manually_verified_incompatible == true
+                  has_parse_conformance = v2_compat && !v2_compat.parse_compatible.nil?
                   is_based_on_require_only = !is_manually_verified_compatible && !is_manually_verified_incompatible && !has_parse_conformance
-                  is_fully_compatible = is_fusion_compatible(package, version)
-                  is_parse_compat = is_fusion_parse_compatible(package, version)
+                  is_fully_compatible = is_v2_compatible(package, version)
+                  is_parse_compat = is_v2_parse_compatible(package, version)
                 %>
                 <% if is_fully_compatible %>
-                  <span class="fusion-badge<% if is_manually_verified_compatible || is_based_on_require_only %> has-popover<% end %>"
-                    <% if is_manually_verified_compatible || is_based_on_require_only %>tabindex="0"<% end %>>Fusion compatible
+                  <span class="v2-badge<% if is_manually_verified_compatible || is_based_on_require_only %> has-popover<% end %>"
+                    <% if is_manually_verified_compatible || is_based_on_require_only %>tabindex="0"<% end %>>v2 compatible
                     <% if is_manually_verified_compatible %>
-                      <span class="popover-text">dbt has manually verified that this package version is compatible with Fusion</span>
+                      <span class="popover-text">dbt has manually verified that this package version is compatible with dbt v2</span>
                     <% elsif is_based_on_require_only %>
                       <span class="popover-text">Compatibility based on require-dbt-version. Parse compatibility has not yet been run on this version.</span>
                     <% end %>
                   </span>
                 <% elsif is_parse_compat %>
-                  <span class="fusion-badge-parse-compat has-popover" tabindex="0">Fusion parse compatible
-                    <span class="popover-text">This version of the package has not been classified as Fusion-compatible by its maintainer or by manual verification from dbt Labs, but it has been automatically verified as compatible with dbt parse. Installing this package will not prevent dbt invocations from starting, but runtime behavior on Fusion may vary versus dbt Core.</span>
+                  <span class="v2-badge-parse-compat has-popover" tabindex="0">v2 parse compatible
+                    <span class="popover-text">This version of the package has not been classified as v2-compatible by its maintainer or by manual verification from dbt Labs, but it has been automatically verified as compatible with dbt parse. Installing this package will not prevent dbt invocations from starting, but runtime behavior on dbt v2 may vary.</span>
                   </span>
                 <% else %>
-                  <span class="fusion-badge-incompatible<% if is_manually_verified_incompatible %> has-popover<% end %>"
-                    <% if is_manually_verified_incompatible %>tabindex="0"<% end %>>Not Fusion compatible
+                  <span class="v2-badge-incompatible<% if is_manually_verified_incompatible %> has-popover<% end %>"
+                    <% if is_manually_verified_incompatible %>tabindex="0"<% end %>>Not v2 compatible
                     <% if is_manually_verified_incompatible %>
-                      <span class="popover-text">dbt has manually verified that this package version is not compatible with Fusion</span>
+                      <span class="popover-text">dbt has manually verified that this package version is not compatible with dbt v2</span>
                     <% end %>
                   </span>
                 <% end %>
@@ -92,9 +92,9 @@
                 <span class="dropdown-selected-text">
                   <%= version.version %><% if version.version == package.latest %> (latest)<% end %>
                   <% if is_fully_compatible %>
-                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion compatible', class: 'fusion-icon'}) %>
+                    <%= image_tag('fusion_atom.svg', {alt: 'v2 compatible', class: 'v2-icon'}) %>
                   <% elsif is_parse_compat %>
-                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion parse compatible', class: 'fusion-icon'}) %>
+                    <%= image_tag('fusion_atom.svg', {alt: 'v2 parse compatible', class: 'v2-icon'}) %>
                   <% end %>
                 </span>
                 <span class="dropdown-arrow">▼</span>
@@ -107,10 +107,10 @@
                   <span class="option-text">
                     <%= local_version %><% if local_version == package.latest %> (latest)<% end %>
                   </span>
-                  <% if is_fusion_compatible(package, local_package_version) %>
-                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion compatible', class: 'fusion-icon'}) %>
-                  <% elsif is_fusion_parse_compatible(package, local_package_version) %>
-                    <%= image_tag('fusion_atom.svg', {alt: 'Fusion parse compatible', class: 'fusion-icon'}) %>
+                  <% if is_v2_compatible(package, local_package_version) %>
+                    <%= image_tag('fusion_atom.svg', {alt: 'v2 compatible', class: 'v2-icon'}) %>
+                  <% elsif is_v2_parse_compatible(package, local_package_version) %>
+                    <%= image_tag('fusion_atom.svg', {alt: 'v2 parse compatible', class: 'v2-icon'}) %>
                   <% end %>
                 </li>
                 <% end %>
@@ -124,38 +124,38 @@
       <hr/>
 
       <div class="package-content-layout">
-        <!-- Right column: Fusion Compatibility (HTML placed first to avoid <base> tag issues, CSS order:2) -->
+        <!-- Right column: v2 compatibility (HTML placed first to avoid <base> tag issues, CSS order:2) -->
         <div class="package-sidebar">
-          <div class="fusion-compatibility-section">
+          <div class="v2-compatibility-section">
             <%
-              fc = fusion_compat_data(version)
-              is_manually_compatible = fc && fc.manually_verified_compatible == true
-              is_manually_incompatible = fc && fc.manually_verified_incompatible == true
+              v2c = v2_compat_data(version)
+              is_manually_compatible = v2c && v2c.manually_verified_compatible == true
+              is_manually_incompatible = v2c && v2c.manually_verified_incompatible == true
               is_manually_verified = is_manually_compatible || is_manually_incompatible
             %>
 
-            <div class="fc-header">
-              <div class="fc-header-icon">
-                <%= image_tag('fusion_atom.svg', {alt: 'Fusion', class: 'fc-atom-icon'}) %>
+            <div class="v2c-header">
+              <div class="v2c-header-icon">
+                <%= image_tag('fusion_atom.svg', {alt: 'dbt v2', class: 'v2c-atom-icon'}) %>
               </div>
-              <h3>Fusion compatibility</h3>
+              <h3>v2 compatibility</h3>
             </div>
 
             <% if is_manually_verified %>
             <!-- Manually verified by dbt -->
-            <div class="fc-group">
-              <div class="fc-group-label">Manually verified by dbt</div>
-              <div class="fc-block">
-                <div class="fc-row">
-                  <span class="fc-label">Status</span>
+            <div class="v2c-group">
+              <div class="v2c-group-label">Manually verified by dbt</div>
+              <div class="v2c-block">
+                <div class="v2c-row">
+                  <span class="v2c-label">Status</span>
                   <% if is_manually_compatible %>
-                    <span class="fc-status fc-status--success">
-                      <%= image_tag('status_success.svg', {alt: 'Compatible', class: 'fc-status-icon'}) %>
+                    <span class="v2c-status v2c-status--success">
+                      <%= image_tag('status_success.svg', {alt: 'Compatible', class: 'v2c-status-icon'}) %>
                       Compatible
                     </span>
                   <% else %>
-                    <span class="fc-status fc-status--error">
-                      <%= image_tag('status_error.svg', {alt: 'Not compatible', class: 'fc-status-icon'}) %>
+                    <span class="v2c-status v2c-status--error">
+                      <%= image_tag('status_error.svg', {alt: 'Not compatible', class: 'v2c-status-icon'}) %>
                       Not compatible
                     </span>
                   <% end %>
@@ -164,81 +164,81 @@
             </div>
 
             <!-- Collapsible details -->
-            <details class="fc-details">
-              <summary class="fc-details-summary">View compatibility details</summary>
-              <div class="fc-details-content">
-                <div class="fc-row">
-                  <span class="fc-label">require-dbt-version</span>
+            <details class="v2c-details">
+              <summary class="v2c-details-summary">View compatibility details</summary>
+              <div class="v2c-details-content">
+                <div class="v2c-row">
+                  <span class="v2c-label">require-dbt-version</span>
                   <% if !require_dbt_version_defined?(version) %>
-                    <span class="fc-status fc-status--warning">
-                      <%= image_tag('status_error.svg', {alt: 'Not defined', class: 'fc-status-icon'}) %>
+                    <span class="v2c-status v2c-status--warning">
+                      <%= image_tag('status_error.svg', {alt: 'Not defined', class: 'v2c-status-icon'}) %>
                       Not defined
                     </span>
-                  <% elsif is_require_dbt_version_fusion_compatible(version.require_dbt_version) %>
-                    <span class="fc-status fc-status--success">
-                      <%= image_tag('status_success.svg', {alt: 'Compatible', class: 'fc-status-icon'}) %>
+                  <% elsif is_require_dbt_version_v2_compatible(version.require_dbt_version) %>
+                    <span class="v2c-status v2c-status--success">
+                      <%= image_tag('status_success.svg', {alt: 'Compatible', class: 'v2c-status-icon'}) %>
                       Compatible
                     </span>
                   <% else %>
-                    <span class="fc-status fc-status--error">
-                      <%= image_tag('status_error.svg', {alt: 'Not compatible', class: 'fc-status-icon'}) %>
+                    <span class="v2c-status v2c-status--error">
+                      <%= image_tag('status_error.svg', {alt: 'Not compatible', class: 'v2c-status-icon'}) %>
                       Not compatible
                     </span>
                   <% end %>
                 </div>
-                <div class="fc-row">
-                  <span class="fc-label">Parse compatibility</span>
-                  <% if fc && !fc.parse_compatible.nil? %>
-                    <% if fc.parse_compatible %>
-                      <span class="fc-status fc-status--success">
-                        <%= image_tag('status_success.svg', {alt: 'Passed', class: 'fc-status-icon'}) %>
+                <div class="v2c-row">
+                  <span class="v2c-label">Parse compatibility</span>
+                  <% if v2c && !v2c.parse_compatible.nil? %>
+                    <% if v2c.parse_compatible %>
+                      <span class="v2c-status v2c-status--success">
+                        <%= image_tag('status_success.svg', {alt: 'Passed', class: 'v2c-status-icon'}) %>
                         Passed
                       </span>
                     <% else %>
-                      <span class="fc-status fc-status--error">
-                        <%= image_tag('status_error.svg', {alt: 'Failed', class: 'fc-status-icon'}) %>
+                      <span class="v2c-status v2c-status--error">
+                        <%= image_tag('status_error.svg', {alt: 'Failed', class: 'v2c-status-icon'}) %>
                         Failed
                       </span>
                     <% end %>
                   <% else %>
-                    <span class="fc-status fc-status--warning">
-                      <%= image_tag('status_error.svg', {alt: 'Not yet tested', class: 'fc-status-icon'}) %>
+                    <span class="v2c-status v2c-status--warning">
+                      <%= image_tag('status_error.svg', {alt: 'Not yet tested', class: 'v2c-status-icon'}) %>
                       Not yet tested
                     </span>
                   <% end %>
                 </div>
-                <% if fc && fc.parse_compatibility_result && fc.parse_compatibility_result.fusion_version %>
-                <div class="fc-row">
-                  <span class="fc-label">Tested with Fusion</span>
-                  <code class="fc-code"><%= fc.parse_compatibility_result.fusion_version %></code>
+                <% if v2c && v2c.parse_compatibility_result && v2c.parse_compatibility_result.fusion_version %>
+                <div class="v2c-row">
+                  <span class="v2c-label">Tested with dbt v2</span>
+                  <code class="v2c-code"><%= v2c.parse_compatibility_result.fusion_version %></code>
                 </div>
                 <% end %>
               </div>
             </details>
             <% else %>
             <!-- Set by package maintainer -->
-            <div class="fc-group">
-              <div class="fc-group-label">Set by package maintainer</div>
-              <div class="fc-block">
-                <div class="fc-row">
-                  <span class="fc-label">Package version</span>
-                  <code class="fc-code"><%= version.version %><% if version.version == package.latest %> (latest)<% end %></code>
+            <div class="v2c-group">
+              <div class="v2c-group-label">Set by package maintainer</div>
+              <div class="v2c-block">
+                <div class="v2c-row">
+                  <span class="v2c-label">Package version</span>
+                  <code class="v2c-code"><%= version.version %><% if version.version == package.latest %> (latest)<% end %></code>
                 </div>
-                <div class="fc-row">
-                  <span class="fc-label">require-dbt-version</span>
+                <div class="v2c-row">
+                  <span class="v2c-label">require-dbt-version</span>
                   <% if !require_dbt_version_defined?(version) %>
-                    <span class="fc-status fc-status--warning">
-                      <%= image_tag('status_error.svg', {alt: 'Not defined', class: 'fc-status-icon'}) %>
+                    <span class="v2c-status v2c-status--warning">
+                      <%= image_tag('status_error.svg', {alt: 'Not defined', class: 'v2c-status-icon'}) %>
                       Not defined
                     </span>
-                  <% elsif is_require_dbt_version_fusion_compatible(version.require_dbt_version) %>
-                    <span class="fc-status fc-status--success">
-                      <%= image_tag('status_success.svg', {alt: 'Compatible', class: 'fc-status-icon'}) %>
+                  <% elsif is_require_dbt_version_v2_compatible(version.require_dbt_version) %>
+                    <span class="v2c-status v2c-status--success">
+                      <%= image_tag('status_success.svg', {alt: 'Compatible', class: 'v2c-status-icon'}) %>
                       Compatible
                     </span>
                   <% else %>
-                    <span class="fc-status fc-status--error">
-                      <%= image_tag('status_error.svg', {alt: 'Not compatible', class: 'fc-status-icon'}) %>
+                    <span class="v2c-status v2c-status--error">
+                      <%= image_tag('status_error.svg', {alt: 'Not compatible', class: 'v2c-status-icon'}) %>
                       Not compatible
                     </span>
                   <% end %>
@@ -247,42 +247,42 @@
             </div>
 
             <!-- Automated tests -->
-            <div class="fc-group">
-              <div class="fc-group-label">Automated tests</div>
-              <div class="fc-block">
-                <div class="fc-row">
-                  <span class="fc-label">Parse compatibility</span>
-                  <% if fc && !fc.parse_compatible.nil? %>
-                    <% if fc.parse_compatible %>
-                      <span class="fc-status fc-status--success">
-                        <%= image_tag('status_success.svg', {alt: 'Passed', class: 'fc-status-icon'}) %>
+            <div class="v2c-group">
+              <div class="v2c-group-label">Automated tests</div>
+              <div class="v2c-block">
+                <div class="v2c-row">
+                  <span class="v2c-label">Parse compatibility</span>
+                  <% if v2c && !v2c.parse_compatible.nil? %>
+                    <% if v2c.parse_compatible %>
+                      <span class="v2c-status v2c-status--success">
+                        <%= image_tag('status_success.svg', {alt: 'Passed', class: 'v2c-status-icon'}) %>
                         Passed
                       </span>
                     <% else %>
-                      <span class="fc-status fc-status--error">
-                        <%= image_tag('status_error.svg', {alt: 'Failed', class: 'fc-status-icon'}) %>
+                      <span class="v2c-status v2c-status--error">
+                        <%= image_tag('status_error.svg', {alt: 'Failed', class: 'v2c-status-icon'}) %>
                         Failed
                       </span>
                     <% end %>
                   <% else %>
-                    <span class="fc-status fc-status--warning">
-                      <%= image_tag('status_error.svg', {alt: 'Not yet tested', class: 'fc-status-icon'}) %>
+                    <span class="v2c-status v2c-status--warning">
+                      <%= image_tag('status_error.svg', {alt: 'Not yet tested', class: 'v2c-status-icon'}) %>
                       Not yet tested
                     </span>
                   <% end %>
                 </div>
-                <% if fc && fc.parse_compatibility_result && fc.parse_compatibility_result.fusion_version %>
-                <div class="fc-row">
-                  <span class="fc-label">Tested with Fusion</span>
-                  <code class="fc-code"><%= fc.parse_compatibility_result.fusion_version %></code>
+                <% if v2c && v2c.parse_compatibility_result && v2c.parse_compatibility_result.fusion_version %>
+                <div class="v2c-row">
+                  <span class="v2c-label">Tested with dbt v2</span>
+                  <code class="v2c-code"><%= v2c.parse_compatibility_result.fusion_version %></code>
                 </div>
-                <div class="fc-row fc-row--link">
-                  <a href="https://github.com/dbt-labs/hub.getdbt.com/blob/master/data/packages/<%= package.namespace %>/<%= package.name %>/versions/<%= version.id.split('/').last %>.json" class="fc-link" target="_blank">View full parse test results</a>
+                <div class="v2c-row v2c-row--link">
+                  <a href="https://github.com/dbt-labs/hub.getdbt.com/blob/master/data/packages/<%= package.namespace %>/<%= package.name %>/versions/<%= version.id.split('/').last %>.json" class="v2c-link" target="_blank">View full parse test results</a>
                 </div>
                 <% end %>
               </div>
-              <% unless fc && !fc.parse_compatible.nil? %>
-              <p class="fc-note">
+              <% unless v2c && !v2c.parse_compatible.nil? %>
+              <p class="v2c-note">
                 dbt has not yet run parse compatibility tests on this package version. Compatibility is based on the <code>require-dbt-version</code> setting.
               </p>
               <% end %>
@@ -290,11 +290,11 @@
             <% end %>
 
             <!-- Footer help text -->
-            <p class="fc-footer">
+            <p class="v2c-footer">
               If you are the package maintainer and see unexpected compatibility errors, check 
-              <a href="https://docs.getdbt.com/guides/fusion-package-compat" class="fc-link">compatibility documentation</a> 
+              <a href="https://docs.getdbt.com/guides/fusion-package-compat" class="v2c-link">compatibility documentation</a> 
               and raise a PR 
-              <a href="https://github.com/dbt-labs/hub.getdbt.com/edit/master/data/packages/<%= package.namespace %>/<%= package.name %>/versions/<%= version.id.split('/').last %>.json" class="fc-link" target="_blank">here</a>
+              <a href="https://github.com/dbt-labs/hub.getdbt.com/edit/master/data/packages/<%= package.namespace %>/<%= package.name %>/versions/<%= version.id.split('/').last %>.json" class="v2c-link" target="_blank">here</a>
             </p>
           </div>
         </div>
