@@ -1,0 +1,53 @@
+{
+    "id": "fivetran/hubspot/v1.9.3",
+    "name": "hubspot",
+    "version": "v1.9.3",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/fivetran_utils",
+            "version": [
+                ">=0.4.0",
+                "<0.5.0"
+            ]
+        },
+        {
+            "package": "dbt-labs/spark_utils",
+            "version": [
+                ">=0.3.0",
+                "<0.4.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.3.0",
+        "<3.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_hubspot/tree/v1.9.3/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_hubspot/v1.9.3/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_hubspot/tar.gz/v1.9.3",
+        "format": "tgz",
+        "sha1": "246668d83375c9b0f1ac879244233081c085e985",
+        "hub": {
+            "tarball": "https://public.cdn.getdbt.com/package-hub/dbt-packages/fivetran/dbt_hubspot/tar.gz/v1.9.3",
+            "format": "tgz",
+            "sha1": "246668d83375c9b0f1ac879244233081c085e985"
+        }
+    },
+    "fusion_compatibility": {
+        "version": "v1.9.3",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": null,
+        "parse_compatibility_result": null,
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
