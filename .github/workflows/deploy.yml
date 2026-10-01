@@ -16,12 +16,19 @@ jobs:
           ruby-version: '2.7'
           bundler-cache: true
 
+      - name: Build
+        run: bundle exec middleman build
+
       - name: Deploy
         env:
           AWS_REGION: us-east-1
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          bundle exec middleman build
           aws s3 cp --recursive build/ s3://com.getdbt.hub/
           aws cloudfront create-invalidation --distribution-id E39VJ0QVYMOHEU --paths '/*'
+
+      - name: Smoke test
+        run: |
+          sleep 30
+          python3 scripts/validate-build.py https://hub.getdbt.com
