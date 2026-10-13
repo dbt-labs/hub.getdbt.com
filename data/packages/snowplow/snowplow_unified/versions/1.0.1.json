@@ -1,0 +1,46 @@
+{
+    "id": "snowplow/snowplow_unified/1.0.1",
+    "name": "snowplow_unified",
+    "version": "1.0.1",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "snowplow/snowplow_utils",
+            "version": [
+                ">=1.0.0",
+                "<2.0.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.6.0",
+        "<2.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/snowplow/dbt-snowplow-unified/tree/1.0.1/",
+        "readme": "https://raw.githubusercontent.com/snowplow/dbt-snowplow-unified/1.0.1/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/snowplow/dbt-snowplow-unified/tar.gz/1.0.1",
+        "format": "tgz",
+        "sha1": "dcdbac5e2ec4aa779bfcc1bc590be14d4ec05c37",
+        "hub": {
+            "tarball": "https://public.cdn.getdbt.com/package-hub/dbt-packages/snowplow/dbt-snowplow-unified/tar.gz/1.0.1",
+            "format": "tgz",
+            "sha1": "dcdbac5e2ec4aa779bfcc1bc590be14d4ec05c37"
+        }
+    },
+    "fusion_compatibility": {
+        "version": "1.0.1",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": false,
+        "parse_compatible": null,
+        "parse_compatibility_result": null,
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
