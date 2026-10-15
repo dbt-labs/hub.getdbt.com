@@ -92,9 +92,9 @@
                 <span class="dropdown-selected-text">
                   <%= version.version %><% if version.version == package.latest %> (latest)<% end %>
                   <% if is_fully_compatible %>
-                    <%= image_tag('fusion_atom.svg', {alt: 'v2 compatible', class: 'v2-icon'}) %>
+                    <%= image_tag('dbt_logo_mark.svg', {alt: 'v2 compatible', class: 'v2-icon'}) %>
                   <% elsif is_parse_compat %>
-                    <%= image_tag('fusion_atom.svg', {alt: 'v2 parse compatible', class: 'v2-icon'}) %>
+                    <%= image_tag('dbt_logo_mark.svg', {alt: 'v2 parse compatible', class: 'v2-icon'}) %>
                   <% end %>
                 </span>
                 <span class="dropdown-arrow">▼</span>
@@ -108,9 +108,9 @@
                     <%= local_version %><% if local_version == package.latest %> (latest)<% end %>
                   </span>
                   <% if is_v2_compatible(package, local_package_version) %>
-                    <%= image_tag('fusion_atom.svg', {alt: 'v2 compatible', class: 'v2-icon'}) %>
+                    <%= image_tag('dbt_logo_mark.svg', {alt: 'v2 compatible', class: 'v2-icon'}) %>
                   <% elsif is_v2_parse_compatible(package, local_package_version) %>
-                    <%= image_tag('fusion_atom.svg', {alt: 'v2 parse compatible', class: 'v2-icon'}) %>
+                    <%= image_tag('dbt_logo_mark.svg', {alt: 'v2 parse compatible', class: 'v2-icon'}) %>
                   <% end %>
                 </li>
                 <% end %>
@@ -136,7 +136,7 @@
 
             <div class="v2c-header">
               <div class="v2c-header-icon">
-                <%= image_tag('fusion_atom.svg', {alt: 'dbt v2', class: 'v2c-atom-icon'}) %>
+                <%= image_tag('dbt_logo_mark.svg', {alt: 'dbt v2', class: 'v2c-logo-icon'}) %>
               </div>
               <h3>v2 compatibility</h3>
             </div>

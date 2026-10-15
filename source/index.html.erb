@@ -77,12 +77,12 @@
                               <%= link_to(name, "/#{package['index'].namespace}/#{package['index'].name}/latest") %>
                               <% if is_fully_compat %>
                                 <span class="v2-pill v2-pill--purple has-popover" tabindex="0">
-                                  <%= image_tag('fusion_atom.svg', {alt: 'v2 compatible', class: 'v2-icon'}) %>
+                                  <%= image_tag('dbt_logo_mark.svg', {alt: 'v2 compatible', class: 'v2-icon'}) %>
                                   <span class="popover-text">v2 compatible</span>
                                 </span>
                               <% elsif is_parse_compat %>
                                 <span class="v2-pill v2-pill--parse has-popover" tabindex="0">
-                                  <%= image_tag('fusion_atom.svg', {alt: 'v2 parse compatible', class: 'v2-icon'}) %><span class="v2-info-icon">ⓘ</span>
+                                  <%= image_tag('dbt_logo_mark.svg', {alt: 'v2 parse compatible', class: 'v2-icon'}) %><span class="v2-info-icon">ⓘ</span>
                                   <span class="popover-text">This version of the package has not been classified as v2-compatible by its maintainer or by manual verification from dbt Labs, but it has been automatically verified as compatible with dbt parse. Installing this package will not prevent dbt invocations from starting, but runtime behavior on dbt v2 may vary.</span>
                                 </span>
                               <% end %>

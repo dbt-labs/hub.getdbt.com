@@ -118,7 +118,7 @@ img { display: inline; }
     @extend %v2-badge-base;
     background: $v2c-color-purple-bg;
     color: $v2c-color-purple;
-    &::before { background: url('/img/fusion_atom.svg') center/contain no-repeat; }
+    &::before { background: url('/img/dbt_logo_mark.svg') center/contain no-repeat; }
 }
 
 // Parse-compatible badge (same purple as fully compatible, with info indicator)
@@ -128,7 +128,7 @@ img { display: inline; }
     color: $v2c-color-purple;
 
     &::before {
-        background: url('/img/fusion_atom.svg') center/contain no-repeat;
+        background: url('/img/dbt_logo_mark.svg') center/contain no-repeat;
         opacity: 0.7;
     }
 
@@ -519,7 +519,7 @@ img { display: inline; }
     flex-shrink: 0;
 }
 
-.v2c-atom-icon {
+.v2c-logo-icon {
     width: 21px;
     height: 21px;
 }
