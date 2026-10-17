@@ -7,7 +7,9 @@ on:
   check_suite:
     types: [ completed ]
 
-permissions: write-all
+permissions:
+  contents: read
+  pull-requests: write
 
 
 jobs:
@@ -15,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Auto-label
-        uses: actions/labeler@ac9175f8a1f3625fd0d4fb234536d26811351594 # actions/labeler@v4
+        uses: actions/labeler@8558fd74291d67161a8a78ce36a648edfd2f1054 # actions/labeler@v5
         with:
           repo-token: ${{ secrets.AUTOMERGE_PAT }}
   automerge:
