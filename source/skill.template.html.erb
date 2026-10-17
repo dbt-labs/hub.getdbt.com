@@ -1,0 +1,96 @@
+<header class="header">
+  <%= partial "nav" %>
+  <section class="section white section-slim" style="padding-bottom:66px;">
+  </section>
+</header>
+
+<main class="main">
+  <section class="section white section-slim">
+    <div class="section-content">
+
+      <div class="package-header">
+        
+        <!-- Left column: Skill info -->
+        <div class="package-info">
+          <div class="tile-body" style="box-shadow: none; overflow: visible">
+            <div class="tile-text">
+              <div class="package-title-row">
+                <h1><%= skill.name %></h1>
+              </div>
+              <em>
+                Created by
+                <a href="<%= site_url %>/<%= skill.namespace %>/"
+                   target="_self">
+                  <%= skill.namespace %>
+                </a>
+              </em><br/>
+              <% if skill._source && skill._source.url %>
+              <% source_url = skill._source.url %>
+              <% github_url = source_url.include?("/tree/") ? source_url.split("/tree/")[0] : source_url %>
+              <% url_parts = source_url.split("/") %>
+              <div class="github-link" style="height: 30px; margin-bottom: 0">
+                <a class="github-button"
+                   href="<%= github_url %>"
+                   data-size="large"
+                   data-show-count="true"
+                   aria-label="View the skill on GitHub"
+                   target="_blank">
+                  <i data-icon="star"></i>
+                  <%= url_parts[3] rescue '' %>/<%= url_parts[4] rescue '' %>
+                </a>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <hr/>
+
+      <div class="row">
+        <div class="col-md-12">
+
+        <h3>About</h3>
+          
+          <p>To install this skill, follow the installation instructions <a href="https://github.com/dbt-labs/dbt-agent-skills?tab=readme-ov-file#installation">here</a>. </p>
+          <% if skill._source && skill._source.url %>
+          <p>For more information, visit the <a href="<%= skill._source.url %>" target="_blank">skill repository on GitHub</a>.</p>
+          <% elsif skill._source && skill._source.readme %>
+          <p>For more information, see the <a href="<%= skill._source.readme %>" target="_blank">skill documentation</a>.</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <% if skill._source && skill._source.readme %>
+  <section class="section section-slim white offset" style="padding-top: 0">
+    <div class="section-content">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>README</h3>
+          (<a href="<%= skill._source.readme %>" target="_blank">View on GitHub</a>)
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <% readme_base = skill._source.readme.split("/blob/")[0] rescue skill._source.url %>
+          <base href="<%= readme_base %>"
+                target="_blank">
+          <article id="readme" class='markdown-body'>
+            <div class="loading">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script>
+    $.get('<%= skill._source.readme %>').done(function(data) {
+        document.getElementById('readme').innerHTML = marked.parse(data)
+    });
+  </script>
+  <% end %>
+</main>
+
