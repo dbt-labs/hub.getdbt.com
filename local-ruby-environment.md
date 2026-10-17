@@ -35,10 +35,10 @@ rbenv init
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
 
 # Install Ruby
-rbenv install 2.7.2
+rbenv install 3.1.7
 
 # Set global version
-rbenv global 2.7.2
+rbenv global 3.1.7
 
 # Restart your shell
 ```
