@@ -11,7 +11,64 @@ permissions: write-all
 
 
 jobs:
+  # Nothing merged here is looked at by a person, so a pull request only
+  # becomes eligible for the automerge label once its contents have been
+  # checked against where they are filed.
+  #
+  # Being ineligible is an ordinary outcome -- every pull request that
+  # touches anything other than a package record is -- so this job reports a
+  # verdict and succeeds, rather than failing and painting an honest change
+  # red. Whether the records themselves are sound is the separate "Validate
+  # package records" check, which is required and does fail.
+  eligibility:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    outputs:
+      eligible: ${{ steps.check.outputs.eligible }}
+    steps:
+      # the checker is taken from the default branch, never from the pull
+      # request, so a change cannot bring along its own approval. Its tip is
+      # used rather than the pull request's base commit so that a request
+      # opened before this check existed is still checked, without a rebase
+      - name: Checkout the checker from the default branch
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: trusted
+      - name: Checkout the pull request
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr
+      - name: Check that every change is a package record matching its path
+        id: check
+        working-directory: pr
+        run: |
+          # pipefail so that a git failure counts as ineligible rather than
+          # feeding the checker an empty diff it would happily accept
+          set -o pipefail
+          if git diff --name-status \
+               ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }} \
+               | python3 ../trusted/scripts/validate_package_records.py \
+                   --registry-only --repo-root .
+          then
+            echo "eligible=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "eligible=false" >> "$GITHUB_OUTPUT"
+          fi
+      # a pull request may have been labelled before the offending commit
+      # landed, so the label is taken back rather than merely withheld
+      - name: Withdraw the automerge label
+        if: steps.check.outputs.eligible != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.AUTOMERGE_PAT }}
+        run: |
+          gh pr edit ${{ github.event.pull_request.number }} \
+            --repo ${{ github.repository }} --remove-label automerge || true
   autolabel:
+    needs: eligibility
+    if: github.event_name == 'pull_request' && needs.eligibility.outputs.eligible == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Auto-label
@@ -19,7 +76,15 @@ jobs:
         with:
           repo-token: ${{ secrets.AUTOMERGE_PAT }}
   automerge:
-    needs: autolabel
+    needs: [ eligibility, autolabel ]
+    # a check_suite run does no labelling, so both jobs above are skipped
+    # there; what must never happen is a merge after the check errored out
+    # or returned an ineligible verdict
+    if: |
+      always()
+      && needs.eligibility.result != 'failure'
+      && needs.autolabel.result != 'failure'
+      && needs.eligibility.outputs.eligible != 'false'
     runs-on: ubuntu-latest
     steps:
       - name: Auto-merge
@@ -28,6 +93,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.AUTOMERGE_PAT }}
           MERGE_LABELS: "automerge,!work in progress,!ready for review"
           MERGE_REMOVE_LABELS: "automerge"
-          LOG: DEBUG
-          MERGE_RETRIES: 10
-          MERGE_RETRY_SLEEP: 60000
