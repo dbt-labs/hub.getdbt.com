@@ -11,7 +11,44 @@ permissions: write-all
 
 
 jobs:
+  # Nothing merged here is reviewed by a person, so a pull request only
+  # becomes eligible for the automerge label once its contents have been
+  # checked against where they are filed. A change that fails this loses
+  # the label it may have been given before the offending commit landed.
+  validate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      # the checker is taken from the base revision, never from the pull
+      # request, so a change cannot bring along its own approval
+      - name: Checkout the base revision
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+      - name: Checkout the pull request
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr
+      - name: Check that every change is a package record matching its path
+        working-directory: pr
+        run: |
+          git diff --name-status \
+            ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }} \
+            | python3 ../base/scripts/validate_package_records.py \
+                --registry-only --repo-root .
+      - name: Withdraw the automerge label
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.AUTOMERGE_PAT }}
+        run: |
+          gh pr edit ${{ github.event.pull_request.number }} \
+            --repo ${{ github.repository }} --remove-label automerge || true
   autolabel:
+    if: github.event_name == 'pull_request'
+    needs: validate
     runs-on: ubuntu-latest
     steps:
       - name: Auto-label
@@ -19,7 +56,13 @@ jobs:
         with:
           repo-token: ${{ secrets.AUTOMERGE_PAT }}
   automerge:
-    needs: autolabel
+    needs: [ validate, autolabel ]
+    # a check_suite run does no labelling, so both jobs above are skipped
+    # there; what must never happen is a merge after either one has failed
+    if: |
+      always()
+      && needs.validate.result != 'failure'
+      && needs.autolabel.result != 'failure'
     runs-on: ubuntu-latest
     steps:
       - name: Auto-merge

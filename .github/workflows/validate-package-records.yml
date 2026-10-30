@@ -1,0 +1,35 @@
+# Package records under data/packages/ merge without human review, so this
+# is the check that stands in for the reviewer. Mark it as a required status
+# check on the default branch so nothing reaches the deploy without it.
+
+name: Validate package records
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      # the checker is taken from the base revision, never from the pull
+      # request, so a change cannot bring along its own approval
+      - name: Checkout the base revision
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+      - name: Checkout the pull request
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr
+      - name: Check that every changed record matches where it is filed
+        working-directory: pr
+        run: |
+          git diff --name-status \
+            ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }} \
+            | python3 ../base/scripts/validate_package_records.py --repo-root .
