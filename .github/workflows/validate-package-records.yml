@@ -32,6 +32,10 @@ jobs:
       - name: Check that every changed record matches where it is filed
         working-directory: pr
         run: |
+          # pipefail so that a git failure fails the check. Without it the
+          # exit status is the checker's alone, and a checker handed an empty
+          # diff reports nothing to check and passes
+          set -o pipefail
           git diff --name-status \
             ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }} \
             | python3 ../trusted/scripts/validate_package_records.py --repo-root .
