@@ -42,6 +42,19 @@ TARBALL_HOSTS = {
     "public.cdn.getdbt.com": 2,  # /package-hub/dbt-packages/<org>/<repo>/...
 }
 
+# the single-character escapes git uses inside a quoted path name
+GIT_ESCAPES = {
+    "a": 7,
+    "b": 8,
+    "f": 12,
+    "n": 10,
+    "r": 13,
+    "t": 9,
+    "v": 11,
+    "\\": 92,
+    '"': 34,
+}
+
 
 class Violation(Exception):
     """A change that must not be merged without a human looking at it"""
@@ -154,6 +167,44 @@ def check_record(path: str, repo_root: Path, warnings: list) -> None:
             )
 
 
+def unquote_git_path(path: str) -> str:
+    """Undo the C-style quoting git applies to unusual path names
+
+    git wraps a path in quotes and escapes it whenever the name holds a
+    non-ASCII byte, a quote, a backslash or a control character, so the raw
+    field can read "data/packages/caf\\303\\251/..." rather than a path.
+    Left encoded, such a path does not start with PACKAGES_ROOT and so would
+    be passed over as though it were not a record at all.
+    """
+    if not (len(path) >= 2 and path.startswith('"') and path.endswith('"')):
+        return path
+
+    body, decoded, i = path[1:-1], bytearray(), 0
+    while i < len(body):
+        if body[i] != "\\":
+            decoded.extend(body[i].encode("utf-8"))
+            i += 1
+            continue
+
+        if i + 1 >= len(body):
+            raise Violation(f"{path}: truncated escape in quoted path")
+
+        escape = body[i + 1]
+        if escape in GIT_ESCAPES:
+            decoded.append(GIT_ESCAPES[escape])
+            i += 2
+        elif escape in "01234567":
+            octal = body[i + 1 : i + 4]
+            if len(octal) != 3 or any(digit not in "01234567" for digit in octal):
+                raise Violation(f"{path}: malformed octal escape in quoted path")
+            decoded.append(int(octal, 8))
+            i += 4
+        else:
+            raise Violation(f"{path}: unknown escape {escape!r} in quoted path")
+
+    return decoded.decode("utf-8", errors="surrogateescape")
+
+
 def parse_diff(lines: list[str]) -> list[tuple[str, str]]:
     """Turn `git diff --name-status` output into (status, path) pairs"""
     changes = []
@@ -165,7 +216,7 @@ def parse_diff(lines: list[str]) -> list[tuple[str, str]]:
         if len(fields) < 2:
             raise Violation(f"cannot parse diff line: {line!r}")
         # a rename reports both paths; the destination is what now exists
-        changes.append((fields[0], fields[-1]))
+        changes.append((fields[0], unquote_git_path(fields[-1])))
     return changes
 
 
