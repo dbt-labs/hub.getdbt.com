@@ -10,7 +10,7 @@ cannot be filed under a package that does not own it.
 Reads `git diff --name-status` lines on stdin and exits non-zero on the
 first kind of violation it finds:
 
-    git diff --name-status origin/main...HEAD | python3 scripts/validate_package_records.py
+    git diff --name-status origin/master...HEAD | python3 scripts/validate_package_records.py
 
 Pass --registry-only to also require that every changed path is a package
 record, which is what makes a pull request eligible for auto-merge.
