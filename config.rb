@@ -67,7 +67,7 @@ module SiteHelpers
     url.split("/tree/").length == 2 && url.split("/").length >= 5
   end
 
-  def fusion_compat_data(version)
+  def v2_compat_data(version)
     defined?(version.fusion_compatibility) && version.fusion_compatibility ? version.fusion_compatibility : nil
   end
 
@@ -79,7 +79,7 @@ module SiteHelpers
     true
   end
 
-  def is_require_dbt_version_fusion_compatible(requirements)
+  def is_require_dbt_version_v2_compatible(requirements)
     return false if requirements.nil?
     return false if requirements.is_a?(Array) && requirements.empty?
     return false if requirements.is_a?(String) && requirements.strip.empty?
@@ -94,43 +94,43 @@ module SiteHelpers
     end
   end
 
-  def is_fusion_parse_compatible(package, version_to_check = nil)
-    # Returns true when parse_compatible == true but the package is NOT fully fusion compatible
+  def is_v2_parse_compatible(package, version_to_check = nil)
+    # Returns true when parse_compatible == true but the package is NOT fully v2 compatible
     # (i.e., require_dbt_version doesn't satisfy >=2.0.0 and no manual verification)
     version = version_to_check ? version_to_check['version'] : package.latest
     return false unless package.versions && package.versions[version]
 
     version_data = package.versions[version]
-    fusion_compat = version_data['fusion_compatibility']
+    v2_compat = version_data['fusion_compatibility']
 
-    return false unless fusion_compat
-    return false if fusion_compat['manually_verified_compatible']
-    return false if fusion_compat['manually_verified_incompatible']
-    return false unless fusion_compat['parse_compatible'] == true
+    return false unless v2_compat
+    return false if v2_compat['manually_verified_compatible']
+    return false if v2_compat['manually_verified_incompatible']
+    return false unless v2_compat['parse_compatible'] == true
 
-    !is_require_dbt_version_fusion_compatible(version_data['require_dbt_version'])
+    !is_require_dbt_version_v2_compatible(version_data['require_dbt_version'])
   end
 
-  def is_fusion_compatible(package, version_to_check = nil)
+  def is_v2_compatible(package, version_to_check = nil)
     # If no version specified, check the latest
     version = version_to_check ? version_to_check['version'] : package.latest
     
     return false unless package.versions && package.versions[version]
     
     version_data = package.versions[version]
-    fusion_compat = version_data['fusion_compatibility']
+    v2_compat = version_data['fusion_compatibility']
     
     # 1. Always respect manually verified info first
-    if fusion_compat
-      return true if fusion_compat['manually_verified_compatible']
-      return false if fusion_compat['manually_verified_incompatible']
+    if v2_compat
+      return true if v2_compat['manually_verified_compatible']
+      return false if v2_compat['manually_verified_incompatible']
       
       # 2. Project must pass Parse conformance
-      return false if fusion_compat['parse_compatible'] == false
+      return false if v2_compat['parse_compatible'] == false
     end
     
     # 3. Check if require_dbt_version satisfies >= 2.0.0
-    is_require_dbt_version_fusion_compatible(version_data['require_dbt_version'])
+    is_require_dbt_version_v2_compatible(version_data['require_dbt_version'])
   end
 end
 
