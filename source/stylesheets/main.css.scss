@@ -38,6 +38,54 @@ pre {
     color: #24292e;
 }
 
+// Copy-to-clipboard button on code blocks
+.code-block {
+    position: relative;
+}
+
+.copy-code-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    color: $v2c-color-muted;
+    background: #fff;
+    border: 1px solid $v2c-color-border;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover { color: $v2c-color-text; background: #f3f4f6; }
+    &.copied { color: $v2c-color-success; border-color: $v2c-color-success; }
+
+    // Tooltip label to the left of the button
+    &::before {
+        content: attr(data-tooltip);
+        position: absolute;
+        right: calc(100% + 6px);
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 4px 8px;
+        font-size: 12px;
+        line-height: 1.4;
+        white-space: nowrap;
+        color: #fff;
+        background: $v2c-color-text;
+        border-radius: 6px;
+        pointer-events: none;
+        display: none;
+    }
+
+    &:hover::before,
+    &:focus-visible::before {
+        display: block;
+    }
+}
+
 // Utility class for hiding elements (more performant than inline style.display)
 .hidden {
     display: none !important;
