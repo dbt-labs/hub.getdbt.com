@@ -1,4 +1,45 @@
 // This is where it all goes :)
+
+// Copy-to-clipboard button for the install snippet on package pages
+var COPY_ICON = '<svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5.75" y="0.75" width="9.5" height="9.5" rx="1.5"/><path d="M3.5 5.25h-1.25a1.5 1.5 0 0 0-1.5 1.5v6.5a1.5 1.5 0 0 0 1.5 1.5h6.5a1.5 1.5 0 0 0 1.5-1.5v-1.25"/></svg>';
+var CHECK_ICON = '<svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg>';
+
+function addCopyButton(pre) {
+  if (!pre || !navigator.clipboard) return;
+
+  // Wrap the pre so the button stays put when the code scrolls horizontally
+  var wrapper = document.createElement('div');
+  wrapper.className = 'code-block';
+  pre.parentNode.insertBefore(wrapper, pre);
+  wrapper.appendChild(pre);
+
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'copy-code-button';
+  wrapper.appendChild(button);
+
+  function setState(copied) {
+    button.innerHTML = copied ? CHECK_ICON : COPY_ICON;
+    button.classList.toggle('copied', copied);
+    button.setAttribute('data-tooltip', copied ? 'Copied' : 'Copy code');
+    button.setAttribute('aria-label', copied ? 'Copied' : 'Copy code');
+  }
+  setState(false);
+
+  button.addEventListener('click', function() {
+    navigator.clipboard.writeText(pre.innerText.replace(/\n$/, '')).then(function() {
+      setState(true);
+    }).catch(function() {
+      button.setAttribute('data-tooltip', 'Copy failed');
+      button.setAttribute('aria-label', 'Copy failed');
+    });
+  });
+
+  // Reset once the pointer or focus leaves, so the next hover says "Copy code" again
+  button.addEventListener('mouseleave', function() { setState(false); });
+  button.addEventListener('blur', function() { setState(false); });
+}
+
 // Package search and filter functionality
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('package-search');
