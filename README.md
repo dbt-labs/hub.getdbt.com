@@ -1,6 +1,6 @@
 ## hub.getdbt.com
 
-Package hub for [dbt](https://www.getdbt.com).
+Package Hub for [dbt](https://www.getdbt.com).
 
 ## Adding a new package
 
