@@ -1,3 +1,4 @@
 # Add 'automerge' label to any change to package versions or contents
 automerge:
-- data/packages/**/*
+  - changed-files:
+      - any-glob-to-any-file: 'data/packages/**/*'
