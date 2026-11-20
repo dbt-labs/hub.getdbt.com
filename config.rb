@@ -24,6 +24,8 @@ end
 
 # Shared helper methods available to both config and templates
 module SiteHelpers
+  PackageStub = Struct.new(:namespace, :name)
+
   def strip_leading_v(version)
     version.start_with?("v") ? version[1..-1] : version
   end
@@ -36,6 +38,7 @@ module SiteHelpers
     versions.each do |version_num, version_data|
       version_num = strip_leading_v(version_num)
       version_data['version'] = strip_leading_v(version_data['version'])
+      version_data['blocklisted'] = is_hidden(PackageStub.new(org, name), version_num)
       new_versions[version_num] = version_data
     end
     entry['versions'] = new_versions
