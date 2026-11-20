@@ -19,12 +19,12 @@ jobs:
       # used rather than the pull request's base commit so that a request
       # opened before this check existed is still checked, without a rebase
       - name: Checkout the checker from the default branch
-        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # actions/checkout@v4
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # actions/checkout@v5
         with:
           ref: ${{ github.event.repository.default_branch }}
           path: trusted
       - name: Checkout the pull request
-        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # actions/checkout@v4
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # actions/checkout@v5
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
