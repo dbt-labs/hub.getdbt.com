@@ -1,0 +1,46 @@
+{
+    "id": "fivetran/salesforce_marketing_cloud/v0.7.0",
+    "name": "salesforce_marketing_cloud",
+    "version": "v0.7.0",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/fivetran_utils",
+            "version": [
+                ">=0.4.0",
+                "<0.5.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.10.0",
+        "<3.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_salesforce_marketing_cloud/tree/v0.7.0/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_salesforce_marketing_cloud/v0.7.0/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_salesforce_marketing_cloud/tar.gz/v0.7.0",
+        "format": "tgz",
+        "sha1": "f6e1c50bef066740495f3096cfe927d351ae6a83",
+        "hub": {
+            "tarball": "https://public.cdn.getdbt.com/package-hub/dbt-packages/fivetran/dbt_salesforce_marketing_cloud/tar.gz/v0.7.0",
+            "format": "tgz",
+            "sha1": "f6e1c50bef066740495f3096cfe927d351ae6a83"
+        }
+    },
+    "fusion_compatibility": {
+        "version": "v0.7.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": null,
+        "parse_compatibility_result": null,
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
