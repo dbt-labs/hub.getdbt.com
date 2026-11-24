@@ -1,0 +1,53 @@
+{
+    "id": "fivetran/zuora/v1.5.0",
+    "name": "zuora",
+    "version": "v1.5.0",
+    "published_at": "1970-01-01T00:00:00.000000+00:00",
+    "packages": [
+        {
+            "package": "fivetran/fivetran_utils",
+            "version": [
+                ">=0.4.0",
+                "<0.5.0"
+            ]
+        },
+        {
+            "package": "dbt-labs/spark_utils",
+            "version": [
+                ">=0.3.0",
+                "<0.4.0"
+            ]
+        }
+    ],
+    "require_dbt_version": [
+        ">=1.10.0",
+        "<3.0.0"
+    ],
+    "works_with": [],
+    "_source": {
+        "type": "github",
+        "url": "https://github.com/fivetran/dbt_zuora/tree/v1.5.0/",
+        "readme": "https://raw.githubusercontent.com/fivetran/dbt_zuora/v1.5.0/README.md"
+    },
+    "downloads": {
+        "tarball": "https://codeload.github.com/fivetran/dbt_zuora/tar.gz/v1.5.0",
+        "format": "tgz",
+        "sha1": "3a427c8966eba0dbe0f112e27957d0370116c2ea",
+        "hub": {
+            "tarball": "https://public.cdn.getdbt.com/package-hub/dbt-packages/fivetran/dbt_zuora/tar.gz/v1.5.0",
+            "format": "tgz",
+            "sha1": "3a427c8966eba0dbe0f112e27957d0370116c2ea"
+        }
+    },
+    "fusion_compatibility": {
+        "version": "v1.5.0",
+        "require_dbt_version_defined": true,
+        "require_dbt_version_compatible": true,
+        "parse_compatible": null,
+        "parse_compatibility_result": null,
+        "manually_verified_compatible": false,
+        "manually_verified_incompatible": false,
+        "download_failed": false,
+        "fusion_compatible_download": {}
+    }
+}
